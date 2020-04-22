@@ -14,6 +14,10 @@
 		2A5CF43B244A254D00E98022 /* AppUser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF439244A254D00E98022 /* AppUser.xcdatamodeld */; };
 		2A5CF43D244A254F00E98022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CF43C244A254F00E98022 /* Assets.xcassets */; };
 		2A5CF440244A254F00E98022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CF43E244A254F00E98022 /* LaunchScreen.storyboard */; };
+		2AAE67FC244DFB6C00129E50 /* Areas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE67FB244DFB6C00129E50 /* Areas.storyboard */; };
+		2AAE67FE244DFE4F00129E50 /* AreasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE67FD244DFE4F00129E50 /* AreasTableViewController.swift */; };
+		2AAE6803244E1FE600129E50 /* AreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE6801244E1FE600129E50 /* AreaTableViewCell.swift */; };
+		2AAE6804244E1FE600129E50 /* AreaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE6802244E1FE600129E50 /* AreaTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		2A5CF43C244A254F00E98022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A5CF43F244A254F00E98022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A5CF441244A254F00E98022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AAE67FB244DFB6C00129E50 /* Areas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Areas.storyboard; sourceTree = "<group>"; };
+		2AAE67FD244DFE4F00129E50 /* AreasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreasTableViewController.swift; sourceTree = "<group>"; };
+		2AAE6801244E1FE600129E50 /* AreaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaTableViewCell.swift; sourceTree = "<group>"; };
+		2AAE6802244E1FE600129E50 /* AreaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +66,36 @@
 		2A5CF42F244A254D00E98022 /* AppUser */ = {
 			isa = PBXGroup;
 			children = (
+				2AAE67FF244E1FE600129E50 /* Models */,
 				2A5CF430244A254D00E98022 /* AppDelegate.swift */,
 				2A5CF432244A254D00E98022 /* SceneDelegate.swift */,
 				2A5CF434244A254D00E98022 /* ViewController.swift */,
 				2A5CF436244A254D00E98022 /* Main.storyboard */,
+				2AAE67FB244DFB6C00129E50 /* Areas.storyboard */,
+				2AAE67FD244DFE4F00129E50 /* AreasTableViewController.swift */,
 				2A5CF43C244A254F00E98022 /* Assets.xcassets */,
 				2A5CF43E244A254F00E98022 /* LaunchScreen.storyboard */,
 				2A5CF441244A254F00E98022 /* Info.plist */,
 				2A5CF439244A254D00E98022 /* AppUser.xcdatamodeld */,
 			);
 			path = AppUser;
+			sourceTree = "<group>";
+		};
+		2AAE67FF244E1FE600129E50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2AAE6800244E1FE600129E50 /* AreaCell */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2AAE6800244E1FE600129E50 /* AreaCell */ = {
+			isa = PBXGroup;
+			children = (
+				2AAE6801244E1FE600129E50 /* AreaTableViewCell.swift */,
+				2AAE6802244E1FE600129E50 /* AreaTableViewCell.xib */,
+			);
+			path = AreaCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +159,8 @@
 				2A5CF440244A254F00E98022 /* LaunchScreen.storyboard in Resources */,
 				2A5CF43D244A254F00E98022 /* Assets.xcassets in Resources */,
 				2A5CF438244A254D00E98022 /* Main.storyboard in Resources */,
+				2AAE6804244E1FE600129E50 /* AreaTableViewCell.xib in Resources */,
+				2AAE67FC244DFB6C00129E50 /* Areas.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +175,8 @@
 				2A5CF435244A254D00E98022 /* ViewController.swift in Sources */,
 				2A5CF431244A254D00E98022 /* AppDelegate.swift in Sources */,
 				2A5CF433244A254D00E98022 /* SceneDelegate.swift in Sources */,
+				2AAE6803244E1FE600129E50 /* AreaTableViewCell.swift in Sources */,
+				2AAE67FE244DFE4F00129E50 /* AreasTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +323,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7CS39R779;
 				INFOPLIST_FILE = AppUser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +342,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C7CS39R779;
 				INFOPLIST_FILE = AppUser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

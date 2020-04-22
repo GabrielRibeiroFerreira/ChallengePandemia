@@ -14,6 +14,8 @@
 		2A5CF45E244A258A00E98022 /* AppAdm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF45C244A258A00E98022 /* AppAdm.xcdatamodeld */; };
 		2A5CF460244A258C00E98022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CF45F244A258C00E98022 /* Assets.xcassets */; };
 		2A5CF463244A258C00E98022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CF461244A258C00E98022 /* LaunchScreen.storyboard */; };
+		2AAE67F8244A39ED00129E50 /* AreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE67F6244A39ED00129E50 /* AreaTableViewCell.swift */; };
+		2AAE67F9244A39ED00129E50 /* AreaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE67F7244A39ED00129E50 /* AreaTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		2A5CF45F244A258C00E98022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A5CF462244A258C00E98022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A5CF464244A258C00E98022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AAE67F6244A39ED00129E50 /* AreaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaTableViewCell.swift; sourceTree = "<group>"; };
+		2AAE67F7244A39ED00129E50 /* AreaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AreaTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		2A5CF452244A258A00E98022 /* AppAdm */ = {
 			isa = PBXGroup;
 			children = (
+				2AAE67F1244A391B00129E50 /* Models */,
 				2A5CF453244A258A00E98022 /* AppDelegate.swift */,
 				2A5CF455244A258A00E98022 /* SceneDelegate.swift */,
 				2A5CF457244A258A00E98022 /* ViewController.swift */,
@@ -68,6 +73,23 @@
 				2A5CF45C244A258A00E98022 /* AppAdm.xcdatamodeld */,
 			);
 			path = AppAdm;
+			sourceTree = "<group>";
+		};
+		2AAE67F1244A391B00129E50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2AAE67FA244A39F200129E50 /* AreaCell */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2AAE67FA244A39F200129E50 /* AreaCell */ = {
+			isa = PBXGroup;
+			children = (
+				2AAE67F6244A39ED00129E50 /* AreaTableViewCell.swift */,
+				2AAE67F7244A39ED00129E50 /* AreaTableViewCell.xib */,
+			);
+			path = AreaCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +152,7 @@
 			files = (
 				2A5CF463244A258C00E98022 /* LaunchScreen.storyboard in Resources */,
 				2A5CF460244A258C00E98022 /* Assets.xcassets in Resources */,
+				2AAE67F9244A39ED00129E50 /* AreaTableViewCell.xib in Resources */,
 				2A5CF45B244A258A00E98022 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5CF458244A258A00E98022 /* ViewController.swift in Sources */,
+				2AAE67F8244A39ED00129E50 /* AreaTableViewCell.swift in Sources */,
 				2A5CF454244A258A00E98022 /* AppDelegate.swift in Sources */,
 				2A5CF45E244A258A00E98022 /* AppAdm.xcdatamodeld in Sources */,
 				2A5CF456244A258A00E98022 /* SceneDelegate.swift in Sources */,
