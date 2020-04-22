@@ -1,24 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGF-a4-1dM">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Onboarding View Controller-->
+        <scene sceneID="ad9-U1-A0t">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="Onboarding" id="cGF-a4-1dM" customClass="OnboardingViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="izm-rg-lcZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwT-NP-ATt">
+                                <rect key="frame" x="0.0" y="44" width="375" height="653"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-S0-dCJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="711.33333333333337"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para você" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82k-Ry-z0Q">
+                                                <rect key="frame" x="40" y="86" width="124" height="33"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
+                                                <color key="textColor" name="appColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profissional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJt-Cy-lgD">
+                                                <rect key="frame" x="40" y="119" width="150" height="33"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
+                                                <color key="textColor" name="appColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="art-pessoa" translatesAutoresizingMaskIntoConstraints="NO" id="jfj-Bx-UPz">
+                                                <rect key="frame" x="181" y="43" width="194" height="450"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="jfj-Bx-UPz" secondAttribute="height" multiplier="181:420" id="0sd-E9-cTL"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agilidade e Fluídez" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-9K-yLn">
+                                                <rect key="frame" x="20" y="513" width="335" height="44.333333333333371"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="37"/>
+                                                <color key="textColor" name="appColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJR-Vd-7zC">
+                                                <rect key="frame" x="40" y="565.33333333333337" width="309.33333333333331" height="86"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
+                                                <color key="textColor" name="appColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="appBlue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Hme-9K-yLn" secondAttribute="trailing" constant="20" id="2Of-dC-mep"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sJR-Vd-7zC" secondAttribute="trailing" constant="20" symbolic="YES" id="6Qi-Cx-fMR"/>
+                                            <constraint firstItem="sJR-Vd-7zC" firstAttribute="top" secondItem="Hme-9K-yLn" secondAttribute="bottom" constant="8" id="9VR-eO-EQs"/>
+                                            <constraint firstAttribute="trailing" secondItem="jfj-Bx-UPz" secondAttribute="trailing" id="Lrs-BR-HuU"/>
+                                            <constraint firstItem="NJt-Cy-lgD" firstAttribute="leading" secondItem="H4J-S0-dCJ" secondAttribute="leading" constant="40" id="NAy-di-M6B"/>
+                                            <constraint firstItem="sJR-Vd-7zC" firstAttribute="leading" secondItem="H4J-S0-dCJ" secondAttribute="leading" constant="40" id="NUC-7g-PyA"/>
+                                            <constraint firstItem="82k-Ry-z0Q" firstAttribute="leading" secondItem="H4J-S0-dCJ" secondAttribute="leading" constant="40" id="Upv-cP-mbL"/>
+                                            <constraint firstItem="Hme-9K-yLn" firstAttribute="leading" secondItem="H4J-S0-dCJ" secondAttribute="leading" constant="20" id="W9p-C6-ek4"/>
+                                            <constraint firstItem="NJt-Cy-lgD" firstAttribute="top" secondItem="82k-Ry-z0Q" secondAttribute="bottom" id="fz2-TI-q75"/>
+                                            <constraint firstItem="Hme-9K-yLn" firstAttribute="top" secondItem="jfj-Bx-UPz" secondAttribute="bottom" constant="20" id="hYc-6x-O3B"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="82k-Ry-z0Q" secondAttribute="trailing" constant="20" symbolic="YES" id="ipI-Sa-Tkk"/>
+                                            <constraint firstAttribute="bottom" secondItem="sJR-Vd-7zC" secondAttribute="bottom" constant="60" id="jhx-ns-SU2"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NJt-Cy-lgD" secondAttribute="trailing" constant="20" symbolic="YES" id="n2e-8O-0wg"/>
+                                            <constraint firstItem="82k-Ry-z0Q" firstAttribute="top" secondItem="H4J-S0-dCJ" secondAttribute="top" constant="86" id="n6e-aa-9F1"/>
+                                            <constraint firstItem="jfj-Bx-UPz" firstAttribute="top" secondItem="H4J-S0-dCJ" secondAttribute="top" constant="43" id="yMg-An-Fn6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nxr-Wv-BgX" firstAttribute="trailing" secondItem="H4J-S0-dCJ" secondAttribute="trailing" id="3dh-ZP-UvT"/>
+                                    <constraint firstItem="nxr-Wv-BgX" firstAttribute="bottom" secondItem="H4J-S0-dCJ" secondAttribute="bottom" id="98J-3M-Av9"/>
+                                    <constraint firstItem="H4J-S0-dCJ" firstAttribute="top" secondItem="nxr-Wv-BgX" secondAttribute="top" id="Q2B-eI-Lz9"/>
+                                    <constraint firstItem="H4J-S0-dCJ" firstAttribute="centerX" secondItem="DwT-NP-ATt" secondAttribute="centerX" id="V1f-aG-km1"/>
+                                    <constraint firstItem="H4J-S0-dCJ" firstAttribute="leading" secondItem="nxr-Wv-BgX" secondAttribute="leading" id="pVj-nA-TgQ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="nxr-Wv-BgX"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="uPR-lX-iyT"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIR-1d-0gS">
+                                <rect key="frame" x="20" y="721" width="335" height="30"/>
+                                <color key="backgroundColor" name="appYellow"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="appBlue"/>
+                        <constraints>
+                            <constraint firstItem="DwT-NP-ATt" firstAttribute="top" secondItem="KPI-y3-xw6" secondAttribute="top" id="0LH-fZ-J4d"/>
+                            <constraint firstItem="VIR-1d-0gS" firstAttribute="top" secondItem="DwT-NP-ATt" secondAttribute="bottom" constant="24" id="2v1-c8-XTC"/>
+                            <constraint firstItem="KPI-y3-xw6" firstAttribute="bottom" secondItem="VIR-1d-0gS" secondAttribute="bottom" constant="27" id="JuX-1L-exc"/>
+                            <constraint firstItem="DwT-NP-ATt" firstAttribute="leading" secondItem="KPI-y3-xw6" secondAttribute="leading" id="OWV-fo-dvA"/>
+                            <constraint firstItem="VIR-1d-0gS" firstAttribute="leading" secondItem="KPI-y3-xw6" secondAttribute="leading" constant="20" id="egi-Eo-omP"/>
+                            <constraint firstItem="jfj-Bx-UPz" firstAttribute="width" secondItem="izm-rg-lcZ" secondAttribute="height" multiplier="107:448" id="sAc-3y-SuL"/>
+                            <constraint firstItem="KPI-y3-xw6" firstAttribute="trailing" secondItem="VIR-1d-0gS" secondAttribute="trailing" constant="20" id="tmY-sq-iXj"/>
+                            <constraint firstItem="KPI-y3-xw6" firstAttribute="trailing" secondItem="DwT-NP-ATt" secondAttribute="trailing" id="uT9-QN-AK0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KPI-y3-xw6"/>
                     </view>
+                    <connections>
+                        <outlet property="professionalLabel" destination="NJt-Cy-lgD" id="6bk-tX-iON"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nRj-NH-zCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="999.20000000000005" y="105.66502463054188"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="art-pessoa" width="320" height="737"/>
+        <namedColor name="appBlue">
+            <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appYellow">
+            <color red="0.98000001907348633" green="0.88200002908706665" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

@@ -14,8 +14,8 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.professionalLabel.attributedText = NSAttributedString(string: "Profissional", attributes:
-        [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        //Underline na palavra Profissional
+        self.professionalLabel.attributedText = NSAttributedString(string: "Profissional", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         
         
     }

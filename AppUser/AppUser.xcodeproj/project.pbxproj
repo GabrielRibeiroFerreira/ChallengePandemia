@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		156577BB244E062D00102570 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 156577B9244E062D00102570 /* Fonts */; };
-		156577BC244E062D00102570 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156577BA244E062D00102570 /* Onboarding.storyboard */; };
 		156577BE244E078900102570 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156577BD244E078900102570 /* OnboardingViewController.swift */; };
 		2A5CF431244A254D00E98022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF430244A254D00E98022 /* AppDelegate.swift */; };
 		2A5CF433244A254D00E98022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF432244A254D00E98022 /* SceneDelegate.swift */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		156577B9244E062D00102570 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
-		156577BA244E062D00102570 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		156577BD244E078900102570 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		2A5CF42D244A254D00E98022 /* AppUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5CF430244A254D00E98022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				156577B9244E062D00102570 /* Fonts */,
-				156577BA244E062D00102570 /* Onboarding.storyboard */,
 				2A5CF430244A254D00E98022 /* AppDelegate.swift */,
 				2A5CF432244A254D00E98022 /* SceneDelegate.swift */,
 				2A5CF434244A254D00E98022 /* ViewController.swift */,
@@ -138,7 +135,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5CF440244A254F00E98022 /* LaunchScreen.storyboard in Resources */,
-				156577BC244E062D00102570 /* Onboarding.storyboard in Resources */,
 				2A5CF43D244A254F00E98022 /* Assets.xcassets in Resources */,
 				2A5CF438244A254D00E98022 /* Main.storyboard in Resources */,
 				156577BB244E062D00102570 /* Fonts in Resources */,
