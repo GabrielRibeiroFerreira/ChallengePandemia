@@ -16,6 +16,9 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var emailLabel: UILabel!
     let appBlueColor = UIColor(named: "appBlue")
     
+    @IBAction func enterButton(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

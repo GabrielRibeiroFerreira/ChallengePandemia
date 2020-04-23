@@ -13,13 +13,16 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var professionalLabel: UILabel!
     @IBOutlet weak var agilityLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    @IBOutlet weak var enterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Underline na palavra Profissional
         self.professionalLabel.attributedText = NSAttributedString(string: "Profissional", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        
+        //Bordas do botão arredondadas 
+        self.enterButton.layer.cornerRadius = 16.0
         
         self.setupAccessibility()
     }

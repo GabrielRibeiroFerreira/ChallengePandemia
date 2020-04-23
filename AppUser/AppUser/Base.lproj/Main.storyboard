@@ -25,19 +25,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwT-NP-ATt">
-                                <rect key="frame" x="0.0" y="44" width="414" height="726"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="731"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-S0-dCJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="696.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="715"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para você" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82k-Ry-z0Q">
-                                                <rect key="frame" x="40" y="86" width="124" height="33"/>
+                                                <rect key="frame" x="40" y="86" width="125.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profissional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJt-Cy-lgD">
-                                                <rect key="frame" x="40" y="119" width="150" height="33"/>
+                                                <rect key="frame" x="40" y="119" width="145" height="33"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
@@ -49,13 +49,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agilidade e Fluídez" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-9K-yLn">
-                                                <rect key="frame" x="20" y="559.5" width="374" height="44.5"/>
+                                                <rect key="frame" x="20" y="559.5" width="374" height="43.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="37"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJR-Vd-7zC">
-                                                <rect key="frame" x="40" y="612" width="353" height="64.5"/>
+                                                <rect key="frame" x="40" y="611" width="331" height="84"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
@@ -92,8 +92,11 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="uPR-lX-iyT"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIR-1d-0gS">
-                                <rect key="frame" x="20" y="794" width="374" height="41"/>
+                                <rect key="frame" x="40" y="794" width="334" height="50"/>
                                 <color key="backgroundColor" name="appYellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="i83-qc-qll"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="Entrar">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -106,12 +109,12 @@
                         <color key="backgroundColor" name="appBlue"/>
                         <constraints>
                             <constraint firstItem="DwT-NP-ATt" firstAttribute="top" secondItem="KPI-y3-xw6" secondAttribute="top" id="0LH-fZ-J4d"/>
-                            <constraint firstItem="VIR-1d-0gS" firstAttribute="top" secondItem="DwT-NP-ATt" secondAttribute="bottom" constant="24" id="2v1-c8-XTC"/>
-                            <constraint firstItem="KPI-y3-xw6" firstAttribute="bottom" secondItem="VIR-1d-0gS" secondAttribute="bottom" constant="27" id="JuX-1L-exc"/>
+                            <constraint firstItem="KPI-y3-xw6" firstAttribute="bottom" secondItem="VIR-1d-0gS" secondAttribute="bottom" constant="18" id="54B-T9-zie"/>
+                            <constraint firstItem="VIR-1d-0gS" firstAttribute="top" secondItem="DwT-NP-ATt" secondAttribute="bottom" constant="19" id="BsZ-QF-Con"/>
                             <constraint firstItem="DwT-NP-ATt" firstAttribute="leading" secondItem="KPI-y3-xw6" secondAttribute="leading" id="OWV-fo-dvA"/>
-                            <constraint firstItem="VIR-1d-0gS" firstAttribute="leading" secondItem="KPI-y3-xw6" secondAttribute="leading" constant="20" id="egi-Eo-omP"/>
+                            <constraint firstItem="VIR-1d-0gS" firstAttribute="leading" secondItem="KPI-y3-xw6" secondAttribute="leading" constant="40" id="egi-Eo-omP"/>
                             <constraint firstItem="jfj-Bx-UPz" firstAttribute="width" secondItem="izm-rg-lcZ" secondAttribute="height" multiplier="107:448" id="sAc-3y-SuL"/>
-                            <constraint firstItem="KPI-y3-xw6" firstAttribute="trailing" secondItem="VIR-1d-0gS" secondAttribute="trailing" constant="20" id="tmY-sq-iXj"/>
+                            <constraint firstItem="KPI-y3-xw6" firstAttribute="trailing" secondItem="VIR-1d-0gS" secondAttribute="trailing" constant="40" id="tmY-sq-iXj"/>
                             <constraint firstItem="KPI-y3-xw6" firstAttribute="trailing" secondItem="DwT-NP-ATt" secondAttribute="trailing" id="uT9-QN-AK0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KPI-y3-xw6"/>
@@ -119,13 +122,14 @@
                     <connections>
                         <outlet property="agilityLabel" destination="Hme-9K-yLn" id="2gK-dR-0uZ"/>
                         <outlet property="descriptionLabel" destination="sJR-Vd-7zC" id="r75-Uj-6gy"/>
+                        <outlet property="enterButton" destination="VIR-1d-0gS" id="dBk-cd-SAB"/>
                         <outlet property="forYouLabel" destination="82k-Ry-z0Q" id="c2B-vq-9eW"/>
                         <outlet property="professionalLabel" destination="NJt-Cy-lgD" id="6bk-tX-iON"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRj-NH-zCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="999.20000000000005" y="105.66502463054188"/>
+            <point key="canvasLocation" x="998.55072463768124" y="105.13392857142857"/>
         </scene>
         <!--Olá,-->
         <scene sceneID="g1E-Zu-XPx">
@@ -274,7 +278,7 @@
                 <navigationController id="tKI-R3-4n6" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eol-qv-L1n"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="E1c-Kp-YdA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="appColor"/>
                         <color key="tintColor" name="appBlue"/>
