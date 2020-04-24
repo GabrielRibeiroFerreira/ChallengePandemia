@@ -30,6 +30,8 @@
 		156577BE244E078900102570 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156577BD244E078900102570 /* OnboardingViewController.swift */; };
 		15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */; };
 		15A48B022453606100870B04 /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B012453606100870B04 /* Etapas.storyboard */; };
+		15A48B05245388C100870B04 /* TituloEtapaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */; };
+		15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */; };
 		2A5CF431244A254D00E98022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF430244A254D00E98022 /* AppDelegate.swift */; };
 		2A5CF433244A254D00E98022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF432244A254D00E98022 /* SceneDelegate.swift */; };
 		2A5CF435244A254D00E98022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF434244A254D00E98022 /* ViewController.swift */; };
@@ -67,6 +69,8 @@
 		156577BD244E078900102570 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerVC.swift; sourceTree = "<group>"; };
 		15A48B012453606100870B04 /* Etapas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
+		15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TituloEtapaViewCell.xib; sourceTree = "<group>"; };
+		15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TituloEtapaViewCell.swift; sourceTree = "<group>"; };
 		2A5CF42D244A254D00E98022 /* AppUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5CF430244A254D00E98022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5CF432244A254D00E98022 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +130,15 @@
 			path = "SF-Font";
 			sourceTree = "<group>";
 		};
+		15A48B032453882600870B04 /* TituloEtapaCell */ = {
+			isa = PBXGroup;
+			children = (
+				15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */,
+				15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */,
+			);
+			path = TituloEtapaCell;
+			sourceTree = "<group>";
+		};
 		2A5CF424244A254D00E98022 = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +182,7 @@
 		2AAE67FF244E1FE600129E50 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				15A48B032453882600870B04 /* TituloEtapaCell */,
 				2AAE6800244E1FE600129E50 /* AreaCell */,
 			);
 			path = Models;
@@ -245,6 +259,7 @@
 				155C660C24511720000969CD /* SF-Pro-Display-BlackItalic.otf in Resources */,
 				155C660224511720000969CD /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
 				155C660D24511720000969CD /* SF-Pro-Display-UltralightItalic.otf in Resources */,
+				15A48B05245388C100870B04 /* TituloEtapaViewCell.xib in Resources */,
 				155C660B24511720000969CD /* SF-Pro-Display-BoldItalic.otf in Resources */,
 				155C660524511720000969CD /* SF-Pro-Display-Semibold.otf in Resources */,
 				2A5CF440244A254F00E98022 /* LaunchScreen.storyboard in Resources */,
@@ -277,6 +292,7 @@
 			files = (
 				15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */,
 				2A5CF43B244A254D00E98022 /* AppUser.xcdatamodeld in Sources */,
+				15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */,
 				2A5CF435244A254D00E98022 /* ViewController.swift in Sources */,
 				156577BE244E078900102570 /* OnboardingViewController.swift in Sources */,
 				155C661324512383000969CD /* AboutViewController.swift in Sources */,
