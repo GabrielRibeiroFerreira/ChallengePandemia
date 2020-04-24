@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uTG-Kx-875">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="qOP-q3-dsY">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" id="uTG-Kx-875" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="xVE-XS-iF9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="appBlue"/>
+                        <color key="barTintColor" name="appBlue"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="L40-Yj-lcC" kind="relationship" relationship="rootViewController" id="G0l-5N-Xi9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7r-VM-bcr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1548" y="698"/>
+        </scene>
+        <!--Fluxo Inicial View Controller-->
+        <scene sceneID="btA-cT-YD6">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="L40-Yj-lcC" customClass="FluxoInicialViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gYK-Qx-eSm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUL-v2-dWO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="689.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E09-Oe-p5e">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1443"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6s-FI-aM9">
+                                                <rect key="frame" x="20" y="30" width="374" height="86"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" name="appContrast"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E67-tP-EF8">
+                                                <rect key="frame" x="20" y="146" width="374" height="1289"/>
+                                                <string key="text">Pacientes com sintomas de Sindrome Gripal                                 (Febre &gt;=  37,5ºC aferida ou referida, acompanhada de tosse ou dor de garganta)mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmms</string>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                                <color key="textColor" name="appYellow"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="appBlue"/>
+                                        <constraints>
+                                            <constraint firstItem="E67-tP-EF8" firstAttribute="top" secondItem="P6s-FI-aM9" secondAttribute="bottom" constant="30" id="7qS-ax-4V6"/>
+                                            <constraint firstAttribute="trailing" secondItem="E67-tP-EF8" secondAttribute="trailing" constant="20" id="82s-g9-Lws"/>
+                                            <constraint firstItem="P6s-FI-aM9" firstAttribute="leading" secondItem="E09-Oe-p5e" secondAttribute="leading" constant="20" id="bwi-nz-7Nj"/>
+                                            <constraint firstItem="E67-tP-EF8" firstAttribute="leading" secondItem="E09-Oe-p5e" secondAttribute="leading" constant="20" id="dsD-cO-sjI"/>
+                                            <constraint firstItem="P6s-FI-aM9" firstAttribute="top" secondItem="E09-Oe-p5e" secondAttribute="top" constant="30" id="fif-CJ-gSs"/>
+                                            <constraint firstAttribute="trailing" secondItem="P6s-FI-aM9" secondAttribute="trailing" constant="20" id="nS2-SF-mz9"/>
+                                            <constraint firstAttribute="bottom" secondItem="E67-tP-EF8" secondAttribute="bottom" constant="8" id="s4e-6I-5dm"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="E09-Oe-p5e" firstAttribute="bottom" secondItem="7FZ-yx-dDT" secondAttribute="bottom" id="bZW-Ch-0WN"/>
+                                    <constraint firstItem="E09-Oe-p5e" firstAttribute="leading" secondItem="7FZ-yx-dDT" secondAttribute="leading" id="cNF-pL-fiO"/>
+                                    <constraint firstItem="E09-Oe-p5e" firstAttribute="trailing" secondItem="7FZ-yx-dDT" secondAttribute="trailing" id="rHP-Y8-vx8"/>
+                                    <constraint firstItem="E09-Oe-p5e" firstAttribute="top" secondItem="7FZ-yx-dDT" secondAttribute="top" id="zbn-ve-Biv"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="7FZ-yx-dDT"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5GW-7L-Qyo"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-YS-D2i">
+                                <rect key="frame" x="33" y="697.5" width="348" height="46.5"/>
+                                <color key="backgroundColor" name="appContrast"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <state key="normal" title="Avançar">
+                                    <color key="titleColor" name="appBlue"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="appBlue"/>
+                        <constraints>
+                            <constraint firstItem="GXY-YS-D2i" firstAttribute="height" secondItem="8VK-Bv-tN7" secondAttribute="height" multiplier="0.06" id="503-FR-2za"/>
+                            <constraint firstItem="GXY-YS-D2i" firstAttribute="leading" secondItem="8VK-Bv-tN7" secondAttribute="leading" constant="33" id="Eg0-zY-yxN"/>
+                            <constraint firstItem="E09-Oe-p5e" firstAttribute="width" secondItem="8VK-Bv-tN7" secondAttribute="width" id="SwC-89-6AD"/>
+                            <constraint firstItem="gUL-v2-dWO" firstAttribute="leading" secondItem="8VK-Bv-tN7" secondAttribute="leading" id="Ubc-uw-zfY"/>
+                            <constraint firstItem="GXY-YS-D2i" firstAttribute="top" secondItem="gUL-v2-dWO" secondAttribute="bottom" constant="8" id="XCH-uJ-x0z"/>
+                            <constraint firstItem="gUL-v2-dWO" firstAttribute="trailing" secondItem="8VK-Bv-tN7" secondAttribute="trailing" id="YLe-T4-8Bd"/>
+                            <constraint firstItem="gUL-v2-dWO" firstAttribute="top" secondItem="8VK-Bv-tN7" secondAttribute="top" id="lpV-ku-Vvb"/>
+                            <constraint firstItem="8VK-Bv-tN7" firstAttribute="trailing" secondItem="GXY-YS-D2i" secondAttribute="trailing" constant="33" id="mc3-eQ-SfC"/>
+                            <constraint firstItem="8VK-Bv-tN7" firstAttribute="bottom" secondItem="GXY-YS-D2i" secondAttribute="bottom" constant="30" id="xMf-ca-3JO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8VK-Bv-tN7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DhK-n6-4kR">
+                        <barButtonItem key="rightBarButtonItem" title="Etapas" id="ZpU-ie-lBM">
+                            <color key="tintColor" name="appContrast"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="textInitial" destination="E67-tP-EF8" id="1ck-jy-4nK"/>
+                        <outlet property="titleInitial" destination="P6s-FI-aM9" id="6jI-hy-dG1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="odg-mz-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-700" y="697.76785714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="appBlue">
+            <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appContrast">
+            <color red="0.0" green="0.059000000357627869" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appYellow">
+            <color red="0.98000001907348633" green="0.88200002908706665" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
