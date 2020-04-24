@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DwT-NP-ATt">
-                                <rect key="frame" x="0.0" y="44" width="414" height="731"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="740"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-S0-dCJ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="715"/>
@@ -92,11 +92,8 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="uPR-lX-iyT"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIR-1d-0gS">
-                                <rect key="frame" x="40" y="794" width="334" height="50"/>
+                                <rect key="frame" x="40" y="803" width="334" height="41"/>
                                 <color key="backgroundColor" name="appYellow"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="i83-qc-qll"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="Entrar">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -265,7 +262,9 @@
                         <outlet property="contactLabel" destination="aLP-Dd-xau" id="idI-FY-G9p"/>
                         <outlet property="emailLabel" destination="Vbf-D6-lue" id="YyK-FJ-aeE"/>
                         <outlet property="firstDescripLabel" destination="JvB-Je-eF3" id="uqF-3P-vuc"/>
+                        <outlet property="numberVersionLabel" destination="zN3-lc-M2S" id="3Ld-uM-W2C"/>
                         <outlet property="secondDescripLabel" destination="94g-w3-PIE" id="zgW-3S-hkh"/>
+                        <outlet property="versionLabel" destination="sHc-oy-4tn" id="UbO-Dl-aoR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4D1-k4-YHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
