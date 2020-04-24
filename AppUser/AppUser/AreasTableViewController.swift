@@ -16,7 +16,7 @@ class AreasTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue")]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue") ?? UIColor.blue]
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
