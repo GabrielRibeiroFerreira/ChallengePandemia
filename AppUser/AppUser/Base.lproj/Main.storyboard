@@ -31,19 +31,22 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-S0-dCJ">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="715"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para você" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82k-Ry-z0Q">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para você" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82k-Ry-z0Q">
                                                 <rect key="frame" x="40" y="86" width="125.5" height="33"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profissional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJt-Cy-lgD">
-                                                <rect key="frame" x="40" y="119" width="145" height="33"/>
+                                                <rect key="frame" x="40" y="119" width="175" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="175" id="Ox7-sH-OBw"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="art-pessoa" translatesAutoresizingMaskIntoConstraints="NO" id="jfj-Bx-UPz">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="art-pessoa" translatesAutoresizingMaskIntoConstraints="NO" id="jfj-Bx-UPz">
                                                 <rect key="frame" x="200" y="43" width="214" height="496.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jfj-Bx-UPz" secondAttribute="height" multiplier="181:420" id="0sd-E9-cTL"/>
@@ -75,6 +78,7 @@
                                             <constraint firstItem="NJt-Cy-lgD" firstAttribute="top" secondItem="82k-Ry-z0Q" secondAttribute="bottom" id="fz2-TI-q75"/>
                                             <constraint firstItem="Hme-9K-yLn" firstAttribute="top" secondItem="jfj-Bx-UPz" secondAttribute="bottom" constant="20" id="hYc-6x-O3B"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="82k-Ry-z0Q" secondAttribute="trailing" constant="20" symbolic="YES" id="ipI-Sa-Tkk"/>
+                                            <constraint firstItem="82k-Ry-z0Q" firstAttribute="width" secondItem="NJt-Cy-lgD" secondAttribute="width" multiplier="0.717143" id="jHY-n0-B2O"/>
                                             <constraint firstAttribute="bottom" secondItem="sJR-Vd-7zC" secondAttribute="bottom" constant="20" id="jhx-ns-SU2"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NJt-Cy-lgD" secondAttribute="trailing" constant="20" symbolic="YES" id="n2e-8O-0wg"/>
                                             <constraint firstItem="82k-Ry-z0Q" firstAttribute="top" secondItem="H4J-S0-dCJ" secondAttribute="top" constant="86" id="n6e-aa-9F1"/>
