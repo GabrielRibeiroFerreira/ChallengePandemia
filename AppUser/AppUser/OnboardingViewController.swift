@@ -9,15 +9,37 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
+    @IBOutlet weak var forYouLabel: UILabel!
     @IBOutlet weak var professionalLabel: UILabel!
+    @IBOutlet weak var agilityLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var enterButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.professionalLabel.attributedText = NSAttributedString(string: "Profissional", attributes:
-        [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        //Underline na palavra Profissional
+        self.professionalLabel.attributedText = NSAttributedString(string: "Profissional", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         
+        //Bordas do botão arredondadas
+        self.enterButton.layer.cornerRadius = 16.0
         
+        self.setupAccessibility()
+    }
+    
+    private func setupAccessibility() {
+        let forYouFont = UIFont(name: "SFProDisplay-Bold", size: 28) ?? UIFont.systemFont(ofSize: 28)
+        let professionalFont = UIFont(name: "SFProDisplay-Bold", size: 28) ?? UIFont.systemFont(ofSize: 28)
+        let agilityFont = UIFont(name: "SFProDisplay-Bold", size: 37) ?? UIFont.systemFont(ofSize: 37)
+        let descriptionFont = UIFont(name: "SFProDisplay-Medium", size: 18) ?? UIFont.systemFont(ofSize: 18)
+        let buttonFont = UIFont(name: "SFProDisplay-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24)
+
+
+        self.forYouLabel.dynamicFont = forYouFont
+        self.professionalLabel.dynamicFont = professionalFont
+        self.agilityLabel.dynamicFont = agilityFont
+        self.descriptionLabel.dynamicFont = descriptionFont
+        self.enterButton.titleLabel?.dynamicFont = buttonFont
     }
     
 }
