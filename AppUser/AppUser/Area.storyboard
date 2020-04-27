@@ -25,6 +25,9 @@
                                     <segment title="Fluxos"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" name="appBlue"/>
+                                <connections>
+                                    <action selector="indexChanged:" destination="MLd-M1-Iwr" eventType="valueChanged" id="Jwt-LU-P9L"/>
+                                </connections>
                             </segmentedControl>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="yN5-Lj-XSS">
                                 <rect key="frame" x="0.0" y="117" width="414" height="56"/>
