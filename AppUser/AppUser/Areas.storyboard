@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SEb-gR-sBG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hospital-->
+        <scene sceneID="XGN-Ql-lYc">
+            <objects>
+                <tableViewController title="Hospital" id="SEb-gR-sBG" customClass="AreasTableViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="XwM-at-ae0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="SEb-gR-sBG" id="ghQ-pR-h6J"/>
+                            <outlet property="delegate" destination="SEb-gR-sBG" id="aQS-hX-1gn"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="Gti-GU-A09" kind="show" identifier="areaSegue" id="RTP-By-zab"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khb-F1-g2E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-112"/>
+        </scene>
+        <!--Area-->
+        <scene sceneID="sFD-kI-wY2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Area" id="Gti-GU-A09" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Epz-xC-byt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YY0-6l-KRU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="-113"/>
+        </scene>
+    </scenes>
+</document>
