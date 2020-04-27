@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dFa-wy-D9R">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,18 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sH0-dy-N3R">
-                                <rect key="frame" x="0.0" y="44" width="414" height="713"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="723"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KCV-Oe-Fxy">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="221.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-xJ-WZ7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmi-xJ-WZ7">
                                                 <rect key="frame" x="20" y="30" width="374" height="86"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Síndrome Respiratória Aguda Grave - SRAG" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXQ-nD-GJ9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Síndrome Respiratória Aguda Grave - SRAG" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXQ-nD-GJ9">
                                                 <rect key="frame" x="20" y="156" width="374" height="57.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" name="appContrast"/>
@@ -57,7 +58,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="ZlT-e0-o4I"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v48-Gm-jtT" customClass="fl">
-                                <rect key="frame" x="33" y="773" width="348" height="49"/>
+                                <rect key="frame" x="33" y="783" width="348" height="39"/>
                                 <color key="backgroundColor" name="appBlue"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <state key="normal" title="Avançar">
@@ -69,13 +70,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="LVX-3h-aBs" kind="show" id="9gn-9n-0Gp"/>
+                                    <segue destination="JSL-bz-CrB" kind="show" id="m3m-3r-EZU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="appColor"/>
                         <constraints>
-                            <constraint firstItem="v48-Gm-jtT" firstAttribute="height" secondItem="Rkx-oh-RFq" secondAttribute="height" multiplier="0.06" id="0BK-vu-oSG"/>
                             <constraint firstItem="Rkx-oh-RFq" firstAttribute="bottom" secondItem="v48-Gm-jtT" secondAttribute="bottom" constant="40" id="8pl-cF-frH"/>
                             <constraint firstItem="sH0-dy-N3R" firstAttribute="top" secondItem="Rkx-oh-RFq" secondAttribute="top" id="JIe-HE-4Vi"/>
                             <constraint firstItem="sH0-dy-N3R" firstAttribute="trailing" secondItem="Rkx-oh-RFq" secondAttribute="trailing" id="MXU-T3-TMT"/>
@@ -95,20 +95,25 @@
                             <color key="tintColor" name="appBlue"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="progressBtn" destination="v48-Gm-jtT" id="ZYI-Oh-fUU"/>
+                        <outlet property="subtitleContent" destination="GXQ-nD-GJ9" id="2ul-ep-3gw"/>
+                        <outlet property="titleContent" destination="Bmi-xJ-WZ7" id="wi4-y3-8xH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bG9-gZ-b6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-687" y="680"/>
         </scene>
         <!--FlowExtensiveContent-->
-        <scene sceneID="mJS-MJ-YAZ">
+        <scene sceneID="4bF-or-Xhw">
             <objects>
-                <viewControllerPlaceholder storyboardName="FlowExtensiveContent" id="LVX-3h-aBs" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="BOn-dJ-BKX"/>
+                <viewControllerPlaceholder storyboardName="FlowExtensiveContent" id="JSL-bz-CrB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4oj-I1-Xkx"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lps-B0-xR2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yz-7k-0YZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="680"/>
+            <point key="canvasLocation" x="234" y="680"/>
         </scene>
     </scenes>
     <resources>

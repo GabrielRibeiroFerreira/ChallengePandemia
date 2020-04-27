@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uZE-n8-NSw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAO-58-Xvh">
-                                <rect key="frame" x="0.0" y="44" width="414" height="713"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="723"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-gv-DLD">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="307.5"/>
@@ -57,7 +58,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="Zox-LA-l6a"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cF-U6-8AQ" customClass="fl">
-                                <rect key="frame" x="33" y="773" width="348" height="49"/>
+                                <rect key="frame" x="33" y="783" width="348" height="39"/>
                                 <color key="backgroundColor" name="appYellow"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <state key="normal" title="Finalizar">
@@ -72,7 +73,6 @@
                         </subviews>
                         <color key="backgroundColor" name="appColor"/>
                         <constraints>
-                            <constraint firstItem="1cF-U6-8AQ" firstAttribute="height" secondItem="L4x-pd-WA8" secondAttribute="height" multiplier="0.06" id="BDB-WB-ZgQ"/>
                             <constraint firstItem="1cF-U6-8AQ" firstAttribute="leading" secondItem="L4x-pd-WA8" secondAttribute="leading" constant="33" id="BaM-jI-rsB"/>
                             <constraint firstItem="L4x-pd-WA8" firstAttribute="trailing" secondItem="1cF-U6-8AQ" secondAttribute="trailing" constant="33" id="DY4-MH-68J"/>
                             <constraint firstItem="JRs-gv-DLD" firstAttribute="width" secondItem="L4x-pd-WA8" secondAttribute="width" id="LS0-Qs-bk6"/>
@@ -92,6 +92,11 @@
                             <color key="tintColor" name="appBlue"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="content" destination="7p1-yK-8u3" id="0u8-fI-5Mn"/>
+                        <outlet property="finishBtn" destination="1cF-U6-8AQ" id="uRA-SY-MgQ"/>
+                        <outlet property="titleContent" destination="VI1-qP-APW" id="0Xy-rx-ZiZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsn-Yl-goN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

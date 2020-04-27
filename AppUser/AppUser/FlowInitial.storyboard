@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L40-Yj-lcC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,20 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUL-v2-dWO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="713"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="723"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E09-Oe-p5e">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1453"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="508"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6s-FI-aM9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6s-FI-aM9">
                                                 <rect key="frame" x="20" y="30" width="374" height="86"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E67-tP-EF8">
-                                                <rect key="frame" x="20" y="156" width="374" height="1289"/>
-                                                <string key="text">Pacientes com sintomas de Sindrome Gripal                                 (Febre &gt;=  37,5ºC aferida ou referida, acompanhada de tosse ou dor de garganta)mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmms</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E67-tP-EF8">
+                                                <rect key="frame" x="20" y="156" width="374" height="344"/>
+                                                <string key="text">Pacientes com sintomas de Sindrome Gripal                                 (Febre &gt;=  37,5ºC aferida ou referida, acompanhada de tosse ou dor de garganta).</string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                                 <color key="textColor" name="appYellow"/>
                                                 <nil key="highlightedColor"/>
@@ -58,7 +59,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="5GW-7L-Qyo"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-YS-D2i" customClass="fl">
-                                <rect key="frame" x="33" y="773" width="348" height="49"/>
+                                <rect key="frame" x="33" y="783" width="348" height="39"/>
                                 <color key="backgroundColor" name="appColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <state key="normal" title="Avançar">
@@ -70,13 +71,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="5R9-13-ou2" kind="show" id="cac-sW-8GQ"/>
+                                    <segue destination="8WW-5J-frd" kind="show" id="tHd-Jt-fzY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="appBlue"/>
                         <constraints>
-                            <constraint firstItem="GXY-YS-D2i" firstAttribute="height" secondItem="8VK-Bv-tN7" secondAttribute="height" multiplier="0.06" id="503-FR-2za"/>
                             <constraint firstItem="GXY-YS-D2i" firstAttribute="leading" secondItem="8VK-Bv-tN7" secondAttribute="leading" constant="33" id="Eg0-zY-yxN"/>
                             <constraint firstItem="E09-Oe-p5e" firstAttribute="width" secondItem="8VK-Bv-tN7" secondAttribute="width" id="SwC-89-6AD"/>
                             <constraint firstItem="gUL-v2-dWO" firstAttribute="leading" secondItem="8VK-Bv-tN7" secondAttribute="leading" id="Ubc-uw-zfY"/>
@@ -97,6 +97,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="progressBtn" destination="GXY-YS-D2i" id="qfU-Nn-rSc"/>
                         <outlet property="textInitial" destination="E67-tP-EF8" id="1ck-jy-4nK"/>
                         <outlet property="titleInitial" destination="P6s-FI-aM9" id="6jI-hy-dG1"/>
                     </connections>
@@ -106,14 +107,14 @@
             <point key="canvasLocation" x="-687" y="680"/>
         </scene>
         <!--FlowInput-->
-        <scene sceneID="3XI-C7-8JB">
+        <scene sceneID="qVn-op-UUJ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e8J-dB-orl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewControllerPlaceholder storyboardName="FlowInput" id="5R9-13-ou2" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="f5Z-S0-jxV"/>
+                <viewControllerPlaceholder storyboardName="FlowInput" id="8WW-5J-frd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wkX-A5-eFo"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xe-I6-C1T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="316" y="680"/>
+            <point key="canvasLocation" x="375" y="680"/>
         </scene>
     </scenes>
     <resources>

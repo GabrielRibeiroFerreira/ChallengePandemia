@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ID7-Ju-5nH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,18 +18,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DtX-rC-iD9">
-                                <rect key="frame" x="0.0" y="44" width="414" height="682"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="702"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-Ga-yt2">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1076"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-x3-XTP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-x3-XTP">
                                                 <rect key="frame" x="20" y="30" width="374" height="86"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Paciente tem sinais de gravidade?*" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7u-bO-CiZ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Paciente tem sinais de gravidade?*" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7u-bO-CiZ">
                                                 <rect key="frame" x="20" y="156" width="374" height="86"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                                 <color key="textColor" name="appBlue"/>
@@ -36,7 +37,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCP-YN-LDc">
                                                 <rect key="frame" x="20" y="274" width="374" height="794"/>
-                                                <mutableString key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label</mutableString>
+                                                <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" name="appContrast"/>
                                                 <nil key="highlightedColor"/>
@@ -66,8 +67,8 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="VMd-xc-tV2"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="TaI-jm-1Xf"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cp-mE-kZG">
-                                <rect key="frame" x="33" y="742" width="348" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="2cp-mE-kZG">
+                                <rect key="frame" x="33" y="762" width="348" height="39"/>
                                 <color key="backgroundColor" name="appBlue"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <state key="normal" title="Sim">
@@ -79,11 +80,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="X1R-nb-avK" kind="show" id="dTn-pE-reB"/>
+                                    <segue destination="Q51-7h-CE6" kind="show" id="6db-H1-4Jy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69m-D1-S72">
-                                <rect key="frame" x="33" y="807" width="348" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="69m-D1-S72">
+                                <rect key="frame" x="33" y="817" width="348" height="39"/>
                                 <color key="backgroundColor" name="appBlue"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <state key="normal" title="Não">
@@ -98,7 +99,6 @@
                         </subviews>
                         <color key="backgroundColor" name="appColor"/>
                         <constraints>
-                            <constraint firstItem="69m-D1-S72" firstAttribute="height" secondItem="i5G-bQ-sFr" secondAttribute="height" multiplier="0.06" id="0Jk-gP-NR2"/>
                             <constraint firstAttribute="bottom" secondItem="69m-D1-S72" secondAttribute="bottom" constant="40" id="0bW-xn-w8U"/>
                             <constraint firstItem="DtX-rC-iD9" firstAttribute="trailing" secondItem="i5G-bQ-sFr" secondAttribute="trailing" id="5QC-M5-YCW"/>
                             <constraint firstItem="2cp-mE-kZG" firstAttribute="top" secondItem="DtX-rC-iD9" secondAttribute="bottom" constant="16" id="D2w-Db-YkU"/>
@@ -106,7 +106,6 @@
                             <constraint firstItem="DtX-rC-iD9" firstAttribute="top" secondItem="i5G-bQ-sFr" secondAttribute="top" id="Yc6-mq-tD4"/>
                             <constraint firstItem="2cp-mE-kZG" firstAttribute="leading" secondItem="i5G-bQ-sFr" secondAttribute="leading" constant="33" id="bgm-ov-dGY"/>
                             <constraint firstItem="i5G-bQ-sFr" firstAttribute="trailing" secondItem="69m-D1-S72" secondAttribute="trailing" constant="33" id="h98-WX-7xV"/>
-                            <constraint firstItem="2cp-mE-kZG" firstAttribute="height" secondItem="i5G-bQ-sFr" secondAttribute="height" multiplier="0.06" id="hxt-1m-uof"/>
                             <constraint firstItem="i5G-bQ-sFr" firstAttribute="trailing" secondItem="2cp-mE-kZG" secondAttribute="trailing" constant="33" id="iUf-4V-XXN"/>
                             <constraint firstItem="69m-D1-S72" firstAttribute="top" secondItem="2cp-mE-kZG" secondAttribute="bottom" constant="16" id="m23-D3-nah"/>
                             <constraint firstItem="eCN-Ga-yt2" firstAttribute="width" secondItem="i5G-bQ-sFr" secondAttribute="width" id="qr0-vO-uvS"/>
@@ -122,20 +121,27 @@
                             <color key="tintColor" name="appBlue"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="content" destination="zCP-YN-LDc" id="NBc-iZ-7hd"/>
+                        <outlet property="noBtn" destination="69m-D1-S72" id="wmr-KQ-Oev"/>
+                        <outlet property="subtitleContent" destination="p7u-bO-CiZ" id="5wD-G3-MdA"/>
+                        <outlet property="titleContent" destination="yRY-x3-XTP" id="gGl-Hi-5s1"/>
+                        <outlet property="yesBtn" destination="2cp-mE-kZG" id="6ue-d7-Hqy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBq-EP-a97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-700" y="697.76785714285711"/>
         </scene>
         <!--FlowShortContent-->
-        <scene sceneID="kmx-0a-Q2x">
+        <scene sceneID="ckU-Ey-Q6t">
             <objects>
-                <viewControllerPlaceholder storyboardName="FlowShortContent" id="X1R-nb-avK" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="52v-4s-qR4"/>
+                <viewControllerPlaceholder storyboardName="FlowShortContent" id="Q51-7h-CE6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="LdK-HG-qxa"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9NT-Cl-Sax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWT-HQ-1PC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="698"/>
+            <point key="canvasLocation" x="202" y="698"/>
         </scene>
     </scenes>
     <resources>
