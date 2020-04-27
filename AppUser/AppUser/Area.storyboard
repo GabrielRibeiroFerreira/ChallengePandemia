@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MLd-M1-Iwr">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Area View Controller-->
+        <scene sceneID="6Og-Hr-5W7">
+            <objects>
+                <viewController id="MLd-M1-Iwr" customClass="AreaViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oPt-uV-Z8Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BXb-PS-lZt">
+                                <rect key="frame" x="15" y="76" width="384" height="32"/>
+                                <color key="backgroundColor" name="appDetail"/>
+                                <segments>
+                                    <segment title="Protocolos"/>
+                                    <segment title="Fluxos"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="appBlue"/>
+                                <connections>
+                                    <action selector="indexChanged:" destination="MLd-M1-Iwr" eventType="valueChanged" id="Jwt-LU-P9L"/>
+                                </connections>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="yN5-Lj-XSS">
+                                <rect key="frame" x="0.0" y="117" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7dS-3i-MkO">
+                                <rect key="frame" x="0.0" y="183" width="414" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yN5-Lj-XSS" firstAttribute="leading" secondItem="grT-BB-H0L" secondAttribute="leading" id="1zc-wr-ZJj"/>
+                            <constraint firstItem="grT-BB-H0L" firstAttribute="trailing" secondItem="7dS-3i-MkO" secondAttribute="trailing" id="2nu-ue-i4y"/>
+                            <constraint firstItem="yN5-Lj-XSS" firstAttribute="trailing" secondItem="grT-BB-H0L" secondAttribute="trailing" id="4UW-tU-cq1"/>
+                            <constraint firstItem="7dS-3i-MkO" firstAttribute="top" secondItem="yN5-Lj-XSS" secondAttribute="bottom" constant="10" id="8jJ-Dl-ebA"/>
+                            <constraint firstItem="BXb-PS-lZt" firstAttribute="top" secondItem="grT-BB-H0L" secondAttribute="top" constant="32" id="JQu-x1-tA6"/>
+                            <constraint firstItem="BXb-PS-lZt" firstAttribute="leading" secondItem="grT-BB-H0L" secondAttribute="leading" constant="15" id="Mnz-rA-BJO"/>
+                            <constraint firstItem="grT-BB-H0L" firstAttribute="bottom" secondItem="7dS-3i-MkO" secondAttribute="bottom" id="h9g-nV-bEF"/>
+                            <constraint firstItem="grT-BB-H0L" firstAttribute="trailing" secondItem="BXb-PS-lZt" secondAttribute="trailing" constant="15" id="sLN-XM-0NZ"/>
+                            <constraint firstItem="yN5-Lj-XSS" firstAttribute="top" secondItem="BXb-PS-lZt" secondAttribute="bottom" constant="10" id="uZL-Tm-NkV"/>
+                            <constraint firstItem="7dS-3i-MkO" firstAttribute="leading" secondItem="grT-BB-H0L" secondAttribute="leading" id="zgi-Q0-syK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="grT-BB-H0L"/>
+                    </view>
+                    <connections>
+                        <outlet property="protocolTable" destination="7dS-3i-MkO" id="Ypc-e8-csv"/>
+                        <outlet property="searchBar" destination="yN5-Lj-XSS" id="nhv-Db-JUw"/>
+                        <outlet property="segmented" destination="BXb-PS-lZt" id="0EV-gd-StN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S3P-mb-rjv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133" y="34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="appBlue">
+            <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appDetail">
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

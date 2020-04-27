@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,10 +20,23 @@
                             <outlet property="delegate" destination="SEb-gR-sBG" id="aQS-hX-1gn"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="Gti-GU-A09" kind="show" identifier="areaSegue" id="RTP-By-zab"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khb-F1-g2E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="388" y="-112"/>
+        </scene>
+        <!--Area-->
+        <scene sceneID="sFD-kI-wY2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Area" id="Gti-GU-A09" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Epz-xC-byt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YY0-6l-KRU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="-113"/>
         </scene>
     </scenes>
 </document>

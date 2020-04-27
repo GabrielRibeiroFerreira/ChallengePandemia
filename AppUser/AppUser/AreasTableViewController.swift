@@ -11,12 +11,13 @@ import UIKit
 class AreasTableViewController: UITableViewController {
     let areaIdentifier : String = "AreaTableViewCell"
     let areas : [(name : String, image : UIImage)] = [(NSLocalizedString("Saúde da Criança e do Adolescente", comment: "children"), UIImage(named: "iconChildren") ?? UIImage()), (NSLocalizedString("Saúde da mulher", comment: "woman"), UIImage(named: "iconWoman") ?? UIImage()), (NSLocalizedString("Saúde do Adulto e do Idoso", comment: "adult"), UIImage(named: "iconAdult") ?? UIImage()), (NSLocalizedString("Atenção Primária à Saúde", comment: "primary"), UIImage(named: "iconPrimary") ?? UIImage())]
+    var selectedArea : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue") ?? UIColor.blue]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue") ?? UIColor.black]
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -42,8 +43,6 @@ class AreasTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.areaIdentifier, for: indexPath) as! AreaTableViewCell
         let area = self.areas[indexPath.row]
 
-        print(area)
-
         cell.nameLabel.text = area.name
         cell.iconImage.image = area.image
 
@@ -55,12 +54,18 @@ class AreasTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
-    /*
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath as IndexPath)
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+        self.selectedArea = self.areas[indexPath.row].name
+        performSegue(withIdentifier: "areaSegue", sender: cell)
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "areaSegue"{
+            if let areaView = segue.destination as? AreaViewController {
+                    areaView.area = self.selectedArea
+            }
+        }
+    }
 }
