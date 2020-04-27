@@ -21,7 +21,7 @@ class OnboardingViewController: UIViewController {
         //Underline na palavra Profissional
         self.professionalLabel.attributedText = NSAttributedString(string: "Profissional", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         
-        //Bordas do botão arredondadas 
+        //Bordas do botão arredondadas
         self.enterButton.layer.cornerRadius = 16.0
         
         self.setupAccessibility()
@@ -32,11 +32,14 @@ class OnboardingViewController: UIViewController {
         let professionalFont = UIFont(name: "SFProDisplay-Bold", size: 28) ?? UIFont.systemFont(ofSize: 28)
         let agilityFont = UIFont(name: "SFProDisplay-Bold", size: 37) ?? UIFont.systemFont(ofSize: 37)
         let descriptionFont = UIFont(name: "SFProDisplay-Medium", size: 18) ?? UIFont.systemFont(ofSize: 18)
+        let buttonFont = UIFont(name: "SFProDisplay-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24)
+
 
         self.forYouLabel.dynamicFont = forYouFont
         self.professionalLabel.dynamicFont = professionalFont
         self.agilityLabel.dynamicFont = agilityFont
         self.descriptionLabel.dynamicFont = descriptionFont
+        self.enterButton.titleLabel?.dynamicFont = buttonFont
     }
     
 }

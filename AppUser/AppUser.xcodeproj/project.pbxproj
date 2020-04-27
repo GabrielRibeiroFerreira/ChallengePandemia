@@ -32,6 +32,7 @@
 		2A5685CF2451095800ECAC23 /* ProtocolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5685CD2451095800ECAC23 /* ProtocolTableViewCell.swift */; };
 		2A5685D02451095800ECAC23 /* ProtocolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5685CE2451095800ECAC23 /* ProtocolTableViewCell.xib */; };
 		2A5685D22451E4B300ECAC23 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5685D12451E4B300ECAC23 /* AreaViewController.swift */; };
+		15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */; };
 		2A5CF431244A254D00E98022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF430244A254D00E98022 /* AppDelegate.swift */; };
 		2A5CF433244A254D00E98022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF432244A254D00E98022 /* SceneDelegate.swift */; };
 		2A5CF435244A254D00E98022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF434244A254D00E98022 /* ViewController.swift */; };
@@ -67,6 +68,7 @@
 		155C65FF24511720000969CD /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
 		155C661224512383000969CD /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		156577BD244E078900102570 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerVC.swift; sourceTree = "<group>"; };
 		2A5685CA2450C10E00ECAC23 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2A5685CD2451095800ECAC23 /* ProtocolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTableViewCell.swift; sourceTree = "<group>"; };
 		2A5685CE2451095800ECAC23 /* ProtocolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProtocolTableViewCell.xib; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				2A5CF439244A254D00E98022 /* AppUser.xcdatamodeld */,
 				156577BD244E078900102570 /* OnboardingViewController.swift */,
 				155C661224512383000969CD /* AboutViewController.swift */,
+				15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */,
 				2AAE67FB244DFB6C00129E50 /* Areas.storyboard */,
 				2AAE67FD244DFE4F00129E50 /* AreasTableViewController.swift */,
 				2A5685CA2450C10E00ECAC23 /* Area.storyboard */,
@@ -291,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */,
 				2A5CF43B244A254D00E98022 /* AppUser.xcdatamodeld in Sources */,
 				2A5CF435244A254D00E98022 /* ViewController.swift in Sources */,
 				156577BE244E078900102570 /* OnboardingViewController.swift in Sources */,
@@ -298,10 +302,10 @@
 				2A5685CF2451095800ECAC23 /* ProtocolTableViewCell.swift in Sources */,
 				2A5CF431244A254D00E98022 /* AppDelegate.swift in Sources */,
 				2A5CF433244A254D00E98022 /* SceneDelegate.swift in Sources */,
-				155C65E8245115F2000969CD /* UILabel+Accessibility.swift in Sources */,
 				2AAE6803244E1FE600129E50 /* AreaTableViewCell.swift in Sources */,
 				2A5685D22451E4B300ECAC23 /* AreaViewController.swift in Sources */,
 				2AAE67FE244DFE4F00129E50 /* AreasTableViewController.swift in Sources */,
+				155C65E8245115F2000969CD /* UILabel+Accessibility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

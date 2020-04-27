@@ -14,10 +14,9 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var secondDescripLabel: UILabel!
     @IBOutlet weak var contactLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
-    let appBlueColor = UIColor(named: "appBlue")
-    
-    @IBAction func enterButton(_ sender: Any) {
-    }
+    @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var numberVersionLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,15 +25,16 @@ class AboutViewController: UIViewController {
     }
     
     private func setupAccessibility() {
-        let firstFont = UIFont(name: "SFProDisplay", size: 18) ?? UIFont.systemFont(ofSize: 18)
+        let commonFont = UIFont(name: "SFProDisplay", size: 18) ?? UIFont.systemFont(ofSize: 18)
         let secondFont = UIFont(name: "SFProDisplay-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18)
         let contactFont = UIFont(name: "SFProDisplay-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24)
-        let emailFont = UIFont(name: "SFProDisplay", size: 18) ?? UIFont.systemFont(ofSize: 18)
 
-        self.firstDescripLabel.dynamicFont = firstFont
+        self.firstDescripLabel.dynamicFont = commonFont
         self.secondDescripLabel.dynamicFont = secondFont
         self.contactLabel.dynamicFont = contactFont
-        self.emailLabel.dynamicFont = emailFont
+        self.emailLabel.dynamicFont = commonFont
+        self.versionLabel.dynamicFont = commonFont
+        self.numberVersionLabel.dynamicFont = commonFont
     }
     
 }
