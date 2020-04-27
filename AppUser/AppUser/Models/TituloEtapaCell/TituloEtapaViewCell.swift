@@ -11,15 +11,24 @@ import UIKit
 class TituloEtapaViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var circleView: UIImageView!
     @IBOutlet weak var lineView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.titleLabel.attributedText = NSAttributedString(string: "Título da etapa", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        
+        self.setupAccessibility()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
+    private func setupAccessibility() {
+        let titleFont = UIFont(name: "SFProDisplay-Regular", size: 18) ?? UIFont.systemFont(ofSize: 18)
+
+        self.titleLabel.dynamicFont = titleFont
+    }
 }

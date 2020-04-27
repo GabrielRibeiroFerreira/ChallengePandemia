@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1548431A245736CF00D5E408 /* EtapasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15484319245736CF00D5E408 /* EtapasViewController.swift */; };
 		155C65E8245115F2000969CD /* UILabel+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155C65E7245115F2000969CD /* UILabel+Accessibility.swift */; };
 		155C660024511720000969CD /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155C65EE24511720000969CD /* SF-Pro-Display-Black.otf */; };
 		155C660124511720000969CD /* SF-Pro-Display-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155C65EF24511720000969CD /* SF-Pro-Display-MediumItalic.otf */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15484319245736CF00D5E408 /* EtapasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtapasViewController.swift; sourceTree = "<group>"; };
 		155C65E7245115F2000969CD /* UILabel+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Accessibility.swift"; sourceTree = "<group>"; };
 		155C65EE24511720000969CD /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
 		155C65EF24511720000969CD /* SF-Pro-Display-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				155C661224512383000969CD /* AboutViewController.swift */,
 				15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */,
 				15A48B012453606100870B04 /* Etapas.storyboard */,
+				15484319245736CF00D5E408 /* EtapasViewController.swift */,
 			);
 			path = AppUser;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			files = (
 				15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */,
 				2A5CF43B244A254D00E98022 /* AppUser.xcdatamodeld in Sources */,
+				1548431A245736CF00D5E408 /* EtapasViewController.swift in Sources */,
 				15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */,
 				2A5CF435244A254D00E98022 /* ViewController.swift in Sources */,
 				156577BE244E078900102570 /* OnboardingViewController.swift in Sources */,
