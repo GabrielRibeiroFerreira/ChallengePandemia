@@ -9,7 +9,7 @@
 import Foundation
 
 class AppUserServices: BaseService {
-    func getAllRooms(router: AppUserRouter = AppUserRouter.getAllCharacters, completion: @escaping (Result<RoomResponse, Error>) -> ()) {
+    func getAllRooms(router: AppUserRouter = AppUserRouter.getAllRooms, completion: @escaping (Result<RoomResponse, Error>) -> ()) {
         return self.request(router: router, completion: completion)
     }
     

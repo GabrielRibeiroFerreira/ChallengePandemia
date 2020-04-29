@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CharacterResponse: Codable {
+class RoomResponse: Codable {
     let results: [Room]
 
     init(results: [Room]) {
