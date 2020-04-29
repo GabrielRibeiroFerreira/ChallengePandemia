@@ -69,9 +69,6 @@
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="JSL-bz-CrB" kind="show" id="m3m-3r-EZU"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="appColor"/>
@@ -104,16 +101,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bG9-gZ-b6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-687" y="680"/>
-        </scene>
-        <!--FlowExtensiveContent-->
-        <scene sceneID="4bF-or-Xhw">
-            <objects>
-                <viewControllerPlaceholder storyboardName="FlowExtensiveContent" id="JSL-bz-CrB" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4oj-I1-Xkx"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8yz-7k-0YZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="234" y="680"/>
         </scene>
     </scenes>
     <resources>

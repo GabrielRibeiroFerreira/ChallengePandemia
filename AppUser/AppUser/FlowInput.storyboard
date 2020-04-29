@@ -79,9 +79,6 @@
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="Q51-7h-CE6" kind="show" id="6db-H1-4Jy"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="69m-D1-S72">
                                 <rect key="frame" x="33" y="817" width="348" height="39"/>
@@ -132,16 +129,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBq-EP-a97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-700" y="697.76785714285711"/>
-        </scene>
-        <!--FlowShortContent-->
-        <scene sceneID="ckU-Ey-Q6t">
-            <objects>
-                <viewControllerPlaceholder storyboardName="FlowShortContent" id="Q51-7h-CE6" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="LdK-HG-qxa"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hWT-HQ-1PC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="202" y="698"/>
         </scene>
     </scenes>
     <resources>

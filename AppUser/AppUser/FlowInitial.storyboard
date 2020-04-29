@@ -70,9 +70,6 @@
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="8WW-5J-frd" kind="show" id="tHd-Jt-fzY"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="appBlue"/>
@@ -105,16 +102,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odg-mz-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-687" y="680"/>
-        </scene>
-        <!--FlowInput-->
-        <scene sceneID="qVn-op-UUJ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="FlowInput" id="8WW-5J-frd" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="wkX-A5-eFo"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xe-I6-C1T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="375" y="680"/>
         </scene>
     </scenes>
     <resources>
