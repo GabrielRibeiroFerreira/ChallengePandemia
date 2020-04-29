@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchViewHeader" customModule="AppUser" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="252"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-93-pSM">
+                    <rect key="frame" x="0.0" y="44" width="414" height="232"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShH-B3-5JI">
+                            <rect key="frame" x="8" y="179" width="398" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Gby-xE-oCb">
+                            <rect key="frame" x="10" y="24" width="394" height="135"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Gby-xE-oCb" secondAttribute="trailing" constant="10" id="3A5-42-tjT"/>
+                        <constraint firstItem="ShH-B3-5JI" firstAttribute="leading" secondItem="EmB-93-pSM" secondAttribute="leading" constant="8" id="5rq-9b-ksb"/>
+                        <constraint firstAttribute="bottom" secondItem="ShH-B3-5JI" secondAttribute="bottom" constant="32" id="L0j-iU-mQY"/>
+                        <constraint firstItem="Gby-xE-oCb" firstAttribute="top" secondItem="EmB-93-pSM" secondAttribute="top" constant="24" id="V8l-MO-xKf"/>
+                        <constraint firstItem="Gby-xE-oCb" firstAttribute="leading" secondItem="EmB-93-pSM" secondAttribute="leading" constant="10" id="qHa-3F-jvg"/>
+                        <constraint firstItem="ShH-B3-5JI" firstAttribute="top" secondItem="Gby-xE-oCb" secondAttribute="bottom" constant="20" id="sZa-Fe-doc"/>
+                        <constraint firstAttribute="trailing" secondItem="ShH-B3-5JI" secondAttribute="trailing" constant="8" id="shK-cf-V4M"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="EmB-93-pSM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Udr-Xl-Rsa"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EmB-93-pSM" secondAttribute="bottom" constant="-24" id="XOn-4y-C4U"/>
+                <constraint firstItem="EmB-93-pSM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ZV0-BI-SaR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EmB-93-pSM" secondAttribute="trailing" id="efj-wT-fdp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="roomLabel" destination="ShH-B3-5JI" id="RKS-JQ-gjJ"/>
+                <outlet property="searchBar" destination="Gby-xE-oCb" id="lnj-Bh-v0B"/>
+            </connections>
+            <point key="canvasLocation" x="57.971014492753625" y="111.83035714285714"/>
+        </view>
+    </objects>
+</document>
