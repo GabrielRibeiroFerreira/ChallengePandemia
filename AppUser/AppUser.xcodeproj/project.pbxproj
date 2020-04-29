@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1548431A245736CF00D5E408 /* EtapasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15484319245736CF00D5E408 /* EtapasViewController.swift */; };
 		155C65E8245115F2000969CD /* UILabel+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155C65E7245115F2000969CD /* UILabel+Accessibility.swift */; };
 		155C660024511720000969CD /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155C65EE24511720000969CD /* SF-Pro-Display-Black.otf */; };
 		155C660124511720000969CD /* SF-Pro-Display-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155C65EF24511720000969CD /* SF-Pro-Display-MediumItalic.otf */; };
@@ -33,6 +34,9 @@
 		2A5685D02451095800ECAC23 /* ProtocolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5685CE2451095800ECAC23 /* ProtocolTableViewCell.xib */; };
 		2A5685D22451E4B300ECAC23 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5685D12451E4B300ECAC23 /* AreaViewController.swift */; };
 		15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */; };
+		15A48B022453606100870B04 /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B012453606100870B04 /* Etapas.storyboard */; };
+		15A48B05245388C100870B04 /* TituloEtapaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */; };
+		15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */; };
 		2A5CF431244A254D00E98022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF430244A254D00E98022 /* AppDelegate.swift */; };
 		2A5CF433244A254D00E98022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF432244A254D00E98022 /* SceneDelegate.swift */; };
 		2A5CF435244A254D00E98022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF434244A254D00E98022 /* ViewController.swift */; };
@@ -47,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15484319245736CF00D5E408 /* EtapasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtapasViewController.swift; sourceTree = "<group>"; };
 		155C65E7245115F2000969CD /* UILabel+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Accessibility.swift"; sourceTree = "<group>"; };
 		155C65EE24511720000969CD /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
 		155C65EF24511720000969CD /* SF-Pro-Display-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-MediumItalic.otf"; sourceTree = "<group>"; };
@@ -73,6 +78,9 @@
 		2A5685CD2451095800ECAC23 /* ProtocolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTableViewCell.swift; sourceTree = "<group>"; };
 		2A5685CE2451095800ECAC23 /* ProtocolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProtocolTableViewCell.xib; sourceTree = "<group>"; };
 		2A5685D12451E4B300ECAC23 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
+		15A48B012453606100870B04 /* Etapas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
+		15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TituloEtapaViewCell.xib; sourceTree = "<group>"; };
+		15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TituloEtapaViewCell.swift; sourceTree = "<group>"; };
 		2A5CF42D244A254D00E98022 /* AppUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5CF430244A254D00E98022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5CF432244A254D00E98022 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +149,15 @@
 			path = ProtocolCell;
 			sourceTree = "<group>";
 		};
+		15A48B032453882600870B04 /* TituloEtapaCell */ = {
+			isa = PBXGroup;
+			children = (
+				15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */,
+				15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */,
+			);
+			path = TituloEtapaCell;
+			sourceTree = "<group>";
+		};
 		2A5CF424244A254D00E98022 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +192,8 @@
 				156577BD244E078900102570 /* OnboardingViewController.swift */,
 				155C661224512383000969CD /* AboutViewController.swift */,
 				15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */,
+				15A48B012453606100870B04 /* Etapas.storyboard */,
+				15484319245736CF00D5E408 /* EtapasViewController.swift */,
 				2AAE67FB244DFB6C00129E50 /* Areas.storyboard */,
 				2AAE67FD244DFE4F00129E50 /* AreasTableViewController.swift */,
 				2A5685CA2450C10E00ECAC23 /* Area.storyboard */,
@@ -186,6 +205,7 @@
 		2AAE67FF244E1FE600129E50 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				15A48B032453882600870B04 /* TituloEtapaCell */,
 				2AAE6800244E1FE600129E50 /* AreaCell */,
 				2A5685CC2450CE0C00ECAC23 /* ProtocolCell */,
 			);
@@ -263,6 +283,7 @@
 				155C660C24511720000969CD /* SF-Pro-Display-BlackItalic.otf in Resources */,
 				155C660224511720000969CD /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
 				155C660D24511720000969CD /* SF-Pro-Display-UltralightItalic.otf in Resources */,
+				15A48B05245388C100870B04 /* TituloEtapaViewCell.xib in Resources */,
 				155C660B24511720000969CD /* SF-Pro-Display-BoldItalic.otf in Resources */,
 				155C660524511720000969CD /* SF-Pro-Display-Semibold.otf in Resources */,
 				2A5CF440244A254F00E98022 /* LaunchScreen.storyboard in Resources */,
@@ -277,6 +298,7 @@
 				2AAE67FC244DFB6C00129E50 /* Areas.storyboard in Resources */,
 				2A5685CB2450C10E00ECAC23 /* Area.storyboard in Resources */,
 				155C660124511720000969CD /* SF-Pro-Display-MediumItalic.otf in Resources */,
+				15A48B022453606100870B04 /* Etapas.storyboard in Resources */,
 				155C661024511720000969CD /* SF-Pro-Display-Thin.otf in Resources */,
 				155C660624511720000969CD /* SF-Pro-Display-Bold.otf in Resources */,
 				155C660724511720000969CD /* SF-Pro-Display-Heavy.otf in Resources */,
@@ -296,6 +318,8 @@
 			files = (
 				15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */,
 				2A5CF43B244A254D00E98022 /* AppUser.xcdatamodeld in Sources */,
+				1548431A245736CF00D5E408 /* EtapasViewController.swift in Sources */,
+				15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */,
 				2A5CF435244A254D00E98022 /* ViewController.swift in Sources */,
 				156577BE244E078900102570 /* OnboardingViewController.swift in Sources */,
 				155C661324512383000969CD /* AboutViewController.swift in Sources */,
