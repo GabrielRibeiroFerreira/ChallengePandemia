@@ -16,6 +16,7 @@ class FlowInitialViewController: UIViewController {
 
     @IBOutlet weak var progressBtn: UIButton!
     
+    var flowTitle: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()

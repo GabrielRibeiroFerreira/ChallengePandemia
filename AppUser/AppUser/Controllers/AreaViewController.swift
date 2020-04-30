@@ -21,6 +21,8 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var searchActive : Bool = false
     
+    var selectedFlow: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -70,6 +72,21 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.nameLabel.text = actual
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath as IndexPath)
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+        self.selectedFlow = self.list[indexPath.row]
+        performSegue(withIdentifier: "initialFlowSegue", sender: cell)
+    }
+       
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "initialFlowSegue" {
+            if let flowInitialView = segue.destination as? FlowInitialViewController {
+                flowInitialView.flowTitle = self.selectedFlow
+            }
+        }
     }
     
     // MARK: - Segmented Control
@@ -129,15 +146,5 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         self.protocolTable.reloadData()
     }
-    
-    // MARK: - Navigation
-    
-    /*
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
