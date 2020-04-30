@@ -13,13 +13,20 @@ class ProtocolTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.setupAccessibility()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    private func setupAccessibility() {
+        let nameFont = UIFont(name: "SFProDisplay-Bold", size: 17) ?? UIFont.systemFont(ofSize: 17)
+
+        self.nameLabel.dynamicFont = nameFont
     }
     
 }

@@ -91,6 +91,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Etapas" id="ZpU-ie-lBM">
                             <color key="tintColor" name="appColor"/>
+                            <connections>
+                                <segue destination="qn7-gn-qRK" kind="show" id="KOw-9q-3q2"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -102,6 +105,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odg-mz-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-687" y="680"/>
+        </scene>
+        <!--Etapas-->
+        <scene sceneID="j5H-2L-aFb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Etapas" id="qn7-gn-qRK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fUc-Y3-yEs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uop-KO-dUz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="680"/>
         </scene>
     </scenes>
     <resources>

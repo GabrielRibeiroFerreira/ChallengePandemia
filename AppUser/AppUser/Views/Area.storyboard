@@ -57,11 +57,22 @@
                         <outlet property="protocolTable" destination="7dS-3i-MkO" id="Ypc-e8-csv"/>
                         <outlet property="searchBar" destination="yN5-Lj-XSS" id="nhv-Db-JUw"/>
                         <outlet property="segmented" destination="BXb-PS-lZt" id="0EV-gd-StN"/>
+                        <segue destination="C4U-UY-jcZ" kind="show" identifier="initialFlowSegue" id="1CZ-cL-BVS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3P-mb-rjv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="133" y="34"/>
+        </scene>
+        <!--FlowInitial-->
+        <scene sceneID="LmN-ZM-ZwK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowInitial" id="C4U-UY-jcZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Y0a-2t-POb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMr-iC-bwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816" y="33"/>
         </scene>
     </scenes>
     <resources>
