@@ -14,8 +14,10 @@ extension UILabel {
         set {
             let fontName = newValue.components(separatedBy: "_")[0]
             let fontSize = CGFloat(Int(newValue.components(separatedBy: "_")[1]) ?? 17)
+            
 
-            let newFont = UIFont(name: fontName, size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)
+            let newFont = UIFont(name: fontName, size: fontSize) ?? UIFont.systemFont(ofSize:
+                fontSize)
             self.dynamicFont = newFont
         }
         
