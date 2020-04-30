@@ -13,7 +13,8 @@ class RoomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        self.setupAccessibility()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -21,5 +22,11 @@ class RoomTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    private func setupAccessibility() {
+         let nameFont = UIFont(name: "SFProDisplay-Regular", size: 22) ?? UIFont.systemFont(ofSize: 22)
+
+         self.nameLabel.dynamicFont = nameFont
+     }
     
 }
