@@ -22,6 +22,9 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
         
         self.setupAccessibility()
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appBlue") ?? UIColor.white]
     }
     
     private func setupAccessibility() {

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,29 +15,48 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="252"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-xh-EAe">
+                    <rect key="frame" x="0.0" y="44" width="414" height="24"/>
+                    <color key="backgroundColor" name="appBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="hgg-KM-mcH"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-93-pSM">
-                    <rect key="frame" x="0.0" y="44" width="414" height="232"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="208"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGb-Fb-RmV">
+                            <rect key="frame" x="0.0" y="184" width="414" height="24"/>
+                            <color key="backgroundColor" name="appColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="yb5-aa-zDQ"/>
+                            </constraints>
+                        </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShH-B3-5JI">
-                            <rect key="frame" x="8" y="179" width="398" height="21"/>
+                            <rect key="frame" x="8" y="175" width="398" height="21"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Gby-xE-oCb">
-                            <rect key="frame" x="10" y="24" width="394" height="135"/>
+                        <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Gby-xE-oCb">
+                            <rect key="frame" x="10" y="24" width="394" height="131"/>
+                            <color key="backgroundColor" name="appColor"/>
+                            <color key="barTintColor" name="appColor"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" name="appColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="Gby-xE-oCb" secondAttribute="trailing" constant="10" id="3A5-42-tjT"/>
                         <constraint firstItem="ShH-B3-5JI" firstAttribute="leading" secondItem="EmB-93-pSM" secondAttribute="leading" constant="8" id="5rq-9b-ksb"/>
-                        <constraint firstAttribute="bottom" secondItem="ShH-B3-5JI" secondAttribute="bottom" constant="32" id="L0j-iU-mQY"/>
+                        <constraint firstAttribute="bottom" secondItem="ShH-B3-5JI" secondAttribute="bottom" constant="12" id="L0j-iU-mQY"/>
                         <constraint firstItem="Gby-xE-oCb" firstAttribute="top" secondItem="EmB-93-pSM" secondAttribute="top" constant="24" id="V8l-MO-xKf"/>
+                        <constraint firstAttribute="trailing" secondItem="eGb-Fb-RmV" secondAttribute="trailing" id="dIN-pt-2Os"/>
+                        <constraint firstAttribute="bottom" secondItem="eGb-Fb-RmV" secondAttribute="bottom" id="dUk-ku-knw"/>
                         <constraint firstItem="Gby-xE-oCb" firstAttribute="leading" secondItem="EmB-93-pSM" secondAttribute="leading" constant="10" id="qHa-3F-jvg"/>
                         <constraint firstItem="ShH-B3-5JI" firstAttribute="top" secondItem="Gby-xE-oCb" secondAttribute="bottom" constant="20" id="sZa-Fe-doc"/>
                         <constraint firstAttribute="trailing" secondItem="ShH-B3-5JI" secondAttribute="trailing" constant="8" id="shK-cf-V4M"/>
+                        <constraint firstItem="eGb-Fb-RmV" firstAttribute="leading" secondItem="EmB-93-pSM" secondAttribute="leading" id="tkn-QM-ztd"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -45,11 +65,14 @@
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" name="appBlue"/>
             <constraints>
+                <constraint firstItem="RTP-xh-EAe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="U0H-0n-hY8"/>
                 <constraint firstItem="EmB-93-pSM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Udr-Xl-Rsa"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EmB-93-pSM" secondAttribute="bottom" constant="-24" id="XOn-4y-C4U"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EmB-93-pSM" secondAttribute="bottom" id="XOn-4y-C4U"/>
+                <constraint firstItem="RTP-xh-EAe" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YTv-O0-Txz"/>
                 <constraint firstItem="EmB-93-pSM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ZV0-BI-SaR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RTP-xh-EAe" secondAttribute="trailing" id="biV-Yb-1ic"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EmB-93-pSM" secondAttribute="trailing" id="efj-wT-fdp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -61,4 +84,12 @@
             <point key="canvasLocation" x="57.971014492753625" y="111.83035714285714"/>
         </view>
     </objects>
+    <resources>
+        <namedColor name="appBlue">
+            <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

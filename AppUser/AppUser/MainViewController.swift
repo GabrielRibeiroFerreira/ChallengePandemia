@@ -14,9 +14,10 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
     
     let roomIdentifier : String = "RoomTableViewCell"
     let searchIdentifier : String = "SearchView"
-    let sectionIdentifier : String = "InitialView "
+    let sectionIdentifier : String = "InitialView"
     
     var rooms : [String] = ["Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste"]
+    var selectedRoom : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,16 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.indexDisplayMode = .alwaysHidden
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appColor") ?? UIColor.white]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appColor") ?? UIColor.white]
     }
     
 
@@ -46,7 +57,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         
         switch section {
         case 0:
-            let initial = tableView.dequeueReusableHeaderFooterView(withIdentifier: self.searchIdentifier) as? InitialViewHeader
+            let initial = tableView.dequeueReusableHeaderFooterView(withIdentifier: self.sectionIdentifier) as? InitialViewHeader
             print(initial?.initialLabel.text)
             sec = initial
         case 1:
@@ -101,5 +112,20 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         return cell
     }
     
+    // MARK: - Navigation
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath as IndexPath)
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
+        self.selectedRoom = self.rooms[indexPath.row]
+        performSegue(withIdentifier: "roomSegue", sender: cell)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "roomSegue"{
+            if let areasView = segue.destination as? AreasTableViewController {
+                areasView.room = self.selectedRoom
+            }
+        }
+    }
 }
 

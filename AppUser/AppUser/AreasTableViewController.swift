@@ -9,6 +9,7 @@
 import UIKit
 
 class AreasTableViewController: UITableViewController {
+    var room : String?
     let areaIdentifier : String = "AreaTableViewCell"
     let areas : [(name : String, image : UIImage)] = [(NSLocalizedString("Saúde da Criança e do Adolescente", comment: "children"), UIImage(named: "iconChildren") ?? UIImage()), (NSLocalizedString("Saúde da mulher", comment: "woman"), UIImage(named: "iconWoman") ?? UIImage()), (NSLocalizedString("Saúde do Adulto e do Idoso", comment: "adult"), UIImage(named: "iconAdult") ?? UIImage()), (NSLocalizedString("Atenção Primária à Saúde", comment: "primary"), UIImage(named: "iconPrimary") ?? UIImage())]
     var selectedArea : String = ""
@@ -25,6 +26,11 @@ class AreasTableViewController: UITableViewController {
         
         let nib = UINib.init(nibName: self.areaIdentifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: self.areaIdentifier)
+        
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appBlue") ?? UIColor.white]
+        
+        self.title = self.room
     }
 
     // MARK: - Table view data source
