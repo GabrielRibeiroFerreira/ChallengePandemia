@@ -33,7 +33,10 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.indexDisplayMode = .alwaysHidden
-
+        
+        //Deixa status bar com fundo azul
+        self.view.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
+        
         self.setupNavBar()
     }
     
@@ -134,5 +137,15 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
             }
         }
     }
+    
+    // MARK: - SearchBar & Keyboard
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar?.endEditing(true)
+    }
+    
+    override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.searchBar?.endEditing(true)
+    }
+    
 }
 

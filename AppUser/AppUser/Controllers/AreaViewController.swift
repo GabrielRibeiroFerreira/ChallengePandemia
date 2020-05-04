@@ -141,10 +141,6 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         searchActive = false;
     }
 
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchActive = false;
-    }
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.list = getList()
         self.list = self.list.filter{ (text) -> Bool in
@@ -161,6 +157,14 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
             searchActive = true;
         }
         self.protocolTable.reloadData()
+    }
+
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar?.endEditing(true)
+    }
+
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        self.searchBar?.endEditing(true)
     }
 
 }
