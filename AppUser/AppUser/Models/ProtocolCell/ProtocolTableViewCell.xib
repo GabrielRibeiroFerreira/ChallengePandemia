@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3U-P3-LKO">
-                                <rect key="frame" x="20" y="48" width="310" height="24"/>
+                                <rect key="frame" x="20" y="12" width="310" height="96"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,10 +36,12 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="x3U-P3-LKO" firstAttribute="top" secondItem="Ey0-cA-LpL" secondAttribute="top" constant="12" id="0BX-7Z-ccX"/>
                             <constraint firstAttribute="trailing" secondItem="cGK-CG-sME" secondAttribute="trailing" constant="20" id="A1L-Ug-sgf"/>
                             <constraint firstItem="x3U-P3-LKO" firstAttribute="leading" secondItem="Ey0-cA-LpL" secondAttribute="leading" constant="20" id="AWG-hZ-3wB"/>
+                            <constraint firstAttribute="bottom" secondItem="x3U-P3-LKO" secondAttribute="bottom" constant="12" id="J1A-Zs-XPD"/>
                             <constraint firstItem="cGK-CG-sME" firstAttribute="centerY" secondItem="Ey0-cA-LpL" secondAttribute="centerY" id="L7f-Zo-s8j"/>
-                            <constraint firstAttribute="height" constant="120" id="U8V-Od-94w"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="U8V-Od-94w"/>
                             <constraint firstItem="x3U-P3-LKO" firstAttribute="centerY" secondItem="Ey0-cA-LpL" secondAttribute="centerY" id="g1N-ov-E5c"/>
                             <constraint firstItem="cGK-CG-sME" firstAttribute="leading" secondItem="x3U-P3-LKO" secondAttribute="trailing" constant="15" id="yvn-uE-eyQ"/>
                         </constraints>

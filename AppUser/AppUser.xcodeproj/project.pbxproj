@@ -38,19 +38,17 @@
 		155C661024511720000969CD /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155C65FE24511720000969CD /* SF-Pro-Display-Thin.otf */; };
 		155C661124511720000969CD /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 155C65FF24511720000969CD /* SF-Pro-Display-ThinItalic.otf */; };
 		155C661324512383000969CD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155C661224512383000969CD /* AboutViewController.swift */; };
-		156577BC244E062D00102570 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 156577BA244E062D00102570 /* Onboarding.storyboard */; };
 		156577BE244E078900102570 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156577BD244E078900102570 /* OnboardingViewController.swift */; };
 		15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */; };
+		15A48B022453606100870B04 /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B012453606100870B04 /* Etapas.storyboard */; };
+		15A48B05245388C100870B04 /* TituloEtapaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */; };
+		15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */; };
 		2A45D47124575F7E00503C13 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45D46F24575F7E00503C13 /* RoomTableViewCell.swift */; };
 		2A45D47224575F7E00503C13 /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A45D47024575F7E00503C13 /* RoomTableViewCell.xib */; };
 		2A5685CB2450C10E00ECAC23 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5685CA2450C10E00ECAC23 /* Area.storyboard */; };
 		2A5685CF2451095800ECAC23 /* ProtocolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5685CD2451095800ECAC23 /* ProtocolTableViewCell.swift */; };
 		2A5685D02451095800ECAC23 /* ProtocolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A5685CE2451095800ECAC23 /* ProtocolTableViewCell.xib */; };
 		2A5685D22451E4B300ECAC23 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5685D12451E4B300ECAC23 /* AreaViewController.swift */; };
-		15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */; };
-		15A48B022453606100870B04 /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B012453606100870B04 /* Etapas.storyboard */; };
-		15A48B05245388C100870B04 /* TituloEtapaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */; };
-		15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */; };
 		2A5CF431244A254D00E98022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF430244A254D00E98022 /* AppDelegate.swift */; };
 		2A5CF433244A254D00E98022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF432244A254D00E98022 /* SceneDelegate.swift */; };
 		2A5CF435244A254D00E98022 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF434244A254D00E98022 /* MainViewController.swift */; };
@@ -100,18 +98,17 @@
 		155C65FE24511720000969CD /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
 		155C65FF24511720000969CD /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
 		155C661224512383000969CD /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		156577BA244E062D00102570 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		156577BD244E078900102570 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		15A48AFF2453509D00870B04 /* NavigationControllerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerVC.swift; sourceTree = "<group>"; };
+		15A48B012453606100870B04 /* Etapas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
+		15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TituloEtapaViewCell.xib; sourceTree = "<group>"; };
+		15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TituloEtapaViewCell.swift; sourceTree = "<group>"; };
 		2A45D46F24575F7E00503C13 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		2A45D47024575F7E00503C13 /* RoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
 		2A5685CA2450C10E00ECAC23 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2A5685CD2451095800ECAC23 /* ProtocolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolTableViewCell.swift; sourceTree = "<group>"; };
 		2A5685CE2451095800ECAC23 /* ProtocolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProtocolTableViewCell.xib; sourceTree = "<group>"; };
 		2A5685D12451E4B300ECAC23 /* AreaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
-		15A48B012453606100870B04 /* Etapas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
-		15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TituloEtapaViewCell.xib; sourceTree = "<group>"; };
-		15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TituloEtapaViewCell.swift; sourceTree = "<group>"; };
 		2A5CF42D244A254D00E98022 /* AppUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5CF430244A254D00E98022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5CF432244A254D00E98022 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +172,15 @@
 			path = "SF-Font";
 			sourceTree = "<group>";
 		};
+		15A48B032453882600870B04 /* TituloEtapaCell */ = {
+			isa = PBXGroup;
+			children = (
+				15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */,
+				15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */,
+			);
+			path = TituloEtapaCell;
+			sourceTree = "<group>";
+		};
 		2A45D46E24575EFF00503C13 /* RoomCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,15 +197,6 @@
 				2A5685CE2451095800ECAC23 /* ProtocolTableViewCell.xib */,
 			);
 			path = ProtocolCell;
-			sourceTree = "<group>";
-		};
-		15A48B032453882600870B04 /* TituloEtapaCell */ = {
-			isa = PBXGroup;
-			children = (
-				15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */,
-				15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */,
-			);
-			path = TituloEtapaCell;
 			sourceTree = "<group>";
 		};
 		2A5CF424244A254D00E98022 = {
@@ -366,7 +363,6 @@
 				0DBDF4A52453E4FB00B5DC26 /* FlowFinal.storyboard in Resources */,
 				0DCFA28B2450A9B3001C9A12 /* FlowInitial.storyboard in Resources */,
 				0DBDF4A12453A8DA00B5DC26 /* FlowExtensiveContent.storyboard in Resources */,
-				156577BC244E062D00102570 /* Onboarding.storyboard in Resources */,
 				2A5CF43D244A254F00E98022 /* Assets.xcassets in Resources */,
 				155C660424511720000969CD /* SF-Pro-Display-Light.otf in Resources */,
 				155C660924511720000969CD /* SF-Pro-Display-LightItalic.otf in Resources */,
@@ -409,7 +405,7 @@
 				0DBDF4A72453E50E00B5DC26 /* FlowFinalViewController.swift in Sources */,
 				1548431A245736CF00D5E408 /* EtapasViewController.swift in Sources */,
 				15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */,
-				2A5CF435244A254D00E98022 /* ViewController.swift in Sources */,
+				2A5CF435244A254D00E98022 /* MainViewController.swift in Sources */,
 				156577BE244E078900102570 /* OnboardingViewController.swift in Sources */,
 				155C661324512383000969CD /* AboutViewController.swift in Sources */,
 				2A5685CF2451095800ECAC23 /* ProtocolTableViewCell.swift in Sources */,
@@ -566,7 +562,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5PT75G5CA6;
+				DEVELOPMENT_TEAM = C7CS39R779;
 				INFOPLIST_FILE = AppUser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -585,7 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5PT75G5CA6;
+				DEVELOPMENT_TEAM = C7CS39R779;
 				INFOPLIST_FILE = AppUser/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
