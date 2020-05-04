@@ -68,7 +68,11 @@
         <scene sceneID="LmN-ZM-ZwK">
             <objects>
                 <viewControllerPlaceholder storyboardName="FlowInitial" id="C4U-UY-jcZ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Y0a-2t-POb"/>
+                    <navigationItem key="navigationItem" id="Y0a-2t-POb">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="I87-Lp-ajX">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BMr-iC-bwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

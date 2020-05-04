@@ -21,9 +21,9 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="702"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-Ga-yt2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1076"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="554.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-x3-XTP">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-x3-XTP">
                                                 <rect key="frame" x="20" y="30" width="374" height="86"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -36,8 +36,8 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCP-YN-LDc">
-                                                <rect key="frame" x="20" y="274" width="374" height="794"/>
-                                                <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label LabelLabel Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label</string>
+                                                <rect key="frame" x="20" y="274" width="374" height="272.5"/>
+                                                <mutableString key="text">- Dispineia; - Desconforto respiratório (tiragem intercostal, batimento de aleta nasal, desidratação, inapetência e cianose); - Saturação de 02 &lt; que 95%; - Piora nas condições clínicas de doença preexistente; - Palidez cutânea  Utilizar Oseltamivir em SRAG sem diagnóstico até resultado de RT-PCR para SARS-CoV-2. Se positivo, suspender o uso!</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" name="appContrast"/>
                                                 <nil key="highlightedColor"/>
@@ -79,6 +79,9 @@
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="h0v-bY-vBf" kind="show" id="3IR-Ff-2uK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="69m-D1-S72">
                                 <rect key="frame" x="33" y="817" width="348" height="39"/>
@@ -142,6 +145,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6j-d7-oNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-61" y="698"/>
+        </scene>
+        <!--FlowExtensiveContent-->
+        <scene sceneID="qQg-Bg-div">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowExtensiveContent" id="h0v-bY-vBf" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6ZX-Xa-E1q"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvg-Fd-AAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34" y="773"/>
         </scene>
     </scenes>
     <resources>

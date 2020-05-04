@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="740"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-S0-dCJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="715"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="652"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para você" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82k-Ry-z0Q">
                                                 <rect key="frame" x="40" y="86" width="125.5" height="33"/>
@@ -58,8 +58,8 @@
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJR-Vd-7zC">
-                                                <rect key="frame" x="40" y="611" width="331" height="84"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Informações iniciais e tutorial do Aplicativo." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJR-Vd-7zC">
+                                                <rect key="frame" x="40" y="611" width="349.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
@@ -148,6 +148,9 @@
             <objects>
                 <tableViewController title="Olá," id="o04-LP-b9t" customClass="MainViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Olá," largeTitleDisplayMode="always" id="CPa-gi-Yka">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="hCg-nV-rhY">
+                            <color key="tintColor" name="appBlue"/>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Sobre" id="4Wh-WN-bkz">
                             <color key="tintColor" name="appColor"/>
                             <connections>
@@ -179,29 +182,28 @@
                                 <rect key="frame" x="0.0" y="148.5" width="414" height="618.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GH2-Ab-oUg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="432"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="195.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94g-w3-PIE">
-                                                <rect key="frame" x="20" y="247.5" width="374" height="86"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações sobre o Aplicativo." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94g-w3-PIE">
+                                                <rect key="frame" x="20" y="75.5" width="374" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLP-Dd-xau">
-                                                <rect key="frame" x="20" y="349.5" width="374" height="29"/>
+                                                <rect key="frame" x="20" y="113" width="374" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emailapp@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbf-D6-lue">
-                                                <rect key="frame" x="20" y="378.5" width="374" height="21.5"/>
+                                                <rect key="frame" x="20" y="142" width="374" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvB-Je-eF3">
-                                                <rect key="frame" x="20" y="38" width="374" height="193.5"/>
-                                                <string key="text">Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí. Mas também, pra que levar a sério um texto que não diz nada ou mulheres que são minoria? Afinal, elas somam só 20% da criação. Um número inversamente proporcional a todas as piadas de cunho machista e sexual que elas escutam todos os dias. Sim, todos os dias.</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações sobre o Aplicativo." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvB-Je-eF3">
+                                                <rect key="frame" x="20" y="38" width="374" height="21.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

@@ -17,15 +17,23 @@ class FlowShortContentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.barTintColor = UIColor(named: "appColor")
-        navigationController?.navigationBar.isTranslucent = false
-        setupAccessibility()
+        self.setupAccessibility()
+        self.setupNavBar()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.barTintColor = UIColor(named: "appColor")
+        super.viewWillAppear(animated)
+
+        self.setupNavBar()
+    }
+    
+    func setupNavBar() {
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor")
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "appColor")
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "appBlue")
     }
 
     private func setupAccessibility() {

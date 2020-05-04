@@ -20,18 +20,25 @@ class FlowInitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.prefersLargeTitles = false
-        navigationController?.navigationBar.barTintColor = UIColor(named: "appBlue")
-        navigationController?.navigationBar.isTranslucent = false
-        setupAccessibility()
+
+        self.setupNavBar()
+        self.setupAccessibility()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.barTintColor = UIColor(named: "appBlue")
+        super.viewWillAppear(animated)
+
+        self.setupNavBar()
     }
     
-    
+    func setupNavBar() {
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appBlue")
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "appBlue")
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "appColor")
+        self.navigationController?.navigationBar.isTranslucent = false
+     }
+     
     private func setupAccessibility() {
         let titleInitialFont = UIFont(name: "SFProDisplay-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24)
         let textInitialFont = UIFont(name: "SFProDisplay-Bold", size: 36) ?? UIFont.systemFont(ofSize: 36)

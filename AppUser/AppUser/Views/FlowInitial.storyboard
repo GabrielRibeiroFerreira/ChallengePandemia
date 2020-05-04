@@ -23,7 +23,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E09-Oe-p5e">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="508"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6s-FI-aM9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6s-FI-aM9">
                                                 <rect key="frame" x="20" y="30" width="374" height="86"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" name="appColor"/>
@@ -31,7 +31,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E67-tP-EF8">
                                                 <rect key="frame" x="20" y="156" width="374" height="344"/>
-                                                <string key="text">Pacientes com sintomas de Sindrome Gripal                                 (Febre &gt;=  37,5ºC aferida ou referida, acompanhada de tosse ou dor de garganta).</string>
+                                                <string key="text">Pacientes com sintomas de Sindrome Gripal                                                                      (Febre &gt;=  37,5ºC aferida ou referida, acompanhada de tosse ou dor de garganta).</string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                                 <color key="textColor" name="appYellow"/>
                                                 <nil key="highlightedColor"/>
@@ -70,6 +70,9 @@
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Tx0-SK-0an" kind="show" id="hzI-7U-LZX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="appBlue"/>
@@ -115,6 +118,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uop-KO-dUz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-28" y="680"/>
+        </scene>
+        <!--FlowInput-->
+        <scene sceneID="P8p-PZ-qio">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowInput" id="Tx0-SK-0an" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hJb-fP-nbB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Shg-lF-xLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="755"/>
         </scene>
     </scenes>
     <resources>

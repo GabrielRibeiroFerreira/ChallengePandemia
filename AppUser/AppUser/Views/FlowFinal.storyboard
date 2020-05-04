@@ -23,13 +23,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-gv-DLD">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="307.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI1-qP-APW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI1-qP-APW">
                                                 <rect key="frame" x="20" y="30" width="374" height="86"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Indicar isolamento domiciliar conforme protocolos da Atenção Primária á Saúde e contactar o posto de saúde para monitoramento." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7p1-yK-8u3">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Indicar isolamento domiciliar conforme protocolos da Atenção Primária á Saúde e contactar o posto de saúde para monitoramento." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7p1-yK-8u3">
                                                 <rect key="frame" x="20" y="156" width="374" height="143.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" name="appContrast"/>
@@ -86,7 +86,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="HhH-vd-mXU">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="OWm-ZU-ThG">
-                            <color key="tintColor" name="appBlue"/>
+                            <color key="tintColor" name="appColor"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Etapas" id="6cy-Ih-FNb">
                             <color key="tintColor" name="appBlue"/>

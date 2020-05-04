@@ -15,8 +15,8 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var searchBar: UISearchBar!
     
     let protocolIdentifier : String = "ProtocolTableViewCell"
-    let protList : [String] = ["Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí.", "Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí.", "Lorem Ipsum é que nem os comportamentos machistas dentro da criação. Você não presta atenção, só sai reproduzindo por aí.", "Um número inversamente proporcional a todas as piadas de cunho machista e sexual que elas escutam todos os dias. Sim, todos os dias."]
-    let fluxList : [String] = ["Mas também, pra que levar a sério um texto que não diz nada ou mulheres que são minoria? Afinal, elas somam só 20% da criação.", "Mas também, pra que levar a sério um texto que não diz nada ou mulheres que são minoria? Afinal, elas somam só 20% da criação.", "Mas também, pra que levar a sério um texto que não diz nada ou mulheres que são minoria? Afinal, elas somam só 20% da criação.", "Um número inversamente proporcional a todas as piadas de cunho machista e sexual que elas escutam todos os dias. Sim, todos os dias."]
+    let protList : [String] = ["Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária"]
+    let fluxList : [String] = ["Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada","Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada","Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada"]
     var list : [String] = []
     
     var searchActive : Bool = false
@@ -27,8 +27,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         self.title = self.area
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue") ?? UIColor.black]
+
         if #available(iOS 13.0, *) {
             let textField = self.searchBar.searchTextField
             textField.backgroundColor = UIColor(named: "appYellow")
@@ -57,6 +56,23 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.protocolTable.register(nib, forCellReuseIdentifier: self.protocolIdentifier)
         
         self.list = self.protList
+        self.setupNavBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.setupNavBar()
+    }
+    
+    func setupNavBar() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationItem.title = "Saúde da mulher"
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "appColor")
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "appBlue")
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue") ?? UIColor.black]
     }
     
     // MARK: - Table View

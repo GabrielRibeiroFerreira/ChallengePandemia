@@ -32,7 +32,9 @@
         <scene sceneID="sFD-kI-wY2">
             <objects>
                 <viewControllerPlaceholder storyboardName="Area" id="Gti-GU-A09" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Epz-xC-byt"/>
+                    <navigationItem key="navigationItem" id="Epz-xC-byt">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="CCl-Rf-tDU"/>
+                    </navigationItem>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YY0-6l-KRU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

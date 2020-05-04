@@ -21,23 +21,27 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="723"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDJ-CE-DAu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1054"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="714"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de manejo clinico e pediatrico na atenção especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCg-vk-kKs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCg-vk-kKs">
                                                 <rect key="frame" x="20" y="30" width="374" height="86"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Síndrome Respiratória Aguda Grave - SRAG" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w11-6c-4gu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Cuidados Domésticos do Paciente em Isolamento" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w11-6c-4gu">
                                                 <rect key="frame" x="20" y="164" width="374" height="45.5"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                 <color key="textColor" name="appContrast"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkc-Li-GqN">
-                                                <rect key="frame" x="20" y="229.5" width="374" height="816.5"/>
-                                                <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkc-Li-GqN">
+                                                <rect key="frame" x="20" y="229.5" width="374" height="476.5"/>
+                                                <mutableString key="text">Sempre reportar à equipe de saúde que acompanha o caso o surgimento de algum novo sintoma ou piora dos sintomas já presentes.
+
+Manter paciente em quarto isolado e bem ventilado até o fim do período sintomático. Destacam-se os seguintes fatores do cuidado do paciente em isolamento: a higiene respiratória e os hábitos saudáveis de alimentação. Todos os contatos domiciliares do paciente também deverão realizar isolamento domiciliar por 14 dias. Caso apresentar os sintomas, deverão entrar em contato com a equipe de saúde para receber atendimento.
+
+Para mais informações sobre orientações quanto ao isolamento domiciliar do paciente e precauções gerais e do cuidador, ver Protocolo de Manejo Clínico.</mutableString>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" name="appContrast"/>
                                                 <nil key="highlightedColor"/>
@@ -79,6 +83,9 @@
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="cLu-Mq-Jvz" kind="show" id="PPw-Si-LKJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="appColor"/>
@@ -125,6 +132,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAb-RK-gal" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-37" y="680"/>
+        </scene>
+        <!--FlowShortContent-->
+        <scene sceneID="htA-rQ-4Tv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowShortContent" id="cLu-Mq-Jvz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hBA-rg-Vf1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4BN-v9-Avp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="823"/>
         </scene>
     </scenes>
     <resources>

@@ -16,7 +16,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
     let searchIdentifier : String = "SearchView"
     let sectionIdentifier : String = "InitialView"
     
-    var rooms : [String] = ["Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste", "Teste"]
+    var rooms : [String] = ["Ministério da Saúde", "Hospital das Clínicas Unicamp", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital"]
     var selectedRoom : String?
     
     override func viewDidLoad() {
@@ -33,18 +33,25 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.indexDisplayMode = .alwaysHidden
-        
-        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appColor") ?? UIColor.white]
+
+        self.setupNavBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appColor") ?? UIColor.white]
+        self.setupNavBar()
     }
     
+    func setupNavBar() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationItem.title = "Olá,"
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "appBlue")
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "appColor")
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appColor") ?? UIColor.white]
+    }
 
     //MARK: -TableView
     

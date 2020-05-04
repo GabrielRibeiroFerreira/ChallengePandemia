@@ -17,9 +17,6 @@ class AreasTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue") ?? UIColor.black]
-        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.indexDisplayMode = .alwaysHidden
@@ -27,10 +24,24 @@ class AreasTableViewController: UITableViewController {
         let nib = UINib.init(nibName: self.areaIdentifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: self.areaIdentifier)
         
-        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appBlue") ?? UIColor.white]
-        
         self.title = self.room
+        self.setupNavBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.setupNavBar()
+    }
+    
+    func setupNavBar() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationItem.title = "Hospital"
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "appColor")
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "appBlue")
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appBlue") ?? UIColor.white]
     }
 
     // MARK: - Table view data source

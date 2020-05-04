@@ -13,7 +13,7 @@ class EtapasViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     let etapaCellIdentifier: String = "TituloEtapaViewCell"
-    var stageTitles: [String] = ["Início", "Sinais de gravidade?", "Indicação - Resposta Positiva", "Indicação - Resposta Negativa", "Indicação para internação?", "Indicação - Resposta Positiva", "Acompanhamento", "Notificação", "Indicação - Resposta Negativa", "Acompanhamento", "Notificação"]
+    var stageTitles: [String] = ["Início", "Sinais de gravidade?", "Indicar Isolamento Domiciliar", "Síndrome Respiratória Aguda Grave", "Indicação para internação?", "Negativo - Lista de Procedimentos", "Positivo - Lista de Procedimentos", "Acompanhamento Leito Clínico", "Notificar e Coletar Exames", "Acompanhamento Leito de Terapia", "Notificar e Coletar Exames"]
     let appBlue = UIColor(named: "appBlue")
     let appColor = UIColor(named: "appColor")
     
@@ -32,11 +32,19 @@ class EtapasViewController: UIViewController {
         self.setupNavBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.setupNavBar()
+    }
+    
     func setupNavBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.title = "Etapas"
-        self.navigationController?.navigationBar.backgroundColor = self.appBlue
-        self.navigationController?.navigationBar.tintColor = self.appColor
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appBlue")
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "appBlue")
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "appColor")
         self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: self.appColor ?? UIColor.blue]
     }
     
