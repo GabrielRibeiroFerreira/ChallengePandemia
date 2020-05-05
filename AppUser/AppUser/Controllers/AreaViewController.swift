@@ -17,6 +17,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     let protocolIdentifier : String = "ProtocolTableViewCell"
     let protList : [String] = ["Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária"]
     let fluxList : [String] = ["Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada","Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada","Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada"]
+    var allList : [String] = []
     var list : [String] = []
     
     var searchActive : Bool = false
@@ -27,6 +28,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         self.title = self.area
+        self.allList = self.protList + self.fluxList
 
         if #available(iOS 13.0, *) {
             let textField = self.searchBar.searchTextField
@@ -55,7 +57,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         let nib = UINib.init(nibName: self.protocolIdentifier, bundle: nil)
         self.protocolTable.register(nib, forCellReuseIdentifier: self.protocolIdentifier)
         
-        self.list = self.protList
+        self.list = self.getList()
         self.setupNavBar()
     }
     
@@ -116,12 +118,12 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         var actual : [String]
         
         switch self.segmented.selectedSegmentIndex {
-        case 0:
-            actual = self.protList
         case 1:
+            actual = self.protList
+        case 2:
             actual = self.fluxList
         default:
-            actual = self.protList
+            actual = self.allList
         }
         
         return actual
