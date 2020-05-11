@@ -11,7 +11,7 @@ import UIKit
 class AreasTableViewController: UITableViewController {
     var room : String?
     let areaIdentifier : String = "AreaTableViewCell"
-    let areas : [(name : String, image : UIImage)] = [(NSLocalizedString("Saúde da Criança e do Adolescente", comment: "children"), UIImage(named: "iconChildren") ?? UIImage()), (NSLocalizedString("Saúde da mulher", comment: "woman"), UIImage(named: "iconWoman") ?? UIImage()), (NSLocalizedString("Saúde do Adulto e do Idoso", comment: "adult"), UIImage(named: "iconAdult") ?? UIImage()), (NSLocalizedString("Atenção Primária à Saúde", comment: "primary"), UIImage(named: "iconPrimary") ?? UIImage())]
+    let areas : [(name : String, image : UIImage)] = [(NSLocalizedString("Saúde da Criança e do Adolescente", comment: "children"), UIImage(named: "iconChildren") ?? UIImage()), (NSLocalizedString("Saúde da mulher", comment: "woman"), UIImage(named: "iconWoman") ?? UIImage()), (NSLocalizedString("Saúde do Adulto e do Idoso", comment: "adult"), UIImage(named: "iconAdult") ?? UIImage()), (NSLocalizedString("Urgência e Emergência", comment: "primary"), UIImage(named: "iconPrimary") ?? UIImage())]
     var selectedArea : String = ""
 
     override func viewDidLoad() {

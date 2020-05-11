@@ -23,6 +23,7 @@
 		151450072459F0AD001183D4 /* AppUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151450062459F0AD001183D4 /* AppUserRouter.swift */; };
 		1514500C2459F530001183D4 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1514500B2459F530001183D4 /* Room.swift */; };
 		1514500F2459F643001183D4 /* RoomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1514500E2459F643001183D4 /* RoomResponse.swift */; };
+		1526225B2469BDB700CF7F7D /* ProtFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526225A2469BDB700CF7F7D /* ProtFlow.swift */; };
 		1533510B245B76CF00DAC11B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1533510A245B76CE00DAC11B /* GoogleService-Info.plist */; };
 		1548431A245736CF00D5E408 /* EtapasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15484319245736CF00D5E408 /* EtapasViewController.swift */; };
 		155C65E8245115F2000969CD /* UILabel+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155C65E7245115F2000969CD /* UILabel+Accessibility.swift */; };
@@ -91,6 +92,7 @@
 		151450062459F0AD001183D4 /* AppUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUserRouter.swift; sourceTree = "<group>"; };
 		1514500B2459F530001183D4 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		1514500E2459F643001183D4 /* RoomResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomResponse.swift; sourceTree = "<group>"; };
+		1526225A2469BDB700CF7F7D /* ProtFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtFlow.swift; sourceTree = "<group>"; };
 		1533510A245B76CE00DAC11B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		15484319245736CF00D5E408 /* EtapasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtapasViewController.swift; sourceTree = "<group>"; };
 		155C65E7245115F2000969CD /* UILabel+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Accessibility.swift"; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				2AAE6800244E1FE600129E50 /* AreaCell */,
 				2A5685CC2450CE0C00ECAC23 /* ProtocolCell */,
 				1514500B2459F530001183D4 /* Room.swift */,
+				1526225A2469BDB700CF7F7D /* ProtFlow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AAA6FCC2459EA2B00B246CC /* InitialViewHeader.swift in Sources */,
+				1526225B2469BDB700CF7F7D /* ProtFlow.swift in Sources */,
 				2AAA6FC52459E15F00B246CC /* SearchViewHeader.swift in Sources */,
 				15A48B002453509D00870B04 /* NavigationControllerVC.swift in Sources */,
 				0DCFA28D2450AA4C001C9A12 /* FlowInitialViewController.swift in Sources */,

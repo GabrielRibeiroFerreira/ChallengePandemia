@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AreaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    var area : String?
+    var area : String = ""
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var protocolTable: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     let protocolIdentifier : String = "ProtocolTableViewCell"
-    let protList : [String] = ["Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária", "Fast-Track de Teleatendimento para a Atenção Primária"]
-    let fluxList : [String] = ["Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada","Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada","Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada", "Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada"]
-    var allList : [String] = []
-    var list : [String] = []
+    
+    var protList : [ProtFlow] = []
+    var fluxList : [ProtFlow] = []
+    
+    var allList : [ProtFlow] = []
+    var list : [ProtFlow] = []
     
     var searchActive : Bool = false
     
@@ -28,7 +31,6 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         self.title = self.area
-        self.allList = self.protList + self.fluxList
 
         if #available(iOS 13.0, *) {
             let textField = self.searchBar.searchTextField
@@ -57,28 +59,52 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         let nib = UINib.init(nibName: self.protocolIdentifier, bundle: nil)
         self.protocolTable.register(nib, forCellReuseIdentifier: self.protocolIdentifier)
         
-        self.list = self.getList()
         self.setupNavBar()
+        
+        self.getDataFromDB()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         self.setupNavBar()
     }
     
     func setupNavBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationItem.title = "Saúde da mulher"
+        self.navigationItem.title = self.area
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "appColor")
         self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
         self.navigationController?.navigationBar.tintColor = UIColor(named: "appBlue")
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue") ?? UIColor.black]
     }
     
-    // MARK: - Table View
+    func getDataFromDB() {
+        let ref = Database.database().reference().child("Areas/idSala1/Crianca/Fluxos")
+        
+        var flowList = [ProtFlow]()
+        
+        ref.observe(.value) { (snapshot) in
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let idFluxo = dict["idFluxo"] as? Int,
+                    let titulo = dict["titulo"] as? String{
+                    
+                    let flow = ProtFlow(key: childSnapshot.key,  idFluxo: idFluxo, titulo: titulo)
+                    flowList.append(flow)
+                }
+            }
+            DispatchQueue.main.async{
+                self.fluxList = flowList
+                self.allList = self.protList + self.fluxList
+                self.list = self.getList()
+                self.protocolTable.reloadData()
+            }
+        }
+    }
     
+    // MARK: - Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.list.count
     }
@@ -87,7 +113,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: self.protocolIdentifier, for: indexPath) as! ProtocolTableViewCell
         let actual = self.list[indexPath.row]
 
-        cell.nameLabel.text = actual
+        cell.nameLabel.text = actual.titulo
 
         return cell
     }
@@ -95,7 +121,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath as IndexPath)
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
-        self.selectedFlow = self.list[indexPath.row]
+        self.selectedFlow = self.list[indexPath.row].key!
         performSegue(withIdentifier: "initialFlowSegue", sender: cell)
     }
        
@@ -108,14 +134,13 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     // MARK: - Segmented Control
-    
     @IBAction func indexChanged(_ sender: Any) {
         self.list = self.getList()
         self.protocolTable.reloadData()
     }
     
-    func getList() -> [String] {
-        var actual : [String]
+    func getList() -> [ProtFlow] {
+        var actual : [ProtFlow]
         
         switch self.segmented.selectedSegmentIndex {
         case 1:
@@ -130,7 +155,6 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     // MARK: - Search
-
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true;
     }
@@ -146,7 +170,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.list = getList()
         self.list = self.list.filter{ (text) -> Bool in
-            let tmp: NSString = text as NSString
+            let tmp: NSString = text.titulo! as NSString
             let range = tmp.range(of: searchText, options: [NSString.CompareOptions.diacriticInsensitive, NSString.CompareOptions.caseInsensitive])
             return range.location != NSNotFound
         }
