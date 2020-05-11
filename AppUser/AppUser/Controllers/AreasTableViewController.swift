@@ -11,8 +11,11 @@ import UIKit
 class AreasTableViewController: UITableViewController {
     var room : String?
     let areaIdentifier : String = "AreaTableViewCell"
-    let areas : [(name : String, image : UIImage)] = [(NSLocalizedString("Saúde da Criança e do Adolescente", comment: "children"), UIImage(named: "iconChildren") ?? UIImage()), (NSLocalizedString("Saúde da mulher", comment: "woman"), UIImage(named: "iconWoman") ?? UIImage()), (NSLocalizedString("Saúde do Adulto e do Idoso", comment: "adult"), UIImage(named: "iconAdult") ?? UIImage()), (NSLocalizedString("Urgência e Emergência", comment: "primary"), UIImage(named: "iconPrimary") ?? UIImage())]
+    let areas : [(name : String, image : UIImage, shortName: String, bdRef: String)] = [(NSLocalizedString("Saúde da Criança e do Adolescente", comment: "children"), UIImage(named: "iconChildren") ?? UIImage(), "Saúde da Criança", "Crianca"), (NSLocalizedString("Saúde da mulher", comment: "woman"), UIImage(named: "iconWoman") ?? UIImage(), "Saúde da Mulher", "Mulher"), (NSLocalizedString("Saúde do Adulto e do Idoso", comment: "adult"), UIImage(named: "iconAdult") ?? UIImage(), "Saúde do Adulto", "Adulto"), (NSLocalizedString("Urgência e Emergência", comment: "primary"), UIImage(named: "iconPrimary") ?? UIImage(), "Urgência e Emergência", "Urgencia")]
+    
     var selectedArea : String = ""
+    var bdRefArea: String = ""
+    var bdRefRoom: String  = "idSala1"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,14 +77,17 @@ class AreasTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath as IndexPath)
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
-        self.selectedArea = self.areas[indexPath.row].name
+        self.selectedArea = self.areas[indexPath.row].shortName
+        self.bdRefArea = self.areas[indexPath.row].bdRef
         performSegue(withIdentifier: "areaSegue", sender: cell)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "areaSegue"{
             if let areaView = segue.destination as? AreaViewController {
-                    areaView.area = self.selectedArea
+                areaView.area = self.selectedArea
+                areaView.bdRefArea = self.bdRefArea
+                areaView.bdRefRoom = self.bdRefRoom
             }
         }
     }

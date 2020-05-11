@@ -11,6 +11,8 @@ import FirebaseDatabase
 
 class AreaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     var area : String = ""
+    var bdRefArea: String = ""
+    var bdRefRoom: String = ""
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var protocolTable: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -19,8 +21,6 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var protList : [ProtFlow] = []
     var fluxList : [ProtFlow] = []
-    
-    //var allList : [ProtFlow] = []
     var list : [ProtFlow] = []
     
     var searchActive : Bool = false
@@ -81,7 +81,8 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func getDataFromDB() {
         //Recuperação Fluxos
-        let refFlow = Database.database().reference().child("Areas/idSala1/Crianca/Fluxos")
+        let urlFlow = "Areas/" + self.bdRefRoom + "/" + self.bdRefArea + "/Fluxos"
+        let refFlow = Database.database().reference().child(urlFlow)
         refFlow.observe(.value) { (snapshot) in
             for child in snapshot.children {
                 if let childSnapshot = child as? DataSnapshot,
@@ -96,7 +97,8 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         //Recuperação Protocolos
-        let refProt = Database.database().reference().child("Areas/idSala1/Crianca/Protocolos")
+        let urlProt = "Areas/" + self.bdRefRoom + "/" + self.bdRefArea + "/Protocolos"
+        let refProt = Database.database().reference().child(urlProt)
         refProt.observe(.value) { (snapshot) in
             for child in snapshot.children {
                 if let childSnapshot = child as? DataSnapshot,
@@ -115,8 +117,6 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.protocolTable.reloadData()
             }
         }
-        
-        
     }
     
     // MARK: - Table View
@@ -136,8 +136,10 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath as IndexPath)
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
-        self.selectedFlow = self.list[indexPath.row].key!
-        performSegue(withIdentifier: "initialFlowSegue", sender: cell)
+        if let flowKey = self.list[indexPath.row].key {
+            self.selectedFlow = flowKey
+            performSegue(withIdentifier: "initialFlowSegue", sender: cell)
+        }
     }
        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -185,7 +187,8 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.list = getList()
         self.list = self.list.filter{ (text) -> Bool in
-            let tmp: NSString = text.titulo! as NSString
+            let textTitle = text.titulo ?? ""
+            let tmp: NSString = textTitle as NSString
             let range = tmp.range(of: searchText, options: [NSString.CompareOptions.diacriticInsensitive, NSString.CompareOptions.caseInsensitive])
             return range.location != NSNotFound
         }

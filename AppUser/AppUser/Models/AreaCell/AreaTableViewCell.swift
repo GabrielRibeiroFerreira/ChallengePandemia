@@ -23,7 +23,7 @@ class AreaTableViewCell: UITableViewCell {
     }
     
     private func setupAccessibility() {
-        let nameFont = UIFont(name: "SFProDisplay-Regular", size: 22) ?? UIFont.systemFont(ofSize: 22)
+        let nameFont = UIFont(name: "SFProDisplay-Bold", size: 22) ?? UIFont.systemFont(ofSize: 22)
 
         self.nameLabel.dynamicFont = nameFont
     }
