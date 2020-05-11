@@ -20,7 +20,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     var protList : [ProtFlow] = []
     var fluxList : [ProtFlow] = []
     
-    var allList : [ProtFlow] = []
+    //var allList : [ProtFlow] = []
     var list : [ProtFlow] = []
     
     var searchActive : Bool = false
@@ -80,28 +80,43 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func getDataFromDB() {
-        let ref = Database.database().reference().child("Areas/idSala1/Crianca/Fluxos")
-        
-        var flowList = [ProtFlow]()
-        
-        ref.observe(.value) { (snapshot) in
+        //Recuperação Fluxos
+        let refFlow = Database.database().reference().child("Areas/idSala1/Crianca/Fluxos")
+        refFlow.observe(.value) { (snapshot) in
             for child in snapshot.children {
                 if let childSnapshot = child as? DataSnapshot,
                     let dict = childSnapshot.value as? [String:Any],
-                    let idFluxo = dict["idFluxo"] as? Int,
+                    let idProtFluxo = dict["idProtFluxo"] as? Int,
                     let titulo = dict["titulo"] as? String{
                     
-                    let flow = ProtFlow(key: childSnapshot.key,  idFluxo: idFluxo, titulo: titulo)
-                    flowList.append(flow)
+                    let flow = ProtFlow(key: childSnapshot.key, idProtFluxo: idProtFluxo, titulo: titulo)
+                    self.fluxList.append(flow)
                 }
             }
-            DispatchQueue.main.async{
-                self.fluxList = flowList
-                self.allList = self.protList + self.fluxList
+        }
+        
+        //Recuperação Protocolos
+        let refProt = Database.database().reference().child("Areas/idSala1/Crianca/Protocolos")
+        refProt.observe(.value) { (snapshot) in
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let idProtFluxo = dict["idProtFluxo"] as? Int,
+                    let titulo = dict["titulo"] as? String{
+                    
+                    let prot = ProtFlow(key: childSnapshot.key, idProtFluxo: idProtFluxo, titulo: titulo)
+                    self.protList.append(prot)
+                }
+            }
+            
+            //Atualiza lista com novos valores e recarrega tableview
+            DispatchQueue.main.async {
                 self.list = self.getList()
                 self.protocolTable.reloadData()
             }
         }
+        
+        
     }
     
     // MARK: - Table View
@@ -148,7 +163,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 2:
             actual = self.fluxList
         default:
-            actual = self.allList
+            actual = self.protList + self.fluxList
         }
         
         return actual
