@@ -87,10 +87,9 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
             for child in snapshot.children {
                 if let childSnapshot = child as? DataSnapshot,
                     let dict = childSnapshot.value as? [String:Any],
-                    let idProtFluxo = dict["idProtFluxo"] as? Int,
-                    let titulo = dict["titulo"] as? String{
+                    let titulo = dict["titulo"] as? String {
                     
-                    let flow = ProtFlow(key: childSnapshot.key, idProtFluxo: idProtFluxo, titulo: titulo)
+                    let flow = ProtFlow(key: childSnapshot.key, titulo: titulo)
                     self.fluxList.append(flow)
                 }
             }
@@ -103,14 +102,12 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
             for child in snapshot.children {
                 if let childSnapshot = child as? DataSnapshot,
                     let dict = childSnapshot.value as? [String:Any],
-                    let idProtFluxo = dict["idProtFluxo"] as? Int,
-                    let titulo = dict["titulo"] as? String{
+                    let titulo = dict["titulo"] as? String {
                     
-                    let prot = ProtFlow(key: childSnapshot.key, idProtFluxo: idProtFluxo, titulo: titulo)
+                    let prot = ProtFlow(key: childSnapshot.key, titulo: titulo)
                     self.protList.append(prot)
                 }
             }
-            
             //Atualiza lista com novos valores e recarrega tableview
             DispatchQueue.main.async {
                 self.list = self.getList()

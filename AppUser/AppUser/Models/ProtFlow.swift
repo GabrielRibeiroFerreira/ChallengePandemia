@@ -10,12 +10,10 @@ import Foundation
 
 class ProtFlow: Codable {
     let key: String?
-    let idProtFluxo: Int?
     let titulo: String?
     
-    init(key: String, idProtFluxo: Int, titulo: String) {
+    init(key: String, titulo: String) {
         self.key = key
-        self.idProtFluxo = idProtFluxo
         self.titulo = titulo
     }
 }
