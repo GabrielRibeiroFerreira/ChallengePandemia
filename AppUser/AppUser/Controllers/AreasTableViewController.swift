@@ -9,13 +9,13 @@
 import UIKit
 
 class AreasTableViewController: UITableViewController {
-    var room : String?
+    var room : Room?
     let areaIdentifier : String = "AreaTableViewCell"
     let areas : [(name : String, image : UIImage, shortName: String, bdRef: String)] = [(NSLocalizedString("Saúde da Criança e do Adolescente", comment: "children"), UIImage(named: "iconChildren") ?? UIImage(), "Saúde da Criança", "Crianca"), (NSLocalizedString("Saúde da mulher", comment: "woman"), UIImage(named: "iconWoman") ?? UIImage(), "Saúde da Mulher", "Mulher"), (NSLocalizedString("Saúde do Adulto e do Idoso", comment: "adult"), UIImage(named: "iconAdult") ?? UIImage(), "Saúde do Adulto", "Adulto"), (NSLocalizedString("Urgência e Emergência", comment: "primary"), UIImage(named: "iconPrimary") ?? UIImage(), "Urgência e Emergência", "Urgencia")]
     
     var selectedArea : String = ""
     var bdRefArea: String = ""
-    var bdRefRoom: String  = "idSala1"
+    var bdRefRoom: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,8 @@ class AreasTableViewController: UITableViewController {
         let nib = UINib.init(nibName: self.areaIdentifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: self.areaIdentifier)
         
-        self.title = self.room
+        self.title = self.room?.name
+        self.bdRefRoom = self.room?.key ?? ""
         self.setupNavBar()
     }
     
@@ -40,7 +41,7 @@ class AreasTableViewController: UITableViewController {
     func setupNavBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationItem.title = "Hospital"
+        self.navigationItem.title = self.room?.name
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "appColor")
         self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
         self.navigationController?.navigationBar.tintColor = UIColor(named: "appBlue")

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class MainViewController: UITableViewController, UISearchBarDelegate {
     var sectionView : SearchViewHeader!
@@ -16,8 +17,8 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
     let searchIdentifier : String = "SearchView"
     let sectionIdentifier : String = "InitialView"
     
-    var rooms : [String] = ["Ministério da Saúde", "Hospital das Clínicas Unicamp", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital", "Hospital"]
-    var selectedRoom : String?
+    var rooms : [Room] = []
+    var selectedRoom : Room?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +39,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         self.view.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
         
         self.setupNavBar()
+        self.getDataFromDB()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +57,31 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         self.navigationController?.navigationBar.tintColor = UIColor(named: "appColor")
         self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appColor") ?? UIColor.white]
     }
+    
+    //MARK: -DB
+    
+    func getDataFromDB() {
+        //Recuperação Fluxos
+        let url = "Salas"
+        let refFlow = Database.database().reference().child(url)
+        refFlow.observe(.value) { (snapshot) in
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                    let dict = childSnapshot.value as? [String:Any],
+                    let name = dict["name"] as? String,
+                    let code = dict["code"] as? String,
+                    let idAdm = dict["idAdm"] as? String {
+                    
+                    let room = Room(name: name, idAdm: idAdm, key: childSnapshot.key, code: code)
+                    self.rooms.append(room)
+                }
+            }
+            self.tableView.reloadData()
+            print("----------")
+            print(self.rooms)
+            print("----------")
+        }
+    }
 
     //MARK: -TableView
     
@@ -68,7 +95,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         switch section {
         case 0:
             let initial = tableView.dequeueReusableHeaderFooterView(withIdentifier: self.sectionIdentifier) as? InitialViewHeader
-            print(initial?.initialLabel.text)
+            
             sec = initial
         case 1:
             self.sectionView = tableView.dequeueReusableHeaderFooterView(withIdentifier: self.searchIdentifier) as? SearchViewHeader
@@ -115,7 +142,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.roomIdentifier, for: indexPath) as! RoomTableViewCell
-        let room = self.rooms[indexPath.row]
+        let room = self.rooms[indexPath.row].name
 
         cell.nameLabel.text = room
         
