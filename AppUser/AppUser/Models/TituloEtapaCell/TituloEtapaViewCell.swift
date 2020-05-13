@@ -17,8 +17,6 @@ class TituloEtapaViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.titleLabel.attributedText = NSAttributedString(string: "Título da etapa", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
-        
         self.setupAccessibility()
     }
     

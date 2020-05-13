@@ -14,14 +14,14 @@ class EtapasViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     let etapaCellIdentifier: String = "TituloEtapaViewCell"
-    var stageTitles: [String] = ["Início", "Sinais de gravidade?", "Indicar Isolamento Domiciliar", "Síndrome Respiratória Aguda Grave", "Indicação para internação?", "Negativo - Lista de Procedimentos", "Positivo - Lista de Procedimentos", "Acompanhamento Leito Clínico", "Notificar e Coletar Exames", "Acompanhamento Leito de Terapia", "Notificar e Coletar Exames"]
+    var stageTitles: [Etapa] = []
     let appBlue = UIColor(named: "appBlue")
     let appColor = UIColor(named: "appColor")
     
     var etapas = [Etapa]()
     var alternativaStack:[Etapa] = []
     var avancarStack:[Etapa] = []
-    var titleList:[String] = []
+    var titleList:[Etapa] = []
     
     
     override func viewDidLoad() {
@@ -73,16 +73,16 @@ class EtapasViewController: UIViewController {
                     self.etapas.append(etapa)
                 }
             }
-            self.printTitles()
+            self.sortTitles()
         }
     }
-    
-    func printTitles() {
+
+    func sortTitles() {
         var actualEtapa: Etapa
         
         for etapa in self.etapas {
             if etapa.tipo == "inicial" {
-                titleList.append(etapa.tituloResumido!)
+                titleList.append(etapa)
                 addProxRightList(proxEtapa: etapa.id_sim!)
             }
         }
@@ -90,12 +90,12 @@ class EtapasViewController: UIViewController {
         while !alternativaStack.isEmpty || !avancarStack.isEmpty {
             if !avancarStack.isEmpty {
                 actualEtapa = avancarStack.popLast()!
-                titleList.append(actualEtapa.tituloResumido!)
+                titleList.append(actualEtapa)
                 addProxRightList(proxEtapa: actualEtapa.id_sim!)
             }
             else {
                 actualEtapa = alternativaStack.popLast()!
-                titleList.append(actualEtapa.tituloResumido!)
+                titleList.append(actualEtapa)
                 addProxRightList(proxEtapa: actualEtapa.id_sim!)
                 addProxRightList(proxEtapa: actualEtapa.id_nao!)
             }
@@ -115,7 +115,7 @@ class EtapasViewController: UIViewController {
                     self.avancarStack.append(etapa)
                 }
                 else if etapa.tipo == "final" {
-                    self.titleList.append(etapa.tituloResumido!)
+                    self.titleList.append(etapa)
                 }
             }
         }
@@ -142,18 +142,27 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.etapaCellIdentifier, for: indexPath) as! TituloEtapaViewCell
-        let stage = self.stageTitles[indexPath.row]
+        let stage = self.stageTitles[indexPath.row].tituloResumido
         cell.titleLabel.text = stage
 
+        if self.stageTitles[indexPath.row].tipo == "inicial" || self.stageTitles[indexPath.row].tipo == "alternativa" {
+            
+            UIFont.familyNames.forEach({ familyName in
+                let fontNames = UIFont.fontNames(forFamilyName: familyName)
+                print(familyName, fontNames)
+            })
+
+            
+            let titleFont = UIFont(name: "SFProDisplay-Heavy", size: 18) ?? UIFont.systemFont(ofSize: 18)
+            cell.titleLabel.dynamicFont = titleFont
+        }
+        
         if indexPath.row == self.stageTitles.count-1 {
             cell.lineView.isHidden = true
             
             //Teste identificação da etapa atual
             cell.circleView.image = UIImage(named: "stageSelected")
             
-            //Teste deixar fonte regular
-            let titleFont = UIFont(name: "SFProDisplay-Bold", size: 18) ?? UIFont.systemFont(ofSize: 18)
-            cell.titleLabel.dynamicFont = titleFont
         }
         return cell
     }
