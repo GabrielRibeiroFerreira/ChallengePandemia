@@ -147,12 +147,6 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
 
         if self.stageTitles[indexPath.row].tipo == "inicial" || self.stageTitles[indexPath.row].tipo == "alternativa" {
             
-            UIFont.familyNames.forEach({ familyName in
-                let fontNames = UIFont.fontNames(forFamilyName: familyName)
-                print(familyName, fontNames)
-            })
-
-            
             let titleFont = UIFont(name: "SFProDisplay-Heavy", size: 18) ?? UIFont.systemFont(ofSize: 18)
             cell.titleLabel.dynamicFont = titleFont
         }
