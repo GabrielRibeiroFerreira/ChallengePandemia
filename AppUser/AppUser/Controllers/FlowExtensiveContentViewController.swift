@@ -99,14 +99,22 @@ class FlowExtensiveContentViewController: UIViewController {
         self.dispatchGroup2.enter()
         self.dispatchGroup1.notify(queue: .main) {
             self.refFlow.child(urlFlowProx + self.idScreen + "/tipo").observeSingleEvent(of: .value) { (snapshot) in
-                self.typeProx = snapshot.value as! String
-                self.dispatchGroup2.leave()
+                if (snapshot.exists()){
+                    self.typeProx = snapshot.value as! String
+                    self.dispatchGroup2.leave()
+                }else{
+                    print("Error: Id Next Screen Not Found")
+                }
             }
         }
     }
 
     @IBAction func btnProgress(_ sender: Any) {
-        performSegue(withIdentifier: segueExtensive, sender: self)
+        if segueExtensive != ""{
+            performSegue(withIdentifier: segueExtensive, sender: self)
+        }else{
+            print("Erro: Segue Not Found")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

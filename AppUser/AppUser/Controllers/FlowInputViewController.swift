@@ -123,26 +123,42 @@ class FlowInputViewController: UIViewController {
         self.dispatchGroup2.enter()
         self.dispatchGroup1.notify(queue: .main) {
             self.refFlow.child(urlFlowProx + self.idScreenYes + "/tipo").observeSingleEvent(of: .value) { (snapshot) in
-                self.typeProxYes = snapshot.value as! String
-                self.dispatchGroup2.leave()
+                if (snapshot.exists()){
+                    self.typeProxYes = snapshot.value as! String
+                    self.dispatchGroup2.leave()
+                }else{
+                    print("Error: Id Next Screen Not Found")
+                }
             }
             
             self.dispatchGroup2.enter()
             self.refFlow.child(urlFlowProx + self.idScreenNo + "/tipo").observeSingleEvent(of: .value) { (snapshot) in
-                self.typeProxNo = snapshot.value as! String
-                self.dispatchGroup2.leave()
+                if (snapshot.exists()){
+                    self.typeProxNo = snapshot.value as! String
+                    self.dispatchGroup2.leave()
+                }else{
+                    print("Error: Id Next Screen Not Found")
+                }
             }
         }
     }
 
     @IBAction func btnNo(_ sender: Any) {
         self.isYes = false
-        performSegue(withIdentifier: segueInputNo, sender: self)
+        if segueInputNo != ""{
+            performSegue(withIdentifier: segueInputNo, sender: self)
+        }else{
+            print("Error: Segue Not Found")
+        }
     }
     
     @IBAction func btnYes(_ sender: Any) {
         self.isYes = true
-        performSegue(withIdentifier: segueInputYes, sender: self)
+        if segueInputYes != ""{
+           performSegue(withIdentifier: segueInputYes, sender: self)
+        }else{
+            print("Error: Segue Not Found")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
