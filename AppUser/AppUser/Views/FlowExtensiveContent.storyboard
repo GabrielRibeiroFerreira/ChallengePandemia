@@ -21,27 +21,22 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="723"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDJ-CE-DAu">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="714"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="106"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCg-vk-kKs">
-                                                <rect key="frame" x="20" y="30" width="374" height="86"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCg-vk-kKs">
+                                                <rect key="frame" x="20" y="30" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Cuidados Domésticos do Paciente em Isolamento" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w11-6c-4gu">
-                                                <rect key="frame" x="20" y="164" width="374" height="45.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w11-6c-4gu">
+                                                <rect key="frame" x="20" y="78" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                 <color key="textColor" name="appContrast"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkc-Li-GqN">
-                                                <rect key="frame" x="20" y="229.5" width="374" height="476.5"/>
-                                                <mutableString key="text">Sempre reportar à equipe de saúde que acompanha o caso o surgimento de algum novo sintoma ou piora dos sintomas já presentes.
-
-Manter paciente em quarto isolado e bem ventilado até o fim do período sintomático. Destacam-se os seguintes fatores do cuidado do paciente em isolamento: a higiene respiratória e os hábitos saudáveis de alimentação. Todos os contatos domiciliares do paciente também deverão realizar isolamento domiciliar por 14 dias. Caso apresentar os sintomas, deverão entrar em contato com a equipe de saúde para receber atendimento.
-
-Para mais informações sobre orientações quanto ao isolamento domiciliar do paciente e precauções gerais e do cuidador, ver Protocolo de Manejo Clínico.</mutableString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkc-Li-GqN">
+                                                <rect key="frame" x="20" y="98" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" name="appContrast"/>
                                                 <nil key="highlightedColor"/>
@@ -71,7 +66,7 @@ Para mais informações sobre orientações quanto ao isolamento domiciliar do p
                                 <viewLayoutGuide key="contentLayoutGuide" id="yPr-IY-nqc"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="dXM-SV-U1j"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EP-0f-m5p" customClass="fl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0EP-0f-m5p">
                                 <rect key="frame" x="33" y="783" width="348" height="39"/>
                                 <color key="backgroundColor" name="appBlue"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
@@ -84,7 +79,7 @@ Para mais informações sobre orientações quanto ao isolamento domiciliar do p
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="cLu-Mq-Jvz" kind="show" id="PPw-Si-LKJ"/>
+                                    <action selector="btnProgress:" destination="Znk-tb-pAi" eventType="touchUpInside" id="ac9-k3-Tb3"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -117,6 +112,10 @@ Para mais informações sobre orientações quanto ao isolamento domiciliar do p
                         <outlet property="progressBtn" destination="0EP-0f-m5p" id="Nf7-44-c4J"/>
                         <outlet property="subtitleContent" destination="w11-6c-4gu" id="6XI-Tq-0VD"/>
                         <outlet property="titleContent" destination="PCg-vk-kKs" id="cHU-Mw-ijf"/>
+                        <segue destination="cLu-Mq-Jvz" kind="show" identifier="segueExtensiveShort" id="NhE-fg-X4v"/>
+                        <segue destination="rjm-yg-Xk7" kind="show" identifier="segueExtensiveExtensive" id="qHI-qJ-DiQ"/>
+                        <segue destination="ZWu-4X-0Ud" kind="show" identifier="segueExtensiveFinal" id="wNA-JV-bDO"/>
+                        <segue destination="EGG-GS-pzY" kind="show" identifier="segueExtensiveInput" id="FCW-r2-Dhl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWn-4y-8Dc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -141,7 +140,37 @@ Para mais informações sobre orientações quanto ao isolamento domiciliar do p
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4BN-v9-Avp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="823"/>
+            <point key="canvasLocation" x="14" y="727"/>
+        </scene>
+        <!--FlowExtensiveContent-->
+        <scene sceneID="CoF-xU-iEH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowExtensiveContent" id="rjm-yg-Xk7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oY2-Vj-zmO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egH-9t-oRi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="755"/>
+        </scene>
+        <!--FlowFinal-->
+        <scene sceneID="aSR-rV-0kU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowFinal" id="ZWu-4X-0Ud" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9Gz-ha-5ES"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7w-KJ-Cl5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-25" y="785"/>
+        </scene>
+        <!--FlowInput-->
+        <scene sceneID="Uo5-xB-TbZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowInput" id="EGG-GS-pzY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BkK-lq-sf7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X88-ce-rVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23" y="834"/>
         </scene>
     </scenes>
     <resources>

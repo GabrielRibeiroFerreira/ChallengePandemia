@@ -142,7 +142,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "initialFlowSegue" {
             if let flowInitialView = segue.destination as? FlowInitialViewController {
-                flowInitialView.flowTitle = self.selectedFlow
+                flowInitialView.bdRefFlow = self.selectedFlow
             }
         }
     }

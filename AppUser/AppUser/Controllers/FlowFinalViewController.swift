@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FlowFinalViewController: UIViewController {
 
@@ -14,11 +15,17 @@ class FlowFinalViewController: UIViewController {
     @IBOutlet weak var content: UILabel!
     @IBOutlet weak var finishBtn: UIButton!
     
+    var bdRefFlow: String = ""
+    var bdRefStep: String = ""
+    
+    let refFlow = Database.database().reference()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupAccessibility()
         self.setupNavBar()
+        self.getDataFromDB()
     }
         
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +52,20 @@ class FlowFinalViewController: UIViewController {
         self.finishBtn.titleLabel?.dynamicFont = btnFont
             
         }
+    
+    func getDataFromDB() {
+        //Recuperação Fluxos
+        let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/Etapas/" + self.bdRefStep
+        
+        self.refFlow.child(urlFlowAtual + "/titulo").observeSingleEvent(of: .value) { (snapshot) in
+            self.titleContent.text =  snapshot.value as? String
+        }
+
+        self.refFlow.child(urlFlowAtual + "/descricao").observeSingleEvent(of: .value) { (snapshot) in
+            self.content.text =  snapshot.value as? String
+        }
+        
+    }
 
 
 }

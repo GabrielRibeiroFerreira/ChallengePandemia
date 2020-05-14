@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FlowInitialViewController: UIViewController {
     
@@ -16,13 +17,35 @@ class FlowInitialViewController: UIViewController {
 
     @IBOutlet weak var progressBtn: UIButton!
     
-    var flowTitle: String?
+    var bdRefFlow: String = "idFluxo1"
+    var bdRefStep: String = "idEtapa1"
+    var idScreen: String = ""
+    var typeProx: String = ""
+    var segueInitial: String = ""
+    
+    let refFlow = Database.database().reference()
+    let dispatchGroup1 = DispatchGroup()
+    let dispatchGroup2 = DispatchGroup()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setupNavBar()
         self.setupAccessibility()
+        self.getDataFromDB()
+
+        self.dispatchGroup2.notify(queue: .main) {
+            if self.typeProx == "alternativa"{
+                self.segueInitial = "segueInitialInput"
+            }else if self.typeProx == "avancarCurto"{
+                self.segueInitial = "segueInitialShort"
+            }else if self.typeProx == "avancarExtenso"{
+                self.segueInitial = "segueInitialExtensive"
+            }else if self.typeProx == "final"{
+                self.segueInitial = "segueInitialFinal"
+            }
+        }
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,5 +72,60 @@ class FlowInitialViewController: UIViewController {
         self.progressBtn.titleLabel?.dynamicFont = btnFont
         
     }
+    
+    func getDataFromDB() {
+        //Recuperação Fluxos
+        let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/Etapas/" + self.bdRefStep
+        let urlFlowProx = "Fluxos/" + self.bdRefFlow + "/Etapas/"
+        
+        self.dispatchGroup1.enter()
+        self.refFlow.child(urlFlowAtual + "/titulo").observeSingleEvent(of: .value) { (snapshot) in
+            self.titleInitial.text =  snapshot.value as? String
+        }
 
+        self.refFlow.child(urlFlowAtual + "/descricao").observeSingleEvent(of: .value) { (snapshot) in
+            self.textInitial.text =  snapshot.value as? String
+        }
+        
+        self.refFlow.child(urlFlowAtual + "/id_nao").observeSingleEvent(of: .value) { (snapshot) in
+            self.idScreen =  snapshot.value as! String
+            self.dispatchGroup1.leave()
+        }
+        
+        self.dispatchGroup2.enter()
+        self.dispatchGroup1.notify(queue: .main) {
+            self.refFlow.child(urlFlowProx + self.idScreen + "/tipo").observeSingleEvent(of: .value) { (snapshot) in
+                self.typeProx = snapshot.value as! String
+                self.dispatchGroup2.leave()
+            }
+        }
+    }
+    
+    @IBAction func btnProgress(_ sender: Any) {
+        performSegue(withIdentifier: segueInitial, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueInitialInput"{
+            if let id = segue.destination as? FlowInputViewController {
+                id.bdRefFlow = bdRefFlow //passa o id do fluxo para a proxima tela
+                id.bdRefStep = idScreen //passa o id da etapa para a proxima tela
+            }
+        }else if segue.identifier == "segueInitialShort"{
+            if let id = segue.destination as? FlowShortContentViewController {
+                id.bdRefFlow = bdRefFlow
+                id.bdRefStep = idScreen
+            }
+        }else if segue.identifier == "segueInitialExtensive"{
+            if let id = segue.destination as? FlowExtensiveContentViewController {
+                id.bdRefFlow = bdRefFlow
+                id.bdRefStep = idScreen
+            }
+        }else if segue.identifier == "segueInitialFinal"{
+            if let id = segue.destination as? FlowFinalViewController {
+                id.bdRefFlow = bdRefFlow
+                id.bdRefStep = idScreen
+            }
+        }
+    }
 }
