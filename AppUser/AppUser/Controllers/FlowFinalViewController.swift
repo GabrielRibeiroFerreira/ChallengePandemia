@@ -54,7 +54,7 @@ class FlowFinalViewController: UIViewController {
         }
     
     func getDataFromDB() {
-        //Recuperação Fluxos
+        //Recuperação da Etapa
         let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/Etapas/" + self.bdRefStep
         
         self.refFlow.child(urlFlowAtual + "/titulo").observeSingleEvent(of: .value) { (snapshot) in

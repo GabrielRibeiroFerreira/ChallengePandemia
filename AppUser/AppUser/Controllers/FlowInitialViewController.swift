@@ -74,7 +74,7 @@ class FlowInitialViewController: UIViewController {
     }
     
     func getDataFromDB() {
-        //Recuperação Fluxos
+        //Recuperação da Etapa
         let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/Etapas/" + self.bdRefStep
         let urlFlowProx = "Fluxos/" + self.bdRefFlow + "/Etapas/"
         
