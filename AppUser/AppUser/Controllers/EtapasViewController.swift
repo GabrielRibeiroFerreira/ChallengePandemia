@@ -23,6 +23,9 @@ class EtapasViewController: UIViewController {
     var avancarStack:[Etapa] = []
     var titleList:[Etapa] = []
     
+    //Id da etapa de origem da tela de Etapas
+    var markedStage: String = "idEtapa1"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +57,18 @@ class EtapasViewController: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor(named: "appBlue")
         self.navigationController?.navigationBar.tintColor = UIColor(named: "appColor")
         self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: self.appColor ?? UIColor.blue]
+        
+        //"Ir para Lista" right navBar button
+        let button = UIButton(type: .custom)
+        button.setTitle("Ir para Lista", for: .normal)
+        button.setTitleColor(UIColor(named: "appColor"), for: .normal)
+        button.addTarget(self, action: #selector(goToList(sender:)), for: .touchUpInside)
+        let rightItem = UIBarButtonItem(customView: button)
+        self.navigationItem.rightBarButtonItem = rightItem
     }
     
     func getDataFromDB() {
-        let urlFlow = "Fluxos/idFluxo1/Etapas"
+        let urlFlow = "Fluxos/idFluxo2/Etapas"
         let refFlow = Database.database().reference().child(urlFlow)
         refFlow.observe(.value) { (snapshot) in
             for child in snapshot.children {
@@ -78,8 +89,9 @@ class EtapasViewController: UIViewController {
     }
 
     func sortTitles() {
-        var actualEtapa: Etapa
+        var currentEtapa: Etapa
         
+        //Etapa inicial do fluxo
         for etapa in self.etapas {
             if etapa.tipo == "inicial" {
                 titleList.append(etapa)
@@ -87,31 +99,33 @@ class EtapasViewController: UIViewController {
             }
         }
         
+        //Ordenação árvore de protocolos/fluxos a partir da etapa inicial
         while !alternativaStack.isEmpty || !avancarStack.isEmpty {
             if !avancarStack.isEmpty {
-                actualEtapa = avancarStack.popLast()!
-                titleList.append(actualEtapa)
-                addProxRightList(proxEtapa: actualEtapa.id_sim!)
+                currentEtapa = avancarStack.popLast()!
+                titleList.append(currentEtapa)
+                addProxRightList(proxEtapa: currentEtapa.id_sim!)
             }
             else {
-                actualEtapa = alternativaStack.popLast()!
-                titleList.append(actualEtapa)
-                addProxRightList(proxEtapa: actualEtapa.id_sim!)
-                addProxRightList(proxEtapa: actualEtapa.id_nao!)
+                currentEtapa = alternativaStack.popLast()!
+                titleList.append(currentEtapa)
+                addProxRightList(proxEtapa: currentEtapa.id_sim!)
+                addProxRightList(proxEtapa: currentEtapa.id_nao!)
             }
         }
-        print(titleList)
         stageTitles = self.titleList
         tableView.reloadData()
     }
     
+    //Função auxiliar que verifica o tipo da próxima etapa a ser visistida
+    //e adiciona a pilha correta
     func addProxRightList(proxEtapa: String) {
         for etapa in self.etapas {
             if etapa.idEtapa == proxEtapa {
                 if etapa.tipo == "alternativa" {
                     self.alternativaStack.append(etapa)
                 }
-                else if etapa.tipo == "avancar" {
+                else if etapa.tipo == "avancarCurto" || etapa.tipo == "avancarExtenso" {
                     self.avancarStack.append(etapa)
                 }
                 else if etapa.tipo == "final" {
@@ -130,7 +144,16 @@ class EtapasViewController: UIViewController {
         let fontMetrics = UIFontMetrics(forTextStyle: .body)
         self.titleLabel.font = fontMetrics.scaledFont(for: titleFont, maximumPointSize: 40.0)
     }
-
+    
+    @objc func goToList(sender: UIButton) {
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers
+        for aViewController in viewControllers {
+            if aViewController is AreaViewController {
+                self.navigationController!.popToViewController(aViewController, animated: true)
+            }
+        }
+    }
+    
 }
 
 
@@ -140,24 +163,67 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
         return self.stageTitles.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let stage = self.stageTitles[indexPath.row]
+        
+        
+    }
+    
+    func updateNavigation() {
+        var viewControllers: [UIViewController] = self.navigationController!.viewControllers
+        var size = viewControllers.count
+        
+        for aViewController in viewControllers {
+            size = size-1
+            if aViewController is FlowInitialViewController {
+                
+                //Remove todas as telas até a FlowInitial
+                viewControllers.removeLast(size)
+                
+                //Criação lista de etapas do fluxos
+                //FAZER MÉTODO PARA CHAMAR CORRETAMENTE CADA TELA DE ETAPA!!!
+                let storyboard = UIStoryboard.init(name: "Area", bundle: Bundle.main)
+                if let mainVC = storyboard.instantiateInitialViewController() {
+                    if let vc = mainVC as? AreaViewController {
+                        vc.area = "Saúde da Criança"
+                        vc.bdRefArea = "Crianca"
+                        vc.bdRefRoom = "idSala1"
+                        viewControllers.append(mainVC)
+                    }
+                }
+                
+                //Atualiza navigation com nova lista de UIViewControllers
+                self.navigationController?.viewControllers = viewControllers
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.etapaCellIdentifier, for: indexPath) as! TituloEtapaViewCell
         let stage = self.stageTitles[indexPath.row].tituloResumido
         cell.titleLabel.text = stage
 
+        //Verifica se é uma etapa de alternativa
         if self.stageTitles[indexPath.row].tipo == "inicial" || self.stageTitles[indexPath.row].tipo == "alternativa" {
             
             let titleFont = UIFont(name: "SFProDisplay-Heavy", size: 18) ?? UIFont.systemFont(ofSize: 18)
             cell.titleLabel.dynamicFont = titleFont
         }
-        
-        if indexPath.row == self.stageTitles.count-1 {
-            cell.lineView.isHidden = true
+        else if self.stageTitles[indexPath.row].tipo == "avancarCurto" || self.stageTitles[indexPath.row].tipo == "avancarLongo" || self.stageTitles[indexPath.row].tipo == "final" {
             
-            //Teste identificação da etapa atual
-            cell.circleView.image = UIImage(named: "stageSelected")
+            let titleFont = UIFont(name: "SFProDisplay-Regular", size: 18) ?? UIFont.systemFont(ofSize: 18)
+            cell.titleLabel.dynamicFont = titleFont
             
         }
+        
+        //Verifica se é a etapa atual visualizada
+        if stageTitles[indexPath.row].idEtapa == self.markedStage {
+            cell.circleView.image = UIImage(named: "stageSelected")
+        }
+        else {
+            cell.circleView.image = UIImage(named: "stageNotSelected")
+        }
+        
         return cell
     }
 }
