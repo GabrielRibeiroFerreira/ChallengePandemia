@@ -21,23 +21,22 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="702"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-Ga-yt2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="554.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="110"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fluxo de Manejo Clínico e Pediatrico na Atenção Especializada" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-x3-XTP">
-                                                <rect key="frame" x="20" y="30" width="374" height="86"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-x3-XTP">
+                                                <rect key="frame" x="20" y="30" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Paciente tem sinais de gravidade?*" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7u-bO-CiZ">
-                                                <rect key="frame" x="20" y="156" width="374" height="86"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7u-bO-CiZ">
+                                                <rect key="frame" x="20" y="70" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                                 <color key="textColor" name="appBlue"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCP-YN-LDc">
-                                                <rect key="frame" x="20" y="274" width="374" height="272.5"/>
-                                                <mutableString key="text">- Dispineia; - Desconforto respiratório (tiragem intercostal, batimento de aleta nasal, desidratação, inapetência e cianose); - Saturação de 02 &lt; que 95%; - Piora nas condições clínicas de doença preexistente; - Palidez cutânea  Utilizar Oseltamivir em SRAG sem diagnóstico até resultado de RT-PCR para SARS-CoV-2. Se positivo, suspender o uso!</mutableString>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCP-YN-LDc">
+                                                <rect key="frame" x="20" y="102" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" name="appContrast"/>
                                                 <nil key="highlightedColor"/>
@@ -80,7 +79,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="h0v-bY-vBf" kind="show" id="3IR-Ff-2uK"/>
+                                    <action selector="btnYes:" destination="ID7-Ju-5nH" eventType="touchUpInside" id="ilT-Co-4W1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="69m-D1-S72">
@@ -95,6 +94,9 @@
                                         <integer key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnNo:" destination="ID7-Ju-5nH" eventType="touchUpInside" id="3BQ-6W-c0V"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="appColor"/>
@@ -130,6 +132,10 @@
                         <outlet property="subtitleContent" destination="p7u-bO-CiZ" id="5wD-G3-MdA"/>
                         <outlet property="titleContent" destination="yRY-x3-XTP" id="gGl-Hi-5s1"/>
                         <outlet property="yesBtn" destination="2cp-mE-kZG" id="6ue-d7-Hqy"/>
+                        <segue destination="h0v-bY-vBf" kind="show" identifier="segueInputExtensive" id="Zcl-7k-hax"/>
+                        <segue destination="yir-Jx-TVg" kind="show" identifier="segueInputFinal" id="i97-ef-ObU"/>
+                        <segue destination="KiN-gd-a5s" kind="show" identifier="segueInputShort" id="pfP-Xz-pDM"/>
+                        <segue destination="Rzp-kf-hJZ" kind="show" identifier="segueInputInput" id="wZ2-Pb-eQ0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBq-EP-a97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -155,6 +161,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fvg-Fd-AAX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-34" y="773"/>
+        </scene>
+        <!--FlowFinal-->
+        <scene sceneID="Q1x-5Q-Xqq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowFinal" id="yir-Jx-TVg" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="77Z-x7-Quo"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t1J-ig-kUr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-89" y="826"/>
+        </scene>
+        <!--FlowShortContent-->
+        <scene sceneID="Xe8-Dy-2EB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowShortContent" id="KiN-gd-a5s" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="u9C-SW-3WU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cR8-Dt-M1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-51" y="879"/>
+        </scene>
+        <!--FlowInput-->
+        <scene sceneID="oK0-de-tbf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowInput" id="Rzp-kf-hJZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="eco-Sa-dRU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IdG-wb-enp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="930"/>
         </scene>
     </scenes>
     <resources>
