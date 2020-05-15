@@ -68,7 +68,7 @@ class EtapasViewController: UIViewController {
     }
     
     func getDataFromDB() {
-        let urlFlow = "Fluxos/idFluxo2/Etapas"
+        let urlFlow = "Fluxos/idFluxo1/Etapas"
         let refFlow = Database.database().reference().child(urlFlow)
         refFlow.observe(.value) { (snapshot) in
             for child in snapshot.children {
@@ -164,8 +164,11 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let stage = self.stageTitles[indexPath.row]
+        //let stage = self.stageTitles[indexPath.row]
         
+        //DFS - retornando a lista das etapas (incial -> selecionada)
+        
+        self.updateNavigation()
         
     }
     
@@ -181,21 +184,38 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
                 viewControllers.removeLast(size)
                 
                 //Criação lista de etapas do fluxos
-                //FAZER MÉTODO PARA CHAMAR CORRETAMENTE CADA TELA DE ETAPA!!!
-                let storyboard = UIStoryboard.init(name: "Area", bundle: Bundle.main)
-                if let mainVC = storyboard.instantiateInitialViewController() {
-                    if let vc = mainVC as? AreaViewController {
-                        vc.area = "Saúde da Criança"
-                        vc.bdRefArea = "Crianca"
-                        vc.bdRefRoom = "idSala1"
-                        viewControllers.append(mainVC)
-                    }
-                }
+                var  testList:[Etapa] = []
+                let etapa1 = Etapa(tituloResumido: "→ Sindrome Gripal", idEtapa: "idEtapa1", id_sim: "idEtapa2", id_nao: "idEtapa2", tipo: "inicial")
+                let etapa2 = Etapa(tituloResumido: "→ Sinais de gravidade?", idEtapa: "idEtapa2", id_sim: "idEtapa4", id_nao: "idEtapa2", tipo: "alternativa")
+                let etapa3 = Etapa(tituloResumido: "• Síndrome Respiratória Aguda Grave", idEtapa: "idEtapa3", id_sim: "idEtapa5", id_nao: "idEtapa5", tipo: "avancarCurto")
+                testList.append(etapa1)
+                testList.append(etapa2)
+                testList.append(etapa3)
+                
+                let newNavList = self.instanciateNewNavigation(stageList: testList)
                 
                 //Atualiza navigation com nova lista de UIViewControllers
-                self.navigationController?.viewControllers = viewControllers
+                self.navigationController?.viewControllers = viewControllers + newNavList
             }
         }
+    }
+    
+    func instanciateNewNavigation(stageList: [Etapa]) -> [UIViewController] {
+        var list: [UIViewController] = []
+        
+        //Percorre lista e instancia cada VC
+        
+        let storyboard = UIStoryboard.init(name: "Area", bundle: Bundle.main)
+        if let mainVC = storyboard.instantiateInitialViewController() {
+            if let vc = mainVC as? AreaViewController {
+                vc.area = "Saúde da Criança"
+                vc.bdRefArea = "Crianca"
+                vc.bdRefRoom = "idSala1"
+                list.append(mainVC)
+            }
+        }
+        
+        return list
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
