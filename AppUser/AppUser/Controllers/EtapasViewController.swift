@@ -26,6 +26,8 @@ class EtapasViewController: UIViewController {
     //Id da etapa de origem da tela de Etapas
     var markedStage: String = "idEtapa1"
     
+    var flow: String = "idFluxo1"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +70,7 @@ class EtapasViewController: UIViewController {
     }
     
     func getDataFromDB() {
-        let urlFlow = "Fluxos/idFluxo1/Etapas"
+        let urlFlow = "Fluxos/" + self.flow + "/Etapas"
         let refFlow = Database.database().reference().child(urlFlow)
         refFlow.observe(.value) { (snapshot) in
             for child in snapshot.children {
@@ -184,13 +186,16 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
                 viewControllers.removeLast(size)
                 
                 //Criação lista de etapas do fluxos
+                //PASSAR AQUI A LISTA ENCONTRADA PELA DFS
                 var  testList:[Etapa] = []
                 let etapa1 = Etapa(tituloResumido: "→ Sindrome Gripal", idEtapa: "idEtapa1", id_sim: "idEtapa2", id_nao: "idEtapa2", tipo: "inicial")
                 let etapa2 = Etapa(tituloResumido: "→ Sinais de gravidade?", idEtapa: "idEtapa2", id_sim: "idEtapa4", id_nao: "idEtapa2", tipo: "alternativa")
                 let etapa3 = Etapa(tituloResumido: "• Síndrome Respiratória Aguda Grave", idEtapa: "idEtapa3", id_sim: "idEtapa5", id_nao: "idEtapa5", tipo: "avancarCurto")
+                let etapa4 = Etapa(tituloResumido: "• Suporte intensivo", idEtapa: "idEtapa6", id_sim: "idEtapa8", id_nao: "idEtapa8", tipo: "avancarExtenso")
                 testList.append(etapa1)
                 testList.append(etapa2)
                 testList.append(etapa3)
+                testList.append(etapa4)
                 
                 let newNavList = self.instanciateNewNavigation(stageList: testList)
                 
@@ -204,19 +209,52 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
         var list: [UIViewController] = []
         
         //Percorre lista e instancia cada VC
-        
-        let storyboard = UIStoryboard.init(name: "Area", bundle: Bundle.main)
-        if let mainVC = storyboard.instantiateInitialViewController() {
-            if let vc = mainVC as? AreaViewController {
-                vc.area = "Saúde da Criança"
-                vc.bdRefArea = "Crianca"
-                vc.bdRefRoom = "idSala1"
-                list.append(mainVC)
+        for stage in stageList {
+            if stage.tipo == "avancarCurto" {
+                let storyboard = UIStoryboard.init(name: "FlowShortContent", bundle: Bundle.main)
+                if let mainVC = storyboard.instantiateInitialViewController() {
+                    if let vc = mainVC as? FlowShortContentViewController {
+                        vc.bdRefFlow = self.flow
+                        vc.bdRefStep = stage.idEtapa!
+                        list.append(vc)
+                    }
+                }
+            }
+            else if stage.tipo == "avancarExtenso" {
+               let storyboard = UIStoryboard.init(name: "FlowExtensiveContent", bundle: Bundle.main)
+               if let mainVC = storyboard.instantiateInitialViewController() {
+                   if let vc = mainVC as? FlowExtensiveContentViewController {
+                       vc.bdRefFlow = self.flow
+                       vc.bdRefStep = stage.idEtapa!
+                       list.append(vc)
+                   }
+               }
+            }
+            else if stage.tipo == "alternativa" {
+               let storyboard = UIStoryboard.init(name: "FlowInput", bundle: Bundle.main)
+               if let mainVC = storyboard.instantiateInitialViewController() {
+                   if let vc = mainVC as? FlowInputViewController {
+                       vc.bdRefFlow = self.flow
+                       vc.bdRefStep = stage.idEtapa!
+                       list.append(vc)
+                   }
+               }
+            }
+            else if stage.tipo == "final" {
+               let storyboard = UIStoryboard.init(name: "FlowFinal", bundle: Bundle.main)
+               if let mainVC = storyboard.instantiateInitialViewController() {
+                   if let vc = mainVC as? FlowInputViewController {
+                       vc.bdRefFlow = self.flow
+                       vc.bdRefStep = stage.idEtapa!
+                       list.append(vc)
+                   }
+               }
             }
         }
         
         return list
     }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.etapaCellIdentifier, for: indexPath) as! TituloEtapaViewCell
@@ -229,8 +267,7 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
             let titleFont = UIFont(name: "SFProDisplay-Heavy", size: 18) ?? UIFont.systemFont(ofSize: 18)
             cell.titleLabel.dynamicFont = titleFont
         }
-        else if self.stageTitles[indexPath.row].tipo == "avancarCurto" || self.stageTitles[indexPath.row].tipo == "avancarLongo" || self.stageTitles[indexPath.row].tipo == "final" {
-            
+        else {
             let titleFont = UIFont(name: "SFProDisplay-Regular", size: 18) ?? UIFont.systemFont(ofSize: 18)
             cell.titleLabel.dynamicFont = titleFont
             
