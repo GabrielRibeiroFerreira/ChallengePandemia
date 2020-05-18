@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class SearchViewHeader: UITableViewHeaderFooterView {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var roomLabel: UILabel!
+    @IBOutlet weak var addRoomButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +25,4 @@ class SearchViewHeader: UITableViewHeaderFooterView {
         
         self.roomLabel.dynamicFont = roomFont
     }
-    
-
 }

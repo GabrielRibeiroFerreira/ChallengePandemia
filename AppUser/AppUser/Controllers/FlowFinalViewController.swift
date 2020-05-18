@@ -34,6 +34,16 @@ class FlowFinalViewController: UIViewController {
         self.setupNavBar()
     }
     
+    @IBAction func endFlow(_ sender: Any) {
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers
+        for aViewController in viewControllers {
+            if aViewController is AreaViewController {
+                self.navigationController!.popToViewController(aViewController, animated: true)
+            }
+        }
+    }
+    
+    
     func setupNavBar() {
         
         self.navigationController?.navigationBar.prefersLargeTitles = false
@@ -51,7 +61,7 @@ class FlowFinalViewController: UIViewController {
         self.content.dynamicFont = contentFont
         self.finishBtn.titleLabel?.dynamicFont = btnFont
             
-        }
+    }
     
     func getDataFromDB() {
         //Recuperação da Etapa
@@ -67,5 +77,12 @@ class FlowFinalViewController: UIViewController {
         
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toStageSegue"{
+            if let etapas = segue.destination as? EtapasViewController {
+                etapas.markedStage = self.bdRefStep
+                etapas.flow = self.bdRefFlow
+            }
+        }
+    }
 }

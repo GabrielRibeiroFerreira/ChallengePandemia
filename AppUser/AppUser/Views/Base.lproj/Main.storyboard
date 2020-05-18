@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="740"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-S0-dCJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="652"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="694"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para você" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82k-Ry-z0Q">
                                                 <rect key="frame" x="40" y="86" width="125.5" height="33"/>
@@ -58,8 +58,8 @@
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Informações iniciais e tutorial do Aplicativo." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJR-Vd-7zC">
-                                                <rect key="frame" x="40" y="611" width="349.5" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Através das salas e áreas do seu local de trabalho, acesse e navegue pelas etapas do fluxos e protocolos de forma flúida!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJR-Vd-7zC">
+                                                <rect key="frame" x="40" y="611" width="337.5" height="63"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
@@ -182,28 +182,36 @@
                                 <rect key="frame" x="0.0" y="148.5" width="414" height="618.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GH2-Ab-oUg">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="195.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="520.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações sobre o Aplicativo." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94g-w3-PIE">
-                                                <rect key="frame" x="20" y="75.5" width="374" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94g-w3-PIE">
+                                                <rect key="frame" x="20" y="226" width="374" height="129"/>
+                                                <string key="text">O Coflui é disponibilizado para você profissional, que realiza consultas a fluxos e protocolos, atráves do Coflui U, e para você instituição ou espaço de trabalho, que realiza cadastros e gestão desses fluxos, através do Coflui Ad. </string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLP-Dd-xau">
-                                                <rect key="frame" x="20" y="113" width="374" height="29"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="emailapp@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbf-D6-lue">
-                                                <rect key="frame" x="20" y="142" width="374" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Possui alguma dúvida? Tem interesse em utilizar o Coflui em seu local de trabalho?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLP-Dd-xau">
+                                                <rect key="frame" x="20" y="387" width="374" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações sobre o Aplicativo." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvB-Je-eF3">
-                                                <rect key="frame" x="20" y="38" width="374" height="21.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entre em contato" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbf-D6-lue">
+                                                <rect key="frame" x="20" y="446" width="374" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvB-Je-eF3">
+                                                <rect key="frame" x="20" y="38" width="374" height="172"/>
+                                                <mutableString key="text">O aplicativo Coflui surge como ferramenta de auxílio ao profissionais da saúde em seus locais de trabalho. Compreendendo a utilização diária de fluxos e protocolos de procedimentos, o Coflui oferece uma nova possibilidade de consulta e navegação, oferecendo agilidade e fluídez em seus acessos e leituras. </mutableString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cofluiapp@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJR-of-H2r">
+                                                <rect key="frame" x="20" y="467.5" width="374" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -211,19 +219,22 @@
                                         </subviews>
                                         <color key="backgroundColor" name="appColor"/>
                                         <constraints>
+                                            <constraint firstItem="oJR-of-H2r" firstAttribute="trailing" secondItem="JvB-Je-eF3" secondAttribute="trailing" id="5xb-5J-V7W"/>
+                                            <constraint firstItem="oJR-of-H2r" firstAttribute="top" secondItem="Vbf-D6-lue" secondAttribute="bottom" id="7Bx-sU-rwu"/>
+                                            <constraint firstAttribute="bottom" secondItem="oJR-of-H2r" secondAttribute="bottom" constant="32" id="8cO-gP-nGn"/>
                                             <constraint firstItem="JvB-Je-eF3" firstAttribute="leading" secondItem="GH2-Ab-oUg" secondAttribute="leading" constant="20" id="9Ks-XU-biX"/>
                                             <constraint firstItem="Vbf-D6-lue" firstAttribute="leading" secondItem="JvB-Je-eF3" secondAttribute="leading" id="AeM-Sd-dnk"/>
                                             <constraint firstItem="Vbf-D6-lue" firstAttribute="trailing" secondItem="JvB-Je-eF3" secondAttribute="trailing" id="DeR-2o-e6p"/>
-                                            <constraint firstItem="aLP-Dd-xau" firstAttribute="top" secondItem="94g-w3-PIE" secondAttribute="bottom" constant="16" id="E01-EP-GXr"/>
+                                            <constraint firstItem="aLP-Dd-xau" firstAttribute="top" secondItem="94g-w3-PIE" secondAttribute="bottom" constant="32" id="E01-EP-GXr"/>
                                             <constraint firstItem="aLP-Dd-xau" firstAttribute="leading" secondItem="JvB-Je-eF3" secondAttribute="leading" id="Jfq-Gh-y9D"/>
-                                            <constraint firstAttribute="bottom" secondItem="Vbf-D6-lue" secondAttribute="bottom" constant="32" id="MCA-xh-kfB"/>
                                             <constraint firstItem="JvB-Je-eF3" firstAttribute="top" secondItem="GH2-Ab-oUg" secondAttribute="top" constant="38" id="Of0-hb-zwu"/>
                                             <constraint firstItem="aLP-Dd-xau" firstAttribute="trailing" secondItem="JvB-Je-eF3" secondAttribute="trailing" id="VIb-fj-KOO"/>
                                             <constraint firstItem="94g-w3-PIE" firstAttribute="trailing" secondItem="JvB-Je-eF3" secondAttribute="trailing" id="Ylb-81-1Gy"/>
                                             <constraint firstAttribute="trailing" secondItem="JvB-Je-eF3" secondAttribute="trailing" constant="20" id="fav-nZ-RhW"/>
                                             <constraint firstItem="94g-w3-PIE" firstAttribute="leading" secondItem="JvB-Je-eF3" secondAttribute="leading" id="gDo-yx-CJX"/>
                                             <constraint firstItem="94g-w3-PIE" firstAttribute="top" secondItem="JvB-Je-eF3" secondAttribute="bottom" constant="16" id="heh-3U-veU"/>
-                                            <constraint firstItem="Vbf-D6-lue" firstAttribute="top" secondItem="aLP-Dd-xau" secondAttribute="bottom" id="j2y-ll-NMv"/>
+                                            <constraint firstItem="Vbf-D6-lue" firstAttribute="top" secondItem="aLP-Dd-xau" secondAttribute="bottom" constant="16" id="j2y-ll-NMv"/>
+                                            <constraint firstItem="oJR-of-H2r" firstAttribute="leading" secondItem="JvB-Je-eF3" secondAttribute="leading" id="oBl-Dw-Pf1"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -268,8 +279,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sobre" id="gjl-zj-pHw"/>
                     <connections>
+                        <outlet property="contact2Label" destination="Vbf-D6-lue" id="kpz-oV-Zg1"/>
                         <outlet property="contactLabel" destination="aLP-Dd-xau" id="idI-FY-G9p"/>
-                        <outlet property="emailLabel" destination="Vbf-D6-lue" id="YyK-FJ-aeE"/>
+                        <outlet property="emailLabel" destination="oJR-of-H2r" id="qOh-LU-KFY"/>
                         <outlet property="firstDescripLabel" destination="JvB-Je-eF3" id="uqF-3P-vuc"/>
                         <outlet property="numberVersionLabel" destination="zN3-lc-M2S" id="3Ld-uM-W2C"/>
                         <outlet property="secondDescripLabel" destination="94g-w3-PIE" id="zgW-3S-hkh"/>
