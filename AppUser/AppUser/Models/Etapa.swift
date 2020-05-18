@@ -23,7 +23,4 @@ class Etapa: Codable {
         self.tipo = tipo
     }
     
-    init() {
-        
-    }
 }
