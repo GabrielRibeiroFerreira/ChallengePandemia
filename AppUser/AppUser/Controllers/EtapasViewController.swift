@@ -23,12 +23,13 @@ class EtapasViewController: UIViewController {
     var avancarStack:[Etapa] = []
     var titleList:[Etapa] = []
     
-//    var initialStage = Etapa()
+    //dfs variabels
+    var stack: [Etapa] = []
+    var dfsResult: [Etapa] = []
     
     //Id da etapa de origem da tela de Etapas
     var markedStage: String = "idEtapa1"
-    
-    var flow: String = "idFluxo1"
+    var flow: String = "idFluxo2"
     
     
     override func viewDidLoad() {
@@ -100,7 +101,6 @@ class EtapasViewController: UIViewController {
             if etapa.tipo == "inicial" {
                 titleList.append(etapa)
                 addProxRightList(proxEtapa: etapa.id_sim!)
-//                self.initialStage = etapa
             }
         }
         
@@ -168,22 +168,62 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
         return self.stageTitles.count
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        //let stage = self.stageTitles[indexPath.row]
-//        
-//        //DFS - retornando a lista das etapas (incial -> selecionada)
-//        
-//        self.updateNavigation()
-//        
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let stage = self.stageTitles[indexPath.row]
+        
+        //DFS - retornando a lista das etapas (incial -> selecionada)
+        self.dfs(stageSelected: stage)
+        
+        self.updateNavigation()
+        
+    }
     
     func dfs(stageSelected: Etapa) {
-        var stack: [Etapa] = []
-//        stack.append(self.initialStage)
-        
-        while stack.last?.idEtapa != stageSelected.idEtapa {
-            
+        //Chama dfs a partir da estapa inicial do fluxo
+        for etapa in self.etapas {
+            if etapa.tipo == "inicial" {
+                dsfVisit(currentStage: etapa, stageSelected: stageSelected)
+            }
         }
+        
+        self.dfsResult.append(stageSelected)
+    }
+    
+    func dsfVisit(currentStage: Etapa, stageSelected: Etapa) {
+        if currentStage.idEtapa == stageSelected.idEtapa {
+            self.dfsResult = self.stack
+            return
+        }
+        else if currentStage.tipo == "final" {
+            return
+        }
+        else {
+            self.stack.append(currentStage)
+            
+            if currentStage.tipo == "alternativa" {
+                guard let etapaSim = getNextStage(idEtapa: currentStage.id_sim!) else { return }
+                dsfVisit(currentStage: etapaSim, stageSelected: stageSelected)
+                
+                guard let etapaNao = getNextStage(idEtapa: currentStage.id_nao!) else { return }
+                dsfVisit(currentStage: etapaNao, stageSelected: stageSelected)
+                
+                self.stack.removeLast()
+            }
+            else {
+                guard let etapaSim = getNextStage(idEtapa: currentStage.id_sim!) else { return }
+                dsfVisit(currentStage: etapaSim, stageSelected: stageSelected)
+                self.stack.removeLast()
+            }
+        }
+    }
+    
+    func getNextStage(idEtapa: String) -> Etapa? {
+        for stage in self.etapas {
+            if stage.idEtapa == idEtapa {
+                return stage
+            }
+        }
+        return nil
     }
     
     func updateNavigation() {
@@ -199,17 +239,17 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
                 
                 //Criação lista de etapas do fluxos
                 //PASSAR AQUI A LISTA ENCONTRADA PELA DFS
-                var  testList:[Etapa] = []
-                let etapa1 = Etapa(tituloResumido: "→ Sindrome Gripal", idEtapa: "idEtapa1", id_sim: "idEtapa2", id_nao: "idEtapa2", tipo: "inicial")
-                let etapa2 = Etapa(tituloResumido: "→ Sinais de gravidade?", idEtapa: "idEtapa2", id_sim: "idEtapa4", id_nao: "idEtapa2", tipo: "alternativa")
-                let etapa3 = Etapa(tituloResumido: "• Síndrome Respiratória Aguda Grave", idEtapa: "idEtapa3", id_sim: "idEtapa5", id_nao: "idEtapa5", tipo: "avancarCurto")
-                let etapa4 = Etapa(tituloResumido: "• Suporte intensivo", idEtapa: "idEtapa6", id_sim: "idEtapa8", id_nao: "idEtapa8", tipo: "avancarExtenso")
-                testList.append(etapa1)
-                testList.append(etapa2)
-                testList.append(etapa3)
-                testList.append(etapa4)
+//                var  testList:[Etapa] = []
+//                let etapa1 = Etapa(tituloResumido: "→ Sindrome Gripal", idEtapa: "idEtapa1", id_sim: "idEtapa2", id_nao: "idEtapa2", tipo: "inicial")
+//                let etapa2 = Etapa(tituloResumido: "→ Sinais de gravidade?", idEtapa: "idEtapa2", id_sim: "idEtapa4", id_nao: "idEtapa2", tipo: "alternativa")
+//                let etapa3 = Etapa(tituloResumido: "• Síndrome Respiratória Aguda Grave", idEtapa: "idEtapa3", id_sim: "idEtapa5", id_nao: "idEtapa5", tipo: "avancarCurto")
+//                let etapa4 = Etapa(tituloResumido: "• Suporte intensivo", idEtapa: "idEtapa6", id_sim: "idEtapa8", id_nao: "idEtapa8", tipo: "avancarExtenso")
+//                testList.append(etapa1)
+//                testList.append(etapa2)
+//                testList.append(etapa3)
+//                testList.append(etapa4)
                 
-                let newNavList = self.instanciateNewNavigation(stageList: testList)
+                let newNavList = self.instanciateNewNavigation(stageList: self.dfsResult)
                 
                 //Atualiza navigation com nova lista de UIViewControllers
                 self.navigationController?.viewControllers = viewControllers + newNavList
