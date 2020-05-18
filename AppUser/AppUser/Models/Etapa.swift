@@ -22,8 +22,4 @@ class Etapa: Codable {
         self.id_nao = id_nao
         self.tipo = tipo
     }
-    
-    init() {
-        
-    }
 }

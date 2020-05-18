@@ -122,7 +122,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Etapas" id="5IF-2m-oYL">
                             <color key="tintColor" name="appBlue"/>
                             <connections>
-                                <segue destination="KCQ-7B-D80" kind="show" id="NET-gS-xo1"/>
+                                <segue destination="KCQ-7B-D80" kind="show" identifier="toStageSegue" id="NET-gS-xo1"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

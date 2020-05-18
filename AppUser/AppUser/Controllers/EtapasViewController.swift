@@ -23,7 +23,7 @@ class EtapasViewController: UIViewController {
     var avancarStack:[Etapa] = []
     var titleList:[Etapa] = []
     
-    var initialStage = Etapa()
+//    var initialStage = Etapa()
     
     //Id da etapa de origem da tela de Etapas
     var markedStage: String = "idEtapa1"
@@ -100,7 +100,7 @@ class EtapasViewController: UIViewController {
             if etapa.tipo == "inicial" {
                 titleList.append(etapa)
                 addProxRightList(proxEtapa: etapa.id_sim!)
-                self.initialStage = etapa
+//                self.initialStage = etapa
             }
         }
         
@@ -179,7 +179,7 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
     
     func dfs(stageSelected: Etapa) {
         var stack: [Etapa] = []
-        stack.append(self.initialStage)
+//        stack.append(self.initialStage)
         
         while stack.last?.idEtapa != stageSelected.idEtapa {
             
