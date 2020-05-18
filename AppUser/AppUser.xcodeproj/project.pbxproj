@@ -47,6 +47,7 @@
 		15A48B022453606100870B04 /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B012453606100870B04 /* Etapas.storyboard */; };
 		15A48B05245388C100870B04 /* TituloEtapaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */; };
 		15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */; };
+		15AABE49246C4F9C00483412 /* Etapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AABE48246C4F9C00483412 /* Etapa.swift */; };
 		2A45D47124575F7E00503C13 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45D46F24575F7E00503C13 /* RoomTableViewCell.swift */; };
 		2A45D47224575F7E00503C13 /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A45D47024575F7E00503C13 /* RoomTableViewCell.xib */; };
 		2A5685CB2450C10E00ECAC23 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5685CA2450C10E00ECAC23 /* Area.storyboard */; };
@@ -112,6 +113,7 @@
 		15A48B012453606100870B04 /* Etapas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
 		15A48B04245388C100870B04 /* TituloEtapaViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TituloEtapaViewCell.xib; sourceTree = "<group>"; };
 		15A48B06245388FD00870B04 /* TituloEtapaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TituloEtapaViewCell.swift; sourceTree = "<group>"; };
+		15AABE48246C4F9C00483412 /* Etapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Etapa.swift; sourceTree = "<group>"; };
 		2A45D46F24575F7E00503C13 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		2A45D47024575F7E00503C13 /* RoomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
 		2A5685CA2450C10E00ECAC23 /* Area.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				2A5685CC2450CE0C00ECAC23 /* ProtocolCell */,
 				1514500B2459F530001183D4 /* Room.swift */,
 				1526225A2469BDB700CF7F7D /* ProtFlow.swift */,
+				15AABE48246C4F9C00483412 /* Etapa.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				2A5CF435244A254D00E98022 /* MainViewController.swift in Sources */,
 				0DBDF4A72453E50E00B5DC26 /* FlowFinalViewController.swift in Sources */,
 				1548431A245736CF00D5E408 /* EtapasViewController.swift in Sources */,
+				15AABE49246C4F9C00483412 /* Etapa.swift in Sources */,
 				15A48B07245388FD00870B04 /* TituloEtapaViewCell.swift in Sources */,
 				2A5CF435244A254D00E98022 /* MainViewController.swift in Sources */,
 				156577BE244E078900102570 /* OnboardingViewController.swift in Sources */,

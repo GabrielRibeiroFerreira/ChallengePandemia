@@ -11,7 +11,7 @@ import UIKit
 class AreasTableViewController: UITableViewController {
     var room : Room?
     let areaIdentifier : String = "AreaTableViewCell"
-    let areas : [(name : String, image : UIImage, shortName: String, bdRef: String)] = [(NSLocalizedString("Saúde da Criança e do Adolescente", comment: "children"), UIImage(named: "iconChildren") ?? UIImage(), "Saúde da Criança", "Crianca"), (NSLocalizedString("Saúde da mulher", comment: "woman"), UIImage(named: "iconWoman") ?? UIImage(), "Saúde da Mulher", "Mulher"), (NSLocalizedString("Saúde do Adulto e do Idoso", comment: "adult"), UIImage(named: "iconAdult") ?? UIImage(), "Saúde do Adulto", "Adulto"), (NSLocalizedString("Urgência e Emergência", comment: "primary"), UIImage(named: "iconPrimary") ?? UIImage(), "Urgência e Emergência", "Urgencia")]
+    let areas : [(name : String, image : UIImage, shortName: String, bdRef: String)] = [(NSLocalizedString("Saúde da Criança e do Adolescente", comment: "children"), UIImage(named: "iconChildren") ?? UIImage(), "Saúde da Criança", "Crianca"), (NSLocalizedString("Saúde da Mulher", comment: "woman"), UIImage(named: "iconWoman") ?? UIImage(), "Saúde da Mulher", "Mulher"), (NSLocalizedString("Saúde do Adulto e do Idoso", comment: "adult"), UIImage(named: "iconAdult") ?? UIImage(), "Saúde do Adulto", "Adulto"), (NSLocalizedString("Urgência e Emergência", comment: "primary"), UIImage(named: "iconPrimary") ?? UIImage(), "Urgência e Emergência", "Urgencia")]
     
     var selectedArea : String = ""
     var bdRefArea: String = ""
