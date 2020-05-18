@@ -9,17 +9,17 @@
 import Foundation
 
 class Room: Codable {
-    let idSala: Int?
     let name: String?
-    let idAdm: Int?
+    let idAdm: String?
     let key: String?
+    let code: String?
     //let areas: [Areas]
     
 
-    init(idSala: Int, name: String, idAdm: Int, key: String) {
-        self.idSala = idSala
+    init(name: String, idAdm: String, key: String, code: String) {
         self.name = name
         self.idAdm = idAdm
         self.key = key
+        self.code = code
     }
 }

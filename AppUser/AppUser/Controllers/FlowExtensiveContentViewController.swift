@@ -138,6 +138,11 @@ class FlowExtensiveContentViewController: UIViewController {
                 id.bdRefFlow = bdRefFlow
                 id.bdRefStep = idScreen
             }
+        }else if segue.identifier == "toStageSegue"{
+            if let etapas = segue.destination as? EtapasViewController {
+                etapas.markedStage = self.bdRefStep
+                etapas.flow = self.bdRefFlow
+            }
         }
     }
 }

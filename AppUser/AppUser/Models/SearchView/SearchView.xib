@@ -33,7 +33,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShH-B3-5JI">
-                            <rect key="frame" x="8" y="175" width="398" height="21"/>
+                            <rect key="frame" x="8" y="175" width="366" height="21"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -44,18 +44,28 @@
                             <color key="barTintColor" name="appColor"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEc-z6-0zb">
+                            <rect key="frame" x="384" y="174" width="22" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="BEc-z6-0zb" secondAttribute="height" multiplier="1:1" id="GQR-nQ-Eh3"/>
+                                <constraint firstAttribute="height" constant="22" id="rbe-aK-dLk"/>
+                            </constraints>
+                            <state key="normal" image="plus" catalog="system"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" name="appColor"/>
                     <constraints>
+                        <constraint firstItem="BEc-z6-0zb" firstAttribute="leading" secondItem="ShH-B3-5JI" secondAttribute="trailing" constant="10" id="0lE-Db-mxV"/>
                         <constraint firstAttribute="trailing" secondItem="Gby-xE-oCb" secondAttribute="trailing" constant="10" id="3A5-42-tjT"/>
                         <constraint firstItem="ShH-B3-5JI" firstAttribute="leading" secondItem="EmB-93-pSM" secondAttribute="leading" constant="8" id="5rq-9b-ksb"/>
+                        <constraint firstAttribute="trailing" secondItem="BEc-z6-0zb" secondAttribute="trailing" constant="8" id="GCX-Aa-mRh"/>
                         <constraint firstAttribute="bottom" secondItem="ShH-B3-5JI" secondAttribute="bottom" constant="12" id="L0j-iU-mQY"/>
                         <constraint firstItem="Gby-xE-oCb" firstAttribute="top" secondItem="EmB-93-pSM" secondAttribute="top" constant="24" id="V8l-MO-xKf"/>
                         <constraint firstAttribute="trailing" secondItem="eGb-Fb-RmV" secondAttribute="trailing" id="dIN-pt-2Os"/>
                         <constraint firstAttribute="bottom" secondItem="eGb-Fb-RmV" secondAttribute="bottom" id="dUk-ku-knw"/>
+                        <constraint firstAttribute="bottom" secondItem="BEc-z6-0zb" secondAttribute="bottom" constant="12" id="iRZ-jW-xMT"/>
                         <constraint firstItem="Gby-xE-oCb" firstAttribute="leading" secondItem="EmB-93-pSM" secondAttribute="leading" constant="10" id="qHa-3F-jvg"/>
                         <constraint firstItem="ShH-B3-5JI" firstAttribute="top" secondItem="Gby-xE-oCb" secondAttribute="bottom" constant="20" id="sZa-Fe-doc"/>
-                        <constraint firstAttribute="trailing" secondItem="ShH-B3-5JI" secondAttribute="trailing" constant="8" id="shK-cf-V4M"/>
                         <constraint firstItem="eGb-Fb-RmV" firstAttribute="leading" secondItem="EmB-93-pSM" secondAttribute="leading" id="tkn-QM-ztd"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -78,6 +88,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="addRoomButton" destination="BEc-z6-0zb" id="x1G-qD-dA6"/>
                 <outlet property="roomLabel" destination="ShH-B3-5JI" id="RKS-JQ-gjJ"/>
                 <outlet property="searchBar" destination="Gby-xE-oCb" id="lnj-Bh-v0B"/>
             </connections>
@@ -85,6 +96,7 @@
         </view>
     </objects>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="appBlue">
             <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

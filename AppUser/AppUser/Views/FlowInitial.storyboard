@@ -94,7 +94,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Etapas" id="ZpU-ie-lBM">
                             <color key="tintColor" name="appColor"/>
                             <connections>
-                                <segue destination="qn7-gn-qRK" kind="show" id="KOw-9q-3q2"/>
+                                <segue destination="qn7-gn-qRK" kind="show" identifier="toStageSegue" id="KOw-9q-3q2"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

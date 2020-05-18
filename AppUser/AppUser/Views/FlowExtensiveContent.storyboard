@@ -103,7 +103,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Etapas" id="dEQ-v0-Ruh">
                             <color key="tintColor" name="appBlue"/>
                             <connections>
-                                <segue destination="d6b-mk-teg" kind="show" id="bSg-ag-0QJ"/>
+                                <segue destination="d6b-mk-teg" kind="show" identifier="toStageSegue" id="bSg-ag-0QJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

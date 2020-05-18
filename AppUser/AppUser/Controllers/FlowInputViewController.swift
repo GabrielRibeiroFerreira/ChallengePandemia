@@ -193,10 +193,15 @@ class FlowInputViewController: UIViewController {
             if let id = segue.destination as? FlowFinalViewController {
                 id.bdRefFlow = bdRefFlow
                 if isYes == true{
-                    id.bdRefStep = idScreenYes 
+                    id.bdRefStep = idScreenYes
                 }else{
                     id.bdRefStep = idScreenNo
                 }
+            }
+        }else if segue.identifier == "toStageSegue"{
+            if let etapas = segue.destination as? EtapasViewController {
+                etapas.markedStage = self.bdRefStep
+                etapas.flow = self.bdRefFlow
             }
         }
     }
