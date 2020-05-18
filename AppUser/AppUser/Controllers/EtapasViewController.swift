@@ -23,6 +23,8 @@ class EtapasViewController: UIViewController {
     var avancarStack:[Etapa] = []
     var titleList:[Etapa] = []
     
+    var initialStage = Etapa()
+    
     //Id da etapa de origem da tela de Etapas
     var markedStage: String = "idEtapa1"
     
@@ -98,6 +100,7 @@ class EtapasViewController: UIViewController {
             if etapa.tipo == "inicial" {
                 titleList.append(etapa)
                 addProxRightList(proxEtapa: etapa.id_sim!)
+                self.initialStage = etapa
             }
         }
         
@@ -165,13 +168,22 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
         return self.stageTitles.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let stage = self.stageTitles[indexPath.row]
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        //let stage = self.stageTitles[indexPath.row]
+//        
+//        //DFS - retornando a lista das etapas (incial -> selecionada)
+//        
+//        self.updateNavigation()
+//        
+//    }
+    
+    func dfs(stageSelected: Etapa) {
+        var stack: [Etapa] = []
+        stack.append(self.initialStage)
         
-        //DFS - retornando a lista das etapas (incial -> selecionada)
-        
-        self.updateNavigation()
-        
+        while stack.last?.idEtapa != stageSelected.idEtapa {
+            
+        }
     }
     
     func updateNavigation() {
@@ -243,7 +255,7 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
             else if stage.tipo == "final" {
                let storyboard = UIStoryboard.init(name: "FlowFinal", bundle: Bundle.main)
                if let mainVC = storyboard.instantiateInitialViewController() {
-                   if let vc = mainVC as? FlowInputViewController {
+                   if let vc = mainVC as? FlowFinalViewController {
                        vc.bdRefFlow = self.flow
                        vc.bdRefStep = stage.idEtapa!
                        list.append(vc)
