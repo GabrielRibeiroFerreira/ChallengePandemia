@@ -77,10 +77,10 @@ class FlowInputViewController: UIViewController {
     }
     
     private func setupAccessibility() {
-        let titleContentFont = UIFont(name: "SFProDisplay-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24)
-        let subtitleContentFont = UIFont(name: "SFProDisplay-Bold", size: 36) ?? UIFont.systemFont(ofSize: 36)
+        let titleContentFont = UIFont(name: "SFProDisplay-Bold", size: 22) ?? UIFont.systemFont(ofSize: 22)
+        let subtitleContentFont = UIFont(name: "SFProDisplay-Bold", size: 32) ?? UIFont.systemFont(ofSize: 32)
         let contentFont = UIFont(name: "SFProDisplay-Regular", size: 19) ?? UIFont.systemFont(ofSize: 19)
-        let buttonFont = UIFont(name: "SFProDisplay-Regular", size: 22) ?? UIFont.systemFont(ofSize: 22)
+        let buttonFont = UIFont(name: "SFProDisplay-Medium", size: 24) ?? UIFont.systemFont(ofSize: 24)
         
         self.titleContent.dynamicFont = titleContentFont
         self.subtitleContent.dynamicFont = subtitleContentFont

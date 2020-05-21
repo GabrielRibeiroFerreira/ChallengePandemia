@@ -142,7 +142,7 @@ class EtapasViewController: UIViewController {
     
     
     private func setupAccessibility() {
-        let titleFont = UIFont(name: "SFProDisplay-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24)
+        let titleFont = UIFont(name: "SFProDisplay-Bold", size: 22) ?? UIFont.systemFont(ofSize: 22)
 
         self.titleLabel.dynamicFont = titleFont
         
