@@ -205,7 +205,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvB-Je-eF3">
                                                 <rect key="frame" x="20" y="38" width="374" height="172"/>
-                                                <mutableString key="text">O aplicativo Coflui surge como ferramenta de auxílio ao profissionais da saúde em seus locais de trabalho. Compreendendo a utilização diária de fluxos e protocolos de procedimentos, o Coflui oferece uma nova possibilidade de consulta e navegação, oferecendo agilidade e fluídez em seus acessos e leituras. </mutableString>
+                                                <string key="text">O aplicativo Coflui surge como ferramenta de auxílio ao profissionais da saúde em seus locais de trabalho. Compreendendo a utilização diária de fluxos e protocolos de procedimentos, o Coflui oferece uma nova possibilidade de consulta e navegação, oferecendo agilidade e fluídez em seus acessos e leituras. </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

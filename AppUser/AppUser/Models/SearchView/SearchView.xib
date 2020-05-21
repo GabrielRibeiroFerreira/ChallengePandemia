@@ -33,7 +33,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ShH-B3-5JI">
-                            <rect key="frame" x="8" y="175" width="366" height="21"/>
+                            <rect key="frame" x="8" y="175" width="44.5" height="21"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -45,17 +45,17 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEc-z6-0zb">
-                            <rect key="frame" x="384" y="174" width="22" height="22"/>
+                            <rect key="frame" x="288" y="174" width="118" height="22"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="BEc-z6-0zb" secondAttribute="height" multiplier="1:1" id="GQR-nQ-Eh3"/>
                                 <constraint firstAttribute="height" constant="22" id="rbe-aK-dLk"/>
                             </constraints>
-                            <state key="normal" image="plus" catalog="system"/>
+                            <state key="normal" title="Entrar em Sala">
+                                <color key="titleColor" name="appBlue"/>
+                            </state>
                         </button>
                     </subviews>
                     <color key="backgroundColor" name="appColor"/>
                     <constraints>
-                        <constraint firstItem="BEc-z6-0zb" firstAttribute="leading" secondItem="ShH-B3-5JI" secondAttribute="trailing" constant="10" id="0lE-Db-mxV"/>
                         <constraint firstAttribute="trailing" secondItem="Gby-xE-oCb" secondAttribute="trailing" constant="10" id="3A5-42-tjT"/>
                         <constraint firstItem="ShH-B3-5JI" firstAttribute="leading" secondItem="EmB-93-pSM" secondAttribute="leading" constant="8" id="5rq-9b-ksb"/>
                         <constraint firstAttribute="trailing" secondItem="BEc-z6-0zb" secondAttribute="trailing" constant="8" id="GCX-Aa-mRh"/>
@@ -96,7 +96,6 @@
         </view>
     </objects>
     <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="appBlue">
             <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

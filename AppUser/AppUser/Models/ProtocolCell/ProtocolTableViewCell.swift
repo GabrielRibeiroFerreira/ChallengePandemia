@@ -24,7 +24,7 @@ class ProtocolTableViewCell: UITableViewCell {
     }
     
     private func setupAccessibility() {
-        let nameFont = UIFont(name: "SFProDisplay-Bold", size: 17) ?? UIFont.systemFont(ofSize: 17)
+        let nameFont = UIFont(name: "SFProDisplay-Regular", size: 17) ?? UIFont.systemFont(ofSize: 17)
 
         self.nameLabel.dynamicFont = nameFont
     }
