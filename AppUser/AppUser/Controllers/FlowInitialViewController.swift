@@ -63,9 +63,9 @@ class FlowInitialViewController: UIViewController {
      }
      
     private func setupAccessibility() {
-        let titleInitialFont = UIFont(name: "SFProDisplay-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24)
-        let textInitialFont = UIFont(name: "SFProDisplay-Bold", size: 36) ?? UIFont.systemFont(ofSize: 36)
-        let btnFont = UIFont(name: "SFProDisplay-Regular", size: 22) ?? UIFont.systemFont(ofSize: 22)
+        let titleInitialFont = UIFont(name: "SFProDisplay-Bold", size: 22) ?? UIFont.systemFont(ofSize: 22)
+        let textInitialFont = UIFont(name: "SFProDisplay-Heavy", size: 28) ?? UIFont.systemFont(ofSize: 28)
+        let btnFont = UIFont(name: "SFProDisplay-Medium", size: 24) ?? UIFont.systemFont(ofSize: 24)
         
         self.titleInitial.dynamicFont = titleInitialFont
         self.textInitial.dynamicFont = textInitialFont

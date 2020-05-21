@@ -60,10 +60,10 @@ class FlowExtensiveContentViewController: UIViewController {
     }
     
     private func setupAccessibility() {
-        let titleFont = UIFont(name: "SFProDisplay-Bold", size: 24) ?? UIFont.systemFont(ofSize: 24)
+        let titleFont = UIFont(name: "SFProDisplay-Bold", size: 22) ?? UIFont.systemFont(ofSize: 22)
         let subtitleFont = UIFont(name: "SFProDisplay-Bold", size: 19) ?? UIFont.systemFont(ofSize: 19)
         let contentFont = UIFont(name: "SFProDisplay-Regular", size: 19) ?? UIFont.systemFont(ofSize: 19)
-        let btnFont = UIFont(name: "SFProDisplay-Regular", size: 22) ?? UIFont.systemFont(ofSize: 22)
+        let btnFont = UIFont(name: "SFProDisplay-Medium", size: 24) ?? UIFont.systemFont(ofSize: 24)
         
         self.titleContent.dynamicFont = titleFont
         self.subtitleContent.dynamicFont = subtitleFont
