@@ -50,17 +50,6 @@
 		2A62376A2478324B00B84B9A /* FlowInitial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237602478324B00B84B9A /* FlowInitial.storyboard */; };
 		2A62376B2478324B00B84B9A /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237612478324B00B84B9A /* Area.storyboard */; };
 		2A62376C2478324B00B84B9A /* Areas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237622478324B00B84B9A /* Areas.storyboard */; };
-		2A62377A2478439400B84B9A /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A62376E2478439400B84B9A /* Etapas.storyboard */; };
-		2A62377B2478439400B84B9A /* FlowExtensiveContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A62376F2478439400B84B9A /* FlowExtensiveContent.storyboard */; };
-		2A62377C2478439400B84B9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237702478439400B84B9A /* LaunchScreen.storyboard */; };
-		2A62377D2478439400B84B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237722478439400B84B9A /* Main.storyboard */; };
-		2A62377E2478439400B84B9A /* FlowFinal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237742478439400B84B9A /* FlowFinal.storyboard */; };
-		2A62377F2478439400B84B9A /* FlowInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237752478439400B84B9A /* FlowInput.storyboard */; };
-		2A6237802478439400B84B9A /* FlowShortContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237762478439400B84B9A /* FlowShortContent.storyboard */; };
-		2A6237812478439400B84B9A /* FlowInitial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237772478439400B84B9A /* FlowInitial.storyboard */; };
-		2A6237822478439400B84B9A /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237782478439400B84B9A /* Area.storyboard */; };
-		2A6237832478439400B84B9A /* Areas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237792478439400B84B9A /* Areas.storyboard */; };
-		2A623786247843A100B84B9A /* UILabel+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A623785247843A100B84B9A /* UILabel+Accessibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,17 +98,6 @@
 		2A6237602478324B00B84B9A /* FlowInitial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowInitial.storyboard; sourceTree = "<group>"; };
 		2A6237612478324B00B84B9A /* Area.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
 		2A6237622478324B00B84B9A /* Areas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Areas.storyboard; sourceTree = "<group>"; };
-		2A62376E2478439400B84B9A /* Etapas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
-		2A62376F2478439400B84B9A /* FlowExtensiveContent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowExtensiveContent.storyboard; sourceTree = "<group>"; };
-		2A6237712478439400B84B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2A6237732478439400B84B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2A6237742478439400B84B9A /* FlowFinal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowFinal.storyboard; sourceTree = "<group>"; };
-		2A6237752478439400B84B9A /* FlowInput.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowInput.storyboard; sourceTree = "<group>"; };
-		2A6237762478439400B84B9A /* FlowShortContent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowShortContent.storyboard; sourceTree = "<group>"; };
-		2A6237772478439400B84B9A /* FlowInitial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowInitial.storyboard; sourceTree = "<group>"; };
-		2A6237782478439400B84B9A /* Area.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
-		2A6237792478439400B84B9A /* Areas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Areas.storyboard; sourceTree = "<group>"; };
-		2A623785247843A100B84B9A /* UILabel+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Accessibility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,9 +130,7 @@
 		2A5CF452244A258A00E98022 /* AppAdm */ = {
 			isa = PBXGroup;
 			children = (
-				2A623784247843A100B84B9A /* Extensions */,
 				2A6237562478324B00B84B9A /* Views */,
-				2A62376D2478439400B84B9A /* Views */,
 				2A62373D2478321E00B84B9A /* Controllers */,
 				2A62371524782D5B00B84B9A /* Models */,
 				2A5CF453244A258A00E98022 /* AppDelegate.swift */,
@@ -285,33 +261,6 @@
 			path = ../../AppUser/AppUser/Views;
 			sourceTree = "<group>";
 		};
-		2A62376D2478439400B84B9A /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2A62376E2478439400B84B9A /* Etapas.storyboard */,
-				2A62376F2478439400B84B9A /* FlowExtensiveContent.storyboard */,
-				2A6237702478439400B84B9A /* LaunchScreen.storyboard */,
-				2A6237722478439400B84B9A /* Main.storyboard */,
-				2A6237742478439400B84B9A /* FlowFinal.storyboard */,
-				2A6237752478439400B84B9A /* FlowInput.storyboard */,
-				2A6237762478439400B84B9A /* FlowShortContent.storyboard */,
-				2A6237772478439400B84B9A /* FlowInitial.storyboard */,
-				2A6237782478439400B84B9A /* Area.storyboard */,
-				2A6237792478439400B84B9A /* Areas.storyboard */,
-			);
-			name = Views;
-			path = ../../AppUser/AppUser/Views;
-			sourceTree = "<group>";
-		};
-		2A623784247843A100B84B9A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2A623785247843A100B84B9A /* UILabel+Accessibility.swift */,
-			);
-			name = Extensions;
-			path = ../../AppUser/AppUser/Extensions;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -370,14 +319,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A62377D2478439400B84B9A /* Main.storyboard in Resources */,
 				2A6237692478324B00B84B9A /* FlowShortContent.storyboard in Resources */,
 				2A62373424782D5B00B84B9A /* RoomTableViewCell.xib in Resources */,
 				2A6237682478324B00B84B9A /* FlowInput.storyboard in Resources */,
 				2A62373724782D5B00B84B9A /* SearchView.xib in Resources */,
 				2A5CF463244A258C00E98022 /* LaunchScreen.storyboard in Resources */,
 				2A62376C2478324B00B84B9A /* Areas.storyboard in Resources */,
-				2A62377E2478439400B84B9A /* FlowFinal.storyboard in Resources */,
 				2A6237662478324B00B84B9A /* Main.storyboard in Resources */,
 				2A62373324782D5B00B84B9A /* InitialView.xib in Resources */,
 				2A6237642478324B00B84B9A /* FlowExtensiveContent.storyboard in Resources */,
@@ -385,16 +332,8 @@
 				2A62376B2478324B00B84B9A /* Area.storyboard in Resources */,
 				2A6237632478324B00B84B9A /* Etapas.storyboard in Resources */,
 				2A62373B24782D5B00B84B9A /* AreaTableViewCell.xib in Resources */,
-				2A6237812478439400B84B9A /* FlowInitial.storyboard in Resources */,
-				2A62377C2478439400B84B9A /* LaunchScreen.storyboard in Resources */,
 				2A62372F24782D5B00B84B9A /* TituloEtapaViewCell.xib in Resources */,
-				2A62377F2478439400B84B9A /* FlowInput.storyboard in Resources */,
-				2A6237822478439400B84B9A /* Area.storyboard in Resources */,
-				2A62377B2478439400B84B9A /* FlowExtensiveContent.storyboard in Resources */,
-				2A62377A2478439400B84B9A /* Etapas.storyboard in Resources */,
 				2A62373924782D5B00B84B9A /* ProtocolTableViewCell.xib in Resources */,
-				2A6237832478439400B84B9A /* Areas.storyboard in Resources */,
-				2A6237802478439400B84B9A /* FlowShortContent.storyboard in Resources */,
 				2A6237672478324B00B84B9A /* FlowFinal.storyboard in Resources */,
 				2A62376A2478324B00B84B9A /* FlowInitial.storyboard in Resources */,
 			);
@@ -421,7 +360,6 @@
 				2A62373124782D5B00B84B9A /* Room.swift in Sources */,
 				2A62372D24782D5B00B84B9A /* ProtFlow.swift in Sources */,
 				2A6237522478321E00B84B9A /* FlowInputViewController.swift in Sources */,
-				2A623786247843A100B84B9A /* UILabel+Accessibility.swift in Sources */,
 				2A62372E24782D5B00B84B9A /* TituloEtapaViewCell.swift in Sources */,
 				2A62374C2478321E00B84B9A /* FlowFinalViewController.swift in Sources */,
 				2A5CF45E244A258A00E98022 /* AppAdm.xcdatamodeld in Sources */,
@@ -452,22 +390,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				2A62375C2478324B00B84B9A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2A6237702478439400B84B9A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A6237712478439400B84B9A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		2A6237722478439400B84B9A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2A6237732478439400B84B9A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
