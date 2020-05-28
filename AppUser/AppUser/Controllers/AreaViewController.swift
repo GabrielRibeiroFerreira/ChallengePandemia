@@ -77,7 +77,6 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.addButton.titleLabel?.dynamicFont = buttonFont
     }
 
-    
     func setupNavBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = true
@@ -137,6 +136,51 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.nameLabel.text = actual.titulo
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = editAction(at: indexPath)
+        let delete = deleteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [delete, edit])
+    }
+    
+    func editAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "Editar") { (action, view, completion) in
+            completion(true)
+        }
+        
+        let image = UIImage(systemName: "circle.grid.3x3.fill", withConfiguration: .none)
+        action.image = image
+        action.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
+        
+        return action
+    }
+    
+    func deleteAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .destructive, title: "Excluir") { (action, view, completion) in
+            self.deleteAlert(at: indexPath)
+        }
+        
+        let image = UIImage(systemName: "xmark", withConfiguration: .none)
+        action.image = image
+        action.backgroundColor = UIColor(named: "appRed") ?? UIColor.red
+        
+        return action
+    }
+    
+    @objc func deleteAlert(at indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Deseja Excluir?", message: "Ao excluir o procedimento, este não estará mais disponível para consulta", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: {(action) in
+            self.protocolTable.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
+            //Chamar metodo delete
+            self.list.remove(at: indexPath.row)
+            self.protocolTable.deleteRows(at: [indexPath], with: .automatic)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
