@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		155FE61C2480159500B1B819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 155FE61B2480159500B1B819 /* GoogleService-Info.plist */; };
+		2A411229248031DD00495571 /* CreateRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A411228248031DD00495571 /* CreateRoom.storyboard */; };
 		2A5CF454244A258A00E98022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF453244A258A00E98022 /* AppDelegate.swift */; };
 		2A5CF456244A258A00E98022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF455244A258A00E98022 /* SceneDelegate.swift */; };
 		2A5CF458244A258A00E98022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF457244A258A00E98022 /* ViewController.swift */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		155FE61B2480159500B1B819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2A411228248031DD00495571 /* CreateRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRoom.storyboard; sourceTree = "<group>"; };
 		2A5CF450244A258A00E98022 /* AppAdm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAdm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5CF453244A258A00E98022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5CF455244A258A00E98022 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 				2A6237602478324B00B84B9A /* FlowInitial.storyboard */,
 				2A6237612478324B00B84B9A /* Area.storyboard */,
 				2A6237622478324B00B84B9A /* Areas.storyboard */,
+				2A411228248031DD00495571 /* CreateRoom.storyboard */,
 			);
 			name = Views;
 			path = ../../AppUser/AppUser/Views;
@@ -454,6 +457,7 @@
 				2A62373B24782D5B00B84B9A /* AreaTableViewCell.xib in Resources */,
 				2A6237A52478462800B84B9A /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 				2A6237AC2478462800B84B9A /* SF-Pro-Display-BoldItalic.otf in Resources */,
+				2A411229248031DD00495571 /* CreateRoom.storyboard in Resources */,
 				2A62372F24782D5B00B84B9A /* TituloEtapaViewCell.xib in Resources */,
 				2A62373924782D5B00B84B9A /* ProtocolTableViewCell.xib in Resources */,
 				2A6237672478324B00B84B9A /* FlowFinal.storyboard in Resources */,
@@ -683,7 +687,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KDP22XDFSU;
+				DEVELOPMENT_TEAM = C7CS39R779;
 				INFOPLIST_FILE = AppAdm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -702,7 +706,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KDP22XDFSU;
+				DEVELOPMENT_TEAM = C7CS39R779;
 				INFOPLIST_FILE = AppAdm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

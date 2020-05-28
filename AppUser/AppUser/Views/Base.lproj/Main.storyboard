@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGF-a4-1dM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGF-a4-1dM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,7 +19,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="ad9-U1-A0t">
             <objects>
-                <viewController storyboardIdentifier="Onboarding" id="cGF-a4-1dM" customClass="OnboardingViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding" id="cGF-a4-1dM" customClass="OnboardingViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="izm-rg-lcZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,16 +28,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="740"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-S0-dCJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="694"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="696.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para você" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82k-Ry-z0Q">
-                                                <rect key="frame" x="40" y="86" width="125.5" height="33"/>
+                                                <rect key="frame" x="40" y="86" width="125.5" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profissional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJt-Cy-lgD">
-                                                <rect key="frame" x="40" y="119" width="175" height="33"/>
+                                                <rect key="frame" x="40" y="119.5" width="175" height="33"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="175" id="Ox7-sH-OBw"/>
                                                 </constraints>
@@ -53,13 +52,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agilidade e Fluídez" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-9K-yLn">
-                                                <rect key="frame" x="20" y="559.5" width="374" height="43.5"/>
+                                                <rect key="frame" x="20" y="559.5" width="374" height="44.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="37"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Através das salas e áreas do seu local de trabalho, acesse e navegue pelas etapas do fluxos e protocolos de forma flúida!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJR-Vd-7zC">
-                                                <rect key="frame" x="40" y="611" width="337.5" height="63"/>
+                                                <rect key="frame" x="40" y="612" width="339" height="64.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
@@ -146,7 +145,7 @@
         <!--Olá,-->
         <scene sceneID="a2o-Fv-OXF">
             <objects>
-                <tableViewController title="Olá," id="o04-LP-b9t" customClass="MainViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Olá," id="o04-LP-b9t" customClass="MainViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Olá," largeTitleDisplayMode="always" id="CPa-gi-Yka">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="hCg-nV-rhY">
                             <color key="tintColor" name="appBlue"/>
@@ -160,6 +159,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="jDf-mz-Xru" kind="show" identifier="roomSegue" id="6TU-et-jWC"/>
+                        <segue destination="rTf-h1-T4j" kind="show" identifier="toCreateRoom" id="Fnu-eU-gOX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTP-O2-21u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -169,7 +169,7 @@
         <!--Sobre-->
         <scene sceneID="6Yo-qp-ANu">
             <objects>
-                <viewController id="oTB-No-BTV" customClass="AboutViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oTB-No-BTV" customClass="AboutViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Thg-dl-8IC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,7 +310,7 @@
         <!--Navigation ControllerVC-->
         <scene sceneID="bsG-cC-Ayt">
             <objects>
-                <navigationController id="tKI-R3-4n6" customClass="NavigationControllerVC" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="tKI-R3-4n6" customClass="NavigationControllerVC" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eol-qv-L1n"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="E1c-Kp-YdA">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -327,6 +327,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNs-s0-LoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1949" y="105"/>
+        </scene>
+        <!--CreateRoom-->
+        <scene sceneID="AuJ-y9-NRe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateRoom" id="rTf-h1-T4j" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="U4J-mR-Dul"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTE-wJ-sha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2801" y="583"/>
         </scene>
     </scenes>
     <resources>
