@@ -16,6 +16,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var protocolTable: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var addButton: UIButton!
     
     let protocolIdentifier : String = "ProtocolTableViewCell"
     
@@ -59,8 +60,11 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         let nib = UINib.init(nibName: self.protocolIdentifier, bundle: nil)
         self.protocolTable.register(nib, forCellReuseIdentifier: self.protocolIdentifier)
         
-        self.setupNavBar()
+        //Bordas do botão arredondadas
+        self.addButton.layer.cornerRadius = 16.0
         
+        self.setupAccessibility()
+        self.setupNavBar()
         self.getDataFromDB()
     }
     
@@ -68,6 +72,11 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewWillAppear(animated)
         self.setupNavBar()
     }
+    private func setupAccessibility() {
+        let buttonFont = UIFont(name: "SFProDisplay-Medium", size: 24) ?? UIFont.systemFont(ofSize: 24)
+        self.addButton.titleLabel?.dynamicFont = buttonFont
+    }
+
     
     func setupNavBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -157,10 +166,10 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         var actual : [ProtFlow]
         
         switch self.segmented.selectedSegmentIndex {
+        case 0:
+            actual = self.fluxList
         case 1:
             actual = self.protList
-        case 2:
-            actual = self.fluxList
         default:
             actual = self.protList + self.fluxList
         }
