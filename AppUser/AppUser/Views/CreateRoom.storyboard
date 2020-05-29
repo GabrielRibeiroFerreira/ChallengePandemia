@@ -22,7 +22,7 @@
         <!--Criar Sala-->
         <scene sceneID="a0v-jf-0nG">
             <objects>
-                <viewController title="Criar Sala" id="TxD-t3-Uyi" sceneMemberID="viewController">
+                <viewController title="Criar Sala" id="TxD-t3-Uyi" customClass="CreateRoomViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JIv-mv-DzV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +98,9 @@
                                                         <state key="normal" title="Criar Sala">
                                                             <color key="titleColor" name="appContrast"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="createRoomAction:" destination="TxD-t3-Uyi" eventType="touchUpInside" id="qT8-Fl-dNZ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" name="appYellow"/>
@@ -170,6 +173,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d9O-55-8uF"/>
                     </view>
+                    <connections>
+                        <outlet property="keyTextField" destination="eAz-gK-zRb" id="ZyX-9t-yHs"/>
+                        <outlet property="nameTextField" destination="vAC-cJ-yR9" id="nJ2-Dw-FHc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0v-eq-P7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

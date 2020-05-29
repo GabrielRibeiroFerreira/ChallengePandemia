@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		155FE61C2480159500B1B819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 155FE61B2480159500B1B819 /* GoogleService-Info.plist */; };
 		2A411229248031DD00495571 /* CreateRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A411228248031DD00495571 /* CreateRoom.storyboard */; };
+		2A41122B248144EC00495571 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A41122A248144EC00495571 /* CreateRoomViewController.swift */; };
 		2A5CF454244A258A00E98022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF453244A258A00E98022 /* AppDelegate.swift */; };
 		2A5CF456244A258A00E98022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF455244A258A00E98022 /* SceneDelegate.swift */; };
 		2A5CF458244A258A00E98022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF457244A258A00E98022 /* ViewController.swift */; };
@@ -77,6 +78,7 @@
 /* Begin PBXFileReference section */
 		155FE61B2480159500B1B819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A411228248031DD00495571 /* CreateRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRoom.storyboard; sourceTree = "<group>"; };
+		2A41122A248144EC00495571 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		2A5CF450244A258A00E98022 /* AppAdm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAdm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5CF453244A258A00E98022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5CF455244A258A00E98022 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				2A6237472478321E00B84B9A /* FlowShortContentViewController.swift */,
 				2A6237482478321E00B84B9A /* NavigationControllerVC.swift */,
 				2A6237492478321E00B84B9A /* AboutViewController.swift */,
+				2A41122A248144EC00495571 /* CreateRoomViewController.swift */,
 			);
 			name = Controllers;
 			path = ../../AppUser/AppUser/Controllers;
@@ -532,6 +535,7 @@
 				2A6237AF2478463600B84B9A /* UILabel+Accessibility.swift in Sources */,
 				2A62372E24782D5B00B84B9A /* TituloEtapaViewCell.swift in Sources */,
 				2A62374C2478321E00B84B9A /* FlowFinalViewController.swift in Sources */,
+				2A41122B248144EC00495571 /* CreateRoomViewController.swift in Sources */,
 				2A5CF45E244A258A00E98022 /* AppAdm.xcdatamodeld in Sources */,
 				2A6237532478321E00B84B9A /* FlowShortContentViewController.swift in Sources */,
 				2A62373524782D5B00B84B9A /* RoomTableViewCell.swift in Sources */,
