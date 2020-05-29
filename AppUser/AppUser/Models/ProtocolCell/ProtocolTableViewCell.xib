@@ -43,6 +43,9 @@
                                     <constraint firstAttribute="height" constant="16" id="ajB-Xh-SC6"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="iconArrow"/>
+                                <connections>
+                                    <action selector="deleteCell:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Zrg-1r-hvM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

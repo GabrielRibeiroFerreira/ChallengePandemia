@@ -190,6 +190,8 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.editButton.isEnabled = false
             cell.editButton.isHidden = true
         }
+        
+        cell.delegate = self
 
         return cell
     }
@@ -315,6 +317,18 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.searchBar?.endEditing(true)
+    }
+
+}
+
+extension AreaViewController: ProtocolCellDelegate {
+    func didTapEditCell(_ cell: ProtocolTableViewCell) {
+        print("Edit Clicked")
+    }
+    
+    func didTapDeleteCell(_ cell: ProtocolTableViewCell) {
+        guard let cellIndex = cell.getIndexPath() else { return }
+        self.deleteAlert(at: cellIndex)
     }
 
 }
