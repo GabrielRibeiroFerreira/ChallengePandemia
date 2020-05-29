@@ -28,6 +28,8 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var selectedFlow: String = ""
     
+    var isEditidingTableView: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,6 +87,14 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
         self.navigationController?.navigationBar.tintColor = UIColor(named: "appBlue")
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue") ?? UIColor.black]
+        
+        //"Editar Lista" right navBar button
+        let button = UIButton(type: .custom)
+        button.setTitle("Editar Lista", for: .normal)
+        button.setTitleColor(UIColor(named: "appBlue"), for: .normal)
+        button.addTarget(self, action: #selector(editList(sender:)), for: .touchUpInside)
+        let rightItem = UIBarButtonItem(customView: button)
+        self.navigationItem.rightBarButtonItem = rightItem
     }
     
     func getDataFromDB() {
@@ -124,6 +134,29 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    // MARK: - Edit TabletView
+    @objc func editList(sender: UIButton) {
+        self.isEditidingTableView = true
+        self.protocolTable.allowsSelection = false
+        self.protocolTable.reloadData()
+        
+        //Mudança título e ação do item da navBar
+        let rightButton = self.navigationItem.rightBarButtonItem?.customView as! UIButton
+        rightButton.setTitle("Concluir", for: .normal)
+        rightButton.addTarget(self, action: #selector(doneEditingList(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func doneEditingList(sender: UIButton) {
+        self.isEditidingTableView = false
+        self.protocolTable.allowsSelection = true
+        self.protocolTable.reloadData()
+        
+        //Mudança título e ação do item da navBar
+        let rightButton = self.navigationItem.rightBarButtonItem?.customView as! UIButton
+        rightButton.setTitle("Editar Lista", for: .normal)
+        rightButton.addTarget(self, action: #selector(editList(sender:)), for: .touchUpInside)
+    }
+    
     // MARK: - Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.list.count
@@ -132,8 +165,31 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.protocolIdentifier, for: indexPath) as! ProtocolTableViewCell
         let actual = self.list[indexPath.row]
-
+        
         cell.nameLabel.text = actual.titulo
+        
+        if isEditidingTableView {
+            let xImage = UIImage(systemName: "xmark", withConfiguration: .none)
+            cell.arrowButoon.setImage(xImage, for: .normal)
+            
+            cell.arrowButoon.removeConstraints(cell.arrowButoon.constraints)
+            cell.arrowButoon.widthAnchor.constraint(equalToConstant: 16).isActive = true
+            cell.arrowButoon.heightAnchor.constraint(equalToConstant: 16).isActive = true
+        
+            cell.editButton.isEnabled = true
+            cell.editButton.isHidden = false
+            
+        } else {
+            let arrowImage =  UIImage(named: "iconArrow")
+            cell.arrowButoon.setImage(arrowImage, for: .normal)
+            
+            cell.arrowButoon.removeConstraints(cell.arrowButoon.constraints)
+            cell.arrowButoon.widthAnchor.constraint(equalToConstant: 10).isActive = true
+            cell.arrowButoon.heightAnchor.constraint(equalToConstant: 16).isActive = true
+            
+            cell.editButton.isEnabled = false
+            cell.editButton.isHidden = true
+        }
 
         return cell
     }
