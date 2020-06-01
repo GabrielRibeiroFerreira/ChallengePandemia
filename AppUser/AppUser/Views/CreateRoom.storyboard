@@ -27,11 +27,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ene-R3-P0E">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Ene-R3-P0E">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-9X-ydo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para criar uma sala, escolha seu nome, chave de acesso e as áreas profissionais disponíveis." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-oP-lyX">
                                                 <rect key="frame" x="8" y="8" width="398" height="40"/>
@@ -65,7 +65,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite a chave de acesso" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAz-gK-zRb">
-                                                <rect key="frame" x="8" y="175.5" width="398" height="29.5"/>
+                                                <rect key="frame" x="8" y="175.5" width="333" height="29.5"/>
                                                 <color key="textColor" name="appContrast"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -83,14 +83,8 @@
                                                     <constraint firstAttribute="height" constant="2" id="2tO-Nu-rQy"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Áreas profissionais" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdy-qQ-4le">
-                                                <rect key="frame" x="8" y="283" width="398" height="20"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
-                                                <color key="textColor" name="appDetail"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y3B-Zl-WGs">
-                                                <rect key="frame" x="40" y="404" width="334" height="56"/>
+                                                <rect key="frame" x="40" y="304" width="334" height="56"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyj-R3-3SK">
                                                         <rect key="frame" x="8" y="12" width="318" height="32"/>
@@ -116,6 +110,13 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w7x-Pr-E9X">
+                                                <rect key="frame" x="353" y="175" width="51" height="31"/>
+                                                <color key="onTintColor" name="appBlue"/>
+                                                <connections>
+                                                    <action selector="keyChanged:" destination="TxD-t3-Uyi" eventType="valueChanged" id="myL-SA-g37"/>
+                                                </connections>
+                                            </switch>
                                         </subviews>
                                         <color key="backgroundColor" name="appBase"/>
                                         <constraints>
@@ -125,31 +126,31 @@
                                             <constraint firstItem="Ycf-oP-lyX" firstAttribute="top" secondItem="FlK-9X-ydo" secondAttribute="top" constant="8" id="9dP-I5-jZZ"/>
                                             <constraint firstItem="eAz-gK-zRb" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="Aeh-Ih-gxF"/>
                                             <constraint firstItem="1Mp-lh-UEW" firstAttribute="top" secondItem="eAz-gK-zRb" secondAttribute="bottom" constant="12" id="Ahh-Hk-jjp"/>
-                                            <constraint firstAttribute="height" constant="500" id="Avc-Vd-TuM"/>
+                                            <constraint firstAttribute="height" priority="999" constant="400" id="Avc-Vd-TuM"/>
+                                            <constraint firstItem="Y3B-Zl-WGs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7gc-E7-eWj" secondAttribute="bottom" constant="24" id="B9y-yc-0hV"/>
                                             <constraint firstAttribute="trailing" secondItem="Y3B-Zl-WGs" secondAttribute="trailing" constant="40" id="BC6-rI-s9b"/>
                                             <constraint firstItem="YZG-HW-tzL" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="BOX-RI-KVa"/>
                                             <constraint firstItem="Y3B-Zl-WGs" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="40" id="BcE-NH-lUV"/>
+                                            <constraint firstAttribute="trailing" secondItem="w7x-Pr-E9X" secondAttribute="trailing" constant="12" id="BrM-PN-xZ1"/>
                                             <constraint firstAttribute="trailing" secondItem="qfX-w6-5Lg" secondAttribute="trailing" constant="8" id="DdS-UC-y7C"/>
                                             <constraint firstItem="qfX-w6-5Lg" firstAttribute="top" secondItem="vAC-cJ-yR9" secondAttribute="bottom" constant="4" id="E4S-5g-csb"/>
                                             <constraint firstItem="shp-dd-edd" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="FoT-c7-HFf"/>
                                             <constraint firstAttribute="trailing" secondItem="vAC-cJ-yR9" secondAttribute="trailing" constant="8" id="GFZ-Ui-vTf"/>
                                             <constraint firstAttribute="trailing" secondItem="YZG-HW-tzL" secondAttribute="trailing" constant="8" id="JfY-hQ-n6s"/>
-                                            <constraint firstAttribute="trailing" secondItem="eAz-gK-zRb" secondAttribute="trailing" constant="8" id="L4D-hS-WQi"/>
                                             <constraint firstAttribute="trailing" secondItem="1Mp-lh-UEW" secondAttribute="trailing" constant="8" id="LA6-nt-zhF"/>
                                             <constraint firstAttribute="trailing" secondItem="Ycf-oP-lyX" secondAttribute="trailing" constant="8" id="Oeo-2e-iD5"/>
                                             <constraint firstAttribute="bottom" secondItem="Y3B-Zl-WGs" secondAttribute="bottom" constant="40" id="OlG-0a-g5o"/>
-                                            <constraint firstItem="Bdy-qQ-4le" firstAttribute="top" secondItem="7gc-E7-eWj" secondAttribute="bottom" constant="16" id="Qvo-zH-tiC"/>
-                                            <constraint firstAttribute="trailing" secondItem="Bdy-qQ-4le" secondAttribute="trailing" constant="8" id="SFs-Cx-k3E"/>
                                             <constraint firstItem="eAz-gK-zRb" firstAttribute="top" secondItem="YZG-HW-tzL" secondAttribute="bottom" constant="8" id="SSk-1V-6N5"/>
+                                            <constraint firstItem="w7x-Pr-E9X" firstAttribute="leading" secondItem="eAz-gK-zRb" secondAttribute="trailing" constant="12" id="Ura-Lb-1sB"/>
                                             <constraint firstItem="YZG-HW-tzL" firstAttribute="top" secondItem="qfX-w6-5Lg" secondAttribute="bottom" constant="16" id="VDr-AQ-xtx"/>
                                             <constraint firstItem="7gc-E7-eWj" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="Wak-6j-qch"/>
                                             <constraint firstItem="qfX-w6-5Lg" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="Xoz-nx-jet"/>
                                             <constraint firstItem="shp-dd-edd" firstAttribute="top" secondItem="Ycf-oP-lyX" secondAttribute="bottom" constant="20" id="Y9P-s4-ttd"/>
+                                            <constraint firstItem="w7x-Pr-E9X" firstAttribute="centerY" secondItem="eAz-gK-zRb" secondAttribute="centerY" id="cF9-rC-JaM"/>
                                             <constraint firstItem="vAC-cJ-yR9" firstAttribute="top" secondItem="shp-dd-edd" secondAttribute="bottom" constant="8" id="eu9-2k-zhy"/>
                                             <constraint firstAttribute="trailing" secondItem="7gc-E7-eWj" secondAttribute="trailing" constant="8" id="jTp-OT-T8m"/>
                                             <constraint firstItem="1Mp-lh-UEW" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="pzZ-yV-VEy"/>
                                             <constraint firstItem="Ycf-oP-lyX" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="rOV-wY-OdG"/>
-                                            <constraint firstItem="Bdy-qQ-4le" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="uhK-Kc-fDX"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -186,6 +187,9 @@
     <resources>
         <namedColor name="appBase">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appBlue">
+            <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="appContrast">
             <color red="0.0" green="0.059000000357627869" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

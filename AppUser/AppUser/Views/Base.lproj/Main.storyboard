@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGF-a4-1dM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -19,7 +20,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="ad9-U1-A0t">
             <objects>
-                <viewController storyboardIdentifier="Onboarding" id="cGF-a4-1dM" customClass="OnboardingViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding" id="cGF-a4-1dM" customClass="OnboardingViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="izm-rg-lcZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,7 +146,7 @@
         <!--Olá,-->
         <scene sceneID="a2o-Fv-OXF">
             <objects>
-                <tableViewController title="Olá," id="o04-LP-b9t" customClass="MainViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Olá," id="o04-LP-b9t" customClass="MainViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Olá," largeTitleDisplayMode="always" id="CPa-gi-Yka">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="hCg-nV-rhY">
                             <color key="tintColor" name="appBlue"/>
@@ -169,7 +170,7 @@
         <!--Sobre-->
         <scene sceneID="6Yo-qp-ANu">
             <objects>
-                <viewController id="oTB-No-BTV" customClass="AboutViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oTB-No-BTV" customClass="AboutViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Thg-dl-8IC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,10 +311,10 @@
         <!--Navigation ControllerVC-->
         <scene sceneID="bsG-cC-Ayt">
             <objects>
-                <navigationController id="tKI-R3-4n6" customClass="NavigationControllerVC" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="tKI-R3-4n6" customClass="NavigationControllerVC" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eol-qv-L1n"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="E1c-Kp-YdA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="appColor"/>
                         <color key="tintColor" name="appBlue"/>
