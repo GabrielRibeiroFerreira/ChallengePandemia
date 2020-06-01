@@ -16,6 +16,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var segmented: UISegmentedControl!
     @IBOutlet weak var protocolTable: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var addButton: UIButton!
     
     let protocolIdentifier : String = "ProtocolTableViewCell"
     
@@ -26,6 +27,8 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     var searchActive : Bool = false
     
     var selectedFlow: String = ""
+    
+    var isEditidingTableView: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,8 +62,11 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         let nib = UINib.init(nibName: self.protocolIdentifier, bundle: nil)
         self.protocolTable.register(nib, forCellReuseIdentifier: self.protocolIdentifier)
         
-        self.setupNavBar()
+        //Bordas do botão arredondadas
+        self.addButton.layer.cornerRadius = 16.0
         
+        self.setupAccessibility()
+        self.setupNavBar()
         self.getDataFromDB()
     }
     
@@ -68,7 +74,11 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewWillAppear(animated)
         self.setupNavBar()
     }
-    
+    private func setupAccessibility() {
+        let buttonFont = UIFont(name: "SFProDisplay-Medium", size: 24) ?? UIFont.systemFont(ofSize: 24)
+        self.addButton.titleLabel?.dynamicFont = buttonFont
+    }
+
     func setupNavBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = true
@@ -77,6 +87,14 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
         self.navigationController?.navigationBar.tintColor = UIColor(named: "appBlue")
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "appBlue") ?? UIColor.black]
+        
+        //"Editar Lista" right navBar button
+        let button = UIButton(type: .custom)
+        button.setTitle("Editar Lista", for: .normal)
+        button.setTitleColor(UIColor(named: "appBlue"), for: .normal)
+        button.addTarget(self, action: #selector(editList(sender:)), for: .touchUpInside)
+        let rightItem = UIBarButtonItem(customView: button)
+        self.navigationItem.rightBarButtonItem = rightItem
     }
     
     func getDataFromDB() {
@@ -116,6 +134,29 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    // MARK: - Edit TabletView
+    @objc func editList(sender: UIButton) {
+        self.isEditidingTableView = true
+        self.protocolTable.allowsSelection = false
+        self.protocolTable.reloadData()
+        
+        //Mudança título e ação do item da navBar
+        let rightButton = self.navigationItem.rightBarButtonItem?.customView as! UIButton
+        rightButton.setTitle("Concluir", for: .normal)
+        rightButton.addTarget(self, action: #selector(doneEditingList(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func doneEditingList(sender: UIButton) {
+        self.isEditidingTableView = false
+        self.protocolTable.allowsSelection = true
+        self.protocolTable.reloadData()
+        
+        //Mudança título e ação do item da navBar
+        let rightButton = self.navigationItem.rightBarButtonItem?.customView as! UIButton
+        rightButton.setTitle("Editar Lista", for: .normal)
+        rightButton.addTarget(self, action: #selector(editList(sender:)), for: .touchUpInside)
+    }
+    
     // MARK: - Table View
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.list.count
@@ -124,10 +165,80 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.protocolIdentifier, for: indexPath) as! ProtocolTableViewCell
         let actual = self.list[indexPath.row]
-
+        
         cell.nameLabel.text = actual.titulo
+        
+        if isEditidingTableView {
+            let xImage = UIImage(systemName: "xmark", withConfiguration: .none)
+            cell.arrowButoon.setImage(xImage, for: .normal)
+            
+            cell.arrowButoon.removeConstraints(cell.arrowButoon.constraints)
+            cell.arrowButoon.widthAnchor.constraint(equalToConstant: 16).isActive = true
+            cell.arrowButoon.heightAnchor.constraint(equalToConstant: 16).isActive = true
+        
+            cell.editButton.isEnabled = true
+            cell.editButton.isHidden = false
+            
+        } else {
+            let arrowImage =  UIImage(named: "iconArrow")
+            cell.arrowButoon.setImage(arrowImage, for: .normal)
+            
+            cell.arrowButoon.removeConstraints(cell.arrowButoon.constraints)
+            cell.arrowButoon.widthAnchor.constraint(equalToConstant: 10).isActive = true
+            cell.arrowButoon.heightAnchor.constraint(equalToConstant: 16).isActive = true
+            
+            cell.editButton.isEnabled = false
+            cell.editButton.isHidden = true
+        }
+        
+        cell.delegate = self
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let edit = editAction(at: indexPath)
+        let delete = deleteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [delete, edit])
+    }
+    
+    func editAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: "Editar") { (action, view, completion) in
+            completion(true)
+        }
+        
+        let image = UIImage(systemName: "circle.grid.3x3.fill", withConfiguration: .none)
+        action.image = image
+        action.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
+        
+        return action
+    }
+    
+    func deleteAction(at indexPath: IndexPath) -> UIContextualAction {
+        let action = UIContextualAction(style: .destructive, title: "Excluir") { (action, view, completion) in
+            self.deleteAlert(at: indexPath)
+        }
+        
+        let image = UIImage(systemName: "xmark", withConfiguration: .none)
+        action.image = image
+        action.backgroundColor = UIColor(named: "appRed") ?? UIColor.red
+        
+        return action
+    }
+    
+    @objc func deleteAlert(at indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Deseja Excluir?", message: "Ao excluir o procedimento, este não estará mais disponível para consulta", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: {(action) in
+            self.protocolTable.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
+            //Chamar metodo delete
+            self.list.remove(at: indexPath.row)
+            self.protocolTable.deleteRows(at: [indexPath], with: .automatic)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -157,10 +268,10 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         var actual : [ProtFlow]
         
         switch self.segmented.selectedSegmentIndex {
+        case 0:
+            actual = self.fluxList
         case 1:
             actual = self.protList
-        case 2:
-            actual = self.fluxList
         default:
             actual = self.protList + self.fluxList
         }
@@ -206,6 +317,18 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         self.searchBar?.endEditing(true)
+    }
+
+}
+
+extension AreaViewController: ProtocolCellDelegate {
+    func didTapEditCell(_ cell: ProtocolTableViewCell) {
+        print("Edit Clicked")
+    }
+    
+    func didTapDeleteCell(_ cell: ProtocolTableViewCell) {
+        guard let cellIndex = cell.getIndexPath() else { return }
+        self.deleteAlert(at: cellIndex)
     }
 
 }
