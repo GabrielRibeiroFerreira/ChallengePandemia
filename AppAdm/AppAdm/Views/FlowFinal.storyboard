@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uZE-n8-NSw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Flow Final View Controller-->
+        <scene sceneID="VPg-bI-tk2">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="uZE-n8-NSw" customClass="FlowFinalViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n3Q-oQ-bFU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qAO-58-Xvh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="723"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JRs-gv-DLD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI1-qP-APW">
+                                                <rect key="frame" x="20" y="30" width="374" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" red="0.70588235290000001" green="0.70588235290000001" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7p1-yK-8u3">
+                                                <rect key="frame" x="20" y="70" width="374" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" name="appContrast"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="appColor"/>
+                                        <constraints>
+                                            <constraint firstItem="7p1-yK-8u3" firstAttribute="top" secondItem="VI1-qP-APW" secondAttribute="bottom" constant="40" id="Dbf-ng-Grl"/>
+                                            <constraint firstItem="VI1-qP-APW" firstAttribute="top" secondItem="JRs-gv-DLD" secondAttribute="top" constant="30" id="FWF-mC-1f6"/>
+                                            <constraint firstAttribute="bottom" secondItem="7p1-yK-8u3" secondAttribute="bottom" constant="8" id="HPg-Tq-bc3"/>
+                                            <constraint firstItem="VI1-qP-APW" firstAttribute="leading" secondItem="JRs-gv-DLD" secondAttribute="leading" constant="20" id="LqU-Xi-F4w"/>
+                                            <constraint firstAttribute="trailing" secondItem="7p1-yK-8u3" secondAttribute="trailing" constant="20" id="OJb-qG-hxx"/>
+                                            <constraint firstAttribute="trailing" secondItem="VI1-qP-APW" secondAttribute="trailing" constant="20" id="gJd-a7-9LF"/>
+                                            <constraint firstItem="7p1-yK-8u3" firstAttribute="leading" secondItem="JRs-gv-DLD" secondAttribute="leading" constant="20" id="wNo-KG-cy1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JRs-gv-DLD" firstAttribute="leading" secondItem="b1B-gi-d0t" secondAttribute="leading" id="7V4-cT-nHv"/>
+                                    <constraint firstItem="JRs-gv-DLD" firstAttribute="bottom" secondItem="b1B-gi-d0t" secondAttribute="bottom" id="YGn-iH-FWN"/>
+                                    <constraint firstItem="JRs-gv-DLD" firstAttribute="trailing" secondItem="b1B-gi-d0t" secondAttribute="trailing" id="ZhV-ty-o6h"/>
+                                    <constraint firstItem="JRs-gv-DLD" firstAttribute="top" secondItem="b1B-gi-d0t" secondAttribute="top" id="gn7-t7-sEK"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="b1B-gi-d0t"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Zox-LA-l6a"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cF-U6-8AQ">
+                                <rect key="frame" x="33" y="783" width="348" height="39"/>
+                                <color key="backgroundColor" name="appYellow"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <state key="normal" title="Finalizar">
+                                    <color key="titleColor" red="0.0" green="0.058823529411764705" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="endFlow:" destination="uZE-n8-NSw" eventType="touchUpInside" id="q9n-as-Ffv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="appColor"/>
+                        <constraints>
+                            <constraint firstItem="1cF-U6-8AQ" firstAttribute="leading" secondItem="L4x-pd-WA8" secondAttribute="leading" constant="33" id="BaM-jI-rsB"/>
+                            <constraint firstItem="L4x-pd-WA8" firstAttribute="trailing" secondItem="1cF-U6-8AQ" secondAttribute="trailing" constant="33" id="DY4-MH-68J"/>
+                            <constraint firstItem="JRs-gv-DLD" firstAttribute="width" secondItem="L4x-pd-WA8" secondAttribute="width" id="LS0-Qs-bk6"/>
+                            <constraint firstItem="L4x-pd-WA8" firstAttribute="bottom" secondItem="1cF-U6-8AQ" secondAttribute="bottom" constant="40" id="QIy-ru-6As"/>
+                            <constraint firstItem="1cF-U6-8AQ" firstAttribute="top" secondItem="qAO-58-Xvh" secondAttribute="bottom" constant="16" id="VQm-mD-SpC"/>
+                            <constraint firstItem="qAO-58-Xvh" firstAttribute="trailing" secondItem="L4x-pd-WA8" secondAttribute="trailing" id="ffL-K7-vVS"/>
+                            <constraint firstItem="qAO-58-Xvh" firstAttribute="top" secondItem="L4x-pd-WA8" secondAttribute="top" id="mXM-Zk-Vsr"/>
+                            <constraint firstItem="qAO-58-Xvh" firstAttribute="leading" secondItem="L4x-pd-WA8" secondAttribute="leading" id="sYU-Ob-en5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L4x-pd-WA8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HhH-vd-mXU">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="OWm-ZU-ThG">
+                            <color key="tintColor" name="appColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Etapas" id="6cy-Ih-FNb">
+                            <color key="tintColor" name="appBlue"/>
+                            <connections>
+                                <segue destination="6Rs-ud-AUU" kind="show" identifier="toStageSegue" id="uCY-jv-d03"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="content" destination="7p1-yK-8u3" id="0u8-fI-5Mn"/>
+                        <outlet property="finishBtn" destination="1cF-U6-8AQ" id="uRA-SY-MgQ"/>
+                        <outlet property="titleContent" destination="VI1-qP-APW" id="0Xy-rx-ZiZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsn-Yl-goN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-687" y="680"/>
+        </scene>
+        <!--Etapas-->
+        <scene sceneID="sSz-uX-FkV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Etapas" id="6Rs-ud-AUU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4g2-wD-oPJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Goc-dx-GkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-89" y="680"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="appBlue">
+            <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appContrast">
+            <color red="0.0" green="0.059000000357627869" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appYellow">
+            <color red="0.98000001907348633" green="0.88200002908706665" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
