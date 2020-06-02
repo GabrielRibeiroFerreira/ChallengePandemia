@@ -8,12 +8,21 @@
 
 import UIKit
 
+protocol ProtocolCellDelegate {
+    func didTapEditCell(_ cell: ProtocolTableViewCell)
+    func didTapDeleteCell(_ cell: ProtocolTableViewCell)
+}
+
 class ProtocolTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var arrowButton: UIButton!
+ 
+    
+    var delegate: ProtocolCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         self.setupAccessibility()
     }
 
@@ -27,6 +36,23 @@ class ProtocolTableViewCell: UITableViewCell {
         let nameFont = UIFont(name: "SFProDisplay-Regular", size: 17) ?? UIFont.systemFont(ofSize: 17)
 
         self.nameLabel.dynamicFont = nameFont
+    }
+    
+    func getIndexPath() -> IndexPath? {
+        guard let superView = self.superview as? UITableView else {
+            print("superview is not a UITableView - getIndexPath")
+            return nil
+        }
+        let indexPath = superView.indexPath(for: self)
+        return indexPath
+    }
+    
+    @IBAction func editCell(_ sender: Any) {
+        delegate?.didTapEditCell(self)
+    }
+    
+    @IBAction func deleteCell(_ sender: Any) {
+        delegate?.didTapDeleteCell(self)
     }
     
 }
