@@ -4,7 +4,7 @@
 //
 //  Created by Inara Takashi on 24/04/20.
 //  Copyright © 2020 Gabriel Ferreira. All rights reserved.
-//
+//  APPUSER
 
 import UIKit
 import FirebaseDatabase
