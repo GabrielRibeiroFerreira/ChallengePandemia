@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJF-FF-kG7">
-                        <rect key="frame" x="54" y="4" width="310" height="21"/>
+                        <rect key="frame" x="54" y="12" width="310" height="21"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <color key="textColor" name="appColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsM-1v-jCl">
-                        <rect key="frame" x="20" y="4" width="22" height="22"/>
+                        <rect key="frame" x="20" y="11.5" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="GsM-1v-jCl" secondAttribute="height" multiplier="1:1" id="yfv-IL-0YU"/>
                         </constraints>
@@ -37,7 +37,7 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R4-RJ-MYt">
-                        <rect key="frame" x="372" y="4" width="22" height="22"/>
+                        <rect key="frame" x="372" y="11.5" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="1R4-RJ-MYt" secondAttribute="height" multiplier="1:1" id="VgM-UN-SUD"/>
                         </constraints>
@@ -47,23 +47,26 @@
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                         </state>
                         <connections>
+                            <action selector="deleteStage:" destination="3uG-cl-BEM" eventType="touchUpInside" id="Qpx-Cn-a4V"/>
                             <action selector="editTitle:" destination="3uG-cl-BEM" eventType="touchUpInside" id="asz-Yn-kTR"/>
                         </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" name="appBlue"/>
                 <constraints>
-                    <constraint firstItem="QJF-FF-kG7" firstAttribute="top" secondItem="948-Va-kK4" secondAttribute="top" constant="4" id="56N-Te-Nqf"/>
-                    <constraint firstAttribute="bottom" secondItem="QJF-FF-kG7" secondAttribute="bottom" constant="20" id="5CB-Kh-li2"/>
                     <constraint firstItem="GsM-1v-jCl" firstAttribute="leading" secondItem="948-Va-kK4" secondAttribute="leading" constant="20" id="B0E-Gf-CG9"/>
-                    <constraint firstItem="GsM-1v-jCl" firstAttribute="top" secondItem="QJF-FF-kG7" secondAttribute="top" id="KS6-ge-vBb"/>
+                    <constraint firstItem="GsM-1v-jCl" firstAttribute="centerY" secondItem="948-Va-kK4" secondAttribute="centerY" id="EDA-8S-9tY"/>
+                    <constraint firstAttribute="bottom" secondItem="QJF-FF-kG7" secondAttribute="bottom" constant="12" id="JyJ-oB-GTf"/>
+                    <constraint firstItem="QJF-FF-kG7" firstAttribute="centerY" secondItem="948-Va-kK4" secondAttribute="centerY" id="Pe4-g7-tXV"/>
                     <constraint firstItem="QJF-FF-kG7" firstAttribute="leading" secondItem="948-Va-kK4" secondAttribute="leading" constant="54" id="TIz-bw-e5z"/>
+                    <constraint firstItem="QJF-FF-kG7" firstAttribute="top" secondItem="948-Va-kK4" secondAttribute="top" constant="12" id="hYG-DA-Zt2"/>
                     <constraint firstAttribute="trailing" secondItem="1R4-RJ-MYt" secondAttribute="trailing" constant="20" id="jP5-9l-iQe"/>
                     <constraint firstAttribute="trailing" secondItem="QJF-FF-kG7" secondAttribute="trailing" constant="50" id="ndU-sr-mhO"/>
-                    <constraint firstItem="1R4-RJ-MYt" firstAttribute="top" secondItem="GsM-1v-jCl" secondAttribute="top" id="vGL-3q-ShF"/>
+                    <constraint firstItem="1R4-RJ-MYt" firstAttribute="centerY" secondItem="948-Va-kK4" secondAttribute="centerY" id="sO7-bd-OXx"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="deleteButton" destination="1R4-RJ-MYt" id="20Q-iD-zgs"/>
                 <outlet property="editButton" destination="GsM-1v-jCl" id="9fN-5U-Reo"/>
                 <outlet property="titleLabel" destination="QJF-FF-kG7" id="1K0-mI-eGX"/>
             </connections>

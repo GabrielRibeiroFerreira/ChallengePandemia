@@ -12,6 +12,7 @@ class TituloEtapaViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,5 +31,8 @@ class TituloEtapaViewCell: UITableViewCell {
     }
     @IBAction func editTitle(_ sender: Any) {
         print("Edit clicked")
+    }
+    @IBAction func deleteStage(_ sender: Any) {
+        print("Delete clicked")
     }
 }
