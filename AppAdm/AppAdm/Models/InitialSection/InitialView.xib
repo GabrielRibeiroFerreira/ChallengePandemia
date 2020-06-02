@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InitialViewHeader" customModule="AppUser" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="311"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F3N-e0-FyR">
+                    <rect key="frame" x="0.0" y="44" width="414" height="267"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjZ-O1-12F">
+                            <rect key="frame" x="20" y="16" width="374" height="235"/>
+                            <string key="text">Abaixo estão as salas disponíveis para acesso aos protocolos/fluxos. Para acesso à salas privadas, é necessário seu código de acesso.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" name="appColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="appBlue"/>
+                    <constraints>
+                        <constraint firstItem="XjZ-O1-12F" firstAttribute="top" secondItem="F3N-e0-FyR" secondAttribute="top" constant="16" id="1cC-XI-xig"/>
+                        <constraint firstItem="XjZ-O1-12F" firstAttribute="leading" secondItem="F3N-e0-FyR" secondAttribute="leading" constant="20" id="QIg-oM-2bL"/>
+                        <constraint firstAttribute="bottom" secondItem="XjZ-O1-12F" secondAttribute="bottom" constant="16" id="a4K-xI-7kK"/>
+                        <constraint firstAttribute="trailing" secondItem="XjZ-O1-12F" secondAttribute="trailing" constant="20" id="caL-D8-NHW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="F3N-e0-FyR" secondAttribute="bottom" id="VE0-rL-pda"/>
+                <constraint firstItem="F3N-e0-FyR" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZUq-6z-ARm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="F3N-e0-FyR" secondAttribute="trailing" id="rmF-1n-sxX"/>
+                <constraint firstItem="F3N-e0-FyR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="vnx-gT-hZl"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="initialLabel" destination="XjZ-O1-12F" id="uNR-pG-mbu"/>
+            </connections>
+            <point key="canvasLocation" x="123.18840579710145" y="319.75446428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="appBlue">
+            <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
