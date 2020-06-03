@@ -134,7 +134,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    // MARK: - Edit TabletView
+    // MARK: - Edit TabletView - Visual adaptation
     @objc func editList(sender: UIButton) {
         self.isEditidingTableView = true
         self.protocolTable.allowsSelection = false
@@ -235,7 +235,9 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.protocolTable.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
-            //Chamar metodo delete
+            
+            
+            
             self.list.remove(at: indexPath.row)
             self.protocolTable.deleteRows(at: [indexPath], with: .automatic)
         }))
