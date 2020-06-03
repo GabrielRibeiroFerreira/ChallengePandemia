@@ -173,9 +173,11 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.arrowButton.setImage(xImage, for: .normal)
             
             cell.arrowButton.removeConstraints(cell.arrowButton.constraints)
-            cell.arrowButton.widthAnchor.constraint(equalToConstant: 19).isActive = true
-            cell.arrowButton.heightAnchor.constraint(equalToConstant: 19).isActive = true
-        
+            cell.arrowButton.widthAnchor.constraint(equalToConstant: 20).isActive = true
+            cell.arrowButton.heightAnchor.constraint(equalToConstant: 20).isActive = true
+            cell.arrowButton.tintColor = UIColor(named: "appBlue") ?? UIColor.blue
+
+            
             cell.editButton.isEnabled = true
             cell.editButton.isHidden = false
             

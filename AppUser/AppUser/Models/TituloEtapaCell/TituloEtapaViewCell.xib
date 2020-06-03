@@ -47,8 +47,7 @@
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
                         </state>
                         <connections>
-                            <action selector="deleteStage:" destination="3uG-cl-BEM" eventType="touchUpInside" id="Qpx-Cn-a4V"/>
-                            <action selector="editTitle:" destination="3uG-cl-BEM" eventType="touchUpInside" id="asz-Yn-kTR"/>
+                            <action selector="deleteStage:" destination="3uG-cl-BEM" eventType="touchUpInside" id="201-XI-YsJ"/>
                         </connections>
                     </button>
                 </subviews>
