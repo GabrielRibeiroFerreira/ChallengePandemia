@@ -176,7 +176,7 @@ class EtapasViewController: UIViewController {
         }
     }
     
-    @objc func goToList(sender: UIButton) {
+    @objc func goToList(sender: Any) {
         let viewControllers: [UIViewController] = self.navigationController!.viewControllers
         for aViewController in viewControllers {
             if aViewController is AreaViewController {
@@ -186,16 +186,15 @@ class EtapasViewController: UIViewController {
     }
     
     @IBAction func savePrtoFlow(_ sender: Any) {
-        self.saveAlert()
+        self.saveAlert(sender)
     }
     
     // MARK: - Alerts
-    @objc func saveAlert() {
+    @objc func saveAlert(_ sender: Any) {
         let alert = UIAlertController(title: "Deseja Salvar as Alterações?", message: "Caso escolha não salvar, todas as modificações serão perdidas", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
-            //Chamar método post
-            print("Salvou")
+            self.goToList(sender: sender)
         }))
         
         self.present(alert, animated: true, completion: nil)
@@ -242,9 +241,32 @@ class EtapasViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
-            //Chamar metodo delete
-            self.stageTitles.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            //Método para excluir etapa de um fluxo/protocolo do firebase
+            let url = "Fluxos/" + self.flow + "/" + self.stageTitles[indexPath.row].idEtapa!
+
+            //Limpa todos as arrays que recebem vaolres do banco no observe
+            self.stageTitles.removeAll()
+            self.etapas.removeAll()
+            self.titleList.removeAll()
+            
+            let ref = Database.database().reference()
+            ref.child(url).removeValue()
+            
+            //Garantindo consistência caso todas as do fluxo etapas sejam excluidas
+            ref.child("Fluxos").observeSingleEvent(of: .value, with: { (snapshot) in
+                if !snapshot.hasChild(self.flow) {
+                    let url = UserDefaults.standard.string(forKey: "urlArea")
+                    let refArea = Database.database().reference()
+                    refArea.child(url!).removeValue { (error, ref) in
+                        if error == nil {
+                            print("Foii")
+                        }
+                    }
+                }
+            })
+            
+            
         }))
         
         self.present(alert, animated: true, completion: nil)

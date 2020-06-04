@@ -25,10 +25,9 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     var list : [ProtFlow] = []
     
     var searchActive : Bool = false
-    
     var selectedFlow: String = ""
-    
     var isEditidingTableView: Bool = false
+    var protFlow: String = "Fluxos/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +97,9 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func getDataFromDB() {
+        self.fluxList = []
+        self.protList = []
+        
         //Recuperação Fluxos
         let urlFlow = "Areas/" + self.bdRefRoom + "/" + self.bdRefArea + "/Fluxos"
         let refFlow = Database.database().reference().child(urlFlow)
@@ -235,11 +237,23 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.protocolTable.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
+            
+            //Fluxo ou protocolo?
+            for flow in self.fluxList {
+                if flow.key == self.list[indexPath.row].key! {
+                    self.protFlow = "Fluxos/"
+                }
+            }
+            for prot in self.protList {
+                if prot.key == self.list[indexPath.row].key! {
+                    self.protFlow = "Protocolos/"
+                }
+            }
 
             //Método para excluir fluxo/protocolo do firebase mantendo a
             //consistência nas duas referências existentes
             let firstUrl = "Areas/" + self.bdRefRoom + "/" + self.bdRefArea + "/"
-            let secondUrl = "Fluxos" + self.list[indexPath.row].key!
+            let secondUrl = self.protFlow + self.list[indexPath.row].key!
             
             let refArea = Database.database().reference()
             refArea.child(firstUrl+secondUrl).removeValue { (error, ref) in
@@ -263,6 +277,21 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.deselectRow(at: indexPath as IndexPath, animated: true)
         if let flowKey = self.list[indexPath.row].key {
             self.selectedFlow = flowKey
+            
+            //Fluxo ou protocolo?
+            for flow in self.fluxList {
+                if flow.key == self.list[indexPath.row].key! {
+                    self.protFlow = "Fluxos/"
+                }
+            }
+            for prot in self.protList {
+                if prot.key == self.list[indexPath.row].key! {
+                    self.protFlow = "Protocolos/"
+                }
+            }
+            
+            let url = "Areas/" + self.bdRefRoom + "/" + self.bdRefArea + "/" + self.protFlow + flowKey
+            UserDefaults.standard.set(url, forKey: "urlArea")
             performSegue(withIdentifier: "initialFlowSegue", sender: cell)
         }
     }
@@ -294,6 +323,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         default:
             actual = self.protList + self.fluxList
         }
+        
         
         return actual
     }
