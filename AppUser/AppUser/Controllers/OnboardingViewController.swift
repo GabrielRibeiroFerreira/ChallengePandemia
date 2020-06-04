@@ -19,7 +19,7 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         
         //Underline na palavra Profissional
-        self.professionalLabel.attributedText = NSAttributedString(string: "Profissional", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        self.professionalLabel.attributedText = NSAttributedString(string: "de Trabalho", attributes: [.underlineStyle: NSUnderlineStyle.single.rawValue])
         
         //Bordas do botão arredondadas
         self.enterButton.layer.cornerRadius = 16.0
