@@ -13,13 +13,28 @@ class CreateRoomViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var keyTextField: UITextField!
     
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var keyLabel: UILabel!
+    @IBOutlet weak var descriptionKeyLabel: UILabel!
+    
     var id : Int = 0
     var keyIsEnabled : Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.setupAccessibility()
         self.getId()
+    }
+    
+    private func setupAccessibility() {
+        let font = UIFont(name: "SFProDisplay-Bold", size: 17) ?? UIFont.systemFont(ofSize: 17)
+        
+        self.descriptionLabel.dynamicFont = font
+        self.nameLabel.dynamicFont = font
+        self.keyLabel.dynamicFont = font
+        self.descriptionKeyLabel.dynamicFont = font
     }
     
     @IBAction func keyChanged(_ sender: Any) {
