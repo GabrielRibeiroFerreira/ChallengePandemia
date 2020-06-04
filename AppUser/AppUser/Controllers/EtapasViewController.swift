@@ -101,6 +101,9 @@ class EtapasViewController: UIViewController {
     }
     
     func getDataFromDB() {
+        self.etapas = []
+        self.stageTitles = []
+        
         let urlFlow = "Fluxos/" + self.flow
         let refFlow = Database.database().reference().child(urlFlow)
         refFlow.observe(.value) { (snapshot) in
@@ -127,6 +130,7 @@ class EtapasViewController: UIViewController {
 
     func sortTitles() {
         var currentEtapa: Etapa
+        self.titleList = []
         
         //Etapa inicial do fluxo
         for etapa in self.etapas {
@@ -201,17 +205,33 @@ class EtapasViewController: UIViewController {
         let alert = UIAlertController(title: "Editar Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
         
         alert.addTextField { (textField) in
-            let placeholder = self.stageTitles[indexPath.row].tituloResumido
+            var placeholder = self.stageTitles[indexPath.row].tituloResumido
+            placeholder = placeholder!.replacingOccurrences(of: "→", with: "", options: NSString.CompareOptions.literal, range: nil)
             textField.placeholder = placeholder
             textField.isSecureTextEntry = false
         }
         
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(action) in
-            //Chamar método put
-            let newTitle = alert.textFields![0].text
-            self.stageTitles[indexPath.row].setTitle(newTielw: newTitle!)
-            self.tableView.reloadData()
+        alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(_) in
+            var newTitle = alert.textFields![0].text
+            
+            if self.stageTitles[indexPath.row].tipo == "alternativa" ||  self.stageTitles[indexPath.row].tipo == "inicial"{
+                newTitle = "→ " + newTitle!
+            } else {
+                newTitle = "     " + newTitle!
+            }
+            
+            //Método para editar tituloResumido de um fluxo/protocolo do firebase
+            let url = "Fluxos/" + self.flow + "/"
+            + self.stageTitles[indexPath.row].idEtapa! + "/tituloResumido"
+            
+            //Limpa todos as arrays que recebem vaolres do banco no observe
+            self.stageTitles.removeAll()
+            self.etapas.removeAll()
+            self.titleList.removeAll()
+            
+            let ref = Database.database().reference()
+            ref.child(url).setValue(newTitle)
         }))
         
         self.present(alert, animated: true, completion: nil)

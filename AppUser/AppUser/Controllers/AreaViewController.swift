@@ -235,11 +235,24 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.protocolTable.reloadData()
         }))
         alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
+
+            //Método para excluir fluxo/protocolo do firebase mantendo a
+            //consistência nas duas referências existentes
+            let firstUrl = "Areas/" + self.bdRefRoom + "/" + self.bdRefArea + "/"
+            let secondUrl = "Fluxos" + self.list[indexPath.row].key!
             
-            
-            
-            self.list.remove(at: indexPath.row)
-            self.protocolTable.deleteRows(at: [indexPath], with: .automatic)
+            let refArea = Database.database().reference()
+            refArea.child(firstUrl+secondUrl).removeValue { (error, ref) in
+                if error == nil {
+                    let refProt = Database.database().reference()
+                    refProt.child(secondUrl).removeValue { (error, ref) in
+                        if error == nil {
+                            self.list.remove(at: indexPath.row)
+                            self.protocolTable.deleteRows(at: [indexPath], with: .automatic)
+                        }
+                    }
+                }
+            }
         }))
         
         self.present(alert, animated: true, completion: nil)
@@ -273,9 +286,11 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch self.segmented.selectedSegmentIndex {
         case 0:
-            actual = self.fluxList
+            actual = self.protList + self.fluxList
         case 1:
             actual = self.protList
+        case 2:
+            actual = self.fluxList
         default:
             actual = self.protList + self.fluxList
         }
