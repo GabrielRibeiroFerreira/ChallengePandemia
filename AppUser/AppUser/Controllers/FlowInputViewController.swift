@@ -214,11 +214,16 @@ class FlowInputViewController: UIViewController {
             if let id = segue.destination as? FlowExtensiveContentViewController {
                 id.bdRefFlow = bdRefFlow
                 id.bdRefStep = "\(self.timeStampStep)"
+                
             }
         }else if segue.identifier == "segueEtapas"{
             if let id = segue.destination as? EtapasViewController {
                 self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/id_nao").setValue("idEtapa0")
                 self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/id_sim").setValue("idEtapa0")
+                id.flow = bdRefFlow
+            }
+        }else if segue.identifier == "segueItem"{
+            if let id = segue.destination as? EtapasViewController {
                 id.flow = bdRefFlow
             }
         }
@@ -232,6 +237,7 @@ class FlowInputViewController: UIViewController {
             self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.bdRefStep)/id_nao").observeSingleEvent(of: .value) { (snapshot) in
                 if (snapshot.exists()){
                     for aViewController in self.viewControllers!.reversed() {
+
                         self.index+=1
                         if aViewController is FlowExtensiveContentViewController{
                             let alert = UIAlertController(title: "Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
@@ -254,11 +260,7 @@ class FlowInputViewController: UIViewController {
                     for aViewController in self.viewControllers!.reversed() {
                         self.index+=1
                         if aViewController is FlowExtensiveContentViewController{
-                            
-//                            self.viewControllers!.removeLast(self.index-1)
-//
-//                            self.navigationController?.viewControllers = self.viewControllers!
-//                            break
+                        
                             self.viewControllers!.removeLast(self.index-1)
                             let alert = UIAlertController(title: "Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
                             
@@ -284,6 +286,7 @@ class FlowInputViewController: UIViewController {
                     for aViewController in self.viewControllers!.reversed() {
                         self.index+=1
                         if aViewController is FlowExtensiveContentViewController{
+                            
                             let alert = UIAlertController(title: "Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
                             
                             alert.addTextField { (textField) in
@@ -325,6 +328,7 @@ class FlowInputViewController: UIViewController {
                 }
             }
         }
+        
     }
 }
 

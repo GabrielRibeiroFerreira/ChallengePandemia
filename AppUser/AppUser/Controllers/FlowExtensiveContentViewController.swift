@@ -100,6 +100,10 @@ class FlowExtensiveContentViewController: UIViewController {
                 id.isAlternative = true
                 id.viewControllers = viewControllers
             }
+        }else if segue.identifier == "toStageSegue"{
+            if let etapas = segue.destination as? EtapasViewController {
+                etapas.flow = self.bdRefFlow
+            }
         }
     }
     
