@@ -40,7 +40,7 @@ class FlowExtensiveContentViewController: UIViewController {
         self.setupNavBar()
         tblView.isHidden = true
         
-        let urlFlowAtual = "FluxosTeste/" + self.bdRefFlow + "/" + self.bdRefStep
+        let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/" + self.bdRefStep
         self.refFlow.child(urlFlowAtual + "/titulo").observeSingleEvent(of: .value) { (snapshot) in
             self.titleContent.text = (snapshot.value as? String)!
         }
