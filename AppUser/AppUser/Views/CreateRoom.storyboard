@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TxD-t3-Uyi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SF-Pro-Display-Regular.otf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Criar Sala-->
+        <scene sceneID="a0v-jf-0nG">
+            <objects>
+                <viewController title="Criar Sala" id="TxD-t3-Uyi" customClass="CreateRoomViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JIv-mv-DzV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Ene-R3-P0E">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-9X-ydo">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="401"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para criar uma sala, escolha seu nome, chave de acesso e as áreas profissionais disponíveis." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ycf-oP-lyX">
+                                                <rect key="frame" x="8" y="8" width="398" height="41"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                                <color key="textColor" name="appContrast"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome da sala" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="shp-dd-edd">
+                                                <rect key="frame" x="8" y="69" width="398" height="20"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
+                                                <color key="textColor" name="appDetail"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite o nome da sala" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vAC-cJ-yR9">
+                                                <rect key="frame" x="8" y="97" width="398" height="30.5"/>
+                                                <color key="textColor" name="appContrast"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfX-w6-5Lg">
+                                                <rect key="frame" x="8" y="131.5" width="398" height="2"/>
+                                                <color key="backgroundColor" name="appDetail"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="Wpq-EL-uAB"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chave de Acesso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-HW-tzL">
+                                                <rect key="frame" x="8" y="149.5" width="398" height="20"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
+                                                <color key="textColor" name="appDetail"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite a chave de acesso" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eAz-gK-zRb">
+                                                <rect key="frame" x="8" y="177.5" width="333" height="30.5"/>
+                                                <color key="textColor" name="appContrast"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="24"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habilitando a chave de acesso, sua sala só poderá ser acessada via inserção da chave." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mp-lh-UEW">
+                                                <rect key="frame" x="8" y="220" width="398" height="41"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gc-E7-eWj">
+                                                <rect key="frame" x="8" y="269" width="398" height="2"/>
+                                                <color key="backgroundColor" name="appDetail"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="2" id="2tO-Nu-rQy"/>
+                                                </constraints>
+                                            </view>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w7x-Pr-E9X">
+                                                <rect key="frame" x="353" y="177.5" width="51" height="31"/>
+                                                <color key="onTintColor" name="appBlue"/>
+                                                <connections>
+                                                    <action selector="keyChanged:" destination="TxD-t3-Uyi" eventType="valueChanged" id="myL-SA-g37"/>
+                                                </connections>
+                                            </switch>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyj-R3-3SK">
+                                                <rect key="frame" x="48" y="311" width="318" height="50"/>
+                                                <color key="backgroundColor" name="appYellow"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="wFg-in-kvP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                                <state key="normal" title="Criar Sala">
+                                                    <color key="titleColor" name="appContrast"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="createRoomAction:" destination="TxD-t3-Uyi" eventType="touchUpInside" id="qT8-Fl-dNZ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" name="appBase"/>
+                                        <constraints>
+                                            <constraint firstItem="7gc-E7-eWj" firstAttribute="top" secondItem="1Mp-lh-UEW" secondAttribute="bottom" constant="8" id="1Ek-48-xiN"/>
+                                            <constraint firstAttribute="trailing" secondItem="zyj-R3-3SK" secondAttribute="trailing" constant="48" id="3RQ-Gg-s4N"/>
+                                            <constraint firstItem="vAC-cJ-yR9" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="5rQ-rM-cpe"/>
+                                            <constraint firstAttribute="trailing" secondItem="shp-dd-edd" secondAttribute="trailing" constant="8" id="8Q5-18-ZXv"/>
+                                            <constraint firstItem="Ycf-oP-lyX" firstAttribute="top" secondItem="FlK-9X-ydo" secondAttribute="top" constant="8" id="9dP-I5-jZZ"/>
+                                            <constraint firstItem="eAz-gK-zRb" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="Aeh-Ih-gxF"/>
+                                            <constraint firstItem="1Mp-lh-UEW" firstAttribute="top" secondItem="eAz-gK-zRb" secondAttribute="bottom" constant="12" id="Ahh-Hk-jjp"/>
+                                            <constraint firstItem="YZG-HW-tzL" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="BOX-RI-KVa"/>
+                                            <constraint firstAttribute="trailing" secondItem="w7x-Pr-E9X" secondAttribute="trailing" constant="12" id="BrM-PN-xZ1"/>
+                                            <constraint firstAttribute="trailing" secondItem="qfX-w6-5Lg" secondAttribute="trailing" constant="8" id="DdS-UC-y7C"/>
+                                            <constraint firstItem="qfX-w6-5Lg" firstAttribute="top" secondItem="vAC-cJ-yR9" secondAttribute="bottom" constant="4" id="E4S-5g-csb"/>
+                                            <constraint firstItem="shp-dd-edd" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="FoT-c7-HFf"/>
+                                            <constraint firstAttribute="trailing" secondItem="vAC-cJ-yR9" secondAttribute="trailing" constant="8" id="GFZ-Ui-vTf"/>
+                                            <constraint firstAttribute="trailing" secondItem="YZG-HW-tzL" secondAttribute="trailing" constant="8" id="JfY-hQ-n6s"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Mp-lh-UEW" secondAttribute="trailing" constant="8" id="LA6-nt-zhF"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ycf-oP-lyX" secondAttribute="trailing" constant="8" id="Oeo-2e-iD5"/>
+                                            <constraint firstItem="eAz-gK-zRb" firstAttribute="top" secondItem="YZG-HW-tzL" secondAttribute="bottom" constant="8" id="SSk-1V-6N5"/>
+                                            <constraint firstItem="w7x-Pr-E9X" firstAttribute="leading" secondItem="eAz-gK-zRb" secondAttribute="trailing" constant="12" id="Ura-Lb-1sB"/>
+                                            <constraint firstItem="YZG-HW-tzL" firstAttribute="top" secondItem="qfX-w6-5Lg" secondAttribute="bottom" constant="16" id="VDr-AQ-xtx"/>
+                                            <constraint firstItem="7gc-E7-eWj" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="Wak-6j-qch"/>
+                                            <constraint firstItem="qfX-w6-5Lg" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="Xoz-nx-jet"/>
+                                            <constraint firstItem="shp-dd-edd" firstAttribute="top" secondItem="Ycf-oP-lyX" secondAttribute="bottom" constant="20" id="Y9P-s4-ttd"/>
+                                            <constraint firstItem="w7x-Pr-E9X" firstAttribute="centerY" secondItem="eAz-gK-zRb" secondAttribute="centerY" id="cF9-rC-JaM"/>
+                                            <constraint firstItem="vAC-cJ-yR9" firstAttribute="top" secondItem="shp-dd-edd" secondAttribute="bottom" constant="8" id="eu9-2k-zhy"/>
+                                            <constraint firstAttribute="trailing" secondItem="7gc-E7-eWj" secondAttribute="trailing" constant="8" id="jTp-OT-T8m"/>
+                                            <constraint firstAttribute="bottom" secondItem="zyj-R3-3SK" secondAttribute="bottom" constant="40" id="lsw-PL-UhL"/>
+                                            <constraint firstItem="1Mp-lh-UEW" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="pzZ-yV-VEy"/>
+                                            <constraint firstItem="zyj-R3-3SK" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="48" id="qW6-4R-dC1"/>
+                                            <constraint firstItem="Ycf-oP-lyX" firstAttribute="leading" secondItem="FlK-9X-ydo" secondAttribute="leading" constant="8" id="rOV-wY-OdG"/>
+                                            <constraint firstItem="zyj-R3-3SK" firstAttribute="top" secondItem="7gc-E7-eWj" secondAttribute="bottom" constant="40" id="uI4-wa-6pp"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FlK-9X-ydo" firstAttribute="trailing" secondItem="mJv-7I-Zhc" secondAttribute="trailing" id="S3m-pa-Pbs"/>
+                                    <constraint firstItem="FlK-9X-ydo" firstAttribute="bottom" secondItem="mJv-7I-Zhc" secondAttribute="bottom" id="dmq-Xk-Mud"/>
+                                    <constraint firstItem="mJv-7I-Zhc" firstAttribute="top" secondItem="FlK-9X-ydo" secondAttribute="top" id="maX-Ch-mKC"/>
+                                    <constraint firstItem="FlK-9X-ydo" firstAttribute="leading" secondItem="mJv-7I-Zhc" secondAttribute="leading" id="wNu-TJ-xeQ"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="mJv-7I-Zhc"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="gfv-PO-pia"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FlK-9X-ydo" firstAttribute="width" secondItem="d9O-55-8uF" secondAttribute="width" id="4RG-sh-ihk"/>
+                            <constraint firstItem="Ene-R3-P0E" firstAttribute="leading" secondItem="d9O-55-8uF" secondAttribute="leading" id="FQz-Zy-Tfl"/>
+                            <constraint firstItem="Ene-R3-P0E" firstAttribute="top" secondItem="d9O-55-8uF" secondAttribute="top" id="IBf-oo-HY5"/>
+                            <constraint firstItem="d9O-55-8uF" firstAttribute="bottom" secondItem="Ene-R3-P0E" secondAttribute="bottom" id="g0g-fJ-jUs"/>
+                            <constraint firstItem="d9O-55-8uF" firstAttribute="trailing" secondItem="Ene-R3-P0E" secondAttribute="trailing" id="nrA-ha-F6f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d9O-55-8uF"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionKeyLabel" destination="1Mp-lh-UEW" id="HZS-Wp-2HG"/>
+                        <outlet property="descriptionLabel" destination="Ycf-oP-lyX" id="Hz7-bw-wvd"/>
+                        <outlet property="keyLabel" destination="YZG-HW-tzL" id="hfu-cs-nXh"/>
+                        <outlet property="keyTextField" destination="eAz-gK-zRb" id="ZyX-9t-yHs"/>
+                        <outlet property="nameLabel" destination="shp-dd-edd" id="XqM-ka-6jU"/>
+                        <outlet property="nameTextField" destination="vAC-cJ-yR9" id="nJ2-Dw-FHc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0v-eq-P7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276" y="-499"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="appBase">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appBlue">
+            <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appContrast">
+            <color red="0.0" green="0.059000000357627869" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appDetail">
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appYellow">
+            <color red="0.98000001907348633" green="0.88200002908706665" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

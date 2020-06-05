@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGF-a4-1dM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGF-a4-1dM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -20,7 +19,7 @@
         <!--Onboarding View Controller-->
         <scene sceneID="ad9-U1-A0t">
             <objects>
-                <viewController storyboardIdentifier="Onboarding" id="cGF-a4-1dM" customClass="OnboardingViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding" id="cGF-a4-1dM" customClass="OnboardingViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="izm-rg-lcZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,37 +28,37 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="740"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4J-S0-dCJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="694"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="696.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para você" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82k-Ry-z0Q">
-                                                <rect key="frame" x="40" y="86" width="125.5" height="33"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Para seu local" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82k-Ry-z0Q">
+                                                <rect key="frame" x="40" y="86" width="174.5" height="33.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profissional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJt-Cy-lgD">
-                                                <rect key="frame" x="40" y="119" width="175" height="33"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="de Trabalho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJt-Cy-lgD">
+                                                <rect key="frame" x="40" y="119.5" width="185" height="33"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="175" id="Ox7-sH-OBw"/>
+                                                    <constraint firstAttribute="width" constant="185" id="Ox7-sH-OBw"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="art-pessoa" translatesAutoresizingMaskIntoConstraints="NO" id="jfj-Bx-UPz">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="jfj-Bx-UPz">
                                                 <rect key="frame" x="200" y="43" width="214" height="496.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="jfj-Bx-UPz" secondAttribute="height" multiplier="181:420" id="0sd-E9-cTL"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agilidade e Fluídez" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-9K-yLn">
-                                                <rect key="frame" x="20" y="559.5" width="374" height="43.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gestão e Fluídez" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-9K-yLn">
+                                                <rect key="frame" x="40" y="559.5" width="354" height="44.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="37"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Através das salas e áreas do seu local de trabalho, acesse e navegue pelas etapas do fluxos e protocolos de forma flúida!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJR-Vd-7zC">
-                                                <rect key="frame" x="40" y="611" width="337.5" height="63"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Cadastre seu local de trabalho, insira e administre de forma flúida e intuitiva os fluxos e protocolos que serão utilizados!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJR-Vd-7zC">
+                                                <rect key="frame" x="40" y="612" width="354" height="64.5"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="18"/>
                                                 <color key="textColor" name="appColor"/>
                                                 <nil key="highlightedColor"/>
@@ -70,15 +69,15 @@
                                             <constraint firstAttribute="trailing" secondItem="Hme-9K-yLn" secondAttribute="trailing" constant="20" id="2Of-dC-mep"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sJR-Vd-7zC" secondAttribute="trailing" constant="20" symbolic="YES" id="6Qi-Cx-fMR"/>
                                             <constraint firstItem="sJR-Vd-7zC" firstAttribute="top" secondItem="Hme-9K-yLn" secondAttribute="bottom" constant="8" id="9VR-eO-EQs"/>
+                                            <constraint firstItem="82k-Ry-z0Q" firstAttribute="width" secondItem="NJt-Cy-lgD" secondAttribute="width" multiplier="0.943243" id="BVL-QH-Iwz"/>
                                             <constraint firstAttribute="trailing" secondItem="jfj-Bx-UPz" secondAttribute="trailing" id="Lrs-BR-HuU"/>
                                             <constraint firstItem="NJt-Cy-lgD" firstAttribute="leading" secondItem="H4J-S0-dCJ" secondAttribute="leading" constant="40" id="NAy-di-M6B"/>
                                             <constraint firstItem="sJR-Vd-7zC" firstAttribute="leading" secondItem="H4J-S0-dCJ" secondAttribute="leading" constant="40" id="NUC-7g-PyA"/>
                                             <constraint firstItem="82k-Ry-z0Q" firstAttribute="leading" secondItem="H4J-S0-dCJ" secondAttribute="leading" constant="40" id="Upv-cP-mbL"/>
-                                            <constraint firstItem="Hme-9K-yLn" firstAttribute="leading" secondItem="H4J-S0-dCJ" secondAttribute="leading" constant="20" id="W9p-C6-ek4"/>
+                                            <constraint firstItem="Hme-9K-yLn" firstAttribute="leading" secondItem="H4J-S0-dCJ" secondAttribute="leading" constant="40" id="W9p-C6-ek4"/>
                                             <constraint firstItem="NJt-Cy-lgD" firstAttribute="top" secondItem="82k-Ry-z0Q" secondAttribute="bottom" id="fz2-TI-q75"/>
                                             <constraint firstItem="Hme-9K-yLn" firstAttribute="top" secondItem="jfj-Bx-UPz" secondAttribute="bottom" constant="20" id="hYc-6x-O3B"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="82k-Ry-z0Q" secondAttribute="trailing" constant="20" symbolic="YES" id="ipI-Sa-Tkk"/>
-                                            <constraint firstItem="82k-Ry-z0Q" firstAttribute="width" secondItem="NJt-Cy-lgD" secondAttribute="width" multiplier="0.717143" id="jHY-n0-B2O"/>
                                             <constraint firstAttribute="bottom" secondItem="sJR-Vd-7zC" secondAttribute="bottom" constant="20" id="jhx-ns-SU2"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="NJt-Cy-lgD" secondAttribute="trailing" constant="20" symbolic="YES" id="n2e-8O-0wg"/>
                                             <constraint firstItem="82k-Ry-z0Q" firstAttribute="top" secondItem="H4J-S0-dCJ" secondAttribute="top" constant="86" id="n6e-aa-9F1"/>
@@ -146,7 +145,7 @@
         <!--Olá,-->
         <scene sceneID="a2o-Fv-OXF">
             <objects>
-                <tableViewController title="Olá," id="o04-LP-b9t" customClass="MainViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Olá," id="o04-LP-b9t" customClass="MainViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Olá," largeTitleDisplayMode="always" id="CPa-gi-Yka">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="hCg-nV-rhY">
                             <color key="tintColor" name="appBlue"/>
@@ -160,6 +159,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="jDf-mz-Xru" kind="show" identifier="roomSegue" id="6TU-et-jWC"/>
+                        <segue destination="rTf-h1-T4j" kind="show" identifier="toCreateRoom" id="Fnu-eU-gOX"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qTP-O2-21u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -169,7 +169,7 @@
         <!--Sobre-->
         <scene sceneID="6Yo-qp-ANu">
             <objects>
-                <viewController id="oTB-No-BTV" customClass="AboutViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oTB-No-BTV" customClass="AboutViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Thg-dl-8IC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,10 +310,10 @@
         <!--Navigation ControllerVC-->
         <scene sceneID="bsG-cC-Ayt">
             <objects>
-                <navigationController id="tKI-R3-4n6" customClass="NavigationControllerVC" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="tKI-R3-4n6" customClass="NavigationControllerVC" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eol-qv-L1n"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="E1c-Kp-YdA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="appColor"/>
                         <color key="tintColor" name="appBlue"/>
@@ -328,14 +328,24 @@
             </objects>
             <point key="canvasLocation" x="1949" y="105"/>
         </scene>
+        <!--CreateRoom-->
+        <scene sceneID="AuJ-y9-NRe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CreateRoom" id="rTf-h1-T4j" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="U4J-mR-Dul"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTE-wJ-sha" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2801" y="583"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="art-pessoa" width="320" height="737"/>
+        <image name="Image" width="229" height="522"/>
         <namedColor name="appBlue">
             <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="appColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appYellow">
             <color red="0.98000001907348633" green="0.88200002908706665" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
