@@ -20,16 +20,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="757"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-Ga-yt2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="367"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="338"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="aaaaa" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-x3-XTP">
-                                                <rect key="frame" x="20" y="30" width="374" height="29"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-x3-XTP">
+                                                <rect key="frame" x="20" y="30" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZDK-TP-Gqy">
-                                                <rect key="frame" x="20" y="91" width="374" height="32"/>
+                                                <rect key="frame" x="20" y="62" width="374" height="32"/>
                                                 <color key="backgroundColor" name="appDetail"/>
                                                 <segments>
                                                     <segment title="Decisão"/>
@@ -43,25 +43,25 @@
                                                 </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Pergunta da Decisão" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7u-bO-CiZ">
-                                                <rect key="frame" x="20" y="162" width="374" height="23"/>
+                                                <rect key="frame" x="20" y="133" width="374" height="23"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                                 <color key="textColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite a pergunta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWx-Iu-chw">
-                                                <rect key="frame" x="20" y="201" width="374" height="30.5"/>
+                                                <rect key="frame" x="20" y="172" width="374" height="30.5"/>
                                                 <color key="textColor" name="appBlue"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto da decisão" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFj-cc-bEb">
-                                                <rect key="frame" x="20" y="295.5" width="374" height="23"/>
+                                                <rect key="frame" x="20" y="266.5" width="374" height="23"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="textColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite o texto da decisão, se necessárioDigite o texto da decisão, se necessário" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1KU-0H-ADV">
-                                                <rect key="frame" x="20" y="334.5" width="374" height="24.5"/>
+                                                <rect key="frame" x="20" y="305.5" width="374" height="24.5"/>
                                                 <color key="textColor" name="appContrast"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -136,6 +136,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Etapas" id="5IF-2m-oYL">
                             <color key="tintColor" name="appBlue"/>
+                            <connections>
+                                <segue destination="v6I-eN-jwC" kind="show" identifier="segueItem" id="qBu-Cb-BRh"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -185,6 +188,9 @@
             <point key="canvasLocation" x="22" y="741"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="qBu-Cb-BRh"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="appBlue">
             <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
