@@ -288,15 +288,18 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
 
         //Verifica se é uma etapa de alternativa
         if self.stageTitles[indexPath.row].tipo == "inicial" || self.stageTitles[indexPath.row].tipo == "alternativa" {
-            
             let titleFont = UIFont(name: "SFProDisplay-Heavy", size: 18) ?? UIFont.systemFont(ofSize: 18)
             cell.titleLabel.dynamicFont = titleFont
+            
+            cell.titleLabel.text = "→ " + stage!
         }
         else {
             let titleFont = UIFont(name: "SFProDisplay-Regular", size: 18) ?? UIFont.systemFont(ofSize: 18)
             cell.titleLabel.dynamicFont = titleFont
             
+            cell.titleLabel.text = "     " + stage!
         }
+
         
         cell.delegate = self
         
