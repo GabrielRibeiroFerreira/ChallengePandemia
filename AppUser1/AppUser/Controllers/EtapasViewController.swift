@@ -73,7 +73,7 @@ class EtapasViewController: UIViewController {
     }
     
     func getDataFromDB() {
-        let urlFlow = "Fluxos/" + self.flow + "/Etapas"
+        let urlFlow = "Fluxos/" + self.flow
         let refFlow = Database.database().reference().child(urlFlow)
         refFlow.observe(.value) { (snapshot) in
             for child in snapshot.children {
@@ -83,10 +83,14 @@ class EtapasViewController: UIViewController {
                     let idEtapa = dict["idEtapa"] as? String,
                     let id_sim = dict["id_sim"] as? String,
                     let id_nao = dict["id_nao"] as? String,
-                    let tipo = dict["tipo"] as? String {
+                    let tipo = dict["tipo"] as? String,
+                    let titulo = dict["titulo"] as? String {
                     
                     let etapa = Etapa(tituloResumido: tituloResumido, idEtapa: idEtapa, id_sim: id_sim, id_nao: id_nao, tipo: tipo)
                     self.etapas.append(etapa)
+                    
+                    //Dá pra melhorar, eu sei
+                    self.titleLabel.text = titulo
                 }
             }
             self.sortTitles()

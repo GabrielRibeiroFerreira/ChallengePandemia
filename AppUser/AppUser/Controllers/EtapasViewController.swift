@@ -101,6 +101,9 @@ class EtapasViewController: UIViewController {
     }
     
     func getDataFromDB() {
+        self.etapas = []
+        self.stageTitles = []
+        
         let urlFlow = "Fluxos/" + self.flow
         let refFlow = Database.database().reference().child(urlFlow)
         refFlow.observe(.value) { (snapshot) in
@@ -127,6 +130,7 @@ class EtapasViewController: UIViewController {
 
     func sortTitles() {
         var currentEtapa: Etapa
+        self.titleList = []
         
         //Etapa inicial do fluxo
         for etapa in self.etapas {
@@ -172,7 +176,7 @@ class EtapasViewController: UIViewController {
         }
     }
     
-    @objc func goToList(sender: UIButton) {
+    @objc func goToList(sender: Any) {
         let viewControllers: [UIViewController] = self.navigationController!.viewControllers
         for aViewController in viewControllers {
             if aViewController is AreaViewController {
@@ -182,16 +186,15 @@ class EtapasViewController: UIViewController {
     }
     
     @IBAction func savePrtoFlow(_ sender: Any) {
-        self.saveAlert()
+        self.saveAlert(sender)
     }
     
     // MARK: - Alerts
-    @objc func saveAlert() {
+    @objc func saveAlert(_ sender: Any) {
         let alert = UIAlertController(title: "Deseja Salvar as Alterações?", message: "Caso escolha não salvar, todas as modificações serão perdidas", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
-            //Chamar método post
-            print("Salvou")
+            self.goToList(sender: sender)
         }))
         
         self.present(alert, animated: true, completion: nil)
@@ -201,17 +204,33 @@ class EtapasViewController: UIViewController {
         let alert = UIAlertController(title: "Editar Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
         
         alert.addTextField { (textField) in
-            let placeholder = self.stageTitles[indexPath.row].tituloResumido
+            var placeholder = self.stageTitles[indexPath.row].tituloResumido
+            placeholder = placeholder!.replacingOccurrences(of: "→", with: "", options: NSString.CompareOptions.literal, range: nil)
             textField.placeholder = placeholder
             textField.isSecureTextEntry = false
         }
         
         alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(action) in
-            //Chamar método put
-            let newTitle = alert.textFields![0].text
-            self.stageTitles[indexPath.row].setTitle(newTielw: newTitle!)
-            self.tableView.reloadData()
+        alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(_) in
+            var newTitle = alert.textFields![0].text
+            
+            if self.stageTitles[indexPath.row].tipo == "alternativa" ||  self.stageTitles[indexPath.row].tipo == "inicial"{
+                newTitle = "→ " + newTitle!
+            } else {
+                newTitle = "     " + newTitle!
+            }
+            
+            //Método para editar tituloResumido de um fluxo/protocolo do firebase
+            let url = "Fluxos/" + self.flow + "/"
+            + self.stageTitles[indexPath.row].idEtapa! + "/tituloResumido"
+            
+            //Limpa todos as arrays que recebem vaolres do banco no observe
+            self.stageTitles.removeAll()
+            self.etapas.removeAll()
+            self.titleList.removeAll()
+            
+            let ref = Database.database().reference()
+            ref.child(url).setValue(newTitle)
         }))
         
         self.present(alert, animated: true, completion: nil)
@@ -222,9 +241,32 @@ class EtapasViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
-            //Chamar metodo delete
-            self.stageTitles.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            //Método para excluir etapa de um fluxo/protocolo do firebase
+            let url = "Fluxos/" + self.flow + "/" + self.stageTitles[indexPath.row].idEtapa!
+
+            //Limpa todos as arrays que recebem vaolres do banco no observe
+            self.stageTitles.removeAll()
+            self.etapas.removeAll()
+            self.titleList.removeAll()
+            
+            let ref = Database.database().reference()
+            ref.child(url).removeValue()
+            
+            //Garantindo consistência caso todas as do fluxo etapas sejam excluidas
+            ref.child("Fluxos").observeSingleEvent(of: .value, with: { (snapshot) in
+                if !snapshot.hasChild(self.flow) {
+                    let url = UserDefaults.standard.string(forKey: "urlArea")
+                    let refArea = Database.database().reference()
+                    refArea.child(url!).removeValue { (error, ref) in
+                        if error == nil {
+                            print("Foii")
+                        }
+                    }
+                }
+            })
+            
+            
         }))
         
         self.present(alert, animated: true, completion: nil)
