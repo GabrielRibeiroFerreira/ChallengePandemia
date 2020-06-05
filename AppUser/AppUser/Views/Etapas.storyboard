@@ -28,23 +28,38 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="67n-LY-H3o">
-                                <rect key="frame" x="0.0" y="160" width="414" height="702"/>
+                                <rect key="frame" x="0.0" y="160" width="414" height="629"/>
                                 <color key="backgroundColor" name="appBlue"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pG0-c6-1vB">
+                                <rect key="frame" x="30" y="813" width="354" height="41"/>
+                                <color key="backgroundColor" name="appYellow"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Salvar">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="savePrtoFlow:" destination="071-qA-ThP" eventType="touchUpInside" id="Wk3-yg-wKS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="appBlue"/>
                         <constraints>
                             <constraint firstItem="67n-LY-H3o" firstAttribute="leading" secondItem="gnB-tZ-6ra" secondAttribute="leading" id="A4d-zY-91c"/>
-                            <constraint firstItem="gnB-tZ-6ra" firstAttribute="bottom" secondItem="67n-LY-H3o" secondAttribute="bottom" id="FQ1-ek-a39"/>
                             <constraint firstItem="weO-XO-5aC" firstAttribute="top" secondItem="gnB-tZ-6ra" secondAttribute="top" constant="20" id="Hl7-uf-01u"/>
+                            <constraint firstItem="pG0-c6-1vB" firstAttribute="top" secondItem="67n-LY-H3o" secondAttribute="bottom" constant="24" id="agi-JA-juA"/>
+                            <constraint firstItem="gnB-tZ-6ra" firstAttribute="bottom" secondItem="pG0-c6-1vB" secondAttribute="bottom" constant="8" id="cJJ-Ye-h0w"/>
                             <constraint firstItem="weO-XO-5aC" firstAttribute="leading" secondItem="gnB-tZ-6ra" secondAttribute="leading" constant="20" id="cWa-ZM-kFY"/>
                             <constraint firstItem="67n-LY-H3o" firstAttribute="trailing" secondItem="gnB-tZ-6ra" secondAttribute="trailing" id="eLz-a6-AU1"/>
                             <constraint firstItem="gnB-tZ-6ra" firstAttribute="trailing" secondItem="weO-XO-5aC" secondAttribute="trailing" constant="20" id="mba-oH-aOA"/>
+                            <constraint firstItem="pG0-c6-1vB" firstAttribute="leading" secondItem="gnB-tZ-6ra" secondAttribute="leading" constant="30" id="twp-DM-QpB"/>
                             <constraint firstItem="67n-LY-H3o" firstAttribute="top" secondItem="weO-XO-5aC" secondAttribute="bottom" constant="40" id="xO7-l1-wyr"/>
+                            <constraint firstItem="gnB-tZ-6ra" firstAttribute="trailing" secondItem="pG0-c6-1vB" secondAttribute="trailing" constant="30" id="zgR-oT-KvL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gnB-tZ-6ra"/>
                     </view>
                     <connections>
+                        <outlet property="saveButton" destination="pG0-c6-1vB" id="qY4-hf-H3H"/>
                         <outlet property="tableView" destination="67n-LY-H3o" id="tMW-Hd-j7O"/>
                         <outlet property="titleLabel" destination="weO-XO-5aC" id="UPK-kr-knQ"/>
                     </connections>
