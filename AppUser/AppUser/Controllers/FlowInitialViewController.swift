@@ -12,9 +12,9 @@ import FirebaseDatabase
 class FlowInitialViewController: UIViewController {
     
     @IBOutlet weak var titleInitial: UILabel!
-    
+    @IBOutlet weak var titleInput: UITextField!
     @IBOutlet weak var textInitial: UILabel!
-
+    @IBOutlet weak var contentInput: UITextField!
     @IBOutlet weak var progressBtn: UIButton!
     
     var bdRefFlow: String = "idFluxo1"
@@ -22,36 +22,31 @@ class FlowInitialViewController: UIViewController {
     var idScreen: String = ""
     var typeProx: String = ""
     var segueInitial: String = ""
+    var teste: String = ""
+    var idFlow: String = ""
+    var timeStampStep = 0
     
     let refFlow = Database.database().reference()
-    let dispatchGroup1 = DispatchGroup()
-    let dispatchGroup2 = DispatchGroup()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setupNavBar()
         self.setupAccessibility()
-        self.getDataFromDB()
+        self.setupTextField()
+        self.HideKeyboard()
 
-        self.dispatchGroup2.notify(queue: .main) {
-            if self.typeProx == "alternativa"{
-                self.segueInitial = "segueInitialInput"
-            }else if self.typeProx == "avancarCurto"{
-                self.segueInitial = "segueInitialShort"
-            }else if self.typeProx == "avancarExtenso"{
-                self.segueInitial = "segueInitialExtensive"
-            }else if self.typeProx == "final"{
-                self.segueInitial = "segueInitialFinal"
-            }
-        }
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         self.setupNavBar()
+    }
+    
+    func setupTextField() {
+        titleInput.attributedPlaceholder = NSAttributedString(string: "Digite o nome do fluxo", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        contentInput.attributedPlaceholder = NSAttributedString(string: "Digite a introdução do fluxo", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appYellow")])
     }
     
     func setupNavBar() {
@@ -63,82 +58,49 @@ class FlowInitialViewController: UIViewController {
      }
      
     private func setupAccessibility() {
-        let titleInitialFont = UIFont(name: "SFProDisplay-Bold", size: 22) ?? UIFont.systemFont(ofSize: 22)
-        let textInitialFont = UIFont(name: "SFProDisplay-Heavy", size: 28) ?? UIFont.systemFont(ofSize: 28)
+        let titleInitialFont = UIFont(name: "SFProDisplay-Bold", size: 19) ?? UIFont.systemFont(ofSize: 22)
         let btnFont = UIFont(name: "SFProDisplay-Medium", size: 24) ?? UIFont.systemFont(ofSize: 24)
         
         self.titleInitial.dynamicFont = titleInitialFont
-        self.textInitial.dynamicFont = textInitialFont
+        self.textInitial.dynamicFont = titleInitialFont
         self.progressBtn.titleLabel?.dynamicFont = btnFont
-        
     }
     
-    func getDataFromDB() {
-        //Recuperação da Etapa
-        let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/Etapas/" + self.bdRefStep
-        let urlFlowProx = "Fluxos/" + self.bdRefFlow + "/Etapas/"
-        
-        self.dispatchGroup1.enter()
-        self.refFlow.child(urlFlowAtual + "/titulo").observeSingleEvent(of: .value) { (snapshot) in
-            self.titleInitial.text =  snapshot.value as? String
-        }
-
-        self.refFlow.child(urlFlowAtual + "/descricao").observeSingleEvent(of: .value) { (snapshot) in
-            self.textInitial.text =  snapshot.value as? String
-        }
-        
-        self.refFlow.child(urlFlowAtual + "/id_nao").observeSingleEvent(of: .value) { (snapshot) in
-            self.idScreen =  snapshot.value as! String
-            self.dispatchGroup1.leave()
-        }
-        
-        self.dispatchGroup2.enter()
-        self.dispatchGroup1.notify(queue: .main) {
-            self.refFlow.child(urlFlowProx + self.idScreen + "/tipo").observeSingleEvent(of: .value) { (snapshot) in
-                if (snapshot.exists()){
-                    self.typeProx = snapshot.value as! String
-                    self.dispatchGroup2.leave()
-                }else{
-                    print("Error: Id Next Screen Not Found")
-                }
-            }
-        }
-    }
     
     @IBAction func btnProgress(_ sender: Any) {
-        if segueInitial != ""{
-            performSegue(withIdentifier: segueInitial, sender: self)
-        }else{
-            print("Error: Segue Not Found")
-        }
+        timeStampStep = Int(NSDate.timeIntervalSinceReferenceDate*1000)
+
+        self.refFlow.child("FluxosTeste").childByAutoId().childByAutoId()
+        idFlow = refFlow.child("FluxosTeste").childByAutoId().key!
+
+        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/titulo").setValue(titleInput.text)
+        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/subtitulo").setValue("subtitulo")
+        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/descricao").setValue(contentInput.text)
+        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/idEtapa").setValue(timeStampStep)
+        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/tipo").setValue("inicial")
+        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/tituloResumido").setValue("Início")
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueInitialInput"{
+        if segue.identifier == "segueInitial"{
             if let id = segue.destination as? FlowInputViewController {
-                id.bdRefFlow = bdRefFlow //passa o id do fluxo para a proxima tela
-                id.bdRefStep = idScreen //passa o id da etapa para a proxima tela
-            }
-        }else if segue.identifier == "segueInitialShort"{
-            if let id = segue.destination as? FlowShortContentViewController {
-                id.bdRefFlow = bdRefFlow
-                id.bdRefStep = idScreen
-            }
-        }else if segue.identifier == "segueInitialExtensive"{
-            if let id = segue.destination as? FlowExtensiveContentViewController {
-                id.bdRefFlow = bdRefFlow
-                id.bdRefStep = idScreen
-            }
-        }else if segue.identifier == "segueInitialFinal"{
-            if let id = segue.destination as? FlowFinalViewController {
-                id.bdRefFlow = bdRefFlow
-                id.bdRefStep = idScreen
-            }
-        }else if segue.identifier == "toStageSegue"{
-            if let etapas = segue.destination as? EtapasViewController {
-                etapas.markedStage = self.bdRefStep
-                etapas.flow = self.bdRefFlow
+                id.bdRefFlow = self.idFlow
+                id.bdRefStep = String(timeStampStep)
+                id.isAlternative = false
             }
         }
+    }
+    
+}
+
+extension UIViewController{
+    func HideKeyboard() {
+        let Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
+        view.addGestureRecognizer(Tap)
+    }
+    
+    @objc func DismissKeyboard(){
+        view.endEditing(true)
     }
 }
