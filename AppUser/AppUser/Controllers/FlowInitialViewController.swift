@@ -74,7 +74,7 @@ class FlowInitialViewController: UIViewController {
         idFlow = refFlow.child("Fluxos").childByAutoId().key!
 
         self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/titulo").setValue(titleInput.text)
-        self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/subtitulo").setValue("subtitulo")
+        self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/subtitulo").setValue(contentInput.text)
         self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/descricao").setValue(contentInput.text)
         self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/idEtapa").setValue(timeStampStep)
         self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/tipo").setValue("inicial")

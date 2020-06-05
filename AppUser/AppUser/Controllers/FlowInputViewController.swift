@@ -42,12 +42,14 @@ class FlowInputViewController: UIViewController {
         self.HideKeyboard()
         self.DismissKeyboard()
         self.setupTextField()
-        
         let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/" + self.bdRefStep
         self.refFlow.child(urlFlowAtual + "/titulo").observeSingleEvent(of: .value) { (snapshot) in
             self.titleFlow.text = (snapshot.value as? String)!
         }
-
+    
+        self.segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor(named: "appColor") ?? UIColor.lightText], for: .selected)
+        
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,7 +108,7 @@ class FlowInputViewController: UIViewController {
             contentInput.font = titleFont
             contentInput.textColor = UIColor(named: "appContrast")
             contentInput.attributedPlaceholder = NSAttributedString(string: "Digite o subtítulo da etapa", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
-            contentInput2.attributedPlaceholder = NSAttributedString(string: "Digite o conteúdo da etapa que será apresentado", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
+            contentInput2.attributedPlaceholder = NSAttributedString(string: "Digite o conteúdo da etapa", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
             typeStep = "avancarExtenso"
             segueInput = "segueCreate"
         case 2:
@@ -158,6 +160,11 @@ class FlowInputViewController: UIViewController {
             self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/titulo").setValue(self.titleFlowBD)
             self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/subtitulo").setValue(self.contentInput.text)
             self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/descricao").setValue(self.contentInput2.text)
+            
+            if (self.typeStep == "final" || self.typeStep == "avancarCurto"){
+                self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/descricao").setValue(self.contentInput.text)
+            }
+            
             self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/idEtapa").setValue(self.timeStampStep)
             self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/tipo").setValue("\(self.typeStep)")
             

@@ -30,12 +30,14 @@
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZDK-TP-Gqy">
                                                 <rect key="frame" x="20" y="91" width="374" height="32"/>
+                                                <color key="backgroundColor" name="appDetail"/>
                                                 <segments>
                                                     <segment title="Decisão"/>
                                                     <segment title="Informação"/>
                                                     <segment title="Notificação"/>
                                                     <segment title="Finalização"/>
                                                 </segments>
+                                                <color key="selectedSegmentTintColor" name="appBlue"/>
                                                 <connections>
                                                     <action selector="indexChange:" destination="ID7-Ju-5nH" eventType="valueChanged" id="7YT-Bl-8c7"/>
                                                 </connections>
@@ -192,6 +194,9 @@
         </namedColor>
         <namedColor name="appContrast">
             <color red="0.0" green="0.059000000357627869" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="appDetail">
+            <color red="0.96100002527236938" green="0.96100002527236938" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
