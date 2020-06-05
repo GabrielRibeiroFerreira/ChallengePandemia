@@ -207,6 +207,9 @@ class FlowInputViewController: UIViewController {
                 id.bdRefStep = "\(self.timeStampStep)"
             }
         }else if segue.identifier == "segueEtapas"{
+            if let id = segue.destination as? EtapasViewController {
+                id.flow = bdRefFlow
+            }
         }
     }
     
