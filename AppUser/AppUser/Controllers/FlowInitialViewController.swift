@@ -70,15 +70,15 @@ class FlowInitialViewController: UIViewController {
     @IBAction func btnProgress(_ sender: Any) {
         timeStampStep = Int(NSDate.timeIntervalSinceReferenceDate*1000)
 
-        self.refFlow.child("FluxosTeste").childByAutoId().childByAutoId()
-        idFlow = refFlow.child("FluxosTeste").childByAutoId().key!
+        self.refFlow.child("Fluxos").childByAutoId().childByAutoId()
+        idFlow = refFlow.child("Fluxos").childByAutoId().key!
 
-        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/titulo").setValue(titleInput.text)
-        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/subtitulo").setValue("subtitulo")
-        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/descricao").setValue(contentInput.text)
-        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/idEtapa").setValue(timeStampStep)
-        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/tipo").setValue("inicial")
-        self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/tituloResumido").setValue("Início")
+        self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/titulo").setValue(titleInput.text)
+        self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/subtitulo").setValue("subtitulo")
+        self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/descricao").setValue(contentInput.text)
+        self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/idEtapa").setValue(timeStampStep)
+        self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/tipo").setValue("inicial")
+        self.refFlow.child("Fluxos/\(idFlow)/\(timeStampStep)/tituloResumido").setValue("Início")
         
     }
     
