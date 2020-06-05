@@ -102,7 +102,7 @@
                                 <rect key="frame" x="33" y="817" width="348" height="39"/>
                                 <color key="backgroundColor" name="appBlue"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <state key="normal" title="Não">
+                                <state key="normal" title="Próxima Etapa">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -143,11 +143,44 @@
                         <outlet property="titleContent" destination="p7u-bO-CiZ" id="see-4y-Nf1"/>
                         <outlet property="titleContent2" destination="zFj-cc-bEb" id="nrn-zx-imM"/>
                         <outlet property="titleFlow" destination="yRY-x3-XTP" id="l7y-8V-eC2"/>
+                        <segue destination="cqZ-rW-HIm" kind="show" identifier="segueAlternative" id="gUH-1D-WvW"/>
+                        <segue destination="YqP-Nh-AWv" kind="show" identifier="segueCreate" id="NLH-Yb-rLj"/>
+                        <segue destination="v6I-eN-jwC" kind="show" identifier="segueEtapas" id="iWg-wf-ce3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBq-EP-a97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-700" y="697.76785714285711"/>
+        </scene>
+        <!--Etapas-->
+        <scene sceneID="d1L-Vd-Qyu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Etapas" id="v6I-eN-jwC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="1I1-No-RVy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMq-5w-ACG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7" y="648"/>
+        </scene>
+        <!--FlowExtensiveContent-->
+        <scene sceneID="D8X-U5-TA5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowExtensiveContent" id="cqZ-rW-HIm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ioD-5B-1DN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ghu-mQ-J6S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="698"/>
+        </scene>
+        <!--FlowInput-->
+        <scene sceneID="m3l-UM-N8C">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowInput" id="YqP-Nh-AWv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="9aR-Dt-QoP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="emN-Oy-sbO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="741"/>
         </scene>
     </scenes>
     <resources>
@@ -155,7 +188,7 @@
             <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="appColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="appContrast">
             <color red="0.0" green="0.059000000357627869" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

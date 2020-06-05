@@ -21,13 +21,16 @@ class FlowInputViewController: UIViewController {
     
     var bdRefFlow: String = ""
     var bdRefStep: String = ""
-    var idScreenYes: String = ""
-    var idScreenNo: String = ""
-    var typeProxYes: String = ""
-    var typeProxNo: String = ""
-    var segueInputYes: String = ""
-    var segueInputNo: String = ""
     var isYes = true
+    var isAlternative = true
+    var typeStep = ""
+    var titleFlowBD = ""
+    var segueInput = "segueAlternative"
+    var timeStampStep = 0
+    var findFirstAlternative: Bool?
+    var index = 0
+    
+    var viewControllers: [UIViewController]?
     
     let refFlow = Database.database().reference()
     let dispatchGroup1 = DispatchGroup()
@@ -38,6 +41,13 @@ class FlowInputViewController: UIViewController {
     
         self.HideKeyboard()
         self.DismissKeyboard()
+        self.setupTextField()
+        
+        let urlFlowAtual = "FluxosTeste/" + self.bdRefFlow + "/" + self.bdRefStep
+        self.refFlow.child(urlFlowAtual + "/titulo").observeSingleEvent(of: .value) { (snapshot) in
+            self.titleFlow.text = (snapshot.value as? String)!
+        }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +68,13 @@ class FlowInputViewController: UIViewController {
         
     }
     
+    func setupTextField() {
+        let titleFont = UIFont(name: "SFProDisplay-Bold", size: 24)
+        contentInput.font = titleFont
+        contentInput.attributedPlaceholder = NSAttributedString(string: "Digite o nome do fluxo", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appBlue")!])
+        contentInput2.attributedPlaceholder = NSAttributedString(string: "Digite a introdução do fluxo", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
+    }
+    
     @IBAction func indexChange(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
@@ -73,6 +90,8 @@ class FlowInputViewController: UIViewController {
             contentInput.font = titleFont
             contentInput.attributedPlaceholder = NSAttributedString(string: "Digite o nome do fluxo", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appBlue")!])
             contentInput2.attributedPlaceholder = NSAttributedString(string: "Digite a introdução do fluxo", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
+            typeStep = "alternativa"
+            segueInput = "segueAlternative"
         case 1:
             titleContent.isHidden = false
             contentInput.isHidden = false
@@ -86,6 +105,8 @@ class FlowInputViewController: UIViewController {
             contentInput.font = titleFont
             contentInput.attributedPlaceholder = NSAttributedString(string: "Digite o subtítulo da etapa", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
             contentInput2.attributedPlaceholder = NSAttributedString(string: "Digite o conteúdo da etapa que será apresentado", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
+            typeStep = "avancarExtenso"
+            segueInput = "segueCreate"
         case 2:
             titleContent.isHidden = false
             contentInput.isHidden = false
@@ -97,6 +118,8 @@ class FlowInputViewController: UIViewController {
             let titleFont = UIFont(name: "SFProDisplay-Bold", size: 24)
             contentInput.font = titleFont
             contentInput.attributedPlaceholder = NSAttributedString(string: "Digite a notificação da etapa", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
+            typeStep = "avancarCurto"
+            segueInput = "segueCreate"
         case 3:
             titleContent.isHidden = false
             contentInput.isHidden = false
@@ -108,24 +131,182 @@ class FlowInputViewController: UIViewController {
             let titleFont = UIFont(name: "SFProDisplay-Bold", size: 24)
             contentInput.font = titleFont
             contentInput.attributedPlaceholder = NSAttributedString(string: "Digite a notificação final", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
+            typeStep = "final"
+            segueInput = "segueEtapas"
         default:
             break;
         }
     }
     
     @IBAction func btnProgress(_ sender: Any) {
-        let timeStampStep = Int(NSDate.timeIntervalSinceReferenceDate*1000)
-                
-        self.refFlow.child("FluxosTeste/\(bdRefFlow)/\(timeStampStep)/titulo").setValue(contentInput.text)
-        self.refFlow.child("FluxosTeste/\(bdRefFlow)/\(timeStampStep)/subtitulo").setValue("subtitulo")
-        self.refFlow.child("FluxosTeste/\(bdRefFlow)/\(timeStampStep)/descricao").setValue(contentInput2.text)
-        self.refFlow.child("FluxosTeste/\(bdRefFlow)/\(timeStampStep)/idEtapa").setValue(timeStampStep)
-        self.refFlow.child("FluxosTeste/\(bdRefFlow)/\(timeStampStep)/tipo").setValue("teste")
-        self.refFlow.child("FluxosTeste/\(bdRefFlow)/\(timeStampStep)/tituloResumido").setValue("teste")
         
-        //Salvando id dessa etapa na etapa anterior
-        self.refFlow.child("FluxosTeste/\(bdRefFlow)/\(bdRefStep)/id_sim").setValue(timeStampStep)
-        self.refFlow.child("FluxosTeste/\(bdRefFlow)/\(bdRefStep)/id_nao").setValue(timeStampStep)
+        self.timeStampStep = Int(NSDate.timeIntervalSinceReferenceDate*1000)
+        
+        self.dispatchGroup1.enter()
+        let urlFlowAtual = "FluxosTeste/" + self.bdRefFlow + "/" + self.bdRefStep
+        self.refFlow.child(urlFlowAtual + "/titulo").observeSingleEvent(of: .value) { (snapshot) in
+            self.titleFlowBD = (snapshot.value as? String)!
+            self.titleFlow.text = (snapshot.value as? String)!
+            self.dispatchGroup1.leave()
+        }
+        
+        self.dispatchGroup1.notify(queue: .main){
+            self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/titulo").setValue(self.titleFlowBD)
+            self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/subtitulo").setValue(self.contentInput.text)
+            self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/descricao").setValue(self.contentInput2.text)
+            self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/idEtapa").setValue(self.timeStampStep)
+            self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/tipo").setValue("\(self.typeStep)")
+            
+            //Salvando id dessa etapa na etapa anterior
+            if self.isAlternative == true{
+                if self.isYes == true{
+                   self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.bdRefStep)/id_sim").setValue(self.timeStampStep)
+                }else{
+                    self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.bdRefStep)/id_nao").setValue(self.timeStampStep)
+                }
+            }else{
+                self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.bdRefStep)/id_sim").setValue(self.timeStampStep)
+                self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.bdRefStep)/id_nao").setValue(self.timeStampStep)
+            }
+            
+            if self.typeStep == "final"{
+                self.updateNavigation()
+            }else{
+                let alert = UIAlertController(title: "Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
+                
+                alert.addTextField { (textField) in
+                    textField.placeholder = "Título Resumido"
+                    textField.isSecureTextEntry = false
+                }
+                
+                alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+                alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(action) in
+                    self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/tituloResumido").setValue(alert.textFields![0].text)
+                    self.performSegue(withIdentifier: self.segueInput, sender: self)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueCreate"{
+            if let id = segue.destination as? FlowInputViewController {
+                id.bdRefFlow = bdRefFlow //passa o id do fluxo para a proxima tela
+                id.bdRefStep = "\(self.timeStampStep)" //passa o id da etapa para a proxima tela
+                id.isAlternative = false
+            }
+        }else if segue.identifier == "segueAlternative"{
+            if let id = segue.destination as? FlowExtensiveContentViewController {
+                id.bdRefFlow = bdRefFlow
+                id.bdRefStep = "\(self.timeStampStep)"
+            }
+        }else if segue.identifier == "segueEtapas"{
+        }
+    }
+    
+    
+    func updateNavigation() {
+        self.viewControllers = self.navigationController!.viewControllers
+        index = 0
+        if isYes == true{
+            self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.bdRefStep)/id_nao").observeSingleEvent(of: .value) { (snapshot) in
+                if (snapshot.exists()){
+                    for aViewController in self.viewControllers!.reversed() {
+                        self.index+=1
+                        if aViewController is FlowExtensiveContentViewController{
+                            let alert = UIAlertController(title: "Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
+                            
+                            alert.addTextField { (textField) in
+                                textField.placeholder = "Título Resumido"
+                                textField.isSecureTextEntry = false
+                            }
+                            
+                            alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+                            alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(action) in
+                                self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/tituloResumido").setValue(alert.textFields![0].text)
+                                self.performSegue(withIdentifier: self.segueInput, sender: self)
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                            break
+                        }
+                    }
+                }else{
+                    for aViewController in self.viewControllers!.reversed() {
+                        self.index+=1
+                        if aViewController is FlowExtensiveContentViewController{
+                            
+//                            self.viewControllers!.removeLast(self.index-1)
+//
+//                            self.navigationController?.viewControllers = self.viewControllers!
+//                            break
+                            self.viewControllers!.removeLast(self.index-1)
+                            let alert = UIAlertController(title: "Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
+                            
+                            alert.addTextField { (textField) in
+                                textField.placeholder = "Título Resumido"
+                                textField.isSecureTextEntry = false
+                            }
+                            
+                            alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+                            alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(action) in
+                                self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/tituloResumido").setValue(alert.textFields![0].text)
+                                self.navigationController?.viewControllers = self.viewControllers!
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                            break
+                        }
+                    }
+                }
+            }
+        }else{
+            self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.bdRefStep)/id_sim").observeSingleEvent(of: .value) { (snapshot) in
+                if (snapshot.exists()){
+                    for aViewController in self.viewControllers!.reversed() {
+                        self.index+=1
+                        if aViewController is FlowExtensiveContentViewController{
+                            let alert = UIAlertController(title: "Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
+                            
+                            alert.addTextField { (textField) in
+                                textField.placeholder = "Título Resumido"
+                                textField.isSecureTextEntry = false
+                            }
+                            
+                            alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+                            alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(action) in
+                                self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/tituloResumido").setValue(alert.textFields![0].text)
+                                self.performSegue(withIdentifier: self.segueInput, sender: self)
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                            break
+                        }
+                    }
+                }else{
+                    for aViewController in self.viewControllers!.reversed() {
+                        self.index+=1
+                        if aViewController is FlowExtensiveContentViewController{
+                            
+                            self.viewControllers!.removeLast(self.index-1)
+                            let alert = UIAlertController(title: "Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
+                            
+                            alert.addTextField { (textField) in
+                                textField.placeholder = "Título Resumido"
+                                textField.isSecureTextEntry = false
+                            }
+                            
+                            alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+                            alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(action) in
+                                self.refFlow.child("FluxosTeste/\(self.bdRefFlow)/\(self.timeStampStep)/tituloResumido").setValue(alert.textFields![0].text)
+                                self.navigationController?.viewControllers = self.viewControllers!
+                            }))
+                            self.present(alert, animated: true, completion: nil)
+                            break
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

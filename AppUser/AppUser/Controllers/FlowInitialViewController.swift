@@ -69,10 +69,10 @@ class FlowInitialViewController: UIViewController {
     
     @IBAction func btnProgress(_ sender: Any) {
         timeStampStep = Int(NSDate.timeIntervalSinceReferenceDate*1000)
-        
+
         self.refFlow.child("FluxosTeste").childByAutoId().childByAutoId()
         idFlow = refFlow.child("FluxosTeste").childByAutoId().key!
-                
+
         self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/titulo").setValue(titleInput.text)
         self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/subtitulo").setValue("subtitulo")
         self.refFlow.child("FluxosTeste/\(idFlow)/\(timeStampStep)/descricao").setValue(contentInput.text)
@@ -84,9 +84,10 @@ class FlowInitialViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueInitial"{
-            if let etapa = segue.destination as? FlowInputViewController {
-                etapa.bdRefFlow = self.idFlow
-                etapa.bdRefStep = String(timeStampStep)
+            if let id = segue.destination as? FlowInputViewController {
+                id.bdRefFlow = self.idFlow
+                id.bdRefStep = String(timeStampStep)
+                id.isAlternative = false
             }
         }
     }
