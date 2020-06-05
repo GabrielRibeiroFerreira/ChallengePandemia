@@ -60,12 +60,29 @@ class CreateRoomViewController: UIViewController {
 
     @IBAction func createRoomAction(_ sender: Any) {
         let key = self.keyIsEnabled ? self.keyTextField.text : "publico"
+        let idAdm = "idAdm" + String(UserDefaults.standard.integer(forKey: "idAdm"))
         let name = self.nameTextField.text
         let room = ["idSala\(self.id)" :
                         ["code" : key as Any,
-                         "idAdm" : "idAdm10" as Any,
+                         "idAdm" : idAdm as Any,
                          "name" : name as Any]]
         let roomRef = Database.database().reference(withPath : "Salas")
         roomRef.updateChildValues(room)
+        
+        self.returnAfterCreate()
+    }
+    
+    func returnAfterCreate() {
+        let action = UIAlertController(title: "Sala criada!", message: "", preferredStyle: .alert)
+        action.addAction(UIAlertAction(title: "OK", style: .cancel, handler: { (action) in
+            let viewControllers: [UIViewController] = self.navigationController!.viewControllers
+            for aViewController in viewControllers {
+                if aViewController is MainViewController {
+                    self.navigationController!.popToViewController(aViewController, animated: true)
+                }
+            }
+        }))
+        
+        self.present(action, animated: true, completion: nil)
     }
 }
