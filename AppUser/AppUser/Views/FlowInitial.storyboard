@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L40-Yj-lcC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,7 +12,7 @@
         <!--Flow Initial View Controller-->
         <scene sceneID="btA-cT-YD6">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="L40-Yj-lcC" customClass="FlowInitialViewController" customModule="AppAdm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="L40-Yj-lcC" customClass="FlowInitialViewController" customModule="AppUser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gYK-Qx-eSm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,50 +21,30 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="723"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E09-Oe-p5e">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="216.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome do Fluxo" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6s-FI-aM9">
-                                                <rect key="frame" x="20" y="30" width="374" height="23"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite o nome do fluxo" textAlignment="natural" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="O2V-dK-e8n">
-                                                <rect key="frame" x="20" y="61" width="374" height="28"/>
-                                                <color key="backgroundColor" name="appBlue"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Introdução Procedimento" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E67-tP-EF8">
-                                                <rect key="frame" x="20" y="139" width="374" height="23"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                                <color key="textColor" red="0.70588235294117641" green="0.70588235294117641" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite a introdução do fluxo" textAlignment="natural" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="r4D-Me-x4R">
-                                                <rect key="frame" x="20" y="178" width="374" height="30.5"/>
-                                                <color key="backgroundColor" name="appBlue"/>
-                                                <color key="textColor" name="appYellow"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6s-FI-aM9">
+                                                <rect key="frame" x="20" y="30" width="374" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <color key="textColor" name="appColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E67-tP-EF8">
+                                                <rect key="frame" x="20" y="70" width="374" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                                <color key="textColor" name="appYellow"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" name="appBlue"/>
                                         <constraints>
-                                            <constraint firstItem="O2V-dK-e8n" firstAttribute="top" secondItem="P6s-FI-aM9" secondAttribute="bottom" constant="8" id="61O-Fk-Czu"/>
+                                            <constraint firstItem="E67-tP-EF8" firstAttribute="top" secondItem="P6s-FI-aM9" secondAttribute="bottom" constant="40" id="7qS-ax-4V6"/>
                                             <constraint firstAttribute="trailing" secondItem="E67-tP-EF8" secondAttribute="trailing" constant="20" id="82s-g9-Lws"/>
-                                            <constraint firstItem="r4D-Me-x4R" firstAttribute="top" secondItem="E67-tP-EF8" secondAttribute="bottom" constant="16" id="E2y-tm-Pbx"/>
-                                            <constraint firstAttribute="bottom" secondItem="r4D-Me-x4R" secondAttribute="bottom" constant="8" id="GrI-sT-fJM"/>
-                                            <constraint firstItem="O2V-dK-e8n" firstAttribute="leading" secondItem="E09-Oe-p5e" secondAttribute="leading" constant="20" id="TNJ-1X-ZZK"/>
                                             <constraint firstItem="P6s-FI-aM9" firstAttribute="leading" secondItem="E09-Oe-p5e" secondAttribute="leading" constant="20" id="bwi-nz-7Nj"/>
-                                            <constraint firstItem="r4D-Me-x4R" firstAttribute="leading" secondItem="E09-Oe-p5e" secondAttribute="leading" constant="20" id="dAI-ij-1P3"/>
                                             <constraint firstItem="E67-tP-EF8" firstAttribute="leading" secondItem="E09-Oe-p5e" secondAttribute="leading" constant="20" id="dsD-cO-sjI"/>
                                             <constraint firstItem="P6s-FI-aM9" firstAttribute="top" secondItem="E09-Oe-p5e" secondAttribute="top" constant="30" id="fif-CJ-gSs"/>
-                                            <constraint firstItem="E67-tP-EF8" firstAttribute="top" secondItem="O2V-dK-e8n" secondAttribute="bottom" constant="50" id="lHw-pc-eGo"/>
                                             <constraint firstAttribute="trailing" secondItem="P6s-FI-aM9" secondAttribute="trailing" constant="20" id="nS2-SF-mz9"/>
-                                            <constraint firstAttribute="trailing" secondItem="r4D-Me-x4R" secondAttribute="trailing" constant="20" id="oCl-Sg-8MG"/>
-                                            <constraint firstAttribute="trailing" secondItem="O2V-dK-e8n" secondAttribute="trailing" constant="20" id="tJd-tr-1eO"/>
+                                            <constraint firstAttribute="bottom" secondItem="E67-tP-EF8" secondAttribute="bottom" constant="8" id="s4e-6I-5dm"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -80,7 +61,7 @@
                                 <rect key="frame" x="33" y="783" width="348" height="39"/>
                                 <color key="backgroundColor" name="appColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <state key="normal" title="Continuar">
+                                <state key="normal" title="Avançar">
                                     <color key="titleColor" name="appBlue"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -90,7 +71,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="btnProgress:" destination="L40-Yj-lcC" eventType="touchUpInside" id="zzm-KL-Hzw"/>
-                                    <segue destination="7BD-B0-BUD" kind="show" identifier="segueInitial" id="Rgy-9u-mUS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -113,29 +93,74 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Etapas" id="ZpU-ie-lBM">
                             <color key="tintColor" name="appColor"/>
+                            <connections>
+                                <segue destination="qn7-gn-qRK" kind="show" identifier="toStageSegue" id="KOw-9q-3q2"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="contentInput" destination="r4D-Me-x4R" id="Ojh-1b-V0z"/>
                         <outlet property="progressBtn" destination="GXY-YS-D2i" id="qfU-Nn-rSc"/>
                         <outlet property="textInitial" destination="E67-tP-EF8" id="1ck-jy-4nK"/>
                         <outlet property="titleInitial" destination="P6s-FI-aM9" id="6jI-hy-dG1"/>
-                        <outlet property="titleInput" destination="O2V-dK-e8n" id="Svq-ro-YH7"/>
+                        <segue destination="Tx0-SK-0an" kind="show" identifier="segueInitialInput" id="6B7-vA-Khb"/>
+                        <segue destination="Q8i-vj-Cr7" kind="show" identifier="segueInitialShort" id="Jp9-QY-MV6"/>
+                        <segue destination="eCp-0n-HHv" kind="show" identifier="segueInitialExtensive" id="IR8-C7-F7k"/>
+                        <segue destination="aLn-yU-2oD" kind="show" identifier="segueInitialFinal" id="6od-GE-WbQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="odg-mz-alg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688.40579710144937" y="679.6875"/>
+            <point key="canvasLocation" x="-687" y="680"/>
+        </scene>
+        <!--Etapas-->
+        <scene sceneID="j5H-2L-aFb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Etapas" id="qn7-gn-qRK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fUc-Y3-yEs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uop-KO-dUz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28" y="680"/>
         </scene>
         <!--FlowInput-->
-        <scene sceneID="Umn-nw-Jr7">
+        <scene sceneID="P8p-PZ-qio">
             <objects>
-                <viewControllerPlaceholder storyboardName="FlowInput" id="7BD-B0-BUD" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="wri-SD-dmR"/>
+                <viewControllerPlaceholder storyboardName="FlowInput" id="Tx0-SK-0an" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hJb-fP-nbB"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6K6-FX-TKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Shg-lF-xLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275" y="680"/>
+            <point key="canvasLocation" x="-29" y="724"/>
+        </scene>
+        <!--FlowExtensiveContent-->
+        <scene sceneID="DaT-ad-Pce">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowExtensiveContent" id="eCp-0n-HHv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="5vs-qF-CHB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9E1-DH-Ayh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="806"/>
+        </scene>
+        <!--FlowShortContent-->
+        <scene sceneID="itf-NR-fCh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowShortContent" id="Q8i-vj-Cr7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Drt-1b-ZXh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lpW-9W-ZPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8" y="765"/>
+        </scene>
+        <!--FlowFinal-->
+        <scene sceneID="iGh-1U-u6a">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlowFinal" id="aLn-yU-2oD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0sH-AF-PGP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0V0-kr-h1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-27" y="852"/>
         </scene>
     </scenes>
     <resources>
@@ -143,7 +168,7 @@
             <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="appColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="appYellow">
             <color red="0.98000001907348633" green="0.88200002908706665" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

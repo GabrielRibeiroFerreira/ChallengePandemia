@@ -2,15 +2,15 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="114" id="KGk-i7-Jjw" customClass="ProtocolTableViewCell" customModule="AppAdm" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="114" id="KGk-i7-Jjw" customClass="ProtocolTableViewCell" customModule="AppUser" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="114"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -21,51 +21,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3U-P3-LKO">
-                                <rect key="frame" x="20" y="12" width="300" height="96"/>
+                                <rect key="frame" x="20" y="12" width="322" height="96"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaH-ZP-qkI">
-                                <rect key="frame" x="332" y="50" width="20" height="20"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconArrow" translatesAutoresizingMaskIntoConstraints="NO" id="cGK-CG-sME">
+                                <rect key="frame" x="357" y="52" width="16" height="16"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="YaH-ZP-qkI" secondAttribute="height" multiplier="1:1" id="5Rl-fw-qR1"/>
-                                    <constraint firstAttribute="width" constant="20" id="KTT-F2-0j9"/>
+                                    <constraint firstAttribute="height" constant="16" id="loM-VB-Cfh"/>
+                                    <constraint firstAttribute="width" secondItem="cGK-CG-sME" secondAttribute="height" multiplier="1:1" id="ubI-Os-jpQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="tintColor" name="appBlue"/>
-                                <state key="normal" image="circle.grid.3x3.fill" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="thin"/>
-                                </state>
-                                <connections>
-                                    <action selector="editCell:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="afB-p7-IFY"/>
-                                </connections>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="x3U-P3-LKO" firstAttribute="top" secondItem="Ey0-cA-LpL" secondAttribute="top" constant="12" id="0BX-7Z-ccX"/>
-                            <constraint firstItem="YaH-ZP-qkI" firstAttribute="leading" secondItem="x3U-P3-LKO" secondAttribute="trailing" constant="12" id="7Le-Uw-c8V"/>
-                            <constraint firstItem="YaH-ZP-qkI" firstAttribute="centerY" secondItem="Ey0-cA-LpL" secondAttribute="centerY" id="7Tc-2C-r1m"/>
+                            <constraint firstAttribute="trailing" secondItem="cGK-CG-sME" secondAttribute="trailing" constant="20" id="A1L-Ug-sgf"/>
                             <constraint firstItem="x3U-P3-LKO" firstAttribute="leading" secondItem="Ey0-cA-LpL" secondAttribute="leading" constant="20" id="AWG-hZ-3wB"/>
                             <constraint firstAttribute="bottom" secondItem="x3U-P3-LKO" secondAttribute="bottom" constant="12" id="J1A-Zs-XPD"/>
+                            <constraint firstItem="cGK-CG-sME" firstAttribute="centerY" secondItem="Ey0-cA-LpL" secondAttribute="centerY" id="L7f-Zo-s8j"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="U8V-Od-94w"/>
                             <constraint firstItem="x3U-P3-LKO" firstAttribute="centerY" secondItem="Ey0-cA-LpL" secondAttribute="centerY" id="g1N-ov-E5c"/>
+                            <constraint firstItem="cGK-CG-sME" firstAttribute="leading" secondItem="x3U-P3-LKO" secondAttribute="trailing" constant="15" id="yvn-uE-eyQ"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUD-xr-7Ba">
-                        <rect key="frame" x="367" y="52" width="10" height="16"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="10" id="B3m-II-Vaa"/>
-                            <constraint firstAttribute="height" constant="16" id="hha-e1-Ife"/>
-                        </constraints>
-                        <state key="normal" image="iconArrow">
-                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
-                        </state>
-                        <connections>
-                            <action selector="deleteCell:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ee8-wA-j6t"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
@@ -73,26 +53,17 @@
                     <constraint firstItem="Ey0-cA-LpL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="B0e-x0-Cfl"/>
                     <constraint firstAttribute="bottom" secondItem="Ey0-cA-LpL" secondAttribute="bottom" id="C4j-pK-c9r"/>
                     <constraint firstAttribute="trailing" secondItem="Ey0-cA-LpL" secondAttribute="trailing" id="EhD-wb-ZlL"/>
-                    <constraint firstItem="tUD-xr-7Ba" firstAttribute="centerY" secondItem="Ey0-cA-LpL" secondAttribute="centerY" id="Q14-KO-fQt"/>
                     <constraint firstItem="Ey0-cA-LpL" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UJ1-ng-4YE"/>
-                    <constraint firstAttribute="trailing" secondItem="tUD-xr-7Ba" secondAttribute="trailing" constant="16" id="bS3-lJ-IXO"/>
-                    <constraint firstItem="tUD-xr-7Ba" firstAttribute="leading" secondItem="YaH-ZP-qkI" secondAttribute="trailing" constant="15" id="lmB-Go-Hxo"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="arrowButton" destination="tUD-xr-7Ba" id="VRZ-XC-FWs"/>
-                <outlet property="editButton" destination="YaH-ZP-qkI" id="5jn-3v-sq6"/>
                 <outlet property="nameLabel" destination="x3U-P3-LKO" id="EDY-dV-32M"/>
             </connections>
             <point key="canvasLocation" x="190.57971014492756" y="147.99107142857142"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="circle.grid.3x3.fill" catalog="system" width="128" height="112"/>
         <image name="iconArrow" width="133" height="200"/>
-        <namedColor name="appBlue">
-            <color red="0.19599999487400055" green="0.47099998593330383" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
     </resources>
 </document>

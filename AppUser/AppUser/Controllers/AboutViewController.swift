@@ -32,6 +32,8 @@ class AboutViewController: UIViewController {
         self.setupNavBar()
     }
     
+    
+    
     func setupNavBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = true

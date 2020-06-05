@@ -8,141 +8,141 @@
 
 /* Begin PBXBuildFile section */
 		155FE61C2480159500B1B819 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 155FE61B2480159500B1B819 /* GoogleService-Info.plist */; };
-		2A411229248031DD00495571 /* CreateRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A411228248031DD00495571 /* CreateRoom.storyboard */; };
-		2A41122B248144EC00495571 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A41122A248144EC00495571 /* CreateRoomViewController.swift */; };
 		2A5CF454244A258A00E98022 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF453244A258A00E98022 /* AppDelegate.swift */; };
 		2A5CF456244A258A00E98022 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF455244A258A00E98022 /* SceneDelegate.swift */; };
 		2A5CF458244A258A00E98022 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF457244A258A00E98022 /* ViewController.swift */; };
 		2A5CF45E244A258A00E98022 /* AppAdm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2A5CF45C244A258A00E98022 /* AppAdm.xcdatamodeld */; };
 		2A5CF460244A258C00E98022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CF45F244A258C00E98022 /* Assets.xcassets */; };
-		2A5CF463244A258C00E98022 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A5CF461244A258C00E98022 /* LaunchScreen.storyboard */; };
-		2A62372D24782D5B00B84B9A /* ProtFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62371624782D5B00B84B9A /* ProtFlow.swift */; };
-		2A62372E24782D5B00B84B9A /* TituloEtapaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62371824782D5B00B84B9A /* TituloEtapaViewCell.swift */; };
-		2A62372F24782D5B00B84B9A /* TituloEtapaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A62371924782D5B00B84B9A /* TituloEtapaViewCell.xib */; };
-		2A62373024782D5B00B84B9A /* RoomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62371B24782D5B00B84B9A /* RoomResponse.swift */; };
-		2A62373124782D5B00B84B9A /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62371C24782D5B00B84B9A /* Room.swift */; };
-		2A62373224782D5B00B84B9A /* InitialViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62371E24782D5B00B84B9A /* InitialViewHeader.swift */; };
-		2A62373324782D5B00B84B9A /* InitialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A62371F24782D5B00B84B9A /* InitialView.xib */; };
-		2A62373424782D5B00B84B9A /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A62372124782D5B00B84B9A /* RoomTableViewCell.xib */; };
-		2A62373524782D5B00B84B9A /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62372224782D5B00B84B9A /* RoomTableViewCell.swift */; };
-		2A62373624782D5B00B84B9A /* SearchViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62372424782D5B00B84B9A /* SearchViewHeader.swift */; };
-		2A62373724782D5B00B84B9A /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A62372524782D5B00B84B9A /* SearchView.xib */; };
-		2A62373824782D5B00B84B9A /* ProtocolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62372724782D5B00B84B9A /* ProtocolTableViewCell.swift */; };
-		2A62373924782D5B00B84B9A /* ProtocolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A62372824782D5B00B84B9A /* ProtocolTableViewCell.xib */; };
-		2A62373A24782D5B00B84B9A /* AreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62372A24782D5B00B84B9A /* AreaTableViewCell.swift */; };
-		2A62373B24782D5B00B84B9A /* AreaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A62372B24782D5B00B84B9A /* AreaTableViewCell.xib */; };
-		2A62373C24782D5B00B84B9A /* Etapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62372C24782D5B00B84B9A /* Etapa.swift */; };
-		2A62374A2478321E00B84B9A /* EtapasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62373E2478321E00B84B9A /* EtapasViewController.swift */; };
-		2A62374B2478321E00B84B9A /* FlowInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A62373F2478321E00B84B9A /* FlowInitialViewController.swift */; };
-		2A62374C2478321E00B84B9A /* FlowFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237402478321E00B84B9A /* FlowFinalViewController.swift */; };
-		2A62374D2478321E00B84B9A /* AreasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237412478321E00B84B9A /* AreasTableViewController.swift */; };
-		2A62374E2478321E00B84B9A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237422478321E00B84B9A /* MainViewController.swift */; };
-		2A62374F2478321E00B84B9A /* FlowExtensiveContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237432478321E00B84B9A /* FlowExtensiveContentViewController.swift */; };
-		2A6237502478321E00B84B9A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237442478321E00B84B9A /* OnboardingViewController.swift */; };
-		2A6237512478321E00B84B9A /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237452478321E00B84B9A /* AreaViewController.swift */; };
-		2A6237522478321E00B84B9A /* FlowInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237462478321E00B84B9A /* FlowInputViewController.swift */; };
-		2A6237532478321E00B84B9A /* FlowShortContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237472478321E00B84B9A /* FlowShortContentViewController.swift */; };
-		2A6237542478321E00B84B9A /* NavigationControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237482478321E00B84B9A /* NavigationControllerVC.swift */; };
-		2A6237552478321E00B84B9A /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237492478321E00B84B9A /* AboutViewController.swift */; };
-		2A6237632478324B00B84B9A /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237572478324B00B84B9A /* Etapas.storyboard */; };
-		2A6237642478324B00B84B9A /* FlowExtensiveContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237582478324B00B84B9A /* FlowExtensiveContent.storyboard */; };
-		2A6237662478324B00B84B9A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A62375B2478324B00B84B9A /* Main.storyboard */; };
-		2A6237672478324B00B84B9A /* FlowFinal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A62375D2478324B00B84B9A /* FlowFinal.storyboard */; };
-		2A6237682478324B00B84B9A /* FlowInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A62375E2478324B00B84B9A /* FlowInput.storyboard */; };
-		2A6237692478324B00B84B9A /* FlowShortContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A62375F2478324B00B84B9A /* FlowShortContent.storyboard */; };
-		2A62376A2478324B00B84B9A /* FlowInitial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237602478324B00B84B9A /* FlowInitial.storyboard */; };
-		2A62376B2478324B00B84B9A /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237612478324B00B84B9A /* Area.storyboard */; };
-		2A62376C2478324B00B84B9A /* Areas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237622478324B00B84B9A /* Areas.storyboard */; };
-		2A62379B2478462800B84B9A /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237892478462700B84B9A /* SF-Pro-Display-Thin.otf */; };
-		2A62379C2478462800B84B9A /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A62378A2478462700B84B9A /* SF-Pro-Display-SemiboldItalic.otf */; };
-		2A62379D2478462800B84B9A /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A62378B2478462700B84B9A /* SF-Pro-Display-RegularItalic.otf */; };
-		2A62379E2478462800B84B9A /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A62378C2478462700B84B9A /* SF-Pro-Display-Light.otf */; };
-		2A62379F2478462800B84B9A /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A62378D2478462700B84B9A /* SF-Pro-Display-Regular.otf */; };
-		2A6237A02478462800B84B9A /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A62378E2478462700B84B9A /* SF-Pro-Display-Bold.otf */; };
-		2A6237A12478462800B84B9A /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A62378F2478462700B84B9A /* SF-Pro-Display-Medium.otf */; };
-		2A6237A22478462800B84B9A /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237902478462700B84B9A /* SF-Pro-Display-Heavy.otf */; };
-		2A6237A32478462800B84B9A /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237912478462700B84B9A /* SF-Pro-Display-Semibold.otf */; };
-		2A6237A42478462800B84B9A /* SF-Pro-Display-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237922478462700B84B9A /* SF-Pro-Display-MediumItalic.otf */; };
-		2A6237A52478462800B84B9A /* SF-Pro-Display-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237932478462700B84B9A /* SF-Pro-Display-HeavyItalic.otf */; };
-		2A6237A62478462800B84B9A /* SF-Pro-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237942478462700B84B9A /* SF-Pro-Display-Ultralight.otf */; };
-		2A6237A72478462800B84B9A /* SF-Pro-Display-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237952478462700B84B9A /* SF-Pro-Display-UltralightItalic.otf */; };
-		2A6237A82478462800B84B9A /* SF-Pro-Display-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237962478462700B84B9A /* SF-Pro-Display-LightItalic.otf */; };
-		2A6237A92478462800B84B9A /* SF-Pro-Display-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237972478462700B84B9A /* SF-Pro-Display-BlackItalic.otf */; };
-		2A6237AA2478462800B84B9A /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237982478462700B84B9A /* SF-Pro-Display-Black.otf */; };
-		2A6237AB2478462800B84B9A /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A6237992478462700B84B9A /* SF-Pro-Display-ThinItalic.otf */; };
-		2A6237AC2478462800B84B9A /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2A62379A2478462800B84B9A /* SF-Pro-Display-BoldItalic.otf */; };
-		2A6237AF2478463600B84B9A /* UILabel+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6237AE2478463600B84B9A /* UILabel+Accessibility.swift */; };
+		2AEC6902248ACD8300646CD4 /* SF-Pro-Display-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68BA248ACD8200646CD4 /* SF-Pro-Display-Thin.otf */; };
+		2AEC6903248ACD8300646CD4 /* SF-Pro-Display-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68BB248ACD8200646CD4 /* SF-Pro-Display-SemiboldItalic.otf */; };
+		2AEC6904248ACD8300646CD4 /* SF-Pro-Display-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68BC248ACD8200646CD4 /* SF-Pro-Display-RegularItalic.otf */; };
+		2AEC6905248ACD8300646CD4 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68BD248ACD8200646CD4 /* SF-Pro-Display-Light.otf */; };
+		2AEC6906248ACD8300646CD4 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68BE248ACD8200646CD4 /* SF-Pro-Display-Regular.otf */; };
+		2AEC6907248ACD8300646CD4 /* SF-Pro-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68BF248ACD8200646CD4 /* SF-Pro-Display-Bold.otf */; };
+		2AEC6908248ACD8300646CD4 /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C0248ACD8200646CD4 /* SF-Pro-Display-Medium.otf */; };
+		2AEC6909248ACD8300646CD4 /* SF-Pro-Display-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C1248ACD8200646CD4 /* SF-Pro-Display-Heavy.otf */; };
+		2AEC690A248ACD8300646CD4 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C2248ACD8200646CD4 /* SF-Pro-Display-Semibold.otf */; };
+		2AEC690B248ACD8300646CD4 /* SF-Pro-Display-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C3248ACD8200646CD4 /* SF-Pro-Display-MediumItalic.otf */; };
+		2AEC690C248ACD8300646CD4 /* SF-Pro-Display-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C4248ACD8300646CD4 /* SF-Pro-Display-HeavyItalic.otf */; };
+		2AEC690D248ACD8300646CD4 /* SF-Pro-Display-Ultralight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C5248ACD8300646CD4 /* SF-Pro-Display-Ultralight.otf */; };
+		2AEC690E248ACD8300646CD4 /* SF-Pro-Display-UltralightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C6248ACD8300646CD4 /* SF-Pro-Display-UltralightItalic.otf */; };
+		2AEC690F248ACD8300646CD4 /* SF-Pro-Display-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C7248ACD8300646CD4 /* SF-Pro-Display-LightItalic.otf */; };
+		2AEC6910248ACD8300646CD4 /* SF-Pro-Display-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C8248ACD8300646CD4 /* SF-Pro-Display-BlackItalic.otf */; };
+		2AEC6911248ACD8300646CD4 /* SF-Pro-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68C9248ACD8300646CD4 /* SF-Pro-Display-Black.otf */; };
+		2AEC6912248ACD8300646CD4 /* SF-Pro-Display-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68CA248ACD8300646CD4 /* SF-Pro-Display-ThinItalic.otf */; };
+		2AEC6913248ACD8300646CD4 /* SF-Pro-Display-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68CB248ACD8300646CD4 /* SF-Pro-Display-BoldItalic.otf */; };
+		2AEC6914248ACD8300646CD4 /* Etapas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68CD248ACD8300646CD4 /* Etapas.storyboard */; };
+		2AEC6915248ACD8300646CD4 /* FlowExtensiveContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68CE248ACD8300646CD4 /* FlowExtensiveContent.storyboard */; };
+		2AEC6916248ACD8300646CD4 /* CreateRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68CF248ACD8300646CD4 /* CreateRoom.storyboard */; };
+		2AEC6917248ACD8300646CD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68D0248ACD8300646CD4 /* LaunchScreen.storyboard */; };
+		2AEC6918248ACD8300646CD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68D2248ACD8300646CD4 /* Main.storyboard */; };
+		2AEC6919248ACD8300646CD4 /* FlowFinal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68D4248ACD8300646CD4 /* FlowFinal.storyboard */; };
+		2AEC691A248ACD8300646CD4 /* FlowInput.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68D5248ACD8300646CD4 /* FlowInput.storyboard */; };
+		2AEC691B248ACD8300646CD4 /* FlowShortContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68D6248ACD8300646CD4 /* FlowShortContent.storyboard */; };
+		2AEC691C248ACD8300646CD4 /* FlowInitial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68D7248ACD8300646CD4 /* FlowInitial.storyboard */; };
+		2AEC691D248ACD8300646CD4 /* Area.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68D8248ACD8300646CD4 /* Area.storyboard */; };
+		2AEC691E248ACD8300646CD4 /* Areas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68D9248ACD8300646CD4 /* Areas.storyboard */; };
+		2AEC691F248ACD8300646CD4 /* ProtFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68DB248ACD8300646CD4 /* ProtFlow.swift */; };
+		2AEC6920248ACD8300646CD4 /* TituloEtapaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68DD248ACD8300646CD4 /* TituloEtapaViewCell.swift */; };
+		2AEC6921248ACD8300646CD4 /* TituloEtapaViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68DE248ACD8300646CD4 /* TituloEtapaViewCell.xib */; };
+		2AEC6922248ACD8300646CD4 /* RoomResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68E0248ACD8300646CD4 /* RoomResponse.swift */; };
+		2AEC6923248ACD8300646CD4 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68E1248ACD8300646CD4 /* Room.swift */; };
+		2AEC6924248ACD8300646CD4 /* InitialViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68E3248ACD8300646CD4 /* InitialViewHeader.swift */; };
+		2AEC6925248ACD8300646CD4 /* InitialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68E4248ACD8300646CD4 /* InitialView.xib */; };
+		2AEC6926248ACD8300646CD4 /* RoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68E6248ACD8300646CD4 /* RoomTableViewCell.xib */; };
+		2AEC6927248ACD8300646CD4 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68E7248ACD8300646CD4 /* RoomTableViewCell.swift */; };
+		2AEC6928248ACD8300646CD4 /* SearchViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68E9248ACD8300646CD4 /* SearchViewHeader.swift */; };
+		2AEC6929248ACD8300646CD4 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68EA248ACD8300646CD4 /* SearchView.xib */; };
+		2AEC692A248ACD8300646CD4 /* ProtocolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68EC248ACD8300646CD4 /* ProtocolTableViewCell.swift */; };
+		2AEC692B248ACD8300646CD4 /* ProtocolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68ED248ACD8300646CD4 /* ProtocolTableViewCell.xib */; };
+		2AEC692C248ACD8300646CD4 /* AreaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68EF248ACD8300646CD4 /* AreaTableViewCell.swift */; };
+		2AEC692D248ACD8300646CD4 /* AreaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEC68F0248ACD8300646CD4 /* AreaTableViewCell.xib */; };
+		2AEC692E248ACD8300646CD4 /* Etapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68F1248ACD8300646CD4 /* Etapa.swift */; };
+		2AEC692F248ACD8300646CD4 /* UILabel+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68F3248ACD8300646CD4 /* UILabel+Accessibility.swift */; };
+		2AEC6930248ACD8300646CD4 /* EtapasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68F5248ACD8300646CD4 /* EtapasViewController.swift */; };
+		2AEC6931248ACD8300646CD4 /* FlowInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68F6248ACD8300646CD4 /* FlowInitialViewController.swift */; };
+		2AEC6932248ACD8300646CD4 /* FlowFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68F7248ACD8300646CD4 /* FlowFinalViewController.swift */; };
+		2AEC6933248ACD8300646CD4 /* AreasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68F8248ACD8300646CD4 /* AreasTableViewController.swift */; };
+		2AEC6934248ACD8300646CD4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68F9248ACD8300646CD4 /* MainViewController.swift */; };
+		2AEC6935248ACD8300646CD4 /* FlowExtensiveContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68FA248ACD8300646CD4 /* FlowExtensiveContentViewController.swift */; };
+		2AEC6936248ACD8300646CD4 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68FB248ACD8300646CD4 /* OnboardingViewController.swift */; };
+		2AEC6937248ACD8300646CD4 /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68FC248ACD8300646CD4 /* AreaViewController.swift */; };
+		2AEC6938248ACD8300646CD4 /* FlowInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68FD248ACD8300646CD4 /* FlowInputViewController.swift */; };
+		2AEC6939248ACD8300646CD4 /* FlowShortContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68FE248ACD8300646CD4 /* FlowShortContentViewController.swift */; };
+		2AEC693A248ACD8300646CD4 /* NavigationControllerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC68FF248ACD8300646CD4 /* NavigationControllerVC.swift */; };
+		2AEC693B248ACD8300646CD4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC6900248ACD8300646CD4 /* AboutViewController.swift */; };
+		2AEC693C248ACD8300646CD4 /* CreateRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEC6901248ACD8300646CD4 /* CreateRoomViewController.swift */; };
 		36DA1FE9A0BFF40448979909 /* Pods_AppAdm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642F85D1B52B247DD604156E /* Pods_AppAdm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		155FE61B2480159500B1B819 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		2A411228248031DD00495571 /* CreateRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateRoom.storyboard; sourceTree = "<group>"; };
-		2A41122A248144EC00495571 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		2A5CF450244A258A00E98022 /* AppAdm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppAdm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5CF453244A258A00E98022 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A5CF455244A258A00E98022 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2A5CF457244A258A00E98022 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A5CF45D244A258A00E98022 /* AppAdm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppAdm.xcdatamodel; sourceTree = "<group>"; };
 		2A5CF45F244A258C00E98022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2A5CF462244A258C00E98022 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A5CF464244A258C00E98022 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A62371624782D5B00B84B9A /* ProtFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtFlow.swift; sourceTree = "<group>"; };
-		2A62371824782D5B00B84B9A /* TituloEtapaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TituloEtapaViewCell.swift; sourceTree = "<group>"; };
-		2A62371924782D5B00B84B9A /* TituloEtapaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TituloEtapaViewCell.xib; sourceTree = "<group>"; };
-		2A62371B24782D5B00B84B9A /* RoomResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomResponse.swift; sourceTree = "<group>"; };
-		2A62371C24782D5B00B84B9A /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
-		2A62371E24782D5B00B84B9A /* InitialViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewHeader.swift; sourceTree = "<group>"; };
-		2A62371F24782D5B00B84B9A /* InitialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitialView.xib; sourceTree = "<group>"; };
-		2A62372124782D5B00B84B9A /* RoomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
-		2A62372224782D5B00B84B9A /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
-		2A62372424782D5B00B84B9A /* SearchViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewHeader.swift; sourceTree = "<group>"; };
-		2A62372524782D5B00B84B9A /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
-		2A62372724782D5B00B84B9A /* ProtocolTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolTableViewCell.swift; sourceTree = "<group>"; };
-		2A62372824782D5B00B84B9A /* ProtocolTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProtocolTableViewCell.xib; sourceTree = "<group>"; };
-		2A62372A24782D5B00B84B9A /* AreaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaTableViewCell.swift; sourceTree = "<group>"; };
-		2A62372B24782D5B00B84B9A /* AreaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaTableViewCell.xib; sourceTree = "<group>"; };
-		2A62372C24782D5B00B84B9A /* Etapa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Etapa.swift; sourceTree = "<group>"; };
-		2A62373E2478321E00B84B9A /* EtapasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtapasViewController.swift; sourceTree = "<group>"; };
-		2A62373F2478321E00B84B9A /* FlowInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowInitialViewController.swift; sourceTree = "<group>"; };
-		2A6237402478321E00B84B9A /* FlowFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowFinalViewController.swift; sourceTree = "<group>"; };
-		2A6237412478321E00B84B9A /* AreasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreasTableViewController.swift; sourceTree = "<group>"; };
-		2A6237422478321E00B84B9A /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		2A6237432478321E00B84B9A /* FlowExtensiveContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowExtensiveContentViewController.swift; sourceTree = "<group>"; };
-		2A6237442478321E00B84B9A /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		2A6237452478321E00B84B9A /* AreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
-		2A6237462478321E00B84B9A /* FlowInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowInputViewController.swift; sourceTree = "<group>"; };
-		2A6237472478321E00B84B9A /* FlowShortContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowShortContentViewController.swift; sourceTree = "<group>"; };
-		2A6237482478321E00B84B9A /* NavigationControllerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerVC.swift; sourceTree = "<group>"; };
-		2A6237492478321E00B84B9A /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		2A6237572478324B00B84B9A /* Etapas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
-		2A6237582478324B00B84B9A /* FlowExtensiveContent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowExtensiveContent.storyboard; sourceTree = "<group>"; };
-		2A62375C2478324B00B84B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2A62375D2478324B00B84B9A /* FlowFinal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowFinal.storyboard; sourceTree = "<group>"; };
-		2A62375E2478324B00B84B9A /* FlowInput.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowInput.storyboard; sourceTree = "<group>"; };
-		2A62375F2478324B00B84B9A /* FlowShortContent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowShortContent.storyboard; sourceTree = "<group>"; };
-		2A6237602478324B00B84B9A /* FlowInitial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowInitial.storyboard; sourceTree = "<group>"; };
-		2A6237612478324B00B84B9A /* Area.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
-		2A6237622478324B00B84B9A /* Areas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Areas.storyboard; sourceTree = "<group>"; };
-		2A6237892478462700B84B9A /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
-		2A62378A2478462700B84B9A /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
-		2A62378B2478462700B84B9A /* SF-Pro-Display-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-RegularItalic.otf"; sourceTree = "<group>"; };
-		2A62378C2478462700B84B9A /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
-		2A62378D2478462700B84B9A /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
-		2A62378E2478462700B84B9A /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
-		2A62378F2478462700B84B9A /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
-		2A6237902478462700B84B9A /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
-		2A6237912478462700B84B9A /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
-		2A6237922478462700B84B9A /* SF-Pro-Display-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-MediumItalic.otf"; sourceTree = "<group>"; };
-		2A6237932478462700B84B9A /* SF-Pro-Display-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-HeavyItalic.otf"; sourceTree = "<group>"; };
-		2A6237942478462700B84B9A /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
-		2A6237952478462700B84B9A /* SF-Pro-Display-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-UltralightItalic.otf"; sourceTree = "<group>"; };
-		2A6237962478462700B84B9A /* SF-Pro-Display-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-LightItalic.otf"; sourceTree = "<group>"; };
-		2A6237972478462700B84B9A /* SF-Pro-Display-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BlackItalic.otf"; sourceTree = "<group>"; };
-		2A6237982478462700B84B9A /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
-		2A6237992478462700B84B9A /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
-		2A62379A2478462800B84B9A /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
-		2A6237AE2478463600B84B9A /* UILabel+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Accessibility.swift"; sourceTree = "<group>"; };
+		2AEC68BA248ACD8200646CD4 /* SF-Pro-Display-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Thin.otf"; sourceTree = "<group>"; };
+		2AEC68BB248ACD8200646CD4 /* SF-Pro-Display-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		2AEC68BC248ACD8200646CD4 /* SF-Pro-Display-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-RegularItalic.otf"; sourceTree = "<group>"; };
+		2AEC68BD248ACD8200646CD4 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		2AEC68BE248ACD8200646CD4 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		2AEC68BF248ACD8200646CD4 /* SF-Pro-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Bold.otf"; sourceTree = "<group>"; };
+		2AEC68C0248ACD8200646CD4 /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		2AEC68C1248ACD8200646CD4 /* SF-Pro-Display-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Heavy.otf"; sourceTree = "<group>"; };
+		2AEC68C2248ACD8200646CD4 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		2AEC68C3248ACD8200646CD4 /* SF-Pro-Display-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-MediumItalic.otf"; sourceTree = "<group>"; };
+		2AEC68C4248ACD8300646CD4 /* SF-Pro-Display-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-HeavyItalic.otf"; sourceTree = "<group>"; };
+		2AEC68C5248ACD8300646CD4 /* SF-Pro-Display-Ultralight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Ultralight.otf"; sourceTree = "<group>"; };
+		2AEC68C6248ACD8300646CD4 /* SF-Pro-Display-UltralightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-UltralightItalic.otf"; sourceTree = "<group>"; };
+		2AEC68C7248ACD8300646CD4 /* SF-Pro-Display-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-LightItalic.otf"; sourceTree = "<group>"; };
+		2AEC68C8248ACD8300646CD4 /* SF-Pro-Display-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BlackItalic.otf"; sourceTree = "<group>"; };
+		2AEC68C9248ACD8300646CD4 /* SF-Pro-Display-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Black.otf"; sourceTree = "<group>"; };
+		2AEC68CA248ACD8300646CD4 /* SF-Pro-Display-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-ThinItalic.otf"; sourceTree = "<group>"; };
+		2AEC68CB248ACD8300646CD4 /* SF-Pro-Display-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-BoldItalic.otf"; sourceTree = "<group>"; };
+		2AEC68CD248ACD8300646CD4 /* Etapas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Etapas.storyboard; sourceTree = "<group>"; };
+		2AEC68CE248ACD8300646CD4 /* FlowExtensiveContent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowExtensiveContent.storyboard; sourceTree = "<group>"; };
+		2AEC68CF248ACD8300646CD4 /* CreateRoom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateRoom.storyboard; sourceTree = "<group>"; };
+		2AEC68D1248ACD8300646CD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2AEC68D3248ACD8300646CD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2AEC68D4248ACD8300646CD4 /* FlowFinal.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowFinal.storyboard; sourceTree = "<group>"; };
+		2AEC68D5248ACD8300646CD4 /* FlowInput.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowInput.storyboard; sourceTree = "<group>"; };
+		2AEC68D6248ACD8300646CD4 /* FlowShortContent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowShortContent.storyboard; sourceTree = "<group>"; };
+		2AEC68D7248ACD8300646CD4 /* FlowInitial.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FlowInitial.storyboard; sourceTree = "<group>"; };
+		2AEC68D8248ACD8300646CD4 /* Area.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Area.storyboard; sourceTree = "<group>"; };
+		2AEC68D9248ACD8300646CD4 /* Areas.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Areas.storyboard; sourceTree = "<group>"; };
+		2AEC68DB248ACD8300646CD4 /* ProtFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtFlow.swift; sourceTree = "<group>"; };
+		2AEC68DD248ACD8300646CD4 /* TituloEtapaViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TituloEtapaViewCell.swift; sourceTree = "<group>"; };
+		2AEC68DE248ACD8300646CD4 /* TituloEtapaViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TituloEtapaViewCell.xib; sourceTree = "<group>"; };
+		2AEC68E0248ACD8300646CD4 /* RoomResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomResponse.swift; sourceTree = "<group>"; };
+		2AEC68E1248ACD8300646CD4 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		2AEC68E3248ACD8300646CD4 /* InitialViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewHeader.swift; sourceTree = "<group>"; };
+		2AEC68E4248ACD8300646CD4 /* InitialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitialView.xib; sourceTree = "<group>"; };
+		2AEC68E6248ACD8300646CD4 /* RoomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomTableViewCell.xib; sourceTree = "<group>"; };
+		2AEC68E7248ACD8300646CD4 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		2AEC68E9248ACD8300646CD4 /* SearchViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewHeader.swift; sourceTree = "<group>"; };
+		2AEC68EA248ACD8300646CD4 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		2AEC68EC248ACD8300646CD4 /* ProtocolTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolTableViewCell.swift; sourceTree = "<group>"; };
+		2AEC68ED248ACD8300646CD4 /* ProtocolTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProtocolTableViewCell.xib; sourceTree = "<group>"; };
+		2AEC68EF248ACD8300646CD4 /* AreaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaTableViewCell.swift; sourceTree = "<group>"; };
+		2AEC68F0248ACD8300646CD4 /* AreaTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AreaTableViewCell.xib; sourceTree = "<group>"; };
+		2AEC68F1248ACD8300646CD4 /* Etapa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Etapa.swift; sourceTree = "<group>"; };
+		2AEC68F3248ACD8300646CD4 /* UILabel+Accessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Accessibility.swift"; sourceTree = "<group>"; };
+		2AEC68F5248ACD8300646CD4 /* EtapasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtapasViewController.swift; sourceTree = "<group>"; };
+		2AEC68F6248ACD8300646CD4 /* FlowInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowInitialViewController.swift; sourceTree = "<group>"; };
+		2AEC68F7248ACD8300646CD4 /* FlowFinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowFinalViewController.swift; sourceTree = "<group>"; };
+		2AEC68F8248ACD8300646CD4 /* AreasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreasTableViewController.swift; sourceTree = "<group>"; };
+		2AEC68F9248ACD8300646CD4 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2AEC68FA248ACD8300646CD4 /* FlowExtensiveContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowExtensiveContentViewController.swift; sourceTree = "<group>"; };
+		2AEC68FB248ACD8300646CD4 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		2AEC68FC248ACD8300646CD4 /* AreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
+		2AEC68FD248ACD8300646CD4 /* FlowInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowInputViewController.swift; sourceTree = "<group>"; };
+		2AEC68FE248ACD8300646CD4 /* FlowShortContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowShortContentViewController.swift; sourceTree = "<group>"; };
+		2AEC68FF248ACD8300646CD4 /* NavigationControllerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerVC.swift; sourceTree = "<group>"; };
+		2AEC6900248ACD8300646CD4 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		2AEC6901248ACD8300646CD4 /* CreateRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRoomViewController.swift; sourceTree = "<group>"; };
 		642F85D1B52B247DD604156E /* Pods_AppAdm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppAdm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF566179D7C83FE4CD8B05C /* Pods-AppAdm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAdm.debug.xcconfig"; path = "Target Support Files/Pods-AppAdm/Pods-AppAdm.debug.xcconfig"; sourceTree = "<group>"; };
 		B251DA43C74DC35F19B9FED4 /* Pods-AppAdm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppAdm.release.xcconfig"; path = "Target Support Files/Pods-AppAdm/Pods-AppAdm.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,11 +189,11 @@
 		2A5CF452244A258A00E98022 /* AppAdm */ = {
 			isa = PBXGroup;
 			children = (
-				2A6237AD2478463600B84B9A /* Extensions */,
-				2A6237882478462700B84B9A /* SF-Font */,
-				2A6237562478324B00B84B9A /* Views */,
-				2A62373D2478321E00B84B9A /* Controllers */,
-				2A62371524782D5B00B84B9A /* Models */,
+				2AEC68F4248ACD8300646CD4 /* Controllers */,
+				2AEC68F2248ACD8300646CD4 /* Extensions */,
+				2AEC68DA248ACD8300646CD4 /* Models */,
+				2AEC68B9248ACD8200646CD4 /* SF-Font */,
+				2AEC68CC248ACD8300646CD4 /* Views */,
 				155FE61B2480159500B1B819 /* GoogleService-Info.plist */,
 				2A5CF453244A258A00E98022 /* AppDelegate.swift */,
 				2A5CF455244A258A00E98022 /* SceneDelegate.swift */,
@@ -205,159 +205,154 @@
 			path = AppAdm;
 			sourceTree = "<group>";
 		};
-		2A62371524782D5B00B84B9A /* Models */ = {
+		2AEC68B9248ACD8200646CD4 /* SF-Font */ = {
 			isa = PBXGroup;
 			children = (
-				2A62371624782D5B00B84B9A /* ProtFlow.swift */,
-				2A62371724782D5B00B84B9A /* TituloEtapaCell */,
-				2A62371A24782D5B00B84B9A /* Network */,
-				2A62371C24782D5B00B84B9A /* Room.swift */,
-				2A62371D24782D5B00B84B9A /* InitialSection */,
-				2A62372024782D5B00B84B9A /* RoomCell */,
-				2A62372324782D5B00B84B9A /* SearchView */,
-				2A62372624782D5B00B84B9A /* ProtocolCell */,
-				2A62372924782D5B00B84B9A /* AreaCell */,
-				2A62372C24782D5B00B84B9A /* Etapa.swift */,
+				2AEC68BA248ACD8200646CD4 /* SF-Pro-Display-Thin.otf */,
+				2AEC68BB248ACD8200646CD4 /* SF-Pro-Display-SemiboldItalic.otf */,
+				2AEC68BC248ACD8200646CD4 /* SF-Pro-Display-RegularItalic.otf */,
+				2AEC68BD248ACD8200646CD4 /* SF-Pro-Display-Light.otf */,
+				2AEC68BE248ACD8200646CD4 /* SF-Pro-Display-Regular.otf */,
+				2AEC68BF248ACD8200646CD4 /* SF-Pro-Display-Bold.otf */,
+				2AEC68C0248ACD8200646CD4 /* SF-Pro-Display-Medium.otf */,
+				2AEC68C1248ACD8200646CD4 /* SF-Pro-Display-Heavy.otf */,
+				2AEC68C2248ACD8200646CD4 /* SF-Pro-Display-Semibold.otf */,
+				2AEC68C3248ACD8200646CD4 /* SF-Pro-Display-MediumItalic.otf */,
+				2AEC68C4248ACD8300646CD4 /* SF-Pro-Display-HeavyItalic.otf */,
+				2AEC68C5248ACD8300646CD4 /* SF-Pro-Display-Ultralight.otf */,
+				2AEC68C6248ACD8300646CD4 /* SF-Pro-Display-UltralightItalic.otf */,
+				2AEC68C7248ACD8300646CD4 /* SF-Pro-Display-LightItalic.otf */,
+				2AEC68C8248ACD8300646CD4 /* SF-Pro-Display-BlackItalic.otf */,
+				2AEC68C9248ACD8300646CD4 /* SF-Pro-Display-Black.otf */,
+				2AEC68CA248ACD8300646CD4 /* SF-Pro-Display-ThinItalic.otf */,
+				2AEC68CB248ACD8300646CD4 /* SF-Pro-Display-BoldItalic.otf */,
 			);
-			name = Models;
-			path = ../../AppUser/AppUser/Models;
+			path = "SF-Font";
 			sourceTree = "<group>";
 		};
-		2A62371724782D5B00B84B9A /* TituloEtapaCell */ = {
+		2AEC68CC248ACD8300646CD4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2A62371824782D5B00B84B9A /* TituloEtapaViewCell.swift */,
-				2A62371924782D5B00B84B9A /* TituloEtapaViewCell.xib */,
+				2AEC68CD248ACD8300646CD4 /* Etapas.storyboard */,
+				2AEC68CE248ACD8300646CD4 /* FlowExtensiveContent.storyboard */,
+				2AEC68CF248ACD8300646CD4 /* CreateRoom.storyboard */,
+				2AEC68D0248ACD8300646CD4 /* LaunchScreen.storyboard */,
+				2AEC68D2248ACD8300646CD4 /* Main.storyboard */,
+				2AEC68D4248ACD8300646CD4 /* FlowFinal.storyboard */,
+				2AEC68D5248ACD8300646CD4 /* FlowInput.storyboard */,
+				2AEC68D6248ACD8300646CD4 /* FlowShortContent.storyboard */,
+				2AEC68D7248ACD8300646CD4 /* FlowInitial.storyboard */,
+				2AEC68D8248ACD8300646CD4 /* Area.storyboard */,
+				2AEC68D9248ACD8300646CD4 /* Areas.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2AEC68DA248ACD8300646CD4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2AEC68DB248ACD8300646CD4 /* ProtFlow.swift */,
+				2AEC68DC248ACD8300646CD4 /* TituloEtapaCell */,
+				2AEC68DF248ACD8300646CD4 /* Network */,
+				2AEC68E1248ACD8300646CD4 /* Room.swift */,
+				2AEC68E2248ACD8300646CD4 /* InitialSection */,
+				2AEC68E5248ACD8300646CD4 /* RoomCell */,
+				2AEC68E8248ACD8300646CD4 /* SearchView */,
+				2AEC68EB248ACD8300646CD4 /* ProtocolCell */,
+				2AEC68EE248ACD8300646CD4 /* AreaCell */,
+				2AEC68F1248ACD8300646CD4 /* Etapa.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2AEC68DC248ACD8300646CD4 /* TituloEtapaCell */ = {
+			isa = PBXGroup;
+			children = (
+				2AEC68DD248ACD8300646CD4 /* TituloEtapaViewCell.swift */,
+				2AEC68DE248ACD8300646CD4 /* TituloEtapaViewCell.xib */,
 			);
 			path = TituloEtapaCell;
 			sourceTree = "<group>";
 		};
-		2A62371A24782D5B00B84B9A /* Network */ = {
+		2AEC68DF248ACD8300646CD4 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				2A62371B24782D5B00B84B9A /* RoomResponse.swift */,
+				2AEC68E0248ACD8300646CD4 /* RoomResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
 		};
-		2A62371D24782D5B00B84B9A /* InitialSection */ = {
+		2AEC68E2248ACD8300646CD4 /* InitialSection */ = {
 			isa = PBXGroup;
 			children = (
-				2A62371E24782D5B00B84B9A /* InitialViewHeader.swift */,
-				2A62371F24782D5B00B84B9A /* InitialView.xib */,
+				2AEC68E3248ACD8300646CD4 /* InitialViewHeader.swift */,
+				2AEC68E4248ACD8300646CD4 /* InitialView.xib */,
 			);
 			path = InitialSection;
 			sourceTree = "<group>";
 		};
-		2A62372024782D5B00B84B9A /* RoomCell */ = {
+		2AEC68E5248ACD8300646CD4 /* RoomCell */ = {
 			isa = PBXGroup;
 			children = (
-				2A62372124782D5B00B84B9A /* RoomTableViewCell.xib */,
-				2A62372224782D5B00B84B9A /* RoomTableViewCell.swift */,
+				2AEC68E6248ACD8300646CD4 /* RoomTableViewCell.xib */,
+				2AEC68E7248ACD8300646CD4 /* RoomTableViewCell.swift */,
 			);
 			path = RoomCell;
 			sourceTree = "<group>";
 		};
-		2A62372324782D5B00B84B9A /* SearchView */ = {
+		2AEC68E8248ACD8300646CD4 /* SearchView */ = {
 			isa = PBXGroup;
 			children = (
-				2A62372424782D5B00B84B9A /* SearchViewHeader.swift */,
-				2A62372524782D5B00B84B9A /* SearchView.xib */,
+				2AEC68E9248ACD8300646CD4 /* SearchViewHeader.swift */,
+				2AEC68EA248ACD8300646CD4 /* SearchView.xib */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
 		};
-		2A62372624782D5B00B84B9A /* ProtocolCell */ = {
+		2AEC68EB248ACD8300646CD4 /* ProtocolCell */ = {
 			isa = PBXGroup;
 			children = (
-				2A62372724782D5B00B84B9A /* ProtocolTableViewCell.swift */,
-				2A62372824782D5B00B84B9A /* ProtocolTableViewCell.xib */,
+				2AEC68EC248ACD8300646CD4 /* ProtocolTableViewCell.swift */,
+				2AEC68ED248ACD8300646CD4 /* ProtocolTableViewCell.xib */,
 			);
 			path = ProtocolCell;
 			sourceTree = "<group>";
 		};
-		2A62372924782D5B00B84B9A /* AreaCell */ = {
+		2AEC68EE248ACD8300646CD4 /* AreaCell */ = {
 			isa = PBXGroup;
 			children = (
-				2A62372A24782D5B00B84B9A /* AreaTableViewCell.swift */,
-				2A62372B24782D5B00B84B9A /* AreaTableViewCell.xib */,
+				2AEC68EF248ACD8300646CD4 /* AreaTableViewCell.swift */,
+				2AEC68F0248ACD8300646CD4 /* AreaTableViewCell.xib */,
 			);
 			path = AreaCell;
 			sourceTree = "<group>";
 		};
-		2A62373D2478321E00B84B9A /* Controllers */ = {
+		2AEC68F2248ACD8300646CD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2A62373E2478321E00B84B9A /* EtapasViewController.swift */,
-				2A62373F2478321E00B84B9A /* FlowInitialViewController.swift */,
-				2A6237402478321E00B84B9A /* FlowFinalViewController.swift */,
-				2A6237412478321E00B84B9A /* AreasTableViewController.swift */,
-				2A6237422478321E00B84B9A /* MainViewController.swift */,
-				2A6237432478321E00B84B9A /* FlowExtensiveContentViewController.swift */,
-				2A6237442478321E00B84B9A /* OnboardingViewController.swift */,
-				2A6237452478321E00B84B9A /* AreaViewController.swift */,
-				2A6237462478321E00B84B9A /* FlowInputViewController.swift */,
-				2A6237472478321E00B84B9A /* FlowShortContentViewController.swift */,
-				2A6237482478321E00B84B9A /* NavigationControllerVC.swift */,
-				2A6237492478321E00B84B9A /* AboutViewController.swift */,
-				2A41122A248144EC00495571 /* CreateRoomViewController.swift */,
+				2AEC68F3248ACD8300646CD4 /* UILabel+Accessibility.swift */,
 			);
-			name = Controllers;
-			path = ../../AppUser/AppUser/Controllers;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		2A6237562478324B00B84B9A /* Views */ = {
+		2AEC68F4248ACD8300646CD4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2A6237572478324B00B84B9A /* Etapas.storyboard */,
-				2A6237582478324B00B84B9A /* FlowExtensiveContent.storyboard */,
-				2A62375B2478324B00B84B9A /* Main.storyboard */,
-				2A5CF461244A258C00E98022 /* LaunchScreen.storyboard */,
-				2A62375D2478324B00B84B9A /* FlowFinal.storyboard */,
-				2A62375E2478324B00B84B9A /* FlowInput.storyboard */,
-				2A62375F2478324B00B84B9A /* FlowShortContent.storyboard */,
-				2A6237602478324B00B84B9A /* FlowInitial.storyboard */,
-				2A6237612478324B00B84B9A /* Area.storyboard */,
-				2A6237622478324B00B84B9A /* Areas.storyboard */,
-				2A411228248031DD00495571 /* CreateRoom.storyboard */,
+				2AEC68F5248ACD8300646CD4 /* EtapasViewController.swift */,
+				2AEC68F6248ACD8300646CD4 /* FlowInitialViewController.swift */,
+				2AEC68F7248ACD8300646CD4 /* FlowFinalViewController.swift */,
+				2AEC68F8248ACD8300646CD4 /* AreasTableViewController.swift */,
+				2AEC68F9248ACD8300646CD4 /* MainViewController.swift */,
+				2AEC68FA248ACD8300646CD4 /* FlowExtensiveContentViewController.swift */,
+				2AEC68FB248ACD8300646CD4 /* OnboardingViewController.swift */,
+				2AEC68FC248ACD8300646CD4 /* AreaViewController.swift */,
+				2AEC68FD248ACD8300646CD4 /* FlowInputViewController.swift */,
+				2AEC68FE248ACD8300646CD4 /* FlowShortContentViewController.swift */,
+				2AEC68FF248ACD8300646CD4 /* NavigationControllerVC.swift */,
+				2AEC6900248ACD8300646CD4 /* AboutViewController.swift */,
+				2AEC6901248ACD8300646CD4 /* CreateRoomViewController.swift */,
 			);
-			name = Views;
-			path = ../../AppUser/AppUser/Views;
-			sourceTree = "<group>";
-		};
-		2A6237882478462700B84B9A /* SF-Font */ = {
-			isa = PBXGroup;
-			children = (
-				2A6237892478462700B84B9A /* SF-Pro-Display-Thin.otf */,
-				2A62378A2478462700B84B9A /* SF-Pro-Display-SemiboldItalic.otf */,
-				2A62378B2478462700B84B9A /* SF-Pro-Display-RegularItalic.otf */,
-				2A62378C2478462700B84B9A /* SF-Pro-Display-Light.otf */,
-				2A62378D2478462700B84B9A /* SF-Pro-Display-Regular.otf */,
-				2A62378E2478462700B84B9A /* SF-Pro-Display-Bold.otf */,
-				2A62378F2478462700B84B9A /* SF-Pro-Display-Medium.otf */,
-				2A6237902478462700B84B9A /* SF-Pro-Display-Heavy.otf */,
-				2A6237912478462700B84B9A /* SF-Pro-Display-Semibold.otf */,
-				2A6237922478462700B84B9A /* SF-Pro-Display-MediumItalic.otf */,
-				2A6237932478462700B84B9A /* SF-Pro-Display-HeavyItalic.otf */,
-				2A6237942478462700B84B9A /* SF-Pro-Display-Ultralight.otf */,
-				2A6237952478462700B84B9A /* SF-Pro-Display-UltralightItalic.otf */,
-				2A6237962478462700B84B9A /* SF-Pro-Display-LightItalic.otf */,
-				2A6237972478462700B84B9A /* SF-Pro-Display-BlackItalic.otf */,
-				2A6237982478462700B84B9A /* SF-Pro-Display-Black.otf */,
-				2A6237992478462700B84B9A /* SF-Pro-Display-ThinItalic.otf */,
-				2A62379A2478462800B84B9A /* SF-Pro-Display-BoldItalic.otf */,
-			);
-			name = "SF-Font";
-			path = "../../AppUser/AppUser/SF-Font";
-			sourceTree = "<group>";
-		};
-		2A6237AD2478463600B84B9A /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2A6237AE2478463600B84B9A /* UILabel+Accessibility.swift */,
-			);
-			name = Extensions;
-			path = ../../AppUser/AppUser/Extensions;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		7B7E28684E1DC298E69D69B2 /* Pods */ = {
@@ -429,43 +424,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A6237A32478462800B84B9A /* SF-Pro-Display-Semibold.otf in Resources */,
-				2A6237A12478462800B84B9A /* SF-Pro-Display-Medium.otf in Resources */,
-				2A6237AB2478462800B84B9A /* SF-Pro-Display-ThinItalic.otf in Resources */,
-				2A6237692478324B00B84B9A /* FlowShortContent.storyboard in Resources */,
-				2A62373424782D5B00B84B9A /* RoomTableViewCell.xib in Resources */,
-				2A6237A42478462800B84B9A /* SF-Pro-Display-MediumItalic.otf in Resources */,
-				2A62379B2478462800B84B9A /* SF-Pro-Display-Thin.otf in Resources */,
-				2A6237682478324B00B84B9A /* FlowInput.storyboard in Resources */,
-				2A62373724782D5B00B84B9A /* SearchView.xib in Resources */,
-				2A6237A22478462800B84B9A /* SF-Pro-Display-Heavy.otf in Resources */,
-				2A6237A72478462800B84B9A /* SF-Pro-Display-UltralightItalic.otf in Resources */,
-				2A5CF463244A258C00E98022 /* LaunchScreen.storyboard in Resources */,
-				2A6237A82478462800B84B9A /* SF-Pro-Display-LightItalic.otf in Resources */,
-				2A62379C2478462800B84B9A /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
-				2A62379E2478462800B84B9A /* SF-Pro-Display-Light.otf in Resources */,
-				2A62376C2478324B00B84B9A /* Areas.storyboard in Resources */,
-				2A6237A92478462800B84B9A /* SF-Pro-Display-BlackItalic.otf in Resources */,
-				2A62379D2478462800B84B9A /* SF-Pro-Display-RegularItalic.otf in Resources */,
-				2A6237A62478462800B84B9A /* SF-Pro-Display-Ultralight.otf in Resources */,
-				2A6237A02478462800B84B9A /* SF-Pro-Display-Bold.otf in Resources */,
-				2A6237662478324B00B84B9A /* Main.storyboard in Resources */,
-				2A62373324782D5B00B84B9A /* InitialView.xib in Resources */,
-				2A62379F2478462800B84B9A /* SF-Pro-Display-Regular.otf in Resources */,
-				2A6237642478324B00B84B9A /* FlowExtensiveContent.storyboard in Resources */,
+				2AEC6903248ACD8300646CD4 /* SF-Pro-Display-SemiboldItalic.otf in Resources */,
+				2AEC6929248ACD8300646CD4 /* SearchView.xib in Resources */,
+				2AEC6918248ACD8300646CD4 /* Main.storyboard in Resources */,
+				2AEC6910248ACD8300646CD4 /* SF-Pro-Display-BlackItalic.otf in Resources */,
+				2AEC6909248ACD8300646CD4 /* SF-Pro-Display-Heavy.otf in Resources */,
+				2AEC690C248ACD8300646CD4 /* SF-Pro-Display-HeavyItalic.otf in Resources */,
 				2A5CF460244A258C00E98022 /* Assets.xcassets in Resources */,
-				2A62376B2478324B00B84B9A /* Area.storyboard in Resources */,
-				2A6237632478324B00B84B9A /* Etapas.storyboard in Resources */,
-				2A6237AA2478462800B84B9A /* SF-Pro-Display-Black.otf in Resources */,
-				2A62373B24782D5B00B84B9A /* AreaTableViewCell.xib in Resources */,
-				2A6237A52478462800B84B9A /* SF-Pro-Display-HeavyItalic.otf in Resources */,
-				2A6237AC2478462800B84B9A /* SF-Pro-Display-BoldItalic.otf in Resources */,
-				2A411229248031DD00495571 /* CreateRoom.storyboard in Resources */,
-				2A62372F24782D5B00B84B9A /* TituloEtapaViewCell.xib in Resources */,
-				2A62373924782D5B00B84B9A /* ProtocolTableViewCell.xib in Resources */,
-				2A6237672478324B00B84B9A /* FlowFinal.storyboard in Resources */,
-				2A62376A2478324B00B84B9A /* FlowInitial.storyboard in Resources */,
 				155FE61C2480159500B1B819 /* GoogleService-Info.plist in Resources */,
+				2AEC690B248ACD8300646CD4 /* SF-Pro-Display-MediumItalic.otf in Resources */,
+				2AEC6904248ACD8300646CD4 /* SF-Pro-Display-RegularItalic.otf in Resources */,
+				2AEC6905248ACD8300646CD4 /* SF-Pro-Display-Light.otf in Resources */,
+				2AEC6917248ACD8300646CD4 /* LaunchScreen.storyboard in Resources */,
+				2AEC6925248ACD8300646CD4 /* InitialView.xib in Resources */,
+				2AEC691A248ACD8300646CD4 /* FlowInput.storyboard in Resources */,
+				2AEC6906248ACD8300646CD4 /* SF-Pro-Display-Regular.otf in Resources */,
+				2AEC692B248ACD8300646CD4 /* ProtocolTableViewCell.xib in Resources */,
+				2AEC6913248ACD8300646CD4 /* SF-Pro-Display-BoldItalic.otf in Resources */,
+				2AEC6914248ACD8300646CD4 /* Etapas.storyboard in Resources */,
+				2AEC6921248ACD8300646CD4 /* TituloEtapaViewCell.xib in Resources */,
+				2AEC690E248ACD8300646CD4 /* SF-Pro-Display-UltralightItalic.otf in Resources */,
+				2AEC6911248ACD8300646CD4 /* SF-Pro-Display-Black.otf in Resources */,
+				2AEC6915248ACD8300646CD4 /* FlowExtensiveContent.storyboard in Resources */,
+				2AEC691E248ACD8300646CD4 /* Areas.storyboard in Resources */,
+				2AEC6916248ACD8300646CD4 /* CreateRoom.storyboard in Resources */,
+				2AEC691D248ACD8300646CD4 /* Area.storyboard in Resources */,
+				2AEC691C248ACD8300646CD4 /* FlowInitial.storyboard in Resources */,
+				2AEC690F248ACD8300646CD4 /* SF-Pro-Display-LightItalic.otf in Resources */,
+				2AEC690D248ACD8300646CD4 /* SF-Pro-Display-Ultralight.otf in Resources */,
+				2AEC691B248ACD8300646CD4 /* FlowShortContent.storyboard in Resources */,
+				2AEC6908248ACD8300646CD4 /* SF-Pro-Display-Medium.otf in Resources */,
+				2AEC6907248ACD8300646CD4 /* SF-Pro-Display-Bold.otf in Resources */,
+				2AEC690A248ACD8300646CD4 /* SF-Pro-Display-Semibold.otf in Resources */,
+				2AEC6926248ACD8300646CD4 /* RoomTableViewCell.xib in Resources */,
+				2AEC692D248ACD8300646CD4 /* AreaTableViewCell.xib in Resources */,
+				2AEC6902248ACD8300646CD4 /* SF-Pro-Display-Thin.otf in Resources */,
+				2AEC6912248ACD8300646CD4 /* SF-Pro-Display-ThinItalic.otf in Resources */,
+				2AEC6919248ACD8300646CD4 /* FlowFinal.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,51 +514,51 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A5CF458244A258A00E98022 /* ViewController.swift in Sources */,
-				2A6237512478321E00B84B9A /* AreaViewController.swift in Sources */,
-				2A62373C24782D5B00B84B9A /* Etapa.swift in Sources */,
-				2A62374A2478321E00B84B9A /* EtapasViewController.swift in Sources */,
+				2AEC692E248ACD8300646CD4 /* Etapa.swift in Sources */,
+				2AEC6933248ACD8300646CD4 /* AreasTableViewController.swift in Sources */,
+				2AEC6930248ACD8300646CD4 /* EtapasViewController.swift in Sources */,
 				2A5CF454244A258A00E98022 /* AppDelegate.swift in Sources */,
-				2A6237502478321E00B84B9A /* OnboardingViewController.swift in Sources */,
-				2A62374F2478321E00B84B9A /* FlowExtensiveContentViewController.swift in Sources */,
-				2A62373A24782D5B00B84B9A /* AreaTableViewCell.swift in Sources */,
-				2A62374E2478321E00B84B9A /* MainViewController.swift in Sources */,
-				2A62373624782D5B00B84B9A /* SearchViewHeader.swift in Sources */,
-				2A62374D2478321E00B84B9A /* AreasTableViewController.swift in Sources */,
-				2A62373124782D5B00B84B9A /* Room.swift in Sources */,
-				2A62372D24782D5B00B84B9A /* ProtFlow.swift in Sources */,
-				2A6237522478321E00B84B9A /* FlowInputViewController.swift in Sources */,
-				2A6237AF2478463600B84B9A /* UILabel+Accessibility.swift in Sources */,
-				2A62372E24782D5B00B84B9A /* TituloEtapaViewCell.swift in Sources */,
-				2A62374C2478321E00B84B9A /* FlowFinalViewController.swift in Sources */,
-				2A41122B248144EC00495571 /* CreateRoomViewController.swift in Sources */,
+				2AEC692C248ACD8300646CD4 /* AreaTableViewCell.swift in Sources */,
+				2AEC6928248ACD8300646CD4 /* SearchViewHeader.swift in Sources */,
+				2AEC6938248ACD8300646CD4 /* FlowInputViewController.swift in Sources */,
+				2AEC692F248ACD8300646CD4 /* UILabel+Accessibility.swift in Sources */,
+				2AEC6923248ACD8300646CD4 /* Room.swift in Sources */,
+				2AEC6936248ACD8300646CD4 /* OnboardingViewController.swift in Sources */,
+				2AEC691F248ACD8300646CD4 /* ProtFlow.swift in Sources */,
+				2AEC693B248ACD8300646CD4 /* AboutViewController.swift in Sources */,
+				2AEC6920248ACD8300646CD4 /* TituloEtapaViewCell.swift in Sources */,
 				2A5CF45E244A258A00E98022 /* AppAdm.xcdatamodeld in Sources */,
-				2A6237532478321E00B84B9A /* FlowShortContentViewController.swift in Sources */,
-				2A62373524782D5B00B84B9A /* RoomTableViewCell.swift in Sources */,
-				2A62374B2478321E00B84B9A /* FlowInitialViewController.swift in Sources */,
-				2A62373224782D5B00B84B9A /* InitialViewHeader.swift in Sources */,
-				2A6237542478321E00B84B9A /* NavigationControllerVC.swift in Sources */,
-				2A62373024782D5B00B84B9A /* RoomResponse.swift in Sources */,
+				2AEC6932248ACD8300646CD4 /* FlowFinalViewController.swift in Sources */,
+				2AEC6935248ACD8300646CD4 /* FlowExtensiveContentViewController.swift in Sources */,
+				2AEC693C248ACD8300646CD4 /* CreateRoomViewController.swift in Sources */,
+				2AEC693A248ACD8300646CD4 /* NavigationControllerVC.swift in Sources */,
+				2AEC6937248ACD8300646CD4 /* AreaViewController.swift in Sources */,
+				2AEC6927248ACD8300646CD4 /* RoomTableViewCell.swift in Sources */,
+				2AEC6924248ACD8300646CD4 /* InitialViewHeader.swift in Sources */,
+				2AEC6922248ACD8300646CD4 /* RoomResponse.swift in Sources */,
 				2A5CF456244A258A00E98022 /* SceneDelegate.swift in Sources */,
-				2A6237552478321E00B84B9A /* AboutViewController.swift in Sources */,
-				2A62373824782D5B00B84B9A /* ProtocolTableViewCell.swift in Sources */,
+				2AEC692A248ACD8300646CD4 /* ProtocolTableViewCell.swift in Sources */,
+				2AEC6931248ACD8300646CD4 /* FlowInitialViewController.swift in Sources */,
+				2AEC6934248ACD8300646CD4 /* MainViewController.swift in Sources */,
+				2AEC6939248ACD8300646CD4 /* FlowShortContentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2A5CF461244A258C00E98022 /* LaunchScreen.storyboard */ = {
+		2AEC68D0248ACD8300646CD4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A5CF462244A258C00E98022 /* Base */,
+				2AEC68D1248ACD8300646CD4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		2A62375B2478324B00B84B9A /* Main.storyboard */ = {
+		2AEC68D2248ACD8300646CD4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2A62375C2478324B00B84B9A /* Base */,
+				2AEC68D3248ACD8300646CD4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

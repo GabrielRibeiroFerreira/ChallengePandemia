@@ -12,7 +12,6 @@ import Firebase
 class EtapasViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var saveButton: UIButton!
     
     let etapaCellIdentifier: String = "TituloEtapaViewCell"
     var stageTitles: [Etapa] = []
@@ -30,7 +29,7 @@ class EtapasViewController: UIViewController {
     
     //Id da etapa de origem da tela de Etapas
     var markedStage: String = "idEtapa1"
-    var flow: String = "idFluxo1"
+    var flow: String = "idFluxo2"
     
     
     override func viewDidLoad() {
@@ -46,12 +45,7 @@ class EtapasViewController: UIViewController {
         
         self.setupNavBar()
         
-        
-        //Bordas do botão arredondadas
-        self.saveButton.layer.cornerRadius = 16.0
-        
         self.getDataFromDB()
-        //self.mockData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,32 +72,7 @@ class EtapasViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = rightItem
     }
     
-    private func setupAccessibility() {
-        let titleFont = UIFont(name: "SFProDisplay-Bold", size: 22) ?? UIFont.systemFont(ofSize: 22)
-        let buttonFont = UIFont(name: "SFProDisplay-Medium", size: 24) ?? UIFont.systemFont(ofSize: 24)
-        
-        self.titleLabel.dynamicFont = titleFont
-        self.saveButton.titleLabel?.dynamicFont = buttonFont
-        
-        let fontMetrics = UIFontMetrics(forTextStyle: .body)
-        self.titleLabel.font = fontMetrics.scaledFont(for: titleFont, maximumPointSize: 40.0)
-    }
-    
-    func mockData() {
-        let etapa1 = Etapa(tituloResumido: "→ Sindrome Gripal", idEtapa: "idEtapa1", id_sim: "idEtapa2", id_nao: "idEtapa2", tipo: "inicial", titulo: "Fluxo de Manejo Clínico Pediátrico na Atenção Especializada")
-        let etapa2 = Etapa(tituloResumido: "→ Sinais de gravidade?", idEtapa: "idEtapa2", id_sim: "idEtapa4", id_nao: "idEtapa2", tipo: "alternativa", titulo: "Fluxo de Manejo Clínico Pediátrico na Atenção Especializada")
-        let etapa3 = Etapa(tituloResumido: "  Síndrome Respiratória Aguda Grave", idEtapa: "idEtapa3", id_sim: "idEtapa5", id_nao: "idEtapa5", tipo: "avancarCurto", titulo: "Fluxo de Manejo Clínico Pediátrico na Atenção Especializada")
-        let etapa4 = Etapa(tituloResumido: "  Suporte intensivo", idEtapa: "idEtapa6", id_sim: "idEtapa8", id_nao: "idEtapa8", tipo: "avancarExtenso", titulo: "Fluxo de Manejo Clínico Pediátrico na Atenção Especializada")
-        self.stageTitles.append(etapa1)
-        self.stageTitles.append(etapa2)
-        self.stageTitles.append(etapa3)
-        self.stageTitles.append(etapa4)
-    }
-    
     func getDataFromDB() {
-        self.etapas = []
-        self.stageTitles = []
-        
         let urlFlow = "Fluxos/" + self.flow
         let refFlow = Database.database().reference().child(urlFlow)
         refFlow.observe(.value) { (snapshot) in
@@ -117,7 +86,7 @@ class EtapasViewController: UIViewController {
                     let tipo = dict["tipo"] as? String,
                     let titulo = dict["titulo"] as? String {
                     
-                    let etapa = Etapa(tituloResumido: tituloResumido, idEtapa: idEtapa, id_sim: id_sim, id_nao: id_nao, tipo: tipo, titulo: titulo)
+                    let etapa = Etapa(tituloResumido: tituloResumido, idEtapa: idEtapa, id_sim: id_sim, id_nao: id_nao, tipo: tipo)
                     self.etapas.append(etapa)
                     
                     //Dá pra melhorar, eu sei
@@ -130,7 +99,6 @@ class EtapasViewController: UIViewController {
 
     func sortTitles() {
         var currentEtapa: Etapa
-        self.titleList = []
         
         //Etapa inicial do fluxo
         for etapa in self.etapas {
@@ -176,100 +144,23 @@ class EtapasViewController: UIViewController {
         }
     }
     
-    @objc func goToList(sender: Any) {
+    
+    private func setupAccessibility() {
+        let titleFont = UIFont(name: "SFProDisplay-Bold", size: 22) ?? UIFont.systemFont(ofSize: 22)
+
+        self.titleLabel.dynamicFont = titleFont
+        
+        let fontMetrics = UIFontMetrics(forTextStyle: .body)
+        self.titleLabel.font = fontMetrics.scaledFont(for: titleFont, maximumPointSize: 40.0)
+    }
+    
+    @objc func goToList(sender: UIButton) {
         let viewControllers: [UIViewController] = self.navigationController!.viewControllers
         for aViewController in viewControllers {
             if aViewController is AreaViewController {
                 self.navigationController!.popToViewController(aViewController, animated: true)
             }
         }
-    }
-    
-    @IBAction func savePrtoFlow(_ sender: Any) {
-        self.saveAlert(sender)
-    }
-    
-    // MARK: - Alerts
-    @objc func saveAlert(_ sender: Any) {
-        let alert = UIAlertController(title: "Deseja Salvar as Alterações?", message: "Caso escolha não salvar, todas as modificações serão perdidas", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
-            self.goToList(sender: sender)
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    @objc func editTitleAlert(at indexPath: IndexPath) {
-        let alert = UIAlertController(title: "Editar Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
-        
-        alert.addTextField { (textField) in
-            var placeholder = self.stageTitles[indexPath.row].tituloResumido
-            placeholder = placeholder!.replacingOccurrences(of: "→", with: "", options: NSString.CompareOptions.literal, range: nil)
-            textField.placeholder = placeholder
-            textField.isSecureTextEntry = false
-        }
-        
-        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Confirmar", style: .default, handler: {(_) in
-            var newTitle = alert.textFields![0].text
-            
-            if self.stageTitles[indexPath.row].tipo == "alternativa" ||  self.stageTitles[indexPath.row].tipo == "inicial"{
-                newTitle = "→ " + newTitle!
-            } else {
-                newTitle = "     " + newTitle!
-            }
-            
-            //Método para editar tituloResumido de um fluxo/protocolo do firebase
-            let url = "Fluxos/" + self.flow + "/"
-            + self.stageTitles[indexPath.row].idEtapa! + "/tituloResumido"
-            
-            //Limpa todos as arrays que recebem vaolres do banco no observe
-            self.stageTitles.removeAll()
-            self.etapas.removeAll()
-            self.titleList.removeAll()
-            
-            let ref = Database.database().reference()
-            ref.child(url).setValue(newTitle)
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    @objc func deleteAlert(at indexPath: IndexPath) {
-        let alert = UIAlertController(title: "Deseja Excluir?", message: "Ao excluir a etapa, esta não estará mais disponível para consulta", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
-            
-            //Método para excluir etapa de um fluxo/protocolo do firebase
-            let url = "Fluxos/" + self.flow + "/" + self.stageTitles[indexPath.row].idEtapa!
-
-            //Limpa todos as arrays que recebem vaolres do banco no observe
-            self.stageTitles.removeAll()
-            self.etapas.removeAll()
-            self.titleList.removeAll()
-            
-            let ref = Database.database().reference()
-            ref.child(url).removeValue()
-            
-            //Garantindo consistência caso todas as do fluxo etapas sejam excluidas
-            ref.child("Fluxos").observeSingleEvent(of: .value, with: { (snapshot) in
-                if !snapshot.hasChild(self.flow) {
-                    let url = UserDefaults.standard.string(forKey: "urlArea")
-                    let refArea = Database.database().reference()
-                    refArea.child(url!).removeValue { (error, ref) in
-                        if error == nil {
-                            print("Foii")
-                        }
-                    }
-                }
-            })
-            
-            
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
     }
     
 }
@@ -280,7 +171,147 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.stageTitles.count
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let stage = self.stageTitles[indexPath.row]
+        
+        //DFS - retornando a lista das etapas (incial -> selecionada)
+        self.dfs(stageSelected: stage)
+        
+        self.updateNavigation()
+        
+    }
+    
+    func dfs(stageSelected: Etapa) {
+        //Chama dfs a partir da estapa inicial do fluxo
+        for etapa in self.etapas {
+            if etapa.tipo == "inicial" {
+                dsfVisit(currentStage: etapa, stageSelected: stageSelected)
+            }
+        }
+        
+        self.dfsResult.append(stageSelected)
+    }
+    
+    func dsfVisit(currentStage: Etapa, stageSelected: Etapa) {
+        if currentStage.idEtapa == stageSelected.idEtapa {
+            self.dfsResult = self.stack
+            return
+        }
+        else if currentStage.tipo == "final" {
+            return
+        }
+        else {
+            self.stack.append(currentStage)
+            
+            if currentStage.tipo == "alternativa" {
+                guard let etapaSim = getNextStage(idEtapa: currentStage.id_sim!) else { return }
+                dsfVisit(currentStage: etapaSim, stageSelected: stageSelected)
+                
+                guard let etapaNao = getNextStage(idEtapa: currentStage.id_nao!) else { return }
+                dsfVisit(currentStage: etapaNao, stageSelected: stageSelected)
+                
+                self.stack.removeLast()
+            }
+            else {
+                guard let etapaSim = getNextStage(idEtapa: currentStage.id_sim!) else { return }
+                dsfVisit(currentStage: etapaSim, stageSelected: stageSelected)
+                self.stack.removeLast()
+            }
+        }
+    }
+    
+    func getNextStage(idEtapa: String) -> Etapa? {
+        for stage in self.etapas {
+            if stage.idEtapa == idEtapa {
+                return stage
+            }
+        }
+        return nil
+    }
+    
+    func updateNavigation() {
+        var viewControllers: [UIViewController] = self.navigationController!.viewControllers
+        var size = viewControllers.count
+        
+        for aViewController in viewControllers {
+            size = size-1
+            if aViewController is FlowInitialViewController {
+                
+                //Remove todas as telas até a FlowInitial
+                viewControllers.removeLast(size)
+                
+                //Criação lista de etapas do fluxos
+                //PASSAR AQUI A LISTA ENCONTRADA PELA DFS
+//                var  testList:[Etapa] = []
+//                let etapa1 = Etapa(tituloResumido: "→ Sindrome Gripal", idEtapa: "idEtapa1", id_sim: "idEtapa2", id_nao: "idEtapa2", tipo: "inicial")
+//                let etapa2 = Etapa(tituloResumido: "→ Sinais de gravidade?", idEtapa: "idEtapa2", id_sim: "idEtapa4", id_nao: "idEtapa2", tipo: "alternativa")
+//                let etapa3 = Etapa(tituloResumido: "• Síndrome Respiratória Aguda Grave", idEtapa: "idEtapa3", id_sim: "idEtapa5", id_nao: "idEtapa5", tipo: "avancarCurto")
+//                let etapa4 = Etapa(tituloResumido: "• Suporte intensivo", idEtapa: "idEtapa6", id_sim: "idEtapa8", id_nao: "idEtapa8", tipo: "avancarExtenso")
+//                testList.append(etapa1)
+//                testList.append(etapa2)
+//                testList.append(etapa3)
+//                testList.append(etapa4)
+                
+                let newNavList = self.instanciateNewNavigation(stageList: self.dfsResult)
+                
+                //Atualiza navigation com nova lista de UIViewControllers
+                self.navigationController?.viewControllers = viewControllers + newNavList
+            }
+        }
+    }
+    
+    func instanciateNewNavigation(stageList: [Etapa]) -> [UIViewController] {
+        var list: [UIViewController] = []
+        
+        //Percorre lista e instancia cada VC
+        for stage in stageList {
+            if stage.tipo == "avancarCurto" {
+                let storyboard = UIStoryboard.init(name: "FlowShortContent", bundle: Bundle.main)
+                if let mainVC = storyboard.instantiateInitialViewController() {
+                    if let vc = mainVC as? FlowShortContentViewController {
+                        vc.bdRefFlow = self.flow
+                        vc.bdRefStep = stage.idEtapa!
+                        list.append(vc)
+                    }
+                }
+            }
+            else if stage.tipo == "avancarExtenso" {
+               let storyboard = UIStoryboard.init(name: "FlowExtensiveContent", bundle: Bundle.main)
+               if let mainVC = storyboard.instantiateInitialViewController() {
+                   if let vc = mainVC as? FlowExtensiveContentViewController {
+                       vc.bdRefFlow = self.flow
+                       vc.bdRefStep = stage.idEtapa!
+                       list.append(vc)
+                   }
+               }
+            }
+            else if stage.tipo == "alternativa" {
+               let storyboard = UIStoryboard.init(name: "FlowInput", bundle: Bundle.main)
+               if let mainVC = storyboard.instantiateInitialViewController() {
+                   if let vc = mainVC as? FlowInputViewController {
+                       vc.bdRefFlow = self.flow
+                       vc.bdRefStep = stage.idEtapa!
+                       list.append(vc)
+                   }
+               }
+            }
+            else if stage.tipo == "final" {
+               let storyboard = UIStoryboard.init(name: "FlowFinal", bundle: Bundle.main)
+               if let mainVC = storyboard.instantiateInitialViewController() {
+                   if let vc = mainVC as? FlowFinalViewController {
+                       vc.bdRefFlow = self.flow
+                       vc.bdRefStep = stage.idEtapa!
+                       list.append(vc)
+                   }
+               }
+            }
+        }
+        
+        return list
+    }
 
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.etapaCellIdentifier, for: indexPath) as! TituloEtapaViewCell
         let stage = self.stageTitles[indexPath.row].tituloResumido
@@ -298,22 +329,14 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
             
         }
         
-        cell.delegate = self
+        //Verifica se é a etapa atual visualizada
+        if stageTitles[indexPath.row].idEtapa == self.markedStage {
+            cell.circleView.image = UIImage(named: "stageSelected")
+        }
+        else {
+            cell.circleView.image = UIImage(named: "stageNotSelected")
+        }
         
         return cell
     }
-}
-
-// MARK: - Protocol extension -
-extension EtapasViewController: TitleStageCellDelegate {
-    func didTapEditCell(_ cell: TituloEtapaViewCell) {
-        guard let cellIndex = cell.getIndexPath() else { return }
-        self.editTitleAlert(at: cellIndex)
-    }
-    
-    func didTapDeleteCell(_ cell: TituloEtapaViewCell) {
-        guard let cellIndex = cell.getIndexPath() else { return }
-        self.deleteAlert(at: cellIndex)
-    }
-
 }
