@@ -18,7 +18,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
     let sectionIdentifier : String = "InitialView"
     
     var rooms : [Room] = []
-    var ids : [String] = []
+    var idAdm : Int = 1
     var selectedRoom : Room?
     
     override func viewDidLoad() {
@@ -40,7 +40,8 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         self.view.backgroundColor = UIColor(named: "appBlue") ?? UIColor.blue
         
         self.setupNavBar()
-        self.ids = UserDefaults.standard.array(forKey: "rooms") as? [String] ?? []
+        UserDefaults.standard.set(1, forKey: "idAdm")
+        self.idAdm = UserDefaults.standard.integer(forKey: "idAdm")
         self.getDataFromDB()
     }
     
@@ -78,9 +79,18 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
                     roomsDB.append(room)
                 }
             }
+            
             for room in roomsDB {
-                if self.ids.contains(room.key!) {
-                    self.rooms.append(room)
+                if room.idAdm == ("idAdm" + String(self.idAdm)) {
+                    var isInRooms = false
+                    for r in self.rooms {
+                        if r.key == room.key {
+                            isInRooms = true
+                        }
+                    }
+                    if !isInRooms {
+                        self.rooms.append(room)
+                    }
                 }
             }
             self.tableView.reloadData()
@@ -163,50 +173,50 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         performSegue(withIdentifier: "toCreateRoom", sender: self)
     }
     
-    func getRoom(code : String){
-        var room : Room?
-        let url = "Salas"
-        let ref = Database.database().reference().child(url)
-        ref.observe(.value) { (snapshot) in
-            for child in snapshot.children {
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let nameBD = dict["name"] as? String,
-                    let codeBD = dict["code"] as? String,
-                    let idAdmBD = dict["idAdm"] as? String {
-                    if code == codeBD {
-                        room = Room(name: nameBD, idAdm: idAdmBD, key: childSnapshot.key, code: codeBD)
-                        break
-                    }
-                }
-            }
-            if room == nil {
-                let alertFail = UIAlertController(title: "Falhou", message: "", preferredStyle: .alert)
-                self.present(alertFail, animated: true, completion: nil)
-                alertFail.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
-                }))
-            } else {
-                if self.rooms.count == 0 {
-                    self.rooms.append(room!)
-                    self.ids.append(room!.key!)
-                } else {
-                    var add : Bool = true
-                    for r in self.rooms {
-                        if r.key == room?.key {
-                            add = false
-                            break
-                        }
-                    }
-                    if add {
-                        self.rooms.append(room!)
-                        self.ids.append(room!.key!)
-                    }
-                }
-                UserDefaults.standard.set(self.ids, forKey: "rooms")
-                self.tableView.reloadData()
-            }
-        }
-    }
+//    func getRoom(code : String){
+//        var room : Room?
+//        let url = "Salas"
+//        let ref = Database.database().reference().child(url)
+//        ref.observe(.value) { (snapshot) in
+//            for child in snapshot.children {
+//                if let childSnapshot = child as? DataSnapshot,
+//                    let dict = childSnapshot.value as? [String:Any],
+//                    let nameBD = dict["name"] as? String,
+//                    let codeBD = dict["code"] as? String,
+//                    let idAdmBD = dict["idAdm"] as? String {
+//                    if code == codeBD {
+//                        room = Room(name: nameBD, idAdm: idAdmBD, key: childSnapshot.key, code: codeBD)
+//                        break
+//                    }
+//                }
+//            }
+//            if room == nil {
+//                let alertFail = UIAlertController(title: "Falhou", message: "", preferredStyle: .alert)
+//                self.present(alertFail, animated: true, completion: nil)
+//                alertFail.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: {(action) in
+//                }))
+//            } else {
+//                if self.rooms.count == 0 {
+//                    self.rooms.append(room!)
+//                    self.ids.append(room!.key!)
+//                } else {
+//                    var add : Bool = true
+//                    for r in self.rooms {
+//                        if r.key == room?.key {
+//                            add = false
+//                            break
+//                        }
+//                    }
+//                    if add {
+//                        self.rooms.append(room!)
+//                        self.ids.append(room!.key!)
+//                    }
+//                }
+//                UserDefaults.standard.set(self.ids, forKey: "rooms")
+//                self.tableView.reloadData()
+//            }
+//        }
+//    }
     
     // MARK: - Navigation
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
