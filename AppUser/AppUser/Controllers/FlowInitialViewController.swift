@@ -24,7 +24,7 @@ class FlowInitialViewController: UIViewController {
     var segueInitial: String = ""
     var teste: String = ""
     var idFlow: String = ""
-    var timeStampStep = 0
+    var timeStampStep = ""
     
     let refFlow = Database.database().reference()
     
@@ -68,7 +68,7 @@ class FlowInitialViewController: UIViewController {
     
     
     @IBAction func btnProgress(_ sender: Any) {
-        timeStampStep = Int(NSDate.timeIntervalSinceReferenceDate*1000)
+        timeStampStep = "\(Int(NSDate.timeIntervalSinceReferenceDate*1000))"
 
         self.refFlow.child("Fluxos").childByAutoId().childByAutoId()
         idFlow = refFlow.child("Fluxos").childByAutoId().key!

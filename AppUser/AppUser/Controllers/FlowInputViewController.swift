@@ -26,7 +26,7 @@ class FlowInputViewController: UIViewController {
     var typeStep = "alternativa"
     var titleFlowBD = ""
     var segueInput = "segueAlternative"
-    var timeStampStep = 0
+    var timeStampStep = ""
     var findFirstAlternative: Bool?
     var index = 0
     
@@ -144,7 +144,7 @@ class FlowInputViewController: UIViewController {
     
     @IBAction func btnProgress(_ sender: Any) {
         
-        self.timeStampStep = Int(NSDate.timeIntervalSinceReferenceDate*1000)
+        self.timeStampStep = "\(Int(NSDate.timeIntervalSinceReferenceDate*1000))"
         
         self.dispatchGroup1.enter()
         let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/" + self.bdRefStep
@@ -210,6 +210,8 @@ class FlowInputViewController: UIViewController {
             }
         }else if segue.identifier == "segueEtapas"{
             if let id = segue.destination as? EtapasViewController {
+                self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/id_nao").setValue("idEtapa0")
+                self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/id_sim").setValue("idEtapa0")
                 id.flow = bdRefFlow
             }
         }
