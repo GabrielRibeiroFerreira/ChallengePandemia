@@ -75,8 +75,8 @@ class FlowInitialViewController: UIViewController {
     
     func getDataFromDB() {
         //Recuperação da Etapa
-        let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/Etapas/" + self.bdRefStep
-        let urlFlowProx = "Fluxos/" + self.bdRefFlow + "/Etapas/"
+        let urlFlowAtual = "Fluxos/" + self.bdRefFlow + "/" + self.bdRefStep
+        let urlFlowProx = "Fluxos/" + self.bdRefFlow + "/"
         
         self.dispatchGroup1.enter()
         self.refFlow.child(urlFlowAtual + "/titulo").observeSingleEvent(of: .value) { (snapshot) in
