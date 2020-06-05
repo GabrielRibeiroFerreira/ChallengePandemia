@@ -175,6 +175,8 @@ class FlowInputViewController: UIViewController {
             
             if self.typeStep == "final"{
                 self.updateNavigation()
+                self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/id_nao").setValue("idEtapa0")
+                self.refFlow.child("Fluxos/\(self.bdRefFlow)/\(self.timeStampStep)/id_sim").setValue("idEtapa0")
             }else{
                 let alert = UIAlertController(title: "Título da Etapa", message: "Digite abaixo qual será o título para esta etapa.", preferredStyle: .alert)
                 
