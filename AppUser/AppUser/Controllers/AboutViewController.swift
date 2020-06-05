@@ -38,8 +38,8 @@ class AboutViewController: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationItem.title = "Sobre"
-        self.navigationController?.navigationBar.barTintColor = UIColor(named: "appColor")
-        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appColor") ?? UIColor.blue
+        self.navigationController?.navigationBar.barTintColor = UIColor(named: "appContrast")
+        self.navigationController?.navigationBar.backgroundColor = UIColor(named: "appContrast") ?? UIColor.blue
         self.navigationController?.navigationBar.tintColor = UIColor(named: "appBlue")
         self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "appBlue") ?? UIColor.white]
     }

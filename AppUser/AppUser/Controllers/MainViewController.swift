@@ -123,7 +123,7 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
             }
             self.searchBar.delegate = self
             
-            self.sectionView.addRoomButton.addTarget(self, action: #selector(self.addRoom(_:)), for: .touchUpInside)
+            self.sectionView.addRoomButton.addTarget(self, action: #selector(self.createRoom(_:)), for: .touchUpInside)
             sec = self.sectionView
         default:
             sec = nil
@@ -159,23 +159,8 @@ class MainViewController: UITableViewController, UISearchBarDelegate {
         return cell
     }
     
-    @objc func addRoom(_ sender: UIButton!) {
-        let alert = UIAlertController(title: "Adicionar Sala", message: "", preferredStyle: .alert)
-        
-//        alert.addTextField { (textField)
-        alert.addTextField { (textField) in
-            textField.placeholder = "código da sala"
-            textField.isSecureTextEntry = true
-        }
-        
-        alert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Adicionar", style: .default, handler: {(action) in
-//            let name = alert.textFields![0].text
-            let code = alert.textFields![0].text
-            self.getRoom(code: code ?? "")
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
+    @objc func createRoom(_ sender: UIButton!) {
+        performSegue(withIdentifier: "toCreateRoom", sender: self)
     }
     
     func getRoom(code : String){
