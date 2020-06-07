@@ -322,10 +322,14 @@ extension EtapasViewController: UITableViewDataSource, UITableViewDelegate {
             
             let titleFont = UIFont(name: "SFProDisplay-Heavy", size: 18) ?? UIFont.systemFont(ofSize: 18)
             cell.titleLabel.dynamicFont = titleFont
+            
+            cell.titleLabel.text = "→ " + stage!
         }
         else {
             let titleFont = UIFont(name: "SFProDisplay-Regular", size: 18) ?? UIFont.systemFont(ofSize: 18)
             cell.titleLabel.dynamicFont = titleFont
+            
+            cell.titleLabel.text = "     " + stage!
             
         }
         
