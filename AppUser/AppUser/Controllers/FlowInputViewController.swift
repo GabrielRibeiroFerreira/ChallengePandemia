@@ -12,6 +12,8 @@ import FirebaseDatabase
 class FlowInputViewController: UIViewController {
 
 
+    @IBOutlet weak var option2: UITextField!
+    @IBOutlet weak var option1: UITextField!
     @IBOutlet weak var titleFlow: UILabel!
     @IBOutlet weak var titleContent: UILabel!
     @IBOutlet weak var contentInput: UITextField!
@@ -75,6 +77,8 @@ class FlowInputViewController: UIViewController {
         contentInput.font = titleFont
         contentInput.attributedPlaceholder = NSAttributedString(string: "Digite o nome do fluxo", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appBlue")!])
         contentInput2.attributedPlaceholder = NSAttributedString(string: "Digite a introdução do fluxo", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appContrast")!])
+        option1.attributedPlaceholder = NSAttributedString(string: "Digite opção 1", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appBlue")!])
+        option2.attributedPlaceholder = NSAttributedString(string: "Digite opção 2", attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "appBlue")!])
     }
     
     @IBAction func indexChange(_ sender: Any) {
@@ -84,6 +88,8 @@ class FlowInputViewController: UIViewController {
             contentInput.isHidden = false
             titleContent2.isHidden = false
             contentInput2.isHidden = false
+            option1.isHidden = false
+            option2.isHidden = false
             contentInput.text?.removeAll()
             contentInput2.text?.removeAll()
             titleContent.text = "Pergunta da Decisão"
@@ -100,6 +106,8 @@ class FlowInputViewController: UIViewController {
             contentInput.isHidden = false
             titleContent2.isHidden = false
             contentInput2.isHidden = false
+            option1.isHidden = true
+            option2.isHidden = true
             contentInput.text?.removeAll()
             contentInput2.text?.removeAll()
             titleContent.text = "Subtítulo da Etapa"
@@ -116,6 +124,8 @@ class FlowInputViewController: UIViewController {
             contentInput.isHidden = false
             titleContent2.isHidden = true
             contentInput2.isHidden = true
+            option1.isHidden = true
+            option2.isHidden = true
             contentInput.text?.removeAll()
             contentInput2.text?.removeAll()
             titleContent.text = "Notificação"
@@ -130,6 +140,8 @@ class FlowInputViewController: UIViewController {
             contentInput.isHidden = false
             titleContent2.isHidden = true
             contentInput2.isHidden = true
+            option1.isHidden = true
+            option2.isHidden = true
             contentInput.text?.removeAll()
             contentInput2.text?.removeAll()
             titleContent.text = "Notificação Final"
@@ -214,6 +226,7 @@ class FlowInputViewController: UIViewController {
             if let id = segue.destination as? FlowExtensiveContentViewController {
                 id.bdRefFlow = bdRefFlow
                 id.bdRefStep = "\(self.timeStampStep)"
+                id.listOptions = ["\(self.option1.text ?? "Sim")","\(self.option2.text ?? "Não")"]
                 
             }
         }else if segue.identifier == "segueEtapas"{

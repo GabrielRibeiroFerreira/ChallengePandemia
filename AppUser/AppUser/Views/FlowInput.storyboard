@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="757"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCN-Ga-yt2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="338"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="692.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRY-x3-XTP">
                                                 <rect key="frame" x="20" y="30" width="374" height="0.0"/>
@@ -66,27 +66,49 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite Opção 1" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bP1-cK-Eef">
+                                                <rect key="frame" x="50" y="660" width="130" height="24.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="Ute-Yy-W4I"/>
+                                                </constraints>
+                                                <color key="textColor" name="appBlue"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Digite Opção 2" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fkd-QE-JrP">
+                                                <rect key="frame" x="234" y="660" width="130" height="24.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="130" id="HDe-5Q-DNP"/>
+                                                </constraints>
+                                                <color key="textColor" name="appBlue"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" name="appColor"/>
                                         <constraints>
                                             <constraint firstItem="1KU-0H-ADV" firstAttribute="top" secondItem="zFj-cc-bEb" secondAttribute="bottom" constant="16" id="30H-LA-048"/>
+                                            <constraint firstItem="bP1-cK-Eef" firstAttribute="leading" secondItem="eCN-Ga-yt2" secondAttribute="leading" constant="50" id="8Dd-Gb-DXc"/>
                                             <constraint firstItem="ZDK-TP-Gqy" firstAttribute="top" secondItem="yRY-x3-XTP" secondAttribute="bottom" constant="32" id="AVk-8w-dDc"/>
                                             <constraint firstItem="yRY-x3-XTP" firstAttribute="leading" secondItem="eCN-Ga-yt2" secondAttribute="leading" constant="20" id="HfG-gL-2SQ"/>
                                             <constraint firstAttribute="trailing" secondItem="ZDK-TP-Gqy" secondAttribute="trailing" constant="20" id="KaG-Mk-YZw"/>
                                             <constraint firstItem="p7u-bO-CiZ" firstAttribute="leading" secondItem="eCN-Ga-yt2" secondAttribute="leading" constant="20" id="NEe-HT-Yo2"/>
                                             <constraint firstItem="yRY-x3-XTP" firstAttribute="top" secondItem="eCN-Ga-yt2" secondAttribute="top" constant="30" id="O7s-E2-ggu"/>
-                                            <constraint firstAttribute="bottom" secondItem="1KU-0H-ADV" secondAttribute="bottom" constant="8" id="P8Y-t3-LpY"/>
                                             <constraint firstAttribute="trailing" secondItem="1KU-0H-ADV" secondAttribute="trailing" constant="20" id="QBj-7z-e9e"/>
+                                            <constraint firstAttribute="trailing" secondItem="fkd-QE-JrP" secondAttribute="trailing" constant="50" id="Uug-zw-Ake"/>
                                             <constraint firstItem="zFj-cc-bEb" firstAttribute="leading" secondItem="eCN-Ga-yt2" secondAttribute="leading" constant="20" id="YHw-j4-is9"/>
                                             <constraint firstItem="p7u-bO-CiZ" firstAttribute="top" secondItem="ZDK-TP-Gqy" secondAttribute="bottom" constant="40" id="ZM2-vB-JZP"/>
                                             <constraint firstItem="gWx-Iu-chw" firstAttribute="leading" secondItem="eCN-Ga-yt2" secondAttribute="leading" constant="20" id="eoX-d4-18m"/>
                                             <constraint firstItem="1KU-0H-ADV" firstAttribute="leading" secondItem="eCN-Ga-yt2" secondAttribute="leading" constant="20" id="lF2-pw-LcR"/>
                                             <constraint firstItem="ZDK-TP-Gqy" firstAttribute="leading" secondItem="eCN-Ga-yt2" secondAttribute="leading" constant="20" id="lX1-M3-kzQ"/>
                                             <constraint firstAttribute="trailing" secondItem="zFj-cc-bEb" secondAttribute="trailing" constant="20" id="mUC-0y-eez"/>
+                                            <constraint firstAttribute="bottom" secondItem="bP1-cK-Eef" secondAttribute="bottom" constant="8" id="oBG-qD-icu"/>
                                             <constraint firstItem="zFj-cc-bEb" firstAttribute="top" secondItem="gWx-Iu-chw" secondAttribute="bottom" constant="64" id="oKx-oe-hsy"/>
                                             <constraint firstAttribute="trailing" secondItem="gWx-Iu-chw" secondAttribute="trailing" constant="20" id="pSU-i2-baP"/>
                                             <constraint firstAttribute="trailing" secondItem="p7u-bO-CiZ" secondAttribute="trailing" constant="20" id="r73-j2-Lqe"/>
+                                            <constraint firstAttribute="bottom" secondItem="fkd-QE-JrP" secondAttribute="bottom" constant="8" id="sdz-sR-dZe"/>
                                             <constraint firstAttribute="trailing" secondItem="yRY-x3-XTP" secondAttribute="trailing" constant="20" id="v7d-HC-p1n"/>
+                                            <constraint firstItem="bP1-cK-Eef" firstAttribute="top" secondItem="1KU-0H-ADV" secondAttribute="bottom" constant="330" id="vxd-EZ-jlh"/>
                                             <constraint firstItem="gWx-Iu-chw" firstAttribute="top" secondItem="p7u-bO-CiZ" secondAttribute="bottom" constant="16" id="ydQ-d6-raA"/>
                                         </constraints>
                                     </view>
@@ -144,6 +166,8 @@
                     <connections>
                         <outlet property="contentInput" destination="gWx-Iu-chw" id="5xj-ge-NuO"/>
                         <outlet property="contentInput2" destination="1KU-0H-ADV" id="cX2-v6-bku"/>
+                        <outlet property="option1" destination="bP1-cK-Eef" id="DRT-33-wov"/>
+                        <outlet property="option2" destination="fkd-QE-JrP" id="vam-dh-WUp"/>
                         <outlet property="segmentedControl" destination="ZDK-TP-Gqy" id="K2j-3z-NIH"/>
                         <outlet property="titleContent" destination="p7u-bO-CiZ" id="see-4y-Nf1"/>
                         <outlet property="titleContent2" destination="zFj-cc-bEb" id="nrn-zx-imM"/>

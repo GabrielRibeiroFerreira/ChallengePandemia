@@ -45,7 +45,7 @@ class FlowExtensiveContentViewController: UIViewController {
             self.titleContent.text = (snapshot.value as? String)!
         }
         self.refFlow.child(urlFlowAtual + "/subtitulo").observeSingleEvent(of: .value) { (snapshot) in
-            self.listOptions = ["\(snapshot.value as! String) - Sim","\(snapshot.value as! String) - Não"]
+            self.listOptions = ["\(snapshot.value as! String)" + " - " + self.listOptions[0],"\(snapshot.value as! String)" + " - " + self.listOptions[1]]
         }
     }
     
