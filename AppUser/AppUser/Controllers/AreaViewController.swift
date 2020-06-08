@@ -73,6 +73,12 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewWillAppear(animated)
         self.setupNavBar()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.setupNavBar()
+        self.getDataFromDB()
+    }
     private func setupAccessibility() {
         let buttonFont = UIFont(name: "SFProDisplay-Medium", size: 24) ?? UIFont.systemFont(ofSize: 24)
         self.addButton.titleLabel?.dynamicFont = buttonFont
