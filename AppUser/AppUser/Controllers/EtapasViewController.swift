@@ -194,7 +194,7 @@ class EtapasViewController: UIViewController {
         let alert = UIAlertController(title: "Deseja Salvar as Alterações?", message: "Caso escolha não salvar, todas as modificações serão perdidas", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
-            //Salva fluxo em Áreas
+            //Salva fluxo em Áreas - consistencia
             var url = UserDefaults.standard.string(forKey: "urlArea")!
             url = url + self.flow + "/"
             let ref = Database.database().reference()
