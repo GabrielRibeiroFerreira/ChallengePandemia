@@ -290,7 +290,7 @@ class AreaViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
             
-            let url = "Areas/" + self.bdRefRoom + "/" + self.bdRefArea + "/" + self.protFlow + flowKey
+            let url = "Areas/" + self.bdRefRoom + "/" + self.bdRefArea + "/" + self.protFlow
             UserDefaults.standard.set(url, forKey: "urlArea")
             performSegue(withIdentifier: "initialFlowSegue", sender: cell)
         }

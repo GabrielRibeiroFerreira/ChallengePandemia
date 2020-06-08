@@ -194,6 +194,14 @@ class EtapasViewController: UIViewController {
         let alert = UIAlertController(title: "Deseja Salvar as Alterações?", message: "Caso escolha não salvar, todas as modificações serão perdidas", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Não", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Sim", style: .default, handler: {(action) in
+            //Salva fluxo em Áreas
+            var url = UserDefaults.standard.string(forKey: "urlArea")!
+            url = url + self.flow + "/"
+            let ref = Database.database().reference()
+            ref.child(url+"titulo").setValue(self.titleLabel.text)
+            ref.child(url+"key").setValue(self.flow)
+            
+            //Volta para a lista
             self.goToList(sender: sender)
         }))
         
@@ -258,7 +266,7 @@ class EtapasViewController: UIViewController {
                 if !snapshot.hasChild(self.flow) {
                     let url = UserDefaults.standard.string(forKey: "urlArea")
                     let refArea = Database.database().reference()
-                    refArea.child(url!).removeValue { (error, ref) in
+                    refArea.child(url!+self.flow).removeValue { (error, ref) in
                         if error == nil {
                             print("Foii")
                         }
